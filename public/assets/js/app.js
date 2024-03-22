@@ -1,20 +1,20 @@
-﻿//const lgaList = require("./lga");
-
-// Populate state dropdown
-function populateStates() {
-  const stateSelect = document.getElementById("stateSelect");
-  Object.keys(lgaList).forEach((state) => {
-    const option = document.createElement("option");
-    option.value = state;
-    option.textContent = state;
-    stateSelect.appendChild(option);
+﻿function populateStates() {
+  const stateSelects = document.querySelectorAll('[id^="stateSelect"]');
+  stateSelects.forEach((stateSelect) => {
+    Object.keys(lgaList).forEach((state) => {
+      const option = document.createElement("option");
+      option.value = state;
+      option.textContent = state;
+      stateSelect.appendChild(option);
+    });
   });
 }
 
-// Populate LGA dropdown based on selected state
-function populateLGAs() {
-  const stateSelect = document.getElementById("stateSelect");
-  const lgaSelect = document.getElementById("lgaSelect");
+function populateLGAs(lgaSelectId) {
+  const stateSelect = document.getElementById(
+    lgaSelectId.replace("lgaSelect", "stateSelect")
+  );
+  const lgaSelect = document.getElementById(lgaSelectId);
   const selectedState = stateSelect.value;
 
   // Clear previous options
@@ -32,7 +32,7 @@ function populateLGAs() {
     // If no state is selected, display default option
     const option = document.createElement("option");
     option.value = "";
-    option.textContent = "Select LGA of Residence";
+    option.textContent = "Select LGA";
     lgaSelect.appendChild(option);
   }
 }

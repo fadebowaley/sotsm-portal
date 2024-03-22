@@ -880,4 +880,3 @@ const lgaList = {
   ],
 };
 
-module.exports = lgaList;

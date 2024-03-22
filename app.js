@@ -46,8 +46,11 @@ app.set("view cache", false);
 app.use(express.static("public"));
 app.use(express.static(path.join(__dirname, "public")));
 
+
+
 const options = {
-  mongoUrl: process.env.MONGO_URI, // MongoDB connection string
+    mongoUrl: conn.client.s.url, // MongoDB connection string
+  //mongoUrl: process.env.MONGO_URI, // MongoDB connection string
   collectionName: "sessions", // Name of the MongoDB collection for session storage
   ttl: 14 * 24 * 60 * 60, //  = 14 days. Default
   autoRemove: "interval", // Automatically remove expired session data

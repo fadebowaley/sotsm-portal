@@ -18,8 +18,8 @@
  
 
   .form-check-label {
-    font-size: 19px; /* Adjust font size as needed */
-    margin-top:39px;
+    font-size: 13px; /* Adjust font size as needed */
+    margin-top:45px;
   }
 
   .quli select{
@@ -75,7 +75,7 @@
       }
 
       label{
-        margin-left: 20px;
+        margin-left: 12px;
       }
       .btn {
         background-color: black;
