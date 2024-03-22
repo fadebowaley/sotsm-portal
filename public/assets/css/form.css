@@ -1,0 +1,115 @@
+
+.inputField textarea {
+    height: 135px;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 25px;
+    resize: none;
+    display: block;
+    width: 100%;
+}
+    .form-check-input {
+    width: 40px; /* Adjust width as needed */
+    height: 40px; /* Adjust height as needed */
+    border: 2px solid black; /* Set border color to black */
+    margin-top: 2rem;
+
+  }
+ 
+
+  .form-check-label {
+    font-size: 19px; /* Adjust font size as needed */
+    margin-top:39px;
+  }
+
+  .quli select{
+    width:600;
+  }
+      .inputField select {
+    border: solid 2px var(--text-color-2);
+    border-radius: 30px;
+    width: 125px;
+    height: 57px;
+    font-size: 18px;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 0 0 0 25px;
+    display: block;
+    cursor: pointer;
+}
+      .sideline{
+        font-size:18px;
+        font-weight: 100;
+      }
+        /* Custom CSS for the timer */
+  .logo#timer {
+    font-size: 56px; /* Adjust font size as needed */
+    color: rgb(8, 8, 8); /* Change color as needed */
+    font-weight: bold; /* Add font weight if desired */
+    /* Add any other custom styles here */
+  }
+      .row{
+        margin-bottom: 1rem;
+      }
+
+      .mb-1{
+        margin-bottom:1rem;
+      }
+      .mb-0{
+        margin-bottom: auto;
+      }
+      .mb-2{
+        margin-bottom:2rem;
+      }
+      .mb-3{
+        margin-bottom:3rem;
+      }
+      .mt-1{
+        margin-top:1rem;
+      }
+      .mt-0{
+        margin-top: auto;
+      }
+      .mt-2{
+        margin-top:2rem;
+      }
+
+      label{
+        margin-left: 20px;
+      }
+      .btn {
+        background-color: black;
+        color: white;
+        padding: 20px 40px;
+        border: none;
+        border-radius: 25px;
+        margin-right: 20px; /* Adjust space between buttons */
+      }
+
+      .finalBtn {
+        display: none;
+      }
+
+      /* Adjust the size of the buttons */
+      .prevBtn,
+      .nextBtn,
+      .finalBtn {
+        font-size: 18px; /* Adjust font size as needed */
+        background-color: black;
+           color: white;
+        padding: 10px 30px;
+        border: none;
+        border-radius: 25px;
+        margin-right: 20px; /* Adjust space between buttons */
+
+      }
+    
+  .form-control  {
+    height: 60px; /* Adjust height as needed */
+    border: 2px solid black; /* Set border color to black */
+    border-radius: 25px; /* Set border radius for rounded edges */
+    padding: 20px; /* Adjust padding as needed */
+    font-size: 18px; /* Adjust font size as needed */
+    width: 100%; /* Set width to 100% for responsiveness */
+  }
+
