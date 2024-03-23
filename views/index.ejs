@@ -42,7 +42,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 <!-- Logo and Phone Info -->
 <div class="logo">
 <!-- Logo Image -->
-<img src="assets/images/icon.png" alt="Icon" />CAPRO.
+<img src="assets/images/icon.png" alt="Icon" />SOTSM.
 <p class="sideline">Pastors, Employee Record Management</p>
 </div>
 <div>
@@ -466,20 +466,19 @@ Career officer
 </label>
 </div>
 </div>
-
+<!-- id -professional - professional-choice, pastor , pastor-choice-->
 
 <!--  col-md-6   -->
 <div class="col-md-6 mb-2">
 <div class="form-group">
-<label for="dob">Name of Parish/Department <small></small></label>
-<input type="text" class="form-control date-picker" id="dob" placeholder="">
+<label for="dept">Name of Parish/Department <small></small></label>
+<input type="text" class="form-control date-picker" id="dept" placeholder="">
 </div>
 </div>
 <!--  col-md-6   -->
 </div>
 
-<div class="row" id="pastor-choice" style="display: none;">
-
+<div class="row" id="pastor-choice" style="display: true;">
 <div class="row">
 <div class="col-md-2">
 <div class="form-group">
@@ -571,7 +570,7 @@ min characters
 </div>
 </div>
 
-<div class="row" id="pastor-choice" style="display: true;">
+<div class="row" id="professional-choice" style="display: none;">
 
 <div class="row">
 
@@ -593,11 +592,12 @@ min characters
 
 <div class="row">
 <!--- Below forms is for FULLTIME/PART-TIME PASTORS-->
+
 <!--  col-md-6   -->
 <div class="col-md-6">
 <div class="form-group">
-<label for="dob">Name of Unit{Under Department}</label>
-<input type="text" class="form-control date-picker" id="dob" placeholder="">
+<label for="dept">Name of Unit{Under Department}</label>
+<input type="text" class="form-control" id="dept" placeholder="">
 </div>
 </div>
 <!--  col-md-6   -->
@@ -797,12 +797,12 @@ min characters
 <!-- Buttons for navigation between steps -->
 <div class="d-flex align-itmes-center flex-wrap">
   <button
-    class="prevBtn btn btn-primary"
+    class="prevBtn btn btn-lg btn-primary"
     onclick="prevStep()">
     Previous
   </button>
   <button
-    class="nextBtn btn btn-primary"
+    class="nextBtn btn btn-lg btn-primary"
     onclick="nextStep()">
     Next
   </button>
@@ -955,7 +955,32 @@ window.onload = startCountdown;
     });
   });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const pastorRadio = document.getElementById("pastor");
+    const professionalRadio = document.getElementById("professional");
+    const pastorChoiceDiv = document.getElementById("pastor-choice");
+    const professionalChoiceDiv = document.getElementById("professional-choice");
 
+    // Set initial visibility based on default checked radio button
+    if (pastorRadio.checked) {
+      pastorChoiceDiv.style.display = "block";
+      professionalChoiceDiv.style.display = "none";
+    } else {
+      pastorChoiceDiv.style.display = "none";
+      professionalChoiceDiv.style.display = "block";
+    }
+
+    // Add event listeners to the radio buttons
+    pastorRadio.addEventListener("change", () => {
+      pastorChoiceDiv.style.display = "block";
+      professionalChoiceDiv.style.display = "none";
+    });
+
+    professionalRadio.addEventListener("change", () => {
+      pastorChoiceDiv.style.display = "none";
+      professionalChoiceDiv.style.display = "block";
+    });
+  });
 </script>
 </body>
 </html>
