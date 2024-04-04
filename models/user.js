@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const Schema = mongoose.Schema;
 const { conn } = require("../config/db");
+
 const saltRounds = 10;
 
 const userSchema = Schema({
@@ -26,8 +27,20 @@ const userSchema = Schema({
   },
   role: {
     type: String,
-    enum: ["employee", "parishPastor", "admin", "superUser"],
-    default: "user",
+    enum: [
+      "superUser",
+      "administrator",
+      "accountant",
+      "pastor",
+      "zonalPastor",
+      "Diocesan",
+      "HOD",
+      "RegionalPastor",
+      "Bishops",
+      "DMD",
+      "Head Bishop",
+    ],
+    default: "pastor",
   },
   password: {
     type: String,
@@ -71,7 +84,6 @@ const userSchema = Schema({
     },
   ],
 });
-
 
 // Pre-save hook to hash the password before saving
 // Pre-save hook to hash the password before saving

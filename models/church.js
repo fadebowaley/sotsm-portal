@@ -58,4 +58,7 @@ const churchSchema = Schema({
   
 });
 
-module.exports = conn.model("Hotel", hotelSchema);
+
+
+
+module.exports = conn.model("Church", churchSchema);

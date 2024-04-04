@@ -1,0 +1,1591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Ministry Database Engineering</title>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css" />
+<!-- Cropper.js CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" rel="stylesheet">
+<!-- Cropper.js JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+
+<!-- Font Awesome -->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<!-- Custom Styles -->
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="assets/css/form.css" />
+<!-- animation -->
+<link rel="stylesheet" href="assets/css/animation.css" />
+
+<!-- responsive -->
+<link rel="stylesheet" href="assets/css/responsive.css" />
+
+<style>
+     #registerForm {
+        display: none;
+    }
+/* Style for the section label */
+.section-label {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333; /* Text color */
+  margin: 20px 0; /* Adjust the top and bottom margin as needed */
+}
+
+/* Style for the horizontal rule */
+.hr-section {
+  border: none; /* Remove default border */
+  height: 1px; /* Set the height of the line */
+  background-color: #999; /* Color of the line */
+  margin: 10px 0; /* Adjust the top and bottom margin as needed */
+}
+
+/* Style for the text beside the horizontal rule */
+.hr-text {
+  display: inline-block;
+  padding: 0 10px; /* Space between text and hr */
+  color: #999; /* Color of the text */
+}
+
+.prevBtn, .nextBtn, .finalBtn {
+    font-size: 30px;
+    background-color: black;
+    color: white;
+    padding: 10px 45px;
+    border: none;
+    border-radius: 25px;
+    margin-right: 20px;
+}
+</style>
+</head>
+
+<body>
+<!-- MAIN sTART -->
+<main class="animate position-relative">
+<!-- Header Section -->
+<header class="mb-md-5">
+<!-- Logo and Phone Info -->
+<div class="logo">
+<!-- Logo Image -->
+<img src="assets/images/icon.png" alt="Icon" />SOTSM.
+<p class="sideline">Pastors, Employee Record Management</p>
+</div>
+<div>
+<h1 class="logo" id="timer">09:00</h1>
+</div>
+<!-- Phone Information -->
+<a href="#" class="phoneInfo">
+<img src="assets/images/phone.png" alt="Phone" />
+<!-- Phone Details -->
+<article>
+<h4>(234) 80 85 448030</h4>
+<p>Call for Quick Support </p>
+</article>
+</a>
+</header>
+
+<!-- Main Content Container -->
+<div class="container mt-5">
+<div class="row">
+
+<!-- Left Column Login Form -->
+<div class="col-md-4">
+<!-- Heading -->
+<!-- <h2 class="asideHeading">Employee Redcord</h2> -->
+<form  action="/user/login" method="POST"id="loginForm" >
+<!-- Hotel Information -->
+<div class="row inputField">
+<!-- Hotel Image -->
+<!-- <img src="assets/images/aside.jpg" alt="aside" class="sideImg" /> -->
+<!-- Hotel Details -->
+<h5 class="mb-2">Continue where you stopped or edit your record </h5>
+<!-- Contact Information -->
+<div class="col-md-12" style="margin-bottom:10px;">
+
+<div class="form-group mb-1">
+<input type="text" class="form-control" placeholder="Email Address" id="first">
+</div>
+<div class="form-group mt-2">
+<input type="password" class="form-control" placeholder="password" id="first">
+</div>
+<!--  col-md-6   -->
+</div>
+
+<div class="col-md-12">
+<button  style="height:60px;" class="apply">Continue</button>
+<br>
+<p class="mb-2">Don't have code ? click <a href="#" id="switchToRegister">here to register </a></p>
+
+</div>
+
+</div>
+</form>
+<form  action="/user/signup" method="POST" id="registerForm" >
+<!-- Hotel Information -->
+<div class="row inputField">
+<!-- Hotel Image -->
+<!-- <img src="assets/images/aside.jpg" alt="aside" class="sideImg" /> -->
+<!-- Hotel Details -->
+<h5 class="mb-2">Start Filling by Email </h5>
+<!-- Contact Information -->
+<div class="col-md-12" style="margin-bottom:10px;">
+
+<div class="form-group mb-1">
+<input type="text" class="form-control" placeholder="Email Address" id="first">
+</div>
+<!--  col-md-6   -->
+</div>
+
+<div class="col-md-12">
+<button  style="height:60px;" class="apply">Register</button>
+<p>Already have code? click <a href="#" id="switchToLogin">here to Login </a></p>
+</div>
+
+</div>
+</form>
+</div>
+
+
+<!--/ Left Column Login Form -->
+
+
+
+<!-- Right Column -->
+<div class="col-md-8">
+<!-- Review Form -->
+<form id="dataCapture" class="ratingMain">
+
+<div class="row">
+
+<div class="col-md-12 step1 inputField" style="background-color:rgb(227, 233, 255);">
+
+<div class="row">
+<h2 class="mb-3">Personal Data</h2>
+
+<div class="col-md-2">
+<label for="title">Title</label>
+<select class="form-control" name="title" id="title">
+<option value="">Title</option>
+<option value="Mr">Mr</option>
+<option value="Mrs">Mrs</option>
+<option value="Miss">Miss</option>
+<option value="Ms">Ms</option>
+<option value="Dr">Dr</option>
+<option value="Rev">Rev</option>
+<option value="Prof">Prof</option>
+<option value="Pastor">Pastor</option>
+<option value="Senior Pastor">Senior Pastor</option>
+<option value="Pastor">Pastor</option>
+<option value="Sister">Sister</option>
+<option value="Brother">Brother</option>
+<option value="Bishop">Bishop</option>
+<option value="Minister">Minister</option>
+</select>
+
+</div>
+
+<div class="col-md-5">
+<div class="form-group">
+<label for="first">First Name</label>
+<input type="text" class="form-control"  name="firstname" placeholder="firstname" id="firstname">
+</div>
+</div>
+<!--  col-md-6   -->
+
+<div class="col-md-5">
+<div class="form-group">
+<label for="lastname">Last Name</label>
+<input type="text" class="form-control" placeholder="lastname" name="lastname" id="lastname">
+</div>
+</div>
+
+
+<!--  col-md-6   -->
+</div>
+
+
+<div class="row">
+
+<div class="col-md-4">
+<div class="form-group">
+<label for="otherName">Other Name</label>
+<input type="text" class="form-control" placeholder="Other name" id="otherName">
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="form-group">
+<label for="email">Email</label>
+<input type="email" class="form-control" placeholder="email" id="email">
+</div>
+</div>
+<!--  col-md-6   -->
+
+<div class="col-md-4">
+<div class="form-group">
+<label for="phone">Phone Number {WhatsApp}</label>
+<input type="tel" class="form-control" id="phone" placeholder="phone">
+</div>
+</div>
+
+<!--  col-md-6   -->
+</div>
+<!--  row   -->
+
+
+<div class="row">
+<h5 class="mt-3">Gender</h5>
+<div class="col-md-3">
+<div class="form-check">
+<input class="form-check-input" type="radio" name="gender" id="male">
+<label class="form-check-label" for="male">
+Male 
+</label>
+</div>
+</div>
+<div class="col-md-3">
+<div class="form-check">
+<input class="form-check-input" type="radio" name="gender" id="female" checked>
+<label class="form-check-label" for="female">
+Female
+</label>
+</div>
+</div>
+
+<!--  col-md-6   -->
+<div class="col-md-6 mb-2">
+<div class="form-group">
+<label for="dob">Date of  Birth</label>
+<input type="date" class="form-control date-picker" name="dateOfBirth" id="dateOfBirth" placeholder="">
+</div>
+</div>
+<!--  col-md-6   -->
+</div>
+
+
+<div class="row">
+
+<div class="col-md-3">
+<div class="form-group">
+<label for="highest">Highest Qualification</label>
+<select class="form-control" name="highestQualification" id="highestQualification"  style="width: 190px;">
+<option value="">Select here</option>
+<option value="Phd">Phd</option>
+<option value="Msc">Msc</option>
+<option value="PGD">PGD</option>
+<option value="Bsc">Bsc</option>
+<option value="HND">HND</option>
+<option value="OND">OND</option>
+<option value="ThD">ThD</option>
+<option value="Dmiss">Dmiss</option>
+<option value="Diploma">Diploma</option>
+<option value="Advance Diploma">Advance Diploma</option>
+<option value="Certificate">Certificate</option>
+<option value="Professional Cert">Professional Cert</option>
+<option value="School Cert">School Cert</option>
+<option value="Primary School">Primary School</option>
+</select>
+
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="form-group">
+<label for="highest">Professional Qualification</label>
+<select class="form-control" name="professionalQualification" id="professionalQualification"  style="width: 390px;">
+  <option value="">Select Professional Qualification</option>
+  <option value="NA">Not Applicable</option>
+  <option value="ACA">ACA (Associate Chartered Accountant) - ICAN</option>
+  <option value="ACPA">ACPA (Associate Chartered Public Accountant) - ICPAN</option>
+  <option value="ACIB">ACIB (Associate Chartered Institute of Bankers) - CIBN</option>
+  <option value="ACIPM">ACIPM (Associate Chartered Institute of Personnel Management) - CIPM</option>
+  <option value="ANIM">ANIM (Associate Nigerian Institute of Management) - NIM</option>
+  <option value="ACTI">ACTI (Associate Chartered Taxation of Nigeria) - CITN</option>
+  <option value="ANIVS">ANIVS (Associate Nigerian Institution of Estate Surveyors and Valuers) - NIESV</option>
+  <option value="R.Eng.">Registered Engineer (R.Eng.) - COREN</option>
+  <option value="BL">BL (Barrister-at-Law) - NBA</option>
+  <option value="ANIMN">ANIMN (Associate Nigerian Institute of Marketing) - NIMN</option>
+  <option value="ANIPR">ANIPR (Associate Nigerian Institute of Public Relations) - NIPR</option>
+  <option value="AIOB">AIOB (Associate Nigerian Institute of Building) - NIOB</option>
+  <option value="AIA">AIA (Associate Nigeria Institute of Architects) - NIA</option>
+  <option value="AIQS">AIQS (Associate Nigerian Institute of Quantity Surveyors) - NIQS</option>
+  <option value="ANITP">ANITP (Associate Nigerian Institute of Town Planners) - NITP</option>
+  <option value="ANCI">ANCI (Associate Nigeria Computer Society) - NCS</option>
+  <option value="ACIM">ACIM (Associate Chartered Institute of Management) - CIM</option>
+  <option value="ANIPS">ANIPS (Associate Nigeria Institute of Purchasing and Supply) - NIPS</option>
+  <option value="AMNIM">AMNIM (Associate Member, Nigeria Institute of Management) - NIM</option>
+  <option value="FNAE">FNAE (Fellow Nigerian Association of Engineers) - NSE</option>
+  <option value="FIIS">FIIS (Fellow, Institute of Industrial Security) - IIS</option>
+  <option value="FNIM">FNIM (Fellow Nigerian Institute of Management) - NIM</option>
+  <option value="FCA">FCA (Fellow Chartered Accountant) - ICAN</option>
+  <option value="FCTI">FCTI (Fellow Chartered Taxation of Nigeria) - CITN</option>
+  <option value="FCAI">FCAI (Fellow Chartered Institute of Administration) - CIA</option>
+  <option value="FNIQS">FNIQS (Fellow Nigerian Institute of Quantity Surveyors) - NIQS</option>
+  <option value="FNIQS">FNIVS (Fellow Nigerian Institution of Estate Surveyors and Valuers) - NIESV</option>
+  <option value="FCILT">FCILT (Fellow Chartered Institute of Logistics and Transport) - CILT</option>
+  <option value="SE">Software Engineer(BE or FE)</option>
+  <option value="DE">Data Engineer</option>
+  <option value="DA">Data Analyst</option>
+  <option value="OTP">Other IT Professions</option>
+  <option value="OPQ">Other Professional Qualifications</option>
+
+</select>
+
+
+</div>
+</div>
+
+<!--  col-md-6   -->
+<div class="col-md-3">
+<div class="form-group">
+<label for="highest">Marital Status</label>
+<select class="form-control" name="maritalStatus" id="maritalStatus" required="" style="width: 180px;">
+<option value="">Marital Status</option>
+<option value="Married">Married</option>
+<option value="Single">Single</option>
+<option value="Widowed">Widowed</option>
+<option value="Separated">Separated</option>
+</select> 
+</div>
+</div>
+
+<!--  col-md-6   -->
+</div>
+
+<div class="row">
+<H5><br></H5>
+<div class="col-md-4">
+<div class="form-group">
+<label for="stateSelect4">State of Origin</label>
+<select id="stateSelect4" onchange="populateLGAs('lgaSelect4')" name="StateOfOrigin"  style="width: 250px;">
+<option value="">Select State</option>
+</select>
+
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="form-group">
+  <label for="stateSelect4">LGA of Origin</label>
+  <select  class="form-control" name="localGovtOrigin" required="" id="lgaSelect4" style="width: 250px;">
+  <option value="">Select LGA of Origin</option>
+</select>  
+
+
+</div>
+</div>
+
+<!--  col-md-6   -->
+<div class="col-md-4">
+<div class="form-group">
+<label for="highest">Home Town</label>
+<input type="text" class="form-control" placeholder="Home Town" id="homeTown" style="width: 250px;">
+</div>
+</div>
+
+<!--  col-md-6   -->
+</div>
+
+
+<!--spouse details-->
+<div class="row">
+
+  <hr class="hr-section">
+  <div class="section-label">Spouse Details</div>
+
+<div class="col-md-4">
+<div class="form-group">
+<label for="highest">Spouse Name</label>
+<input type="text" class="form-control" placeholder="Spouse Name" name="spouseName" id="spouseName" style="width: 250px;">
+
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="form-group">
+  <label for="stateSelect4">Spouse Phone Number</label>
+<input type="tel" class="form-control" placeholder="Spouse Phone Number" name="spousePhoneNumber" id="spousePhoneNumber" style="width: 250px;">
+
+
+</div>
+</div>
+
+<!--  col-md-6   -->
+<div class="col-md-4">
+<div class="form-group">
+<label for="highest"> Spouse Date of Birth</label>
+<input type="date" class="form-control" placeholder="Spouse Date " name="spouseDateOfBirth" id="spouseDateOfBirth" style="width: 250px;">
+</div>
+</div>
+
+<!--  col-md-6   -->
+</div>
+<!--/ spouse details-->
+
+<!--spouse details-->
+<div class="row">
+
+<hr class="hr-section">
+<div class="section-label">Next Of Kin</div>
+
+<div class="col-md-4">
+<div class="form-group">
+<label for="highest">Next Of Kin Name</label>
+<input type="text" class="form-control" placeholder="Next of Kin"  name="nextOfKinName" id="nextOfKinName" style="width: 250px;">
+
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="form-group">
+  <label for="stateSelect4"> Next Of Kin Phone Number</label>
+<input type="tel" class="form-control" placeholder="Next Of Kin Phone Number" phone="nextOfKinPhoneNumber" id="nextOfKinPhoneNumber" style="width: 250px;">
+
+
+</div>
+</div>
+
+<!--  col-md-6   -->
+<div class="col-md-4">
+<div class="form-group">
+<label for="highest">Relationship</label>
+<select class="form-control" name="nextOfKinRelationship" id="nextOfKinRelationship" required="" style="width: 250px;">
+  <option value="">Select Relationship Status</option>
+  <option value="Spouse">Spouse</option>
+  <option value="Father">Father</option>
+  <option value="Mother">Mother</option>
+  <option value="Sibling">Sibling</option>
+  <option value="Child">Child</option>
+  <option value="Other">Other</option>
+</select></div>
+</div>
+
+<!--  col-md-6   -->
+</div>
+
+<!--/ spouse details-->
+
+
+
+
+
+
+
+ <hr class="hr-section">
+  <div class="section-label">Residential Address</div>
+<div class="col-md-12">
+<div class="form-group">
+<label>Residential Address </label>
+<textarea id="residentialAddress" name="residentialAddress" placeholder="Please type your full address"></textarea>
+</div>
+<span class="maxChar">
+<span class="count">0</span>/<span class="tillcount">200</span>
+min characters
+</span>
+</div>
+
+<div class="row">
+<!--  col-md-6   -->
+<div class="col-md-6">
+<div class="form-group">
+<label for="stateSelect1">State<small>State of Residence</small></label>
+<select id="stateSelect1" onchange="populateLGAs('lgaSelect1')" name="residentialState"  style="width:360px;">
+<option value="">Select State</option>
+</select>
+</div>
+</div>
+<!--  col-md-6   -->
+
+<div class="col-md-6">
+<div class="form-group">
+<!-- <label for="lgaSelect">Local Government</label> -->
+<option value="">Select LGA of Residence</option>
+<select  class="form-control" name="residentialLGA" required="" id="lgaSelect1" style="width:360px;">
+</select>
+</div>
+</div>
+
+</div>
+<div class="row">
+
+<div class="col-md-6">
+<div class="form-group">
+<label for="designation">Employment Category</label>
+<select class="form-control" name="emp-category" required="" id="emp-category" style="width: 360px;">
+<option value="">Select Category</option>
+<option value="Full-Time Pastor">Full-Time Pastor</option>
+<option value="Part-Time Pastor">Part-Time Pastor</option>
+<option value="Field Missionaries">Field Missionaries</option>
+<option value="Professional Staff">Professional Staff</option>
+<option value="Department Staff">Department Staff</option>
+<option value="Contract Staff">Contract Staff</option>
+</select>
+</div>
+</div>
+<!--  col-md-6   -->
+<div class="col-md-6">
+<div class="form-group">
+<label for="occupation">Occupation</label>
+<select class="form-control" name="occupation" required="" id="occupation" style="width:360px;">
+<option value="">Select Occupation</option>
+<option value="Accountant">Accountant</option>
+<option value="Actor">Actor</option>
+<option value="Administrator">Administrator</option>
+<option value="Agricultural Extension Officer">Agricultural Extension Officer</option>
+<option value="Air Traffic Controller">Air Traffic Controller</option>
+<option value="Architect">Architect</option>
+<option value="Artist">Artist</option>
+<option value="Author">Author</option>
+<option value="Baker">Baker</option>
+<option value="Banker">Banker</option>
+<option value="Barber">Barber</option>
+<option value="Chef">Chef</option>
+<option value="Civil Engineer">Civil Engineer</option>
+<option value="Clergy">Clergy</option>
+<option value="Community Health Worker">Community Health Worker</option>
+<option value="Computer Programmer">Computer Programmer</option>
+<option value="Custom Officer">Custom Officer</option>
+<option value="Dentist">Dentist</option>
+<option value="Doctor">Doctor</option>
+<option value="Economist">Economist</option>
+<option value="Electrician">Electrician</option>
+<option value="Engineer">Engineer</option>
+<option value="Farmer">Farmer</option>
+<option value="Financial Analyst">Financial Analyst</option>
+<option value="Firefighter">Firefighter</option>
+<option value="Geologist">Geologist</option>
+<option value="Graphic Designer">Graphic Designer</option>
+<option value="Hairdresser">Hairdresser</option>
+<option value="Historian">Historian</option>
+<option value="Journalist">Journalist</option>
+<option value="Lecturer">Lecturer</option>
+<option value="Legal Adviser">Legal Adviser</option>
+<option value="Librarian">Librarian</option>
+<option value="Marine Engineer">Marine Engineer</option>
+<option value="Market Trader">Market Trader</option>
+<option value="Mechanic">Mechanic</option>
+<option value="Missionary">Missionary</option>
+<option value="Musician">Musician</option>
+<option value="Nurse">Nurse</option>
+<option value="Oil and Gas Engineer">Oil and Gas Engineer</option>
+<option value="Painter">Painter</option>
+<option value="Pharmacist">Pharmacist</option>
+<option value="Pharmacist Assistant">Pharmacist Assistant</option>
+<option value="Photographer">Photographer</option>
+<option value="Pilot">Pilot</option>
+<option value="Plumber">Plumber</option>
+<option value="Police Officer">Police Officer</option>
+<option value="Professor">Professor</option>
+<option value="Programmer">Programmer</option>
+<option value="Psychiatrist">Psychiatrist</option>
+<option value="Psychologist">Psychologist</option>
+<option value="Radio Presenter">Radio Presenter</option>
+<option value="Real Estate Agent">Real Estate Agent</option>
+<option value="Scientist">Scientist</option>
+<option value="Singer">Singer</option>
+<option value="Social Worker">Social Worker</option>
+<option value="Software Developer">Software Developer</option>
+<option value="Surgeon">Surgeon</option>
+<option value="Tax Consultant">Tax Consultant</option>
+<option value="Teacher">Teacher</option>
+<option value="Translator">Translator</option>
+<option value="University Registrar">University Registrar</option>
+<option value="Veterinarian">Veterinarian</option>
+<option value="Waiter/Waitress">Waiter/Waitress</option>
+<option value="Web Developer">Web Developer</option>
+<option value="Wildlife Conservationist">Wildlife Conservationist</option>
+
+</select>
+
+</div>
+</div>
+<!--  col-md-6   -->
+
+</div>
+
+</div>
+<!--  row   -->
+
+
+<div class="col-md-12 step2 inputField " style="display:none; background-color:rgb(237, 249, 227);">
+
+<div class="row">
+<h2 class="mb-3">Spiritual Data</h2>
+
+
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="boa">Year: Born Again</label>
+<select class="worker-select form-control" id="yearBornAgain"  name="yearBornAgain" required="" style="width: 180px;">
+  <!-- Placeholder option -->
+  <option value="">Not Yet</option>
+</select>
+</div>
+</div>
+<!--  col-md-6   -->
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="bow">Year: Water Baptised</label>
+<select class="worker-select form-control" id="waterBaptized"  name="waterBaptized" required="" style="width: 180px;">
+  <!-- Placeholder option -->
+  <option value="">Not Yet</option>
+</select></div>
+</div>
+
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="hgb">Holyghost Baptism</label>
+<select class="worker-select form-control" id="holyghostBaptism"  name="holyghostBaptism" required="" style="width: 180px;">
+  <!-- Placeholder option -->
+  <option value="">Not Yet</option>
+</select></div>
+</div>
+
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="hgb">Year: Joined SOTSM</label>
+<select class="worker-select form-control" id="joinedSotsm"  name="joinedSotsm" required="" style="width: 180px;">
+  <!-- Placeholder option -->
+  <option value="">Not Yet</option>
+</select>
+</div>
+</div>
+<!--  col-md-6   -->
+
+
+</div>
+
+
+<div class="row">
+
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="boa">Year: Became Worker</label>
+<select class="worker-select form-control" id="becameWorker"  name="becameWorker" required="" style="width: 180px;">
+  <!-- Placeholder option -->
+  <option value="">Not Yet</option>
+</select>
+</div>
+</div>
+<!--  col-md-6   -->
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="bow">Year: Became Minister</label>
+<select class="worker-select form-control" id="becameMinister"  name="becameMinister" required="" style="width: 180px;">
+  <!-- Placeholder option -->
+  <option value="">Not Yet</option>
+</select></div>
+</div>
+
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="hgb">Year: Deacon/Dns</label>
+<select class="worker-select form-control" id="ordainedDcns"  name="ordainedDcns" required="" style="width: 180px;">
+  <!-- Placeholder option -->
+  <option value="">Not Yet</option>
+</select></div>
+</div>
+
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="hgb">Year: Ordained Pastor</label>
+<select class="worker-select form-control" id="becamePastor"  name="becamePastor" required="" style="width: 180px;">
+  <!-- Placeholder option -->
+  <option value="">Not Yet</option>
+</select>
+</div>
+</div>
+<!--  col-md-6   -->
+
+
+</div>
+
+
+<div class="row">
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="boa">Year: Senior Pastor</label>
+<select class="worker-select form-control" id="becameSnrPastor"  name="becameSnrPastor" required="" style="width: 180px;">
+  <!-- Placeholder option -->
+  <option value="">Not Yet</option>
+</select>
+</div>
+</div>
+<!--  col-md-6   -->
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="bow">Year: Ordained Elder</label>
+<select class="worker-select form-control" id="ordainedElder"  name="ordainedElder" required="" style="width: 180px;">
+  <!-- Placeholder option -->
+  <option value="">Not Yet</option>
+</select></div>
+</div>
+
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="hgb">Year: Bishop</label>
+<select class="worker-select form-control" id="ordainedBishop"  name="ordainedBishop" required="" style="width: 180px;">
+  <!-- Placeholder option -->
+  <option value="">Not Yet</option>
+</select></div>
+</div>
+
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="hgb">Last Ordination Date</label>
+<input type="date" class="form-control"  name="lastOrdinationDate" placeholder="LastordinationDate" id="lastOrdinationDate">
+
+</div>
+</div>
+<!--  col-md-6   -->
+
+
+</div>
+
+
+<div class="row">
+
+<hr class="hr-section">
+<div class="section-label">Ministry Schools</div>
+
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="ibcoms">Year: IBCOMS</label>
+<select class="worker-select form-control" id="IBSCOMS"  name="IBSCOMS" required="" style="width: 180px;">
+  <!-- Placeholder option -->
+  <option value="">Not Yet</option>
+</select>
+</div>
+</div>
+
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="woocome">Year: WOOCOME</label>
+<select class="worker-select form-control" id="WOOCOME"  name="WOOCOME" required="" style="width: 180px;">
+  <!-- Placeholder option -->
+  <option value="">Not Yet</option>
+</select>
+</div>
+</div>
+<!--  col-md-6   -->
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="join-sotsm">Year: ILS</label>
+<select class="worker-select form-control" id="ILS"  name="ILS" required="" style="width: 180px;">
+  <!-- Placeholder option -->
+  <option value="">Not Yet</option>
+</select></div>
+</div>
+<!--  col-md-6   -->
+
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="join-sotsm">Year: NGBTI</label>
+<select class="worker-select form-control" id="NGBTI"  name="NGBTI" required="" style="width: 180px;">
+  <!-- Placeholder option -->
+  <option value="">Not Yet</option>
+</select></div>
+</div>
+
+</div>
+<!--  row   -->
+
+<div class="row" style="background-color:rgb(227, 247, 209); border-radius:15px; margin-right:5px;">
+
+<div class="row">
+<h2 class="mt-3">Career/Ministry</h2>
+<div class="col-md-3">
+<div class="form-check">
+<input class="form-check-input" type="radio" name="career" id="pastor" checked>
+<label class="form-check-label" for="pastor">
+Full/PT Pastor
+</label>
+</div>
+</div>
+<div class="col-md-3">
+<div class="form-check">
+<input class="form-check-input" type="radio" name="career" id="professional" >
+<label class="form-check-label" for="professional">
+Career officer
+</label>
+</div>
+</div>
+<!-- id -professional - professional-choice, pastor , pastor-choice-->
+
+<!--  col-md-6   -->
+<div class="col-md-6 mb-2">
+<div class="form-group">
+<label for="dept">Name of Parish/Place Of Assignment <small></small></label>
+<input type="text" class="form-control date-picker"  name="placeOfAssignment" id="placeOfAssignment" placeholder="">
+</div>
+</div>
+<!--  col-md-6   -->
+</div>
+
+<div class="row" id="pastor-choice" style="display: true;">
+
+<div class="row">
+
+<div class="col-md-2 mb-2">
+<div class="form-group">
+<label for="pc">Status</label>
+<select name="statusOfEmployment" id="statusOfEmployment" class="form-control" style="width:120px;">
+  <option value="part-time">Part time</option>
+  <option value="full-time"> Full-time</option>
+</select>
+</div>
+</div>
+
+<div class="col-md-5">
+<div class="form-group">
+<label for="dob">Name of Zone</label>
+<input type="text" class="form-control date-picker" name="nameOfzone" id="nameOfzone" placeholder="">
+</div>
+</div>
+
+<!--  col-md-6   -->
+<div class="col-md-5">
+<div class="form-group">
+<label for="dob">Name of Diocese/Region</label>
+<input type="text" class="form-control date-picker" name="nameOfDiocese" id="nameOfDiocese" placeholder="" style="width: 300px;">
+</div>
+</div>
+
+
+<!--  col-md-6   -->
+</div>
+
+<div class="row">
+<!--- Below forms is for FULLTIME/PART-TIME PASTORS-->
+
+<!--  col-md-6   -->
+<div class="col-md-4">
+<div class="form-group">
+<label for="dob">Name of Division</label>
+<input type="text" class="form-control date-picker" name="nameOfDivision" id="nameOfDivision" placeholder="">
+</div>
+</div>
+<div class="col-md-4">
+<div class="form-group">
+<label for="dob">State</label>
+<select id="stateSelect2" onchange="populateLGAs('lgaSelect2')" name="stateOfAssignment"  style="width:230px;">
+<option value="">Select Church State </option>
+</select>
+</div>
+</div>
+<div class="col-md-4">
+<div class="form-group">
+<label for="dob">Name  of LGA</label>
+<select  class="form-control" name="lgaOfAssignment" required="" id="lgaSelect2"  style="width:230px;">
+  <option value="">Select Church LGA </option>
+</select>  </div>
+</div>
+
+
+
+<!--  col-md-6   -->
+</div>
+<div class="row">
+<div class="col-md-12">
+<div class="form-group">
+<label>Church Address/Location </label>
+<textarea id="placeOfAssignment" name="placeOfAssignment" placeholder="Please type Church address"></textarea>
+</div>
+<span class="maxChar">
+<span class="count">0</span>/<span class="tillcount">200</span>
+min characters
+</span>
+</div>
+
+<div class="col-md-6">
+<div class="form-group">
+<label for="churchCountry">Church Country</label>
+<select id="countryChurch"  name="countryChurch"  style="width:200px;">
+<option value="">Select Country</option>
+</select>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="row" id="professional-choice" style="display: none;">
+
+<div class="row">
+
+<div class="col-md-6">
+<div class="form-group">
+<label for="dob">Job Title</label>
+<input type="text" class="form-control date-picker" name="jobTitle" id="jobTitle" placeholder="">
+</div>
+</div>
+<!--  col-md-6   -->
+<div class="col-md-6">
+<div class="form-group">
+<label for="dob">Year Employed </label>
+<input type="date" class="form-control date-picker" id="yrEmployed" name="yrEmployed" placeholder="">
+</div>
+</div>
+<!--  col-md-6   -->
+</div>
+
+<div class="row">
+<!--- Below forms is for FULLTIME/PART-TIME PASTORS-->
+
+<!--  col-md-6   -->
+<div class="col-md-6">
+<div class="form-group">
+<label for="dept">Name of Unit{Under Department}</label>
+<input type="text" class="form-control" name="unitInDepartment" id="unitInDepartment" placeholder="">
+</div>
+</div>
+<!--  col-md-6   -->
+
+<!--  col-md-6   -->
+<div class="col-md-4">
+<div class="form-group">
+<label for="grade">Grade Level</label>
+<select class="form-control" name="gradeLevel" id="gradeLevel"  style="width: 200px;">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>
+  <option value="19">19</option>
+  <option value="20">20</option>
+</select>
+</div>
+</div>
+<div class="col-md-2">
+<div class="form-group">
+<label for="step">Step</label>
+<select class="form-control" name="stepLevel" id="stepLevel"  style="width: 120px;">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>
+  <option value="19">19</option>
+  <option value="20">20</option>
+</select>
+</div>
+</div>
+<!--  col-md-6   -->
+</div>
+
+<div class="col-md-12">
+<div class="form-group">
+<label>Department Address/Location </label>
+<textarea id="deptAdress" name="deptAdress" placeholder="Please type Church address"></textarea>
+</div>
+<span class="maxChar">
+<span class="count">0</span>/<span class="tillcount">200</span>
+min characters
+</span>
+</div>
+
+<div class="row">
+<!--  col-md-6   -->
+<div class="col-md-4">
+<div class="form-group">
+<select id="stateSelect3" onchange="populateLGAs('lgaSelect3')" name="deptState"  style="width:200px;">
+<option value="">Select  State </option>
+</select>
+</div>
+</div>
+<!--  col-md-6   -->
+
+<div class="col-md-4">
+<div class="form-group">
+<select  class="form-control" name="deptLGA" required="" id="lgaSelect3" style="width:200px;">
+  <option value="">Select  LGA </option>
+</select>  
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="form-group">
+<select id="countryOrg"  name="countryOrg"  style="width:200px;">
+<option value="">Select Country</option>
+
+</select>
+</div>
+</div>
+
+</div>
+
+
+<!--declaration as a career officer If I also pastor a Parish -->
+<div class="row">
+
+  <hr class="hr-section">
+  <div class="section-label">Career Officer with Pastoral Responsiility</div>
+
+<!--  col-md-6   -->
+<div class="col-md-6">
+<div class="form-group">
+  <label>I am pastor in a parish </label>
+<select id="ispastor_parish" name="ispastor_parish" style="width:330px;">
+<option value="" selected>Select </option>
+<option value="Yes">Yes</option>
+<option value="No">No </option>
+</select>
+</div>
+</div>
+<!--  col-md-6   -->
+
+<div class="col-md-6">
+<div class="form-group">
+  <label></label>
+
+<select  class="form-control" name="careerPastorOffice" required="" id="careerPastorOffice" style="width:330px;">
+  <option value="">Current Leadership Role </option>
+  <option value="Parish Pastor">Parish Pastor</option>
+  <option value="Zonal Pastor (ZP)">Zonal Pastor (ZP)</option>
+  <option value="Regional Pastor (RP)">Regional Pastor (RP)</option>
+  <option value="Diocesan Mission Director (DMD)">Diocesan Mission Director (DMD)</option>
+  <option value="Head of Division (HOD)">Head of Division (HOD)</option>
+  <option value="Bishop">Bishop</option>
+  <option value="Presiding Bishop">Presiding Bishop</option>
+</select>  
+</div>
+</div>
+
+  <hr class="hr-section">
+
+<div id="confirmation"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-12 step3 inputField" style="display: none">
+<h3 class="mb-3"> Church/Parish Information</h3>
+
+<div class="row" >
+<label class="mb-3" style="font-size:24px;">Property Details</label>
+
+<div class="col-md-4">
+<div class="form-group">
+<label for="dateEstablished">Date of  Establishment</label>
+<input type="date" class="form-control date-picker" id="dateEstablished" placeholder="">
+</div>
+</div>
+<div class="col-md-4">
+<div class="form-group">
+<label for="designation">Church Property Status</label>
+<select class="form-control" name="churchProperty" required="" id="churchProperty" style="width: 240px;">
+<option value="">Church property Status</option>
+<option value="Owned Property">Owned Property</option>
+<option value="Leased Property">Leased Property</option>
+<option value="Free Lease">Free Lease</option>
+<option value="Freehold">Freehold</option>
+<option value="Rented Property">Rented Property</option>
+</select>
+</div>
+</div>
+
+
+<div class="col-md-4">
+<div class="form-group">
+<label for="dateEstablished">Estimated value </label>
+<input type="text" class="form-control date-picker" id="propertyEstimatedValue" placeholder=" ₦ FreeHold/Lease/Rent">
+</div>
+</div>
+
+
+</div>
+
+<section id="leasingInfo">
+<div class="row">
+<div class="col-md-4 leasingInfo">
+<div class="form-group">
+<label for="designation">Church Building</label>
+<select class="form-control" name="clcBuilding" required="" id="clcBuilding" style="width: 240px;">
+<option value="">Church property Status</option>
+<option value="clc-Building">CLC Building </option>
+<option value="third-partyBuilding">Third-Party Building</option>
+</select>
+</div>
+</div>
+
+<div class="col-md-4 leasingInfo">
+<div class="form-group">
+<label for="dateEstablished">Payment Frequency</label>
+<select class="form-control" name="leaseType" id="leaseType" style="width: 240px;">
+  <option value="">Lease/Rent Agreement</option>
+  <option value="monthly_rent">Monthly Rent</option>
+  <option value="yearly_rent">Yearly Rent</option>
+  <option value="other_monthly">Other Monthly</option>
+</select>
+</div>
+</div>
+
+<div class="col-md-4 leasingInfo">
+<div class="form-group">
+<label for="designation">Church Property Status</label>
+<select class="form-control" name="churchProperty" required="" id="churchProperty" style="width: 240px;">
+<option value="">Church property Status</option>
+<option value="Field Missionaries">Owned Property</option>
+<option value="Leased Property">Leased Property</option>
+<option value="Free Lease">Free Lease</option>
+<option value="Freehold">Freehold</option>
+<option value="Rented Property">Rented Property</option>
+</select>
+</div>
+</div>
+</div>
+
+</section>
+
+
+<div class="row " >
+<label class="mb-3" style="font-size:24px;">Average Monthly Statistics [Last Month]</label>
+<div class="col-md-3">
+<div class="form-group">
+<label for="adult">Adult</label>
+<input type="number" class="form-control avg" id="avgadult" name="avgadult" placeholder="">
+</div>
+</div>
+<div class="col-md-3">
+<div class="form-group">
+<label for="youth">Youth</label>
+<input type="number" class="form-control avg" id="avgyouth" name="avgyouth" placeholder="">
+</div>
+</div>
+<div class="col-md-3">
+<div class="form-group">
+<label for="children">Children</label>
+<input type="number" class="form-control avg" id="avgchildren" name="avgchildren" placeholder="">
+</div>
+</div>
+<div class="col-md-3">
+<div class="form-group">
+<label for="total">Total</label>
+<input type="number" class="form-control avg"  name="totalAttedance" id="total" placeholder="" readonly>
+</div>
+</div>
+
+</div>
+<div class="row " >
+<label class="mb-3" style="font-size:24px;">Workforce data</label>
+<div class="col-md-4">
+<div class="form-group">
+<label for="adult">Total No: Workers</label>
+<input type="number" class="form-control avg" name="totalWorkers" id="totalWorkers" placeholder="">
+</div>
+</div>
+<div class="col-md-4">
+<div class="form-group">
+<label for="youth">Workers in Training</label>
+<input type="number" class="form-control avg" name="workersInTraining" id="workersInTraining" placeholder="">
+</div>
+</div>
+<div class="col-md-4">
+<div class="form-group">
+<label for="children">Total Un-Ordained Leaders</label>
+<input type="number" class="form-control avg" name="unordainedLeaders" id="unordainedLeaders" placeholder="">
+</div>
+</div>
+
+
+</div>
+
+<div class="row " >
+
+  <div class="col-md-2">
+<div class="form-group">
+<label for="children">Ministers</label>
+<input type="number" class="form-control avg" name="noofMinisters" id="noofMinisters" placeholder="">
+</div>
+</div>
+<div class="col-md-2">
+<div class="form-group">
+<label for="adult">Dcn/Dncs</label>
+<input type="number" class="form-control" id="noofdcns" name="noofdcns"  placeholder="">
+</div>
+</div>
+<div class="col-md-2">
+<div class="form-group">
+<label for="youth">Pastor</label>
+<input type="number" class="form-control avg" name="noofpastor" id="noofpastor" placeholder="">
+</div>
+</div>
+<div class="col-md-2">
+<div class="form-group">
+<label for="children">Snr Pastors</label>
+<input type="number" class="form-control avg" name="noofsnrpastor" id="noofsnrpastor" placeholder="">
+</div>
+</div>
+<div class="col-md-2">
+<div class="form-group">
+<label for="children">Elder</label>
+<input type="number" class="form-control avg" name="noofelder" id="noofelder" placeholder="">
+</div>
+</div>
+<div class="col-md-2">
+<div class="form-group">
+<label for="children">Bishops</label>
+<input type="number" class="form-control avg" name="noofbishops" id="noofbishops" placeholder="">
+</div>
+</div>
+
+
+  <hr class="hr-section">
+<div class="col-md-12" id="finalConfirmation" >
+
+
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+<!--buttom-->
+<div class="col-md-12">
+<!-- Buttons for navigation between steps -->
+<div class="d-flex align-itmes-center flex-wrap">
+  <button
+    class="prevBtn btn btn-lg btn-primary"
+    onclick="prevStep()">
+    Previous
+  </button>
+  <button
+    class="nextBtn btn btn-lg btn-primary"
+    onclick="nextStep()">
+    Next
+  </button>
+  <button
+    type="submit"
+    id="submitBtn"
+    class="finalBtn btn"
+    style="display: none">
+    Submit
+  </button>
+</div>
+</div>
+</div>
+
+
+</form>
+</div>
+</div>
+</div>
+</main>
+
+<div id="error"></div>
+<!-- Bootstrap JS -->
+<script src="assets/js/bootstrap/bootstrap.min.js"></script>
+
+<!-- jQuery -->
+<script src="assets/js/jQuery/jquery-3.7.0.min.js"></script>
+
+<!-- Custom JS -->
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/lga.js"></script>
+<script src="assets/js/year.js"></script>
+<script src="assets/js/country.js"></script>
+<script src="assets/js/app.js"></script>
+
+
+<script>
+// JavaScript for managing multi-step form
+let currentStep = 1;
+
+function nextStep() {
+if (currentStep < 3) {
+document.querySelector(".step" + currentStep).style.display = "none";
+currentStep++;
+document.querySelector(".step" + currentStep).style.display = "block";
+if (currentStep === 3) {
+document.querySelector(".nextBtn").style.display = "none";
+document.querySelector(".finalBtn").style.display = "inline-block";
+}
+}
+}
+
+
+function prevStep() {
+if (currentStep > 1) {
+document.querySelector(".step" + currentStep).style.display = "none";
+currentStep--;
+document.querySelector(".step" + currentStep).style.display = "block";
+document.querySelector(".nextBtn").style.display = "inline-block";
+document.querySelector(".finalBtn").style.display = "none";
+}
+}
+
+
+
+const form = document.getElementById("dataCapture");
+
+// Get the submit button
+const submitBtn = document.getElementById("submitBtn");
+
+// Function to handle form submission
+function submitForm() {
+// Perform any validation if needed
+// For simplicity, let's assume the form is valid
+// Then submit the form
+alert("form has been submitted . . . ");
+form.submit();
+}
+
+// Add event listener to the submit button
+submitBtn.addEventListener("click", submitForm);
+
+
+//<!--Start of Tawk.to Script-->
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/65fd77271ec1082f04da2365/1hpj1isne';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+//<!--End of Tawk.to Script-->
+
+
+const countdownTime = 300; // 5 minutes * 60 seconds
+
+// Get the timer element
+const timerElement = document.getElementById('timer');
+
+// Function to update the timer display
+function updateTimerDisplay(time) {
+// Calculate minutes and seconds
+const minutes = Math.floor(time / 60);
+const seconds = time % 60;
+
+// Format minutes and seconds with leading zeros if needed
+const formattedMinutes = String(minutes).padStart(2, '0');
+const formattedSeconds = String(seconds).padStart(2, '0');
+
+// Update the timer display
+timerElement.textContent = `${formattedMinutes}:${formattedSeconds}`;
+}
+
+// Function to start the countdown timer
+function startCountdown() {
+let remainingTime = countdownTime;
+
+// Update the timer display initially
+updateTimerDisplay(remainingTime);
+
+// Update the timer display every second
+const countdownInterval = setInterval(() => {
+remainingTime--;
+
+// Update the timer display
+updateTimerDisplay(remainingTime);
+
+// Check if the countdown has reached zero
+if (remainingTime <= 0) {
+clearInterval(countdownInterval); // Stop the countdown
+timerElement.textContent = 'Time\'s up!'; // Display a message when the countdown ends
+}
+}, 1000); // Update every second (1000 milliseconds)
+}
+
+// Start the countdown timer when the page loads
+window.onload = startCountdown;
+
+//create a uniqueCode after form Submission
+  const updateTotal = () => {
+    const adultValue = parseFloat(document.getElementById("adult").value) || 0;
+    const youthValue = parseFloat(document.getElementById("youth").value) || 0;
+    const childrenValue = parseFloat(document.getElementById("children").value) || 0;
+
+    const total = adultValue + youthValue + childrenValue;
+
+    document.getElementById("total").value = total;
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const inputs = document.querySelectorAll("#adult, #youth, #children");
+
+    inputs.forEach(input => {
+      input.onchange = updateTotal;
+    });
+  });
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const pastorRadio = document.getElementById("pastor");
+    const professionalRadio = document.getElementById("professional");
+    const pastorChoiceDiv = document.getElementById("pastor-choice");
+    const professionalChoiceDiv = document.getElementById("professional-choice");
+    const parishSelect = document.getElementById("ispastor_parish");
+    const churchProperty = document.getElementById("churchProperty");
+
+    //Hide some forms
+    document.getElementById('careerPastorOffice').style.display="none";
+    document.getElementById('leasingInfo').style.display="none";
+    generateConfirmation("finalConfirmation");
+
+
+
+    // Set initial visibility based on default checked radio button
+    if (pastorRadio.checked) {
+      pastorChoiceDiv.style.display = "block";
+      professionalChoiceDiv.style.display = "none";
+    } else {
+      pastorChoiceDiv.style.display = "none";
+      professionalChoiceDiv.style.display = "block";
+    }
+
+    // Add event listeners to the radio buttons
+    pastorRadio.addEventListener("change", () => {
+      pastorChoiceDiv.style.display = "block";
+      professionalChoiceDiv.style.display = "none";
+    });
+
+    //add even listener to the professional button
+    professionalRadio.addEventListener("change", () => {
+      pastorChoiceDiv.style.display = "none";
+      professionalChoiceDiv.style.display = "block";
+      showfinalBtn();
+    });
+
+    //add event listener to select parish
+    parishSelect.addEventListener("change", (event) => {
+    const selectedValue = event.target.value;
+    if(selectedValue === 'Yes'){
+    document.getElementById('careerPastorOffice').style.display="inline-block";
+      shownextBtn();
+    
+    }else if(selectedValue === 'No'){
+      document.getElementById('careerPastorOffice').style.display="none";
+      generateConfirmation("confirmation");
+      showfinalBtn();
+    }
+    });
+
+    churchProperty.addEventListener("change", (event) => {
+    const selectedValue = event.target.value;
+        if(selectedValue === "Leased Property" || selectedValue === "Freehold" || selectedValue === "Rented Property"){
+            document.getElementById('leasingInfo').style.display="inline-block";
+        }else{
+          document.getElementById('leasingInfo').style.display="none";
+
+        }
+
+    })
+function showfinalBtn (){
+document.querySelector(".nextBtn").style.display = "none";
+document.querySelector(".finalBtn").style.display = "inline-block";
+  }
+
+function shownextBtn (){
+document.querySelector(".nextBtn").style.display = "inline-block";
+document.querySelector(".finalBtn").style.display = "none";
+  }
+
+function hideConfirmation(){
+document.getElementById('confirmation').style.display="none";
+}
+
+function generateConfirmation(selectId) {
+    // Get the values of first name and last name from the DOM
+    const firstName = document.getElementById("firstname").value;
+    const lastName = document.getElementById("lastname").value;
+
+    // Create the confirmation message
+    const confirmationMessage = `
+    <h2 style="font-weight: bold;">Confirmation of Accuracy</h2>
+    <ul>
+        <li>I, ${firstName} ${lastName}, confirm that the information provided in this form is accurate and complete to the best of my knowledge.</li>
+        <li>By submitting this form, I verify that:
+            <ol>
+                <li>I have reviewed all information provided.</li>
+                <li>I have answered all questions truthfully.</li>
+                <li>I take responsibility for the accuracy of the submitted information.</li>
+            </ol>
+        </li>
+    </ul>
+    <p>[Your Signature (if required): _____________________]</p>
+    <p>Date: ${new Date().toLocaleDateString()}</p>
+    `;
+
+    // Append the confirmation message to the <p> element with ID "confirmation"
+    const confirmationElement = document.getElementById(selectId);
+        confirmationElement.innerHTML = confirmationMessage;
+}
+
+
+    var loginForm = document.getElementById("loginForm");
+    var registerForm = document.getElementById("registerForm");
+    var switchToRegister = document.getElementById("switchToRegister");
+    var switchToLogin = document.getElementById("switchToLogin");
+
+      switchToRegister.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the default link behavior
+
+        // Hide loginForm and show registerForm
+        loginForm.style.display = "none";
+        registerForm.style.display = "block";
+    });
+
+
+    switchToLogin.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the default link behavior
+
+        // Hide registerForm and show loginForm
+        loginForm.style.display = "block";
+        registerForm.style.display = "none";
+    });
+  });
+
+
+</script>
+</body>
+</html>

@@ -880,3 +880,20 @@ const lgaList = {
   ],
 };
 
+// Get the leaseType select element
+const leaseTypeSelect = document.getElementById("leaseType");
+
+// Create an option group for lease terms
+const leaseTermsGroup = document.createElement("optgroup");
+leaseTermsGroup.label = "Lease Term";
+
+// Generate options for lease terms from 1 to 50
+for (let i = 1; i <= 50; i++) {
+  const option = document.createElement("option");
+  option.value = `${i}_year_lease`;
+  option.textContent = `${i} Year${i !== 1 ? 's' : ''}`;
+  leaseTermsGroup.appendChild(option);
+}
+
+// Append the lease terms group to the select element
+leaseTypeSelect.appendChild(leaseTermsGroup);

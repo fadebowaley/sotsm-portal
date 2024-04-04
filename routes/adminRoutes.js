@@ -1,13 +1,16 @@
 // routes/userRoutes.js
 const express = require('express');
 const router = express.Router();
-const userController = require('../controller/userController');
+const adminController = require("../controller/adminController");
+const middleware = require("../middleware/confirm");
+const storage = require("../middleware/storage");
 
 
-//router.get('/', userController.getRegisterationForm);
-router.post('/register', userController.registerUser);
-router.post('/login', userController.loginUser);
-router.post('/logout', userController.logoutUser);
+//POST:Create pastors Employee Data  with post
+router.get("/pastorsData", middleware.isLoggedIn, middleware.isLoggedIn,middleware.isAdmin, adminController.getPastors);
+router.get( "/legalData", middleware.isLoggedIn, middleware.isAdmin, adminController.getLegal);
+router.get( "/leadership", middleware.isAdmin, adminController.getLeadership);
+
 
 
 module.exports = router;

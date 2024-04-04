@@ -1,12 +1,10 @@
 const mongoose = require("mongoose");
 
-
-console.log(process.env.MONGO_URI);
-
 function makeNewConnection(uri) {
+  const db = mongoose.createConnection(uri, {
+  });
 
-  const db = mongoose.createConnection(uri, {});
-
+  
   db.on("error", function (error) {
     console.log(`MongoDB :: connection ${this.name} ${JSON.stringify(error)}`);
     db.close().catch(() =>
@@ -14,14 +12,18 @@ function makeNewConnection(uri) {
     );
   });
 
+
   db.on("connected", function () {
-    mongoose.set("debug", function (col, method, query, doc) {});
+    mongoose.set("debug", function (col, method, query, doc) {    
+    });
     console.log(`MongoDB :: connected ${this.name}`);
   });
+
 
   db.on("disconnected", function () {
     console.log(`MongoDB :: disconnected ${this.name}`);
   });
+
 
   return db;
 }
