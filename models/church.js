@@ -1,64 +1,68 @@
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
-const { conn } = require("../config/db");
+"use strict";
+const { Model } = require("sequelize");
+module.exports = (sequelize, DataTypes) => {
+  class Church extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      // Define one-to-many relationship with MonthlyReport, vitalStatistics,Statistics
+      Church.hasMany(models.MonthlyReport, { foreignKey: "parishCode" });
+      Church.hasMany(models.VitalStatistics, { foreignKey: "parishCode" });
+      Church.hasMany(models.Statistics, { foreignKey: "parishCode" });
 
-const churchSchema = Schema({
-  name: {
-    type: String,
-    required: true,
-  },
-  description: {
-    type: String,
-    required: true,
-  },
-  address: {
-    type: String,
-    required: true,
-  },
-  category: {
-    type: String,
-    enum: [
-      "parish",
-      "area",
-      "zone",
-      "diocese",
-      "region",
-      "Others",
-    ],
-  },
-  city: {
-    type: String,
-    required: true,
-  },
-  state: {
-    type: String,
-    required: true,
-  },
-  zip: {
-    type: String,
-    required: true,
-  },
-  phone: {
-    type: String,
-    required: true,
-  },
-  email: {
-    type: String,
-    required: true,
-  },
-  website: {
-    type: String,
-    required: true,
-  },
-  picture: {
-    type: String,
-    required: true,
-  },
-
-  
-});
+      //define user{Pastor} relationship with church 1-1
+      Church.belongsTo(models.User, { foreignKey: "employeeId", optional: true });
 
 
+    }
+  }
+  Church.init(
+    {
+      parishOrPlaceOfAssignment: DataTypes.STRING,
+      zoneName: DataTypes.STRING,
+      dioceseRegionName: DataTypes.STRING,
+      divisionName: DataTypes.STRING,
+      churchState: DataTypes.STRING,
+      churchLGA: DataTypes.STRING,
+      churchAddress: DataTypes.STRING,
+      churchCountry: DataTypes.STRING,
 
+      //additional info
+      dateOfEstablishment: DataTypes.DATE,
+      propertyStatus: DataTypes.STRING,
+      estimatedValue: DataTypes.DECIMAL(10, 2),
+      building: DataTypes.STRING,
+      paymentFrequency: DataTypes.STRING,
+      leaseRentAgreement: DataTypes.STRING,
+      status: DataTypes.STRING,
 
-module.exports = conn.model("Church", churchSchema);
+      //codes for parishes
+      parishCode: { type: DataTypes.INTEGER, allowNull: true }, // Nullable field
+      zonalCode: { type: DataTypes.INTEGER, allowNull: true }, // Nullable field
+      dioceseCode: { type: DataTypes.INTEGER, allowNull: true }, // Nullable field
+      divisionCode: { type: DataTypes.INTEGER, allowNull: true }, // Nullable field
+      nationalCode: { type: DataTypes.INTEGER, allowNull: true }, // Nullable field
+      employeeId: DataTypes.INTEGER,
+
+      // HQ Status enum
+      hqStatus: {
+        type: DataTypes.ENUM(
+          "zone",
+          "diocese",
+          "region",
+          "division",
+          "national"
+        ),
+        allowNull: true, // Nullable field
+      },
+    },
+    {
+      sequelize,
+      modelName: "Church",
+    }
+  );
+  return Church;
+};

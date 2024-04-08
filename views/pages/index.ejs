@@ -32,7 +32,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 <link rel="stylesheet" href="assets/css/responsive.css" />
 
 <style>
-     #registerForm {
+
+  
+  .mb-1{
+    margin-bottom:1rem;
+  }
+  .mb-2{
+     margin-bottom: 0.5rem;
+  }
+   .hidden,  #registerForm {
         display: none;
     }
 /* Style for the section label */
@@ -93,6 +101,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 <p>Call for Quick Support </p>
 </article>
 </a>
+<article>
+  <% if (currentUser) { %>
+ <a href="/user/logout" style="height:90px;">logout</a>
+<% }%>
+</article>
 </header>
 
 <!-- Main Content Container -->
@@ -101,9 +114,31 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 
 <!-- Left Column Login Form -->
 <div class="col-md-4">
+
+
 <!-- Heading -->
+    <% if (errorMsg) { %>
+        <div class="alert alert-danger alert-dismissible rounded-pill fade show" role="alert">
+        <%= errorMsg %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <% } %>
+
+        <% if (successMsg) { %>
+        <div class="alert alert-success alert-dismissible rounded-pill fade show" role="alert">
+        <%= successMsg %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <% } %>
+
+  <% if (currentUser) { %>
+
+
+<% } else  { %>
+
+
 <!-- <h2 class="asideHeading">Employee Redcord</h2> -->
-<form  action="/user/login" method="POST"id="loginForm" >
+<form  action="#" method="POST"id="loginForm" >
 <!-- Hotel Information -->
 <div class="row inputField">
 <!-- Hotel Image -->
@@ -114,24 +149,24 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 <div class="col-md-12" style="margin-bottom:10px;">
 
 <div class="form-group mb-1">
-<input type="text" class="form-control" placeholder="Email Address" id="first">
+<input type="text" class="form-control" placeholder="Phone Number" id="loginEmail" name="phoneNumber">
 </div>
 <div class="form-group mt-2">
-<input type="password" class="form-control" placeholder="password" id="first">
+<input type="password" class="form-control" placeholder="password" id="loginPassword" name="password">
 </div>
 <!--  col-md-6   -->
 </div>
 
 <div class="col-md-12">
-<button  style="height:60px;" class="apply">Continue</button>
+<button  style="height:60px;" type="submit" class="apply">Continue</button>
 <br>
-<p class="mb-2">Don't have code ? click <a href="#" id="switchToRegister">here to register </a></p>
+<!-- <p class="mb-2">Don't have code ? click <a href="#" id="switchToRegister">here to register </a></p> -->
 
 </div>
 
 </div>
 </form>
-<form  action="/user/signup" method="POST" id="registerForm" >
+<form  action="#" method="POST" id="registerForm" >
 <!-- Hotel Information -->
 <div class="row inputField">
 <!-- Hotel Image -->
@@ -140,20 +175,26 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 <h5 class="mb-2">Start Filling by Email </h5>
 <!-- Contact Information -->
 <div class="col-md-12" style="margin-bottom:10px;">
-
 <div class="form-group mb-1">
-<input type="text" class="form-control" placeholder="Email Address" id="first">
+<input type="text" class="form-control" placeholder="Email Address" name="email" id="email">
 </div>
-<!--  col-md-6   -->
+<div class="form-group mb-1">
+<input type="password" class="form-control" placeholder="Password " name="password" id="password">
 </div>
+<div class="form-group mb-1">
+<input type="password" class="form-control" placeholder="Password Confirmation" name="password2" id="password2">
+</div>
+</div>
+
 
 <div class="col-md-12">
-<button  style="height:60px;" class="apply">Register</button>
+<button  type="submit" style="height:60px;" class="apply">Register</button>
 <p>Already have code? click <a href="#" id="switchToLogin">here to Login </a></p>
 </div>
 
 </div>
 </form>
+<% } %>
 </div>
 
 
@@ -163,17 +204,16 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 
 <!-- Right Column -->
 <div class="col-md-8">
+
 <!-- Review Form -->
-<form id="dataCapture" class="ratingMain">
+<form id="dataCapture" class="ratingMain <%= currentUser ? '' : 'hidden' %>" >
 
 <div class="row">
 
 <div class="col-md-12 step1 inputField" style="background-color:rgb(227, 233, 255);">
-
 <div class="row">
 <h2 class="mb-3">Personal Data</h2>
-
-<div class="col-md-2">
+<div class="col-md-2" style="width:8rem;">
 <label for="title">Title</label>
 <select class="form-control" name="title" id="title">
 <option value="">Title</option>
@@ -201,9 +241,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 <input type="text" class="form-control"  name="firstname" placeholder="firstname" id="firstname">
 </div>
 </div>
-<!--  col-md-6   -->
 
-<div class="col-md-5">
+<div class="col-md-4">
 <div class="form-group">
 <label for="lastname">Last Name</label>
 <input type="text" class="form-control" placeholder="lastname" name="lastname" id="lastname">
@@ -617,9 +656,7 @@ min characters
 </div>
 <!--  row   -->
 
-
 <div class="col-md-12 step2 inputField " style="display:none; background-color:rgb(237, 249, 227);">
-
 <div class="row">
 <h2 class="mb-3">Spiritual Data</h2>
 
@@ -1095,12 +1132,11 @@ min characters
 </div>
 </div>
 </div>
-</div>
+
 
 
 <div class="col-md-12 step3 inputField" style="display: none">
 <h3 class="mb-3"> Church/Parish Information</h3>
-
 <div class="row" >
 <label class="mb-3" style="font-size:24px;">Property Details</label>
 
@@ -1279,12 +1315,6 @@ min characters
 
 </div>
 
-
-
-
-
-
-
 <!--buttom-->
 <div class="col-md-12">
 <!-- Buttons for navigation between steps -->
@@ -1308,11 +1338,12 @@ min characters
   </button>
 </div>
 </div>
+
 </div>
-
-
 </form>
 </div>
+
+
 </div>
 </div>
 </main>
@@ -1584,6 +1615,106 @@ function generateConfirmation(selectId) {
         registerForm.style.display = "none";
     });
   });
+
+
+
+  //form register Submission to /user/signup
+  document.getElementById("registerForm").addEventListener("submit", function(event) {
+    // Prevent the default form submission behavior
+    event.preventDefault();
+
+    // Get form data
+    const formData = new FormData(this);
+   
+
+    // Create an object to hold form data
+    const userData = {};
+    formData.forEach((value, key) => {
+      userData[key] = value;
+    });
+
+    // Send form data to the backend
+    registerUser(userData);
+  });
+
+  // Function to send form data to the backend
+  function registerUser(userData) {
+    // Send AJAX request to the backend
+    fetch("/user/signup", {
+      method: "POST",
+      body: JSON.stringify(userData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .then(data => {
+      // Handle response from the backend
+      console.log(data);
+      // Optionally, you can redirect the user or display a success message here
+    })
+    .catch(error => {
+      // Handle errors
+      console.error("There was a problem with the request:", error);
+      // Optionally, you can display an error message to the user
+    });
+  }
+
+
+
+  //form login Submission to /user/login
+  document.getElementById("loginForm").addEventListener("submit", function(event) {
+    // Prevent the default form submission behavior
+    event.preventDefault();
+    // Get form data
+    const formData = new FormData(this);
+  
+    // Create an object to hold form data
+    const userData = {};
+    formData.forEach((value, key) => {
+      userData[key] = value;
+    });
+
+    console.log(userData);
+    // Send form data to the backend
+    registerUser(userData);
+  });
+
+  // Function to send form data to the backend
+  function registerUser(userData) {
+    // Send AJAX request to the backend
+    fetch("/user/login", {
+      method: "POST",
+      body: JSON.stringify(userData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .then(data => {
+      // Handle response from the backend
+      window.location.href = `${data.redirectUrl}`;
+      
+      console.log(data);
+      // Optionally, you can redirect the user or display a success message here
+    })
+    .catch(error => {
+      // Handle errors
+      console.error("There was a problem with the request:", error);
+      // Optionally, you can display an error message to the user
+    });
+  }
+
 
 
 </script>

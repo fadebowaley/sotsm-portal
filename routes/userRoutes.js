@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 var passport = require("passport");
 var LocalStrategy = require("passport-local").Strategy;
-const User = require("../models/user");
+const { User } = require("../models");
 
 const middleware = require("../middleware/confirm");
 const userController = require("../controller/userController");
@@ -14,6 +14,24 @@ const {
   validateSignup,
   validateSignin,
 } = require("../middleware/validator");
+
+
+//Users Authentications
+router.post(
+  "/signup",
+  [
+    middleware.isNotLoggedIn,
+    passport.authenticate("local.signup", {
+      successRedirect: "/",
+      failureRedirect: "/",
+      failureFlash: true,
+      successFlash: true,
+    }),
+  ],
+  userController.postUserRegister
+);
+
+
 
 
 
@@ -38,38 +56,23 @@ router.get(
 );
 
 
-//Users Authentications
-router.get("/register", userController.getUserRegister);
-router.post(
-  "/signup",
-  [
-    middleware.isNotLoggedIn,
-    userSignUpValidationRules(),
-    validateSignup,
-    middleware.emailVerified,
-    passport.authenticate("local.signup", {
-      successRedirect: "/user/activate-your-account",
-      failureRedirect: "/user/register",
-      failureFlash: true,
-      successFlash: true,
-    }),
-  ],
-  userController.postUserRegister
-);
+
+
 router.get("/login", middleware.isNotLoggedIn, userController.getUserLogin);
+
 router.post(
-  "/signin",
+  "/login",
   [
     middleware.isNotLoggedIn,
-    userSignInValidationRules(),
-    validateSignin,
     passport.authenticate("local.signin", {
-      failureRedirect: "/user/login",
+      failureRedirect: "/",
       failureFlash: true,
     }),
   ],
   userController.postUserLogin
 );
+
+
 
 //User Adminitrations
 router.get("/profile", middleware.isLoggedIn, userController.getUserProfile);

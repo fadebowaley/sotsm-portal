@@ -18,9 +18,9 @@ const sendPasswordResetEmailInBackground = async (token, email) => {
 };
 
 
-const sendVerificationEmailInBackground = async (token, email, usernane) => {
+const sendVerificationEmailInBackground = async (token, email) => {
   try {
-   sendVerificationEmail(token, email, usernane);
+   sendVerificationEmail(token, email);
     console.log("verification email sent in the background");
   } catch (error) {
     console.error("Error sending password reset email in background:", error);

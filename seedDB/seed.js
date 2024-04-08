@@ -1,6 +1,6 @@
 const path = require("path");
 require("dotenv").config({ path: path.join(__dirname, "../.env") });
-const User = require("../models/user");
+const User = require("../models_/user");
 const bcrypt = require("bcrypt");
 const fs = require("fs/promises");
 const saltRounds = 10;

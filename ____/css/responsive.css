@@ -46,7 +46,7 @@
 }
 @media (max-width: 992px) {
   .inputField {
-    padding: 20px 10px 25px 40px;
+    padding: 20px 10px 25px 25px;
   }
   .inputField select + i {
     top: 95px;

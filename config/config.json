@@ -1,18 +1,22 @@
 {
   "development": {
-    "username": "root",
-    "password": "Ad3m0l@000",
-    "database": "churchdb",
+    "username": "bishop",
+    "password": "password",
+    "database": "sotsm",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres", 
+    "port": 5432 
   },
+  
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
+    "username": "bishop",
+    "password": "password",
+    "database": "sotsm_test",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres", 
+    "port": 5432 
   },
+
   "production": {
     "username": "root",
     "password": null,

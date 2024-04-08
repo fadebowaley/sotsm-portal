@@ -1,33 +1,20 @@
-const mongoose = require("mongoose");
+const { Sequelize } = require("sequelize");
 
-function makeNewConnection(uri) {
-  const db = mongoose.createConnection(uri, {
-  });
+// Initialize Sequelize and connect to the database
+const sequelize = new Sequelize(process.env.POSTGRES_URI, {
+  dialect: "postgres", // Specify the PostgreSQL dialect explicitly
+});
 
-  
-  db.on("error", function (error) {
-    console.log(`MongoDB :: connection ${this.name} ${JSON.stringify(error)}`);
-    db.close().catch(() =>
-      console.log(`MongoDB :: failed to close connection ${this.name}`)
+// Test the database connection
+sequelize
+  .authenticate()
+  .then(() => {
+    console.log(
+      "::::  [POSTGRESQL] Connection to the database has been established successfully."
     );
+  })
+  .catch((err) => {
+    console.error("Unable to connect to the database:", err);
   });
 
-
-  db.on("connected", function () {
-    mongoose.set("debug", function (col, method, query, doc) {    
-    });
-    console.log(`MongoDB :: connected ${this.name}`);
-  });
-
-
-  db.on("disconnected", function () {
-    console.log(`MongoDB :: disconnected ${this.name}`);
-  });
-
-
-  return db;
-}
-
-const conn = makeNewConnection(process.env.MONGO_URI);
-
-module.exports = { conn };
+module.exports = sequelize;

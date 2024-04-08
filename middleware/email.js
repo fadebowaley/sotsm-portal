@@ -32,7 +32,7 @@ const transporter = nodemailer.createTransport({
 
 
 
-const sendVerificationEmail = async (token, email, username) => {
+const sendVerificationEmail = async (token, email) => {
   try {
     const templatePath = path.join(
       __dirname,

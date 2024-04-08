@@ -1,10 +1,9 @@
 const express = require("express");
-const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const path = require("path");
 const fs = require("fs");
 const User = require("../models/user");
-const Church= require("../models/church");
+const Church = require("../models/church");
 const saltRounds = 10;
 
 

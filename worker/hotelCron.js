@@ -1,5 +1,5 @@
-const Room = require("../models/room");
-const CronJobReport = require("../models/cronReport");
+const Room = require("../models_/room");
+const CronJobReport = require("../models_/cronReport");
 
 function updateRoomAvailability() {
   const currentDate = new Date();

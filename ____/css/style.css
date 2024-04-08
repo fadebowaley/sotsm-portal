@@ -19,7 +19,7 @@ p {
 }
 
 body {
-  width: 100%;
+  width: 200%;
   height: auto;
   font-family: "Roboto";
   position: relative;
@@ -151,13 +151,13 @@ aside {
 }
 
 .inputField {
-  border-radius: 40px;
+  border-radius: 25px;
   background-color: var(--bg-color);
   box-shadow: 0px 8px 111.15px 5.85px rgba(0, 0, 0, 0.06);
   width: 100%;
   min-height: 150px;
   margin-bottom: 30px;
-  padding: 40px 20px 50px 80px;
+  padding: 40px 20px 50px 25px;
   position: relative;
 }
 .labelHeading {

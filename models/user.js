@@ -1,116 +1,63 @@
-const mongoose = require("mongoose");
-const bcrypt = require("bcrypt");
-const Schema = mongoose.Schema;
-const { conn } = require("../config/db");
+'use strict';
+const {
+  Model
+} = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
+  class User extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
 
-const saltRounds = 10;
+      // Define one-to-one relationship with VitalStatistics using parishCode
+        User.hasOne(models.CareerMinistry);
+        User.hasOne(models.SpiritualProfile);
+        User.hasOne(models.Department, { foreignKey: "employeeId", optional: true });
+        User.hasOne(models.Church, { foreignKey: "employeeId", optional: true });
 
-const userSchema = Schema({
-  email: {
-    type: String,
-    required: true,
-    unique: true,
-    lowercase: true,
-  },
-  phone: {
-    type: String,
-    required: false,
-  },
-  title: {
-    type: String,
-  },
-  firstname: {
-    type: String,
-  },
-  lastname: {
-    type: String,
-  },
-  role: {
-    type: String,
-    enum: [
-      "superUser",
-      "administrator",
-      "accountant",
-      "pastor",
-      "zonalPastor",
-      "Diocesan",
-      "HOD",
-      "RegionalPastor",
-      "Bishops",
-      "DMD",
-      "Head Bishop",
-    ],
-    default: "pastor",
-  },
-  password: {
-    type: String,
-    required: true,
-  },
-  resetPasswordToken: {
-    type: String,
-  },
-  emailVerified: {
-    type: Boolean,
-    default: false,
-  },
-  emailVerificationToken: {
-    type: String,
-  },
-  emailVerificationTokenExpiresAt: {
-    type: Date,
-  },
-  emailVerifiedAt: {
-    type: Date,
-  },
-  resetPasswordExpires: {
-    type: Date,
-  },
-  created: {
-    type: Date,
-    default: Date.now,
-  },
-  username: {
-    type: String,
-    default: function () {
-      return `${this.firstname.toLowerCase()}${this.lastname.toLowerCase()}${Math.floor(
-        Math.random() * 10000
-      )}`;
-    },
-  },
-  church: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Church",
-    },
-  ],
-});
+        User.belongsTo(models.UserData);
 
-// Pre-save hook to hash the password before saving
-// Pre-save hook to hash the password before saving
-userSchema.pre("save", function (next) {
-  if (!this.isModified("password")) {
-    return next();
+    }
   }
+  User.init({
+    firstName: DataTypes.STRING,
+    lastName: DataTypes.STRING,
+    email: DataTypes.STRING,
+    emailVerificationToken:DataTypes.STRING,
+    emailVerificationTokenExpiresAt:DataTypes.DATE,
+    password: DataTypes.STRING,
 
-  bcrypt.genSalt(saltRounds, (err, salt) => {
-    if (err) return next(err);
-
-    bcrypt.hash(this.password, salt, (err, hash) => {
-      if (err) return next(err);
-      this.password = hash;
-      next();
-    });
+    // Personal data fields
+    title: DataTypes.STRING,
+    otherName: DataTypes.STRING,
+    phoneNumber: DataTypes.STRING,
+    gender: DataTypes.STRING,
+    dateOfBirth: DataTypes.DATE,
+    highestQualification: DataTypes.STRING,
+    professional: DataTypes.STRING,
+    maritalStatus: DataTypes.STRING,
+    stateOfOrigin: DataTypes.STRING,
+    lgaOfOrigin: DataTypes.STRING,
+    homeTown: DataTypes.STRING,
+    spouseName: DataTypes.STRING,
+    spousePhoneNumber: DataTypes.STRING,
+    spouseDateOfBirth: DataTypes.DATE,
+    nextOfKinName: DataTypes.STRING,
+    nextOfKinPhoneNumber: DataTypes.STRING,
+    nextOfKinRelationship: DataTypes.STRING,
+    residentialAddress: DataTypes.STRING,
+    stateOfResidence: DataTypes.STRING,
+    lgaOfResidence: DataTypes.STRING,
+    employmentCategory: DataTypes.STRING,
+    occupation: DataTypes.STRING,
+    employeeId: DataTypes.INTEGER,
+  }, {
+    sequelize,
+    modelName: 'User',
   });
-});
-
-// Method to check if password is valid
-userSchema.methods.validPassword = async function (password) {
-  try {
-    const match = await bcrypt.compare(password, this.password);
-    return match;
-  } catch (error) {
-    throw new Error(error.message);
-  }
+  return User;
 };
 
-module.exports = conn.model("User", userSchema);
+

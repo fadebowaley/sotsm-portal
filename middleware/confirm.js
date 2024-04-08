@@ -55,7 +55,7 @@ middlewareObject.emailVerified  = (req, res, next) => {
     req.flash("success", "please activate your account by checking email:" + req.user.email);
     //check if user.email not verifies
     console.log('error', 'please verify your account first')
-    return res.redirect("/user/activate-your-account");
+    return res.redirect("/");
   }
   next();
 }
@@ -67,7 +67,7 @@ middlewareObject.isLoggedIn = (req, res, next) => {
     return next();
   } else {
     req.flash("error", "Please you need to login to make reservations");
-    res.redirect("/user/login");
+    res.redirect("/");
   }
 };
 

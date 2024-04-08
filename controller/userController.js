@@ -1,38 +1,8 @@
-
 //church assigned to user
-const User = require("../models/user");
 const bcrypt = require("bcrypt");
 const saltRounds = 10;
 
-// function to generate Token
-function generateToken() {
-  return require("crypto").randomBytes(20).toString("hex");
-}
-
-const {
-  sendPasswordResetEmailInBackground,
-  sendVerificationEmailInBackground,
-} = require("../worker/workers");
-
-//send a verification email
-async function sendVerificationEmail(email) {
-  // Check if the user exists in the database
-  const user = await User.findOne({ email });
-  if (!user) {
-    throw new Error("User does not exist");
-  }
-
-  // Generate a new token and save it to the user's record in the database
-  const token = generateToken();
-  user.emailVerificationToken = token;
-  user.emailVerificationTokenExpiresAt = new Date(
-    Date.now() + 24 * 60 * 60 * 1000
-  ); // Token expires in 24 hours
-  await user.save();
-
-  // Send the verification email to the user
-  await sendVerificationEmailInBackground(token, email, user.username);
-}
+const { UserData } = require("../models");
 
 //Create new controller for the User
 const userController = {
@@ -185,48 +155,24 @@ const userController = {
     }
   },
 
-  // GET: display the signup form with csrf token
-  getUserRegister: (req, res) => {
-    var errorMsg = req.flash("error")[0];
-    res.render("user/register", {
-      errorMsg,
-      pageName: "Sign Up",
-    });
-  },
-
-  //POST: post User Register
+  //POST: post User Register just for verification email
   postUserRegister: async (req, res) => {
+    console.log('the matter reach here . . .')
     try {
-      // generate a verification token
-      if (req.user.email && !req.user.emailVerified) {
         await sendVerificationEmail(req.user.email);
         req.flash(
           "success",
           "A verification email has been sent to your email address. Please verify your email before logging in."
         );
-        res.redirect("/user/activate-your-account");
-      }
-
-      //if there is cart session, save it to the user's cart in db
-      if (req.session.cart) {
-        const cart = await new Cart(req.session.cart);
-        cart.user = req.user._id;
-        await cart.save();
-      }
-      // redirect to the previous URL
-      if (req.session.oldUrl) {
-        var oldUrl = req.session.oldUrl;
-        req.session.oldUrl = null;
-        res.redirect(oldUrl);
-      } else {
-        res.redirect("/user/profile");
-      }
+        res.redirect("/");
     } catch (err) {
       console.log(err);
       req.flash("error", err.message);
       return res.redirect("/");
     }
   },
+
+
 
   //GET: router for verifying Token
   getVerifiedToken: async (req, res, next) => {
@@ -284,36 +230,10 @@ const userController = {
   postUserLogin: async (req, res) => {
     try {
       console.log("body request  ->", req.body);
-
-      const user = await User.findOne({ email: req.body.identifier });
-
-      if (!user) {
-        throw new Error("User not found"); // Handle the case where user is not found
-      }
-
-      if (!req.session.cart) {
-        req.session.cart = {};
-      }
-
-      const cart = await Cart.findOneAndUpdate(
-        { user: user._id }, // Update the user's cart based on their _id
-        { $set: req.session.cart }, // Use $set to update the cart document
-        { upsert: true, new: true }
-      );
-
-      console.log("Carting request -->", cart);
-
-      req.session.cart = cart || req.session.cart;
-
-      // redirect to appropriate URL based on user role
-      if (req.user.role === "admin" || req.user.role === "superUser") {
-        res.redirect("/admin/dashboard");
-      } else if (req.session.oldUrl) {
-        res.redirect(req.session.oldUrl);
-        req.session.oldUrl = null;
-      } else {
-        res.redirect("/");
-      }
+      res.json({
+        success: true,
+        message: "Success: login successfully",
+        redirectUrl: "/",})
     } catch (err) {
       console.log(err);
       req.flash("error", "this is error: " + err.message);
