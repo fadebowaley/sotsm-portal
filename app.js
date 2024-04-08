@@ -14,7 +14,7 @@ const passport = require("./config/passport");
 // Authentication dependencies
 const LocalStrategy = require("passport-local").Strategy;
 const flash = require("connect-flash");
-const User = require("./models/userData");
+const User = require("./models/user");
 
 dotenv.config();
 
@@ -23,13 +23,7 @@ const app = express();
 
 
 
-const allowedOrigins = [
-  "*",
-  "https://fonts.googleapis.com",
-  "https://fonts.gstatic.com]",
-  "https://rccghospitality.com/",
-];
-
+const allowedOrigins = ["*"];
 
 app.use(
   cors({
