@@ -12,10 +12,8 @@ module.exports = (sequelize, DataTypes) => {
       Church.hasMany(models.MonthlyReport, { foreignKey: "parishCode" });
       Church.hasMany(models.VitalStatistics, { foreignKey: "parishCode" });
       Church.hasMany(models.Statistics, { foreignKey: "parishCode" });
-
       //define user{Pastor} relationship with church 1-1
       Church.belongsTo(models.User, { foreignKey: "employeeId", optional: true });
-
 
     }
   }
@@ -31,25 +29,29 @@ module.exports = (sequelize, DataTypes) => {
       churchCountry: DataTypes.STRING,
 
       //additional info
-      dateOfEstablishment: DataTypes.DATE,
-      propertyStatus: DataTypes.STRING,
-      estimatedValue: DataTypes.DECIMAL(10, 2),
-      building: DataTypes.STRING,
-      paymentFrequency: DataTypes.STRING,
-      leaseRentAgreement: DataTypes.STRING,
+      dateOfEstablishment: { type: DataTypes.DATE, allowNull: true },
+      propertyStatus: { type: DataTypes.STRING, allowNull: true },
+      estimatedValue: { type: DataTypes.DECIMAL(10, 2), allowNull: true },
+      building: { type: DataTypes.STRING, allowNull: true },
+      paymentFrequency: { type: DataTypes.STRING, allowNull: true },
+      leaseRentAgreement: { type: DataTypes.STRING, allowNull: true },
       status: DataTypes.STRING,
+      //add alias
+      alias:{type:DataTypes.STRING, allowNull:true },
 
       //codes for parishes
-      parishCode: { type: DataTypes.INTEGER, allowNull: true }, // Nullable field
-      zonalCode: { type: DataTypes.INTEGER, allowNull: true }, // Nullable field
-      dioceseCode: { type: DataTypes.INTEGER, allowNull: true }, // Nullable field
-      divisionCode: { type: DataTypes.INTEGER, allowNull: true }, // Nullable field
-      nationalCode: { type: DataTypes.INTEGER, allowNull: true }, // Nullable field
-      employeeId: DataTypes.INTEGER,
+      parishCode: { type: DataTypes.STRING, allowNull: true }, // Nullable field
+      zonalCode: { type: DataTypes.STRING, allowNull: true }, // Nullable field
+      dioceseCode: { type: DataTypes.STRING, allowNull: true }, // Nullable field
+      divisionCode: { type: DataTypes.STRING, allowNull: true }, // Nullable field
+      nationalCode: { type: DataTypes.STRING, allowNull: true }, // Nullable field
+      employeeId: { type: DataTypes.STRING, allowNull: true },
+
 
       // HQ Status enum
       hqStatus: {
         type: DataTypes.ENUM(
+          "parish",
           "zone",
           "diocese",
           "region",
