@@ -13188,10 +13188,10 @@ module.exports = {
       const parishNumber = church.parishCode.substring(2);
       if (parishNumber === church.nationalCode.substring(2)) {
         church.hqStatus = "national";
-      } else if (parishNumber === church.dioceseCode.substring(2)) {
+         } else if (parishNumber === church.divisionCode.substring(2)) {
         church.hqStatus = "division";
-      } else if (parishNumber === church.divisionCode.substring(2)) {
-        church.hqStatus = "region";
+      } else if (parishNumber === church.dioceseCode.substring(2)) {
+        church.hqStatus = "diocese";
       } else if (parishNumber === church.zonalCode.substring(2)) {
         church.hqStatus = "zone";
       } else {
