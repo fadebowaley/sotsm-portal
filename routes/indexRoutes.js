@@ -5,9 +5,13 @@ const router = express.Router();
 
 
 
-// Change language route
 router.get("/", indexController.getHomePage);
-
+router.get("/confirmation", indexController.getConfirmation);
+router.post("/receiveData", indexController.postData);
+router.get("/divisions", indexController.getDivision);
+router.get("/divisions/:divisionId/dioceses", indexController.getDioceseByDivision);
+router.get("/dioceses/:dioceseId/zones", indexController.getZoneByDiocese);
+router.get("/zones/:zoneId/parishes", indexController.getParishByZone);
 
 
 

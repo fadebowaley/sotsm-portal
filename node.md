@@ -9,6 +9,7 @@ npx sequelize-cli migration:generate --name userData_migration
 npx sequelize-cli migration:generate --name spiritual_profile_migration
 npx sequelize-cli migration:generate --name vital_statistics_migration
 
+1768X792
 
 npx sequelize-cli init
 This will create the following folders

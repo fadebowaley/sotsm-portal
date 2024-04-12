@@ -64,12 +64,15 @@ passport.use(
       passReqToCallback: true,
     },
     async (req, email, password, done) => {
-      console.log(req.body, 'here we dey');
       try {
 
-        const user = await UserData.findOne({ where: { email: email } });
-
+         const user = await UserData.findOne({
+           where: { phoneNumber: phoneNumber },
+         });
         if (!user) {
+           const user = await UserData.findOne({
+          where: { phoneNumber: phoneNumber },
+        });
           return done(null, false, { message: "User not Authorised " });
         }
         if (password != req.body.password2) {
@@ -115,7 +118,6 @@ passport.use(
         if (!user) {
           return done(null, false, { message: "User doesn't exist" });
         }
-        console.log(user);
         return done(null, user);
       } catch (error) {
         console.log(error);

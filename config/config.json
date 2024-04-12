@@ -2,7 +2,7 @@
   "development": {
     "username": "bishop",
     "password": "password",
-    "database": "sotsm",
+    "database": "sotsmdb",
     "host": "127.0.0.1",
     "dialect": "postgres", 
     "port": 5432 

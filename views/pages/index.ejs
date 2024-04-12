@@ -40,7 +40,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
   .mb-2{
      margin-bottom: 0.5rem;
   }
-   .hidden,  #registerForm {
+   .hidden, #registerForm{
         display: none;
     }
 /* Style for the section label */
@@ -115,9 +115,103 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 <!-- Left Column Login Form -->
 <div class="col-md-4">
 
+  <% if (currentUser) { %>
+<div class="card">
+  <div class="card-header">
+    <h5>Welcome <%= currentUser.firstName  %> <%= currentUser.lastName %></h5>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Important Instruction</h5>
+  <ul>
+    <li>
+        <p class="card-text">Complete Personal Information: Provide accurate personal details including name, contact info, and job title within CLC.</p>
+    </li>
+    <li>
+        <p class="card-text">Fill Data Sections Accurately: Enter required data with precision, ensuring numerical accuracy and correct spellings.</p>
+    </li>
+    <li>
+        <p class="card-text">Agree to Confidentiality: Read and accept the confidentiality agreement before proceeding.</p>
+    </li>
+    <li>
+        <p class="card-text">Submit Form: Once all sections are filled correctly, submit the form and await your identity code.</p>
+    </li>
+    <li>
+        <p class="card-text">Note Identity Code and Follow Instructions: Record the identity code provided upon submission and follow any further instructions given.</p>
+    </li>
+</ul>
 
+    <a href="/user/logout" class="btn btn-sm btn-primary">Logout here</a>
+  </div>
+</div>
+<% }%>
 <!-- Heading -->
-    <% if (errorMsg) { %>
+
+<!-- <h2 class="asideHeading">Employee Redcord</h2> -->
+<form  action="/user/login" method="POST"id="loginForm"  class="<%= currentUser ? 'hidden' : '' %>">
+<!-- Hotel Information -->
+<div class="row inputField">
+<!-- Hotel Image -->
+<!-- <img src="assets/images/aside.jpg" alt="aside" class="sideImg" /> -->
+<!-- Hotel Details -->
+<h5 class="mb-2">Continue where you stopped or edit your record </h5>
+<!-- Contact Information -->
+<div class="col-md-12" style="margin-bottom:10px;">
+<div class="form-group mb-1">
+<input type="text" class="form-control"  placeholder="Phone Number" value="08145045108" id="loginEmail" name="phoneNumber">
+</div>
+<div class="form-group mt-2">
+<input type="password" class="form-control"  value="password123"  placeholder="password" id="loginPassword" name="password">
+</div>
+<!--  col-md-6   -->
+</div>
+<div class="col-md-12">
+<button  style="height:60px;" type="submit" class="apply">Continue</button>
+<br>
+<!-- <p class="mb-2">Don't have code ? click <a href="#" id="switchToRegister">here to register </a></p> -->
+</div>
+</div>
+</form>
+
+
+<form  action="#" method="POST" id="registerForm" >
+<!-- Hotel Information -->
+<div class="row inputField">
+<!-- Hotel Image -->
+<!-- <img src="assets/images/aside.jpg" alt="aside" class="sideImg" /> -->
+<!-- Hotel Details -->
+<h5 class="mb-2">Start Filling by Email </h5>
+<!-- Contact Information -->
+<div class="col-md-12" style="margin-bottom:10px;">
+<div class="form-group mb-1">
+<input type="text" class="form-control"  placeholder="Email Address" name="loginemail" id="loginemail">
+</div>
+<div class="form-group mb-1">
+<input type="password" class="form-control"  placeholder="Password " name="password" id="password">
+</div>
+<div class="form-group mb-1">
+<input type="password" class="form-control"  placeholder="Password Confirmation" name="password2" id="password2">
+</div>
+</div>
+
+
+<div class="col-md-12">
+<button  type="submit" style="height:60px;" class="apply">Register</button>
+<p>Already have code? click <a href="#" id="switchToLogin">here to Login </a></p>
+</div>
+
+</div>
+</form>
+
+</div>
+
+
+<!--/ Left Column Login Form -->
+
+
+
+<!-- Right Column -->
+<div class="col-md-8">
+  <% if (errorMsg) { %>
         <div class="alert alert-danger alert-dismissible rounded-pill fade show" role="alert">
         <%= errorMsg %>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -130,81 +224,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         <% } %>
-
-  <% if (currentUser) { %>
-
-
-<% } else  { %>
-
-
-<!-- <h2 class="asideHeading">Employee Redcord</h2> -->
-<form  action="#" method="POST"id="loginForm" >
-<!-- Hotel Information -->
-<div class="row inputField">
-<!-- Hotel Image -->
-<!-- <img src="assets/images/aside.jpg" alt="aside" class="sideImg" /> -->
-<!-- Hotel Details -->
-<h5 class="mb-2">Continue where you stopped or edit your record </h5>
-<!-- Contact Information -->
-<div class="col-md-12" style="margin-bottom:10px;">
-
-<div class="form-group mb-1">
-<input type="text" class="form-control" placeholder="Phone Number" id="loginEmail" name="phoneNumber">
-</div>
-<div class="form-group mt-2">
-<input type="password" class="form-control" placeholder="password" id="loginPassword" name="password">
-</div>
-<!--  col-md-6   -->
-</div>
-
-<div class="col-md-12">
-<button  style="height:60px;" type="submit" class="apply">Continue</button>
-<br>
-<!-- <p class="mb-2">Don't have code ? click <a href="#" id="switchToRegister">here to register </a></p> -->
-
-</div>
-
-</div>
-</form>
-<form  action="#" method="POST" id="registerForm" >
-<!-- Hotel Information -->
-<div class="row inputField">
-<!-- Hotel Image -->
-<!-- <img src="assets/images/aside.jpg" alt="aside" class="sideImg" /> -->
-<!-- Hotel Details -->
-<h5 class="mb-2">Start Filling by Email </h5>
-<!-- Contact Information -->
-<div class="col-md-12" style="margin-bottom:10px;">
-<div class="form-group mb-1">
-<input type="text" class="form-control" placeholder="Email Address" name="email" id="email">
-</div>
-<div class="form-group mb-1">
-<input type="password" class="form-control" placeholder="Password " name="password" id="password">
-</div>
-<div class="form-group mb-1">
-<input type="password" class="form-control" placeholder="Password Confirmation" name="password2" id="password2">
-</div>
-</div>
-
-
-<div class="col-md-12">
-<button  type="submit" style="height:60px;" class="apply">Register</button>
-<p>Already have code? click <a href="#" id="switchToLogin">here to Login </a></p>
-</div>
-
-</div>
-</form>
-<% } %>
-</div>
-
-
-<!--/ Left Column Login Form -->
-
-
-
-<!-- Right Column -->
-<div class="col-md-8">
-
 <!-- Review Form -->
 <form id="dataCapture" class="ratingMain <%= currentUser ? '' : 'hidden' %>" >
 
@@ -215,7 +234,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 <h2 class="mb-3">Personal Data</h2>
 <div class="col-md-2" style="width:8rem;">
 <label for="title">Title</label>
-<select class="form-control" name="title" id="title">
+<select class="form-control"  name="title" required="" id="title">
 <option value="">Title</option>
 <option value="Mr">Mr</option>
 <option value="Mrs">Mrs</option>
@@ -238,14 +257,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 <div class="col-md-5">
 <div class="form-group">
 <label for="first">First Name</label>
-<input type="text" class="form-control"  name="firstname" placeholder="firstname" id="firstname">
+<input type="text" class="form-control"   name="firstname" placeholder="firstname" required="" id="firstname">
 </div>
 </div>
 
 <div class="col-md-4">
 <div class="form-group">
 <label for="lastname">Last Name</label>
-<input type="text" class="form-control" placeholder="lastname" name="lastname" id="lastname">
+<input type="text" class="form-control"  placeholder="lastname" name="lastname" required="" id="lastname">
 </div>
 </div>
 
@@ -259,14 +278,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 <div class="col-md-4">
 <div class="form-group">
 <label for="otherName">Other Name</label>
-<input type="text" class="form-control" placeholder="Other name" id="otherName">
+<input type="text" class="form-control"  placeholder="Other name" required="" id="otherName">
 </div>
 </div>
 
 <div class="col-md-4">
 <div class="form-group">
 <label for="email">Email</label>
-<input type="email" class="form-control" placeholder="email" id="email">
+<input type="email" class="form-control"  placeholder="email" required="" id="email">
 </div>
 </div>
 <!--  col-md-6   -->
@@ -274,7 +293,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 <div class="col-md-4">
 <div class="form-group">
 <label for="phone">Phone Number {WhatsApp}</label>
-<input type="tel" class="form-control" id="phone" placeholder="phone">
+<input type="tel" class="form-control"  required="" id="phone" placeholder="phone">
 </div>
 </div>
 
@@ -286,8 +305,13 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 <div class="row">
 <h5 class="mt-3">Gender</h5>
 <div class="col-md-3">
+  <!-- <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" required="" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div> -->
+
 <div class="form-check">
-<input class="form-check-input" type="radio" name="gender" id="male">
+<input class="form-check-input" type="checkbox"  name="male"  id="male">
 <label class="form-check-label" for="male">
 Male 
 </label>
@@ -295,7 +319,7 @@ Male
 </div>
 <div class="col-md-3">
 <div class="form-check">
-<input class="form-check-input" type="radio" name="gender" id="female" checked>
+<input class="form-check-input" type="checkbox"  name="female"  id="female" >
 <label class="form-check-label" for="female">
 Female
 </label>
@@ -306,7 +330,7 @@ Female
 <div class="col-md-6 mb-2">
 <div class="form-group">
 <label for="dob">Date of  Birth</label>
-<input type="date" class="form-control date-picker" name="dateOfBirth" id="dateOfBirth" placeholder="">
+<input type="date" class="form-control  date-picker" name="dateOfBirth" required="" id="dateOfBirth" placeholder="">
 </div>
 </div>
 <!--  col-md-6   -->
@@ -318,7 +342,7 @@ Female
 <div class="col-md-3">
 <div class="form-group">
 <label for="highest">Highest Qualification</label>
-<select class="form-control" name="highestQualification" id="highestQualification"  style="width: 190px;">
+<select class="form-control"  name="highestQualification" required="" id="highestQualification"  style="width: 190px;">
 <option value="">Select here</option>
 <option value="Phd">Phd</option>
 <option value="Msc">Msc</option>
@@ -342,7 +366,7 @@ Female
 <div class="col-md-6">
 <div class="form-group">
 <label for="highest">Professional Qualification</label>
-<select class="form-control" name="professionalQualification" id="professionalQualification"  style="width: 390px;">
+<select class="form-control"  name="professionalQualification" required="" id="professionalQualification"  style="width: 390px;">
   <option value="">Select Professional Qualification</option>
   <option value="NA">Not Applicable</option>
   <option value="ACA">ACA (Associate Chartered Accountant) - ICAN</option>
@@ -389,7 +413,7 @@ Female
 <div class="col-md-3">
 <div class="form-group">
 <label for="highest">Marital Status</label>
-<select class="form-control" name="maritalStatus" id="maritalStatus" required="" style="width: 180px;">
+<select class="form-control"  name="maritalStatus" required="" id="maritalStatus"  style="width: 180px;">
 <option value="">Marital Status</option>
 <option value="Married">Married</option>
 <option value="Single">Single</option>
@@ -407,7 +431,7 @@ Female
 <div class="col-md-4">
 <div class="form-group">
 <label for="stateSelect4">State of Origin</label>
-<select id="stateSelect4" onchange="populateLGAs('lgaSelect4')" name="StateOfOrigin"  style="width: 250px;">
+<select required="" id="stateSelect4" onchange="populateLGAs('lgaSelect4')" name="StateOfOrigin"  style="width: 250px;">
 <option value="">Select State</option>
 </select>
 
@@ -417,7 +441,7 @@ Female
 <div class="col-md-4">
 <div class="form-group">
   <label for="stateSelect4">LGA of Origin</label>
-  <select  class="form-control" name="localGovtOrigin" required="" id="lgaSelect4" style="width: 250px;">
+  <select  class="form-control"  name="localGovtOrigin"  required="" id="lgaSelect4" style="width: 250px;">
   <option value="">Select LGA of Origin</option>
 </select>  
 
@@ -429,7 +453,7 @@ Female
 <div class="col-md-4">
 <div class="form-group">
 <label for="highest">Home Town</label>
-<input type="text" class="form-control" placeholder="Home Town" id="homeTown" style="width: 250px;">
+<input type="text" class="form-control"  placeholder="Home Town" required="" id="homeTown" style="width: 250px;">
 </div>
 </div>
 
@@ -446,7 +470,7 @@ Female
 <div class="col-md-4">
 <div class="form-group">
 <label for="highest">Spouse Name</label>
-<input type="text" class="form-control" placeholder="Spouse Name" name="spouseName" id="spouseName" style="width: 250px;">
+<input type="text" class="form-control"  placeholder="Spouse Name" name="spouseName" required="" id="spouseName" style="width: 250px;">
 
 </div>
 </div>
@@ -454,7 +478,7 @@ Female
 <div class="col-md-4">
 <div class="form-group">
   <label for="stateSelect4">Spouse Phone Number</label>
-<input type="tel" class="form-control" placeholder="Spouse Phone Number" name="spousePhoneNumber" id="spousePhoneNumber" style="width: 250px;">
+<input type="tel" class="form-control"  placeholder="Spouse Phone Number" name="spousePhoneNumber" required="" id="spousePhoneNumber" style="width: 250px;">
 
 
 </div>
@@ -464,7 +488,7 @@ Female
 <div class="col-md-4">
 <div class="form-group">
 <label for="highest"> Spouse Date of Birth</label>
-<input type="date" class="form-control" placeholder="Spouse Date " name="spouseDateOfBirth" id="spouseDateOfBirth" style="width: 250px;">
+<input type="date" class="form-control"  placeholder="Spouse Date " name="spouseDateOfBirth" required="" id="spouseDateOfBirth" style="width: 250px;">
 </div>
 </div>
 
@@ -481,7 +505,7 @@ Female
 <div class="col-md-4">
 <div class="form-group">
 <label for="highest">Next Of Kin Name</label>
-<input type="text" class="form-control" placeholder="Next of Kin"  name="nextOfKinName" id="nextOfKinName" style="width: 250px;">
+<input type="text" class="form-control"  placeholder="Next of Kin"  name="nextOfKinName" required="" id="nextOfKinName" style="width: 250px;">
 
 </div>
 </div>
@@ -489,7 +513,7 @@ Female
 <div class="col-md-4">
 <div class="form-group">
   <label for="stateSelect4"> Next Of Kin Phone Number</label>
-<input type="tel" class="form-control" placeholder="Next Of Kin Phone Number" phone="nextOfKinPhoneNumber" id="nextOfKinPhoneNumber" style="width: 250px;">
+<input type="tel" class="form-control"  placeholder="Next Of Kin Phone Number" phone="nextOfKinPhoneNumber" required="" id="nextOfKinPhoneNumber" style="width: 250px;">
 
 
 </div>
@@ -499,7 +523,7 @@ Female
 <div class="col-md-4">
 <div class="form-group">
 <label for="highest">Relationship</label>
-<select class="form-control" name="nextOfKinRelationship" id="nextOfKinRelationship" required="" style="width: 250px;">
+<select class="form-control"  name="nextOfKinRelationship" required="" id="nextOfKinRelationship"  style="width: 250px;">
   <option value="">Select Relationship Status</option>
   <option value="Spouse">Spouse</option>
   <option value="Father">Father</option>
@@ -526,7 +550,7 @@ Female
 <div class="col-md-12">
 <div class="form-group">
 <label>Residential Address </label>
-<textarea id="residentialAddress" name="residentialAddress" placeholder="Please type your full address"></textarea>
+<textarea required="" id="residentialAddress" name="residentialAddress" placeholder="Please type your full address"></textarea>
 </div>
 <span class="maxChar">
 <span class="count">0</span>/<span class="tillcount">200</span>
@@ -539,7 +563,7 @@ min characters
 <div class="col-md-6">
 <div class="form-group">
 <label for="stateSelect1">State<small>State of Residence</small></label>
-<select id="stateSelect1" onchange="populateLGAs('lgaSelect1')" name="residentialState"  style="width:360px;">
+<select required="" id="stateSelect1" onchange="populateLGAs('lgaSelect1')" name="residentialState"  style="width:360px;">
 <option value="">Select State</option>
 </select>
 </div>
@@ -550,7 +574,7 @@ min characters
 <div class="form-group">
 <!-- <label for="lgaSelect">Local Government</label> -->
 <option value="">Select LGA of Residence</option>
-<select  class="form-control" name="residentialLGA" required="" id="lgaSelect1" style="width:360px;">
+<select  class="form-control"  name="residentialLGA"  required="" id="lgaSelect1" style="width:360px;">
 </select>
 </div>
 </div>
@@ -561,7 +585,7 @@ min characters
 <div class="col-md-6">
 <div class="form-group">
 <label for="designation">Employment Category</label>
-<select class="form-control" name="emp-category" required="" id="emp-category" style="width: 360px;">
+<select class="form-control"  name="empCategory"  required="" id="empCategory" style="width: 360px;">
 <option value="">Select Category</option>
 <option value="Full-Time Pastor">Full-Time Pastor</option>
 <option value="Part-Time Pastor">Part-Time Pastor</option>
@@ -576,7 +600,7 @@ min characters
 <div class="col-md-6">
 <div class="form-group">
 <label for="occupation">Occupation</label>
-<select class="form-control" name="occupation" required="" id="occupation" style="width:360px;">
+<select class="form-control"  name="occupation"  required="" id="occupation" style="width:360px;">
 <option value="">Select Occupation</option>
 <option value="Accountant">Accountant</option>
 <option value="Actor">Actor</option>
@@ -664,9 +688,9 @@ min characters
 <div class="col-md-6 col-lg-3 mb-3">
 <div class="form-group">
 <label for="boa">Year: Born Again</label>
-<select class="worker-select form-control" id="yearBornAgain"  name="yearBornAgain" required="" style="width: 180px;">
+<select class="worker-select form-control"  required="" id="yearBornAgain"  name="yearBornAgain"  style="width: 180px;">
   <!-- Placeholder option -->
-  <option value="">Not Yet</option>
+  <option value="">Select</option>
 </select>
 </div>
 </div>
@@ -674,27 +698,27 @@ min characters
 <div class="col-md-6 col-lg-3 mb-3">
 <div class="form-group">
 <label for="bow">Year: Water Baptised</label>
-<select class="worker-select form-control" id="waterBaptized"  name="waterBaptized" required="" style="width: 180px;">
+<select class="worker-select form-control"  required="" id="waterBaptized"  name="waterBaptized"  style="width: 180px;">
   <!-- Placeholder option -->
-  <option value="">Not Yet</option>
+  <option value="">Select</option>
 </select></div>
 </div>
 
 <div class="col-md-6 col-lg-3 mb-3">
 <div class="form-group">
 <label for="hgb">Holyghost Baptism</label>
-<select class="worker-select form-control" id="holyghostBaptism"  name="holyghostBaptism" required="" style="width: 180px;">
+<select class="worker-select form-control"  required="" id="holyghostBaptism"  name="holyghostBaptism"  style="width: 180px;">
   <!-- Placeholder option -->
-  <option value="">Not Yet</option>
+  <option value="">Select</option>
 </select></div>
 </div>
 
 <div class="col-md-6 col-lg-3 mb-3">
 <div class="form-group">
 <label for="hgb">Year: Joined SOTSM</label>
-<select class="worker-select form-control" id="joinedSotsm"  name="joinedSotsm" required="" style="width: 180px;">
+<select class="worker-select form-control"  required="" id="joinedSotsm"  name="joinedSotsm"  style="width: 180px;">
   <!-- Placeholder option -->
-  <option value="">Not Yet</option>
+  <option value="">Select</option>
 </select>
 </div>
 </div>
@@ -709,9 +733,9 @@ min characters
 <div class="col-md-6 col-lg-3 mb-3">
 <div class="form-group">
 <label for="boa">Year: Became Worker</label>
-<select class="worker-select form-control" id="becameWorker"  name="becameWorker" required="" style="width: 180px;">
+<select class="worker-select form-control"  required="" id="becameWorker"  name="becameWorker"  style="width: 180px;">
   <!-- Placeholder option -->
-  <option value="">Not Yet</option>
+  <option value="">Select</option>
 </select>
 </div>
 </div>
@@ -719,27 +743,27 @@ min characters
 <div class="col-md-6 col-lg-3 mb-3">
 <div class="form-group">
 <label for="bow">Year: Became Minister</label>
-<select class="worker-select form-control" id="becameMinister"  name="becameMinister" required="" style="width: 180px;">
+<select class="worker-select form-control"  required="" id="becameMinister"  name="becameMinister"  style="width: 180px;">
   <!-- Placeholder option -->
-  <option value="">Not Yet</option>
+  <option value="">Select</option>
 </select></div>
 </div>
 
 <div class="col-md-6 col-lg-3 mb-3">
 <div class="form-group">
 <label for="hgb">Year: Deacon/Dns</label>
-<select class="worker-select form-control" id="ordainedDcns"  name="ordainedDcns" required="" style="width: 180px;">
+<select class="worker-select form-control"  required="" id="ordainedDcns"  name="ordainedDcns"  style="width: 180px;">
   <!-- Placeholder option -->
-  <option value="">Not Yet</option>
+  <option value="">Select</option>
 </select></div>
 </div>
 
 <div class="col-md-6 col-lg-3 mb-3">
 <div class="form-group">
 <label for="hgb">Year: Ordained Pastor</label>
-<select class="worker-select form-control" id="becamePastor"  name="becamePastor" required="" style="width: 180px;">
+<select class="worker-select form-control"  required="" id="becamePastor"  name="becamePastor"  style="width: 180px;">
   <!-- Placeholder option -->
-  <option value="">Not Yet</option>
+  <option value="">Select</option>
 </select>
 </div>
 </div>
@@ -753,9 +777,9 @@ min characters
 <div class="col-md-6 col-lg-3 mb-3">
 <div class="form-group">
 <label for="boa">Year: Senior Pastor</label>
-<select class="worker-select form-control" id="becameSnrPastor"  name="becameSnrPastor" required="" style="width: 180px;">
+<select class="worker-select form-control"  required="" id="becameSnrPastor"  name="becameSnrPastor"  style="width: 180px;">
   <!-- Placeholder option -->
-  <option value="">Not Yet</option>
+  <option value="">Select</option>
 </select>
 </div>
 </div>
@@ -763,25 +787,25 @@ min characters
 <div class="col-md-6 col-lg-3 mb-3">
 <div class="form-group">
 <label for="bow">Year: Ordained Elder</label>
-<select class="worker-select form-control" id="ordainedElder"  name="ordainedElder" required="" style="width: 180px;">
+<select class="worker-select form-control"  required="" id="ordainedElder"  name="ordainedElder"  style="width: 180px;">
   <!-- Placeholder option -->
-  <option value="">Not Yet</option>
+  <option value="">Select</option>
 </select></div>
 </div>
 
 <div class="col-md-6 col-lg-3 mb-3">
 <div class="form-group">
 <label for="hgb">Year: Bishop</label>
-<select class="worker-select form-control" id="ordainedBishop"  name="ordainedBishop" required="" style="width: 180px;">
+<select class="worker-select form-control"  required="" id="ordainedBishop"  name="ordainedBishop"  style="width: 180px;">
   <!-- Placeholder option -->
-  <option value="">Not Yet</option>
+  <option value="">Select</option>
 </select></div>
 </div>
 
 <div class="col-md-6 col-lg-3 mb-3">
 <div class="form-group">
 <label for="hgb">Last Ordination Date</label>
-<input type="date" class="form-control"  name="lastOrdinationDate" placeholder="LastordinationDate" id="lastOrdinationDate">
+<input type="date" class="form-control"   name="lastOrdinationDate" placeholder="LastordinationDate" required="" id="lastOrdinationDate">
 
 </div>
 </div>
@@ -799,9 +823,9 @@ min characters
 <div class="col-md-6 col-lg-3 mb-3">
 <div class="form-group">
 <label for="ibcoms">Year: IBCOMS</label>
-<select class="worker-select form-control" id="IBSCOMS"  name="IBSCOMS" required="" style="width: 180px;">
+<select class="worker-select form-control"  required="" id="IBSCOMS"  name="IBSCOMS"  style="width: 180px;">
   <!-- Placeholder option -->
-  <option value="">Not Yet</option>
+  <option value="">Select</option>
 </select>
 </div>
 </div>
@@ -809,9 +833,9 @@ min characters
 <div class="col-md-6 col-lg-3 mb-3">
 <div class="form-group">
 <label for="woocome">Year: WOOCOME</label>
-<select class="worker-select form-control" id="WOOCOME"  name="WOOCOME" required="" style="width: 180px;">
+<select class="worker-select form-control"  required="" id="WOOCOME"  name="WOOCOME"  style="width: 180px;">
   <!-- Placeholder option -->
-  <option value="">Not Yet</option>
+  <option value="">Select</option>
 </select>
 </div>
 </div>
@@ -819,9 +843,9 @@ min characters
 <div class="col-md-6 col-lg-3 mb-3">
 <div class="form-group">
 <label for="join-sotsm">Year: ILS</label>
-<select class="worker-select form-control" id="ILS"  name="ILS" required="" style="width: 180px;">
+<select class="worker-select form-control"  required="" id="ILS"  name="ILS"  style="width: 180px;">
   <!-- Placeholder option -->
-  <option value="">Not Yet</option>
+  <option value="">Select</option>
 </select></div>
 </div>
 <!--  col-md-6   -->
@@ -829,9 +853,9 @@ min characters
 <div class="col-md-6 col-lg-3 mb-3">
 <div class="form-group">
 <label for="join-sotsm">Year: NGBTI</label>
-<select class="worker-select form-control" id="NGBTI"  name="NGBTI" required="" style="width: 180px;">
+<select class="worker-select form-control"  required="" id="NGBTI"  name="NGBTI"  style="width: 180px;">
   <!-- Placeholder option -->
-  <option value="">Not Yet</option>
+  <option value="">Select</option>
 </select></div>
 </div>
 
@@ -842,17 +866,17 @@ min characters
 
 <div class="row">
 <h2 class="mt-3">Career/Ministry</h2>
-<div class="col-md-3">
+<div class="col-md-6">
 <div class="form-check">
-<input class="form-check-input" type="radio" name="career" id="pastor" checked>
+<input class="form-check-input" type="checkbox" value="pastorStatus" name="pastorStatus"  id="pastorStatus">
 <label class="form-check-label" for="pastor">
 Full/PT Pastor
 </label>
 </div>
 </div>
-<div class="col-md-3">
+<div class="col-md-6">
 <div class="form-check">
-<input class="form-check-input" type="radio" name="career" id="professional" >
+<input class="form-check-input" type="checkbox" value="professionalStatus" name="professional"  id="professionalStatus" >
 <label class="form-check-label" for="professional">
 Career officer
 </label>
@@ -860,43 +884,49 @@ Career officer
 </div>
 <!-- id -professional - professional-choice, pastor , pastor-choice-->
 
-<!--  col-md-6   -->
-<div class="col-md-6 mb-2">
-<div class="form-group">
-<label for="dept">Name of Parish/Place Of Assignment <small></small></label>
-<input type="text" class="form-control date-picker"  name="placeOfAssignment" id="placeOfAssignment" placeholder="">
-</div>
-</div>
-<!--  col-md-6   -->
+
 </div>
 
-<div class="row" id="pastor-choice" style="display: true;">
-
+<div class="row" required="" id="pastor-choice" style="display: true;">
 <div class="row">
-
-<div class="col-md-2 mb-2">
+<!--  col-md-6   -->
+<div class="col-md-4 mb-2">
 <div class="form-group">
 <label for="pc">Status</label>
-<select name="statusOfEmployment" id="statusOfEmployment" class="form-control" style="width:120px;">
+<select name="statusOfEmployment" required="" id="statusOfEmployment" class="form-control"  style="width:180px;">
+  <option value="">select status</option>
   <option value="part-time">Part time</option>
   <option value="full-time"> Full-time</option>
 </select>
 </div>
 </div>
 
-<div class="col-md-5">
-<div class="form-group">
-<label for="dob">Name of Zone</label>
-<input type="text" class="form-control date-picker" name="nameOfzone" id="nameOfzone" placeholder="">
-</div>
+<div class="col-md-6 mb-2">
+    <div class="form-group">
+        <label for="nameOfDivision">Name of Division/Region</label>
+        <select class="form-control"  name="nameOfDivision" required="" id="nameOfDivision" style="width:360px;">
+            <!-- Options will be dynamically added here -->
+        </select>
+    </div>
 </div>
 
-<!--  col-md-6   -->
-<div class="col-md-5">
-<div class="form-group">
-<label for="dob">Name of Diocese/Region</label>
-<input type="text" class="form-control date-picker" name="nameOfDiocese" id="nameOfDiocese" placeholder="" style="width: 300px;">
+
+<div class="col-md-6">
+    <div class="form-group">
+        <label for="nameOfDiocese">Name of Diocese</label>
+        <select class="form-control"  name="nameOfDiocese" required="" id="nameOfDiocese" style="width:340px;">
+            <!-- Options will be dynamically added here -->
+        </select>
+    </div>
 </div>
+
+<div class="col-md-6">
+    <div class="form-group">
+        <label for="nameOfZone">Name of Zone</label>
+        <select class="form-control"  name="nameOfZone" required="" id="nameOfZone" style="width:340px;">
+            <!-- Options will be dynamically added here -->
+        </select>
+    </div>
 </div>
 
 
@@ -908,15 +938,18 @@ Career officer
 
 <!--  col-md-6   -->
 <div class="col-md-4">
-<div class="form-group">
-<label for="dob">Name of Division</label>
-<input type="text" class="form-control date-picker" name="nameOfDivision" id="nameOfDivision" placeholder="">
+    <div class="form-group">
+        <label for="placeOfAssignment">Name of Parish</label>
+          <select class="form-control"  name="placeOfAssignment" required="" id="placeOfAssignment" style="width:230px;">
+            <!-- Options will be dynamically added here -->
+        </select>   
+      </div>
 </div>
-</div>
+
 <div class="col-md-4">
 <div class="form-group">
 <label for="dob">State</label>
-<select id="stateSelect2" onchange="populateLGAs('lgaSelect2')" name="stateOfAssignment"  style="width:230px;">
+<select required="" id="stateSelect2" onchange="populateLGAs('lgaSelect2')" name="stateOfAssignment"  style="width:230px;">
 <option value="">Select Church State </option>
 </select>
 </div>
@@ -924,20 +957,34 @@ Career officer
 <div class="col-md-4">
 <div class="form-group">
 <label for="dob">Name  of LGA</label>
-<select  class="form-control" name="lgaOfAssignment" required="" id="lgaSelect2"  style="width:230px;">
+<select  class="form-control"  name="lgaOfAssignment"  required="" id="lgaSelect2"  style="width:230px;">
   <option value="">Select Church LGA </option>
 </select>  </div>
 </div>
 
-
-
+<div class="col-md-6">
+<div class="form-group">
+<label></label>
+<select  class="form-control"  name="pastorOffice"  required="" id="pastorrOffice" style="width:330px;">
+  <option value="">Current Leadership Role </option>
+  <option value="Parish Pastor">Parish Pastor</option>
+  <option value="Zonal Pastor (ZP)">Zonal Pastor (ZP)</option>
+  <option value="Regional Pastor (RP)">Regional Pastor (RP)</option>
+  <option value="Diocesan Mission Director (DMD)">Diocesan Mission Director (DMD)</option>
+  <option value="Head of Division (HOD)">Head of Division (HOD)</option>
+  <option value="Bishop">Bishop</option>
+  <option value="Presiding Bishop">Presiding Bishop</option>
+</select>  
+</div>
+</div>
 <!--  col-md-6   -->
 </div>
+
 <div class="row">
 <div class="col-md-12">
 <div class="form-group">
 <label>Church Address/Location </label>
-<textarea id="placeOfAssignment" name="placeOfAssignment" placeholder="Please type Church address"></textarea>
+<textarea required="" id="placeOfAssignmentAddress" name="placeOfAssignmentAddress" placeholder="Please type Church address"></textarea>
 </div>
 <span class="maxChar">
 <span class="count">0</span>/<span class="tillcount">200</span>
@@ -948,7 +995,7 @@ min characters
 <div class="col-md-6">
 <div class="form-group">
 <label for="churchCountry">Church Country</label>
-<select id="countryChurch"  name="countryChurch"  style="width:200px;">
+<select required="" id="countryChurch"  name="countryChurch"  style="width:200px;">
 <option value="">Select Country</option>
 </select>
 </div>
@@ -957,21 +1004,21 @@ min characters
 
 </div>
 
-<div class="row" id="professional-choice" style="display: none;">
+<div class="row" required="" id="professional-choice" style="display: none;">
 
 <div class="row">
 
 <div class="col-md-6">
 <div class="form-group">
-<label for="dob">Job Title</label>
-<input type="text" class="form-control date-picker" name="jobTitle" id="jobTitle" placeholder="">
+<label for="dob">Name of Department</label>
+<input type="text" class="form-control  date-picker" name="nameOfDepartment" required="" id="nameOfDepartment" placeholder="">
 </div>
 </div>
 <!--  col-md-6   -->
 <div class="col-md-6">
 <div class="form-group">
 <label for="dob">Year Employed </label>
-<input type="date" class="form-control date-picker" id="yrEmployed" name="yrEmployed" placeholder="">
+<input type="date" class="form-control  date-picker" required="" id="yrEmployed" name="yrEmployed" placeholder="">
 </div>
 </div>
 <!--  col-md-6   -->
@@ -983,8 +1030,8 @@ min characters
 <!--  col-md-6   -->
 <div class="col-md-6">
 <div class="form-group">
-<label for="dept">Name of Unit{Under Department}</label>
-<input type="text" class="form-control" name="unitInDepartment" id="unitInDepartment" placeholder="">
+<label for="dept">Designation/Job Title</label>
+<input type="text" class="form-control"  name="jobTitle" required="" id="jobTitle" placeholder="">
 </div>
 </div>
 <!--  col-md-6   -->
@@ -993,7 +1040,8 @@ min characters
 <div class="col-md-4">
 <div class="form-group">
 <label for="grade">Grade Level</label>
-<select class="form-control" name="gradeLevel" id="gradeLevel"  style="width: 200px;">
+<select class="form-control"  name="gradeLevel" required="" id="gradeLevel"  style="width: 200px;">
+  <option value="">Select</option>
   <option value="1">1</option>
   <option value="2">2</option>
   <option value="3">3</option>
@@ -1020,7 +1068,8 @@ min characters
 <div class="col-md-2">
 <div class="form-group">
 <label for="step">Step</label>
-<select class="form-control" name="stepLevel" id="stepLevel"  style="width: 120px;">
+<select class="form-control"  name="stepLevel" required="" id="stepLevel"  style="width: 120px;">
+  <option value="">Select</option>
   <option value="1">1</option>
   <option value="2">2</option>
   <option value="3">3</option>
@@ -1050,7 +1099,7 @@ min characters
 <div class="col-md-12">
 <div class="form-group">
 <label>Department Address/Location </label>
-<textarea id="deptAdress" name="deptAdress" placeholder="Please type Church address"></textarea>
+<textarea required="" id="deptAdress" name="deptAdress" placeholder="Please type Church address"></textarea>
 </div>
 <span class="maxChar">
 <span class="count">0</span>/<span class="tillcount">200</span>
@@ -1062,7 +1111,7 @@ min characters
 <!--  col-md-6   -->
 <div class="col-md-4">
 <div class="form-group">
-<select id="stateSelect3" onchange="populateLGAs('lgaSelect3')" name="deptState"  style="width:200px;">
+<select required="" id="stateSelect3" onchange="populateLGAs('lgaSelect3')" name="deptState"  style="width:200px;">
 <option value="">Select  State </option>
 </select>
 </div>
@@ -1071,7 +1120,7 @@ min characters
 
 <div class="col-md-4">
 <div class="form-group">
-<select  class="form-control" name="deptLGA" required="" id="lgaSelect3" style="width:200px;">
+<select  class="form-control"  name="deptLGA"  required="" id="lgaSelect3" style="width:200px;">
   <option value="">Select  LGA </option>
 </select>  
 </div>
@@ -1079,8 +1128,8 @@ min characters
 
 <div class="col-md-4">
 <div class="form-group">
-<select id="countryOrg"  name="countryOrg"  style="width:200px;">
-<option value="">Select Country</option>
+<select required="" id="countryOrg"  name="countryOrg"  style="width:200px;">
+<option value="" selected>Select Country</option>
 
 </select>
 </div>
@@ -1099,7 +1148,7 @@ min characters
 <div class="col-md-6">
 <div class="form-group">
   <label>I am pastor in a parish </label>
-<select id="ispastor_parish" name="ispastor_parish" style="width:330px;">
+<select required="" id="ispastor_parish" name="ispastor_parish" style="width:330px;">
 <option value="" selected>Select </option>
 <option value="Yes">Yes</option>
 <option value="No">No </option>
@@ -1107,12 +1156,11 @@ min characters
 </div>
 </div>
 <!--  col-md-6   -->
-
+<!--pastoring while serving as career officer-->
 <div class="col-md-6">
 <div class="form-group">
-  <label></label>
-
-<select  class="form-control" name="careerPastorOffice" required="" id="careerPastorOffice" style="width:330px;">
+<label></label>
+<select  class="form-control"  name="careerPastorOffice"  required="" id="careerPastorOffice" style="width:330px;">
   <option value="">Current Leadership Role </option>
   <option value="Parish Pastor">Parish Pastor</option>
   <option value="Zonal Pastor (ZP)">Zonal Pastor (ZP)</option>
@@ -1124,10 +1172,49 @@ min characters
 </select>  
 </div>
 </div>
+   
+
+
+
+<div class="col-md-6 mb-2">
+    <div class="form-group">
+        <label class="c-label" for="nameOfDivisionc">Name of Division/Region</label>
+        <select class="form-control"  name="nameOfDivision" required="" id="nameOfDivisionc" style="width:340px;">
+            <!-- Options will be dynamically added here -->
+        </select>
+    </div>
+</div>
+
+<div class="col-md-6">
+    <div class="form-group">
+        <label class="c-label" for="nameOfDiocesec">Name of Diocese</label>
+        <select class="form-control"  name="nameOfDiocese" required="" id="nameOfDiocesec" style="width:340px;">
+            <!-- Options will be dynamically added here -->
+        </select>
+    </div>
+</div>
+
+<div class="col-md-6">
+    <div class="form-group">
+        <label class="c-label" for="nameOfZonec">Name of Zone</label>
+        <select class="form-control"  name="nameOfZone" required="" id="nameOfZonec" style="width:340px;">
+            <!-- Options will be dynamically added here -->
+        </select>
+    </div>
+</div>
+
+<div class="col-md-6">
+<div class="form-group">
+<label  class="c-label" for="placeOfAssignmentc">Name of Parish</label>
+<select class="form-control"  name="placeOfAssignment" required="" id="placeOfAssignmentc" style="width:340px;">
+<!-- Options will be dynamically added here -->
+</select>
+</div>
+</div>
 
   <hr class="hr-section">
 
-<div id="confirmation"></div>
+<div required="" id="confirmation"></div>
 </div>
 </div>
 </div>
@@ -1143,13 +1230,13 @@ min characters
 <div class="col-md-4">
 <div class="form-group">
 <label for="dateEstablished">Date of  Establishment</label>
-<input type="date" class="form-control date-picker" id="dateEstablished" placeholder="">
+<input type="date" class="form-control  date-picker" required="" id="dateEstablished" placeholder="">
 </div>
 </div>
 <div class="col-md-4">
 <div class="form-group">
 <label for="designation">Church Property Status</label>
-<select class="form-control" name="churchProperty" required="" id="churchProperty" style="width: 240px;">
+<select class="form-control"  name="churchProperty"  required="" id="churchProperty" style="width: 240px;">
 <option value="">Church property Status</option>
 <option value="Owned Property">Owned Property</option>
 <option value="Leased Property">Leased Property</option>
@@ -1164,48 +1251,33 @@ min characters
 <div class="col-md-4">
 <div class="form-group">
 <label for="dateEstablished">Estimated value </label>
-<input type="text" class="form-control date-picker" id="propertyEstimatedValue" placeholder=" ₦ FreeHold/Lease/Rent">
+<input type="text" class="form-control"  required="" id="propertyEstimatedValue" placeholder=" ₦ FreeHold/Lease/Rent">
 </div>
 </div>
 
 
 </div>
-
-<section id="leasingInfo">
+<section required="" id="leasingInfo">
 <div class="row">
-<div class="col-md-4 leasingInfo">
+<div class="col-md-6 leasingInfo">
 <div class="form-group">
 <label for="designation">Church Building</label>
-<select class="form-control" name="clcBuilding" required="" id="clcBuilding" style="width: 240px;">
+<select class="form-control"  name="clcBuilding"  required="" id="clcBuilding" style="width: 320px;">
 <option value="">Church property Status</option>
-<option value="clc-Building">CLC Building </option>
-<option value="third-partyBuilding">Third-Party Building</option>
+<option value="ownedProperty">Owned Property </option>
+<option value="thirdPartyBuilding">ThirdParty Building</option>
 </select>
 </div>
 </div>
 
-<div class="col-md-4 leasingInfo">
+<div class="col-md-6 leasingInfo">
 <div class="form-group">
 <label for="dateEstablished">Payment Frequency</label>
-<select class="form-control" name="leaseType" id="leaseType" style="width: 240px;">
+<select class="form-control"  name="leaseType" required="" id="leaseType" style="width: 320px;">
   <option value="">Lease/Rent Agreement</option>
   <option value="monthly_rent">Monthly Rent</option>
   <option value="yearly_rent">Yearly Rent</option>
   <option value="other_monthly">Other Monthly</option>
-</select>
-</div>
-</div>
-
-<div class="col-md-4 leasingInfo">
-<div class="form-group">
-<label for="designation">Church Property Status</label>
-<select class="form-control" name="churchProperty" required="" id="churchProperty" style="width: 240px;">
-<option value="">Church property Status</option>
-<option value="Field Missionaries">Owned Property</option>
-<option value="Leased Property">Leased Property</option>
-<option value="Free Lease">Free Lease</option>
-<option value="Freehold">Freehold</option>
-<option value="Rented Property">Rented Property</option>
 </select>
 </div>
 </div>
@@ -1219,25 +1291,25 @@ min characters
 <div class="col-md-3">
 <div class="form-group">
 <label for="adult">Adult</label>
-<input type="number" class="form-control avg" id="avgadult" name="avgadult" placeholder="">
+<input type="number" class="form-control avg" required="" id="avgadult" name="avgadult" placeholder="">
 </div>
 </div>
 <div class="col-md-3">
 <div class="form-group">
 <label for="youth">Youth</label>
-<input type="number" class="form-control avg" id="avgyouth" name="avgyouth" placeholder="">
+<input type="number" class="form-control  avg" required="" id="avgyouth" name="avgyouth" placeholder="">
 </div>
 </div>
 <div class="col-md-3">
 <div class="form-group">
 <label for="children">Children</label>
-<input type="number" class="form-control avg" id="avgchildren" name="avgchildren" placeholder="">
+<input type="number" class="form-control  avg" required="" id="avgchildren" name="avgchildren" placeholder="">
 </div>
 </div>
 <div class="col-md-3">
 <div class="form-group">
 <label for="total">Total</label>
-<input type="number" class="form-control avg"  name="totalAttedance" id="total" placeholder="" readonly>
+<input type="number" class="form-control  avg"  name="totalAttedance"  id="total" placeholder="" readonly>
 </div>
 </div>
 
@@ -1247,19 +1319,19 @@ min characters
 <div class="col-md-4">
 <div class="form-group">
 <label for="adult">Total No: Workers</label>
-<input type="number" class="form-control avg" name="totalWorkers" id="totalWorkers" placeholder="">
+<input type="number" class="form-control  avg" name="totalWorkers" required="" id="totalWorkers" placeholder="">
 </div>
 </div>
 <div class="col-md-4">
 <div class="form-group">
 <label for="youth">Workers in Training</label>
-<input type="number" class="form-control avg" name="workersInTraining" id="workersInTraining" placeholder="">
+<input type="number" class="form-control  avg" name="workersInTraining" required="" id="workersInTraining" placeholder="">
 </div>
 </div>
 <div class="col-md-4">
 <div class="form-group">
 <label for="children">Total Un-Ordained Leaders</label>
-<input type="number" class="form-control avg" name="unordainedLeaders" id="unordainedLeaders" placeholder="">
+<input type="number" class="form-control  avg" name="unordainedLeaders" required="" id="unordainedLeaders" placeholder="">
 </div>
 </div>
 
@@ -1271,37 +1343,37 @@ min characters
   <div class="col-md-2">
 <div class="form-group">
 <label for="children">Ministers</label>
-<input type="number" class="form-control avg" name="noofMinisters" id="noofMinisters" placeholder="">
+<input type="number" class="form-control  avg" name="noofMinisters" required="" id="noofMinisters" placeholder="">
 </div>
 </div>
 <div class="col-md-2">
 <div class="form-group">
 <label for="adult">Dcn/Dncs</label>
-<input type="number" class="form-control" id="noofdcns" name="noofdcns"  placeholder="">
+<input type="number" class="form-control"  required="" id="noofdcns" name="noofdcns"  placeholder="">
 </div>
 </div>
 <div class="col-md-2">
 <div class="form-group">
 <label for="youth">Pastor</label>
-<input type="number" class="form-control avg" name="noofpastor" id="noofpastor" placeholder="">
+<input type="number" class="form-control  avg" name="noofpastor" required="" id="noofpastor" placeholder="">
 </div>
 </div>
 <div class="col-md-2">
 <div class="form-group">
 <label for="children">Snr Pastors</label>
-<input type="number" class="form-control avg" name="noofsnrpastor" id="noofsnrpastor" placeholder="">
+<input type="number" class="form-control  avg" name="noofsnrpastor" required="" id="noofsnrpastor" placeholder="">
 </div>
 </div>
 <div class="col-md-2">
 <div class="form-group">
 <label for="children">Elder</label>
-<input type="number" class="form-control avg" name="noofelder" id="noofelder" placeholder="">
+<input type="number" class="form-control  avg" name="noofelder" required="" id="noofelder" placeholder="">
 </div>
 </div>
 <div class="col-md-2">
 <div class="form-group">
 <label for="children">Bishops</label>
-<input type="number" class="form-control avg" name="noofbishops" id="noofbishops" placeholder="">
+<input type="number" class="form-control  avg" name="noofbishops" required="" id="noofbishops" placeholder="">
 </div>
 </div>
 
@@ -1314,21 +1386,23 @@ min characters
 </div>
 
 </div>
-
 <!--buttom-->
 <div class="col-md-12">
 <!-- Buttons for navigation between steps -->
 <div class="d-flex align-itmes-center flex-wrap">
+
   <button
     class="prevBtn btn btn-lg btn-primary"
     onclick="prevStep()">
     Previous
   </button>
+  
   <button
     class="nextBtn btn btn-lg btn-primary"
     onclick="nextStep()">
     Next
   </button>
+
   <button
     type="submit"
     id="submitBtn"
@@ -1338,9 +1412,10 @@ min characters
   </button>
 </div>
 </div>
+</form>
 
 </div>
-</form>
+
 </div>
 
 
@@ -1360,27 +1435,720 @@ min characters
 <script src="assets/js/lga.js"></script>
 <script src="assets/js/year.js"></script>
 <script src="assets/js/country.js"></script>
+<!-- <script src="assets/js/storage.js"></script> -->
 <script src="assets/js/app.js"></script>
 
 
 <script>
+var pastorData = {};
+// Function to load divisions on page load
+/*
+async function loadDivisions() {
+    const divisionsResponse = await fetch('/divisions');
+    const divisions = await divisionsResponse.json();
+    const divisionSelect = document.getElementById('nameOfDivision');
+    divisionSelect.innerHTML = '';
+    divisions.forEach(division => {
+        const option = document.createElement('option');
+        option.value = division.divisionCode; // Adjust according to your data structure
+        option.text = `${division.parishOrPlaceOfAssignment} Division`; // Adjust according to your data structure
+        divisionSelect.appendChild(option);
+    });
+}
+*/
+async function loadDivisions() {
+    const divisionsResponse = await fetch('/divisions');
+    const divisions = await divisionsResponse.json();
+    const divisionSelect = document.getElementById('nameOfDivision');
+    divisionSelect.innerHTML = '';
+
+    // Create the first option element for 'select division'
+    const firstOption = document.createElement('option');
+    firstOption.value = ''; // Set the value to an empty string
+    firstOption.text = 'Select Division'; // Set the text to 'Select Division'
+    divisionSelect.appendChild(firstOption);
+
+    // Iterate over the divisions and append options for each division
+    divisions.forEach(division => {
+        const option = document.createElement('option');
+        option.value = division.divisionCode; // Adjust according to your data structure
+        option.text = `${division.parishOrPlaceOfAssignment} Division`; // Adjust according to your data structure
+        divisionSelect.appendChild(option);
+    });
+}
+
+// Function to load dioceses based on selected division
+async function loadDioceses() {
+    const divisionId = document.getElementById('nameOfDivision').value;
+
+    const diocesesResponse = await fetch(`/divisions/${divisionId}/dioceses`);
+    const dioceses = await diocesesResponse.json();
+    const dioceseSelect = document.getElementById('nameOfDiocese');
+    dioceseSelect.innerHTML = '';
+    dioceses.forEach(diocese => {
+        const option = document.createElement('option');
+        option.value = diocese.dioceseCode; // Adjust according to your data structure
+        option.text = diocese.parishOrPlaceOfAssignment; // Adjust according to your data structure
+        dioceseSelect.appendChild(option);
+    });
+}
+
+// Function to load zones based on selected diocese
+async function loadZones() {
+    const dioceseId = document.getElementById('nameOfDiocese').value;
+    const zonesResponse = await fetch(`/dioceses/${dioceseId}/zones`);
+    const zones = await zonesResponse.json();
+    const zoneSelect = document.getElementById('nameOfZone');
+    zoneSelect.innerHTML = '';
+    zones.forEach(zone => {
+        const option = document.createElement('option');
+        option.value = zone.zonalCode; // Adjust according to your data structure
+        option.text = zone.parishOrPlaceOfAssignment; // Adjust according to your data structure
+        zoneSelect.appendChild(option);
+    });
+}
+
+async function loadParishes() {
+    const zoneId = document.getElementById('nameOfZone').value;
+    const parishResponse = await fetch(`/zones/${zoneId}/parishes`);
+    const parishes = await parishResponse.json();
+    const parishSelect = document.getElementById('placeOfAssignment');
+    parishSelect.innerHTML = '';
+    parishes.forEach(parish => {
+        const option = document.createElement('option');
+        option.value = parish.parishCode; // Adjust according to your data structure
+        option.text = parish.parishOrPlaceOfAssignment; // Adjust according to your data structure
+        parishSelect.appendChild(option);
+    });
+}
+
+// JavaScript to load forms dynamically based on user selection
+//-----------load for  career employee-----------//
+
+async function loadDivisions2() {
+    const divisionsResponse = await fetch('/divisions');
+    const divisions = await divisionsResponse.json();
+    const divisionSelect = document.getElementById('nameOfDivisionc');
+    divisionSelect.innerHTML = '';
+
+    // Create the first option element for 'select division'
+    const firstOption = document.createElement('option');
+    firstOption.value = ''; // Set the value to an empty string
+    firstOption.text = 'Select Division'; // Set the text to 'Select Division'
+    divisionSelect.appendChild(firstOption);
+
+    // Iterate over the divisions and append options for each division
+    divisions.forEach(division => {
+        const option = document.createElement('option');
+        option.value = division.divisionCode; // Adjust according to your data structure
+        option.text = `${division.parishOrPlaceOfAssignment} Division`; // Adjust according to your data structure
+        divisionSelect.appendChild(option);
+    });
+}
+
+// Function to load dioceses based on selected division
+async function loadDioceses2() {
+    const divisionId = document.getElementById('nameOfDivisionc').value;
+    const diocesesResponse = await fetch(`/divisions/${divisionId}/dioceses`);
+    const dioceses = await diocesesResponse.json();
+    const dioceseSelect = document.getElementById('nameOfDiocesec');
+    dioceseSelect.innerHTML = '';
+    dioceses.forEach(diocese => {
+        const option = document.createElement('option');
+        option.value = diocese.dioceseCode; // Adjust according to your data structure
+        option.text = diocese.parishOrPlaceOfAssignment; // Adjust according to your data structure
+        dioceseSelect.appendChild(option);
+    });
+}
+
+// Function to load zones based on selected diocese
+async function loadZones2() {
+    const dioceseId = document.getElementById('nameOfDiocesec').value;
+    const zonesResponse = await fetch(`/dioceses/${dioceseId}/zones`);
+    const zones = await zonesResponse.json();
+    const zoneSelect = document.getElementById('nameOfZonec');
+    zoneSelect.innerHTML = '';
+    zones.forEach(zone => {
+        const option = document.createElement('option');
+        option.value = zone.zonalCode; // Adjust according to your data structure
+        option.text = zone.parishOrPlaceOfAssignment; // Adjust according to your data structure
+        zoneSelect.appendChild(option);
+    });
+}
+
+async function loadParishes2() {
+    const zoneId = document.getElementById('nameOfZonec').value;
+    const parishResponse = await fetch(`/zones/${zoneId}/parishes`);
+    const parishes = await parishResponse.json();
+    const parishSelect = document.getElementById('placeOfAssignmentc');
+    parishSelect.innerHTML = '';
+    parishes.forEach(parish => {
+        const option = document.createElement('option');
+        option.value = parish.parishCode; // Adjust according to your data structure
+        option.text = parish.parishOrPlaceOfAssignment; // Adjust according to your data structure
+        parishSelect.appendChild(option);
+    });
+}
+
+
+
+
+  const title = document.getElementById("title").value;
+  const firstname = document.getElementById("firstname").value;
+  const lastname = document.getElementById("lastname").value;
+  const otherName = document.getElementById("otherName").value;
+  const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
+  const genderMale = document.getElementById("male").checked;
+  const genderFemale = document.getElementById("female").checked;
+  const dateOfBirth = document.getElementById("dateOfBirth").value;
+  const highestQualification = document.getElementById("highestQualification").value;
+  const professionalQualification = document.getElementById("professionalQualification").value;
+  const maritalStatus = document.getElementById("maritalStatus").value;
+  const stateOfOrigin = document.getElementById("stateSelect4").value;
+  const lgaOfOrigin = document.getElementById("lgaSelect4").value;
+  const homeTown = document.getElementById("homeTown").value;
+  const spouseName = document.getElementById("spouseName").value;
+  const spousePhoneNumber = document.getElementById("spousePhoneNumber").value;
+  const spouseDateOfBirth = document.getElementById("spouseDateOfBirth").value;
+  const nextOfKinName = document.getElementById("nextOfKinName").value;
+  const nextOfKinPhoneNumber = document.getElementById("nextOfKinPhoneNumber").value;
+  const nextOfKinRelationship = document.getElementById("nextOfKinRelationship").value;
+  const residentialAddress = document.getElementById("residentialAddress").value;
+  const stateOfResidence = document.getElementById("stateSelect1").value;
+  const lgaOfResidence = document.getElementById("lgaSelect1").value;
+  const employmentCategory = document.getElementById("empCategory").value;
+  const occupation = document.getElementById("occupation").value;
+  //second form
+  const yearBornAgain = document.getElementById("yearBornAgain").value;
+  const waterBaptized = document.getElementById("waterBaptized").value;
+  const holyghostBaptism = document.getElementById("holyghostBaptism").value;
+  const joinedSotsm = document.getElementById("joinedSotsm").value;
+  const becameWorker = document.getElementById("becameWorker").value;
+  const becameMinister = document.getElementById("becameMinister").value;
+  const ordainedDcns = document.getElementById("ordainedDcns").value;
+  const becamePastor = document.getElementById("becamePastor").value;
+  const becameSnrPastor = document.getElementById("becameSnrPastor").value;
+  const ordainedElder = document.getElementById("ordainedElder").value;
+  const ordainedBishop = document.getElementById("ordainedBishop").value;
+  const lastOrdinationDate = document.getElementById("lastOrdinationDate").value;
+  const IBSCOMS = document.getElementById("IBSCOMS").value;
+  const WOOCOME = document.getElementById("WOOCOME").value;
+  const ILS = document.getElementById("ILS").value;
+  const NGBTI = document.getElementById("NGBTI").value;
+  //Task 1. Only validate if element pastor is checke with value
+  const pastor = document.getElementById("pastorStatus").checked;
+  const placeOfAssignment = document.getElementById("placeOfAssignment").value;
+  const nameOfzone = document.getElementById("nameOfZone").value;
+  const nameOfDiocese = document.getElementById("nameOfDiocese").value;
+  const nameOfDivision = document.getElementById("nameOfDivision").value;
+  const stateChurch = document.getElementById("stateSelect2").value;
+  const lgaChurch= document.getElementById("lgaSelect2").value;
+  const placeOfAssignmentAddress = document.getElementById("placeOfAssignmentAddress").value;
+  const countryChurch = document.getElementById("countryChurch").value;
+  // Task2. only validate  set of elements if professional is choosen/checked with value
+  const professional = document.getElementById("professionalStatus").checked;
+  const jobTitle = document.getElementById("jobTitle").value;
+  const yrEmployed = document.getElementById("yrEmployed").value;
+  const nameOfDepartment = document.getElementById("nameOfDepartment").value;
+  const gradeLevel = document.getElementById("gradeLevel").value;
+  const stepLevel = document.getElementById("stepLevel").value;
+  const deptAdress = document.getElementById("deptAdress").value;
+  const stateOrg = document.getElementById("stateSelect3").value;
+  const lgaOrg= document.getElementById("lgaSelect3").value;
+  const countryOrg = document.getElementById("countryOrg").value;
+  //Task 3 if ispastor_parish value is  No skip validation element of careerPastor
+  const ispastor_parish = document.getElementById("ispastor_parish").value;
+  const careerPastorOffice = document.getElementById("careerPastorOffice").value;
+  //Task 4 rest of the form 
+  const dateEstablished = document.getElementById('dateEstablished').value;
+  const churchProperty = document.getElementById('churchProperty').value;
+  const propertyEstimatedValue = document.getElementById('propertyEstimatedValue').value;
+  const clcBuilding = document.getElementById('clcBuilding').value;
+  const leaseType = document.getElementById('leaseType').value;
+  const avgadult = document.getElementById('avgadult').value;
+  const avgyouth = document.getElementById('avgyouth').value;
+  const avgchildren = document.getElementById('avgchildren').value;
+  const total = document.getElementById('total').value;
+  const totalWorkers = document.getElementById('totalWorkers').value;
+  const workersInTraining = document.getElementById('workersInTraining').value;
+  const unordainedLeaders = document.getElementById('unordainedLeaders').value;
+  const noofMinisters = document.getElementById('noofMinisters').value;
+  const noofdcns = document.getElementById('noofdcns').value;
+  const noofpastor = document.getElementById('noofpastor').value;
+  const noofsnrpastor = document.getElementById('noofsnrpastor').value;
+  const noofelder = document.getElementById('noofelder').value;
+  const noofbishops = document.getElementById('noofbishops').value;
+
+
+
+
+function validateForm() {
+  const emptyFields = [];
+  const title = document.getElementById("title").value;
+  const firstname = document.getElementById("firstname").value;
+  const lastname = document.getElementById("lastname").value;
+  const otherName = document.getElementById("otherName").value;
+  const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
+  const genderMale = document.getElementById("male").checked;
+  const genderFemale = document.getElementById("female").checked;
+  const dateOfBirth = document.getElementById("dateOfBirth").value;
+  const highestQualification = document.getElementById("highestQualification").value;
+  const professionalQualification = document.getElementById("professionalQualification").value;
+  const maritalStatus = document.getElementById("maritalStatus").value;
+  const stateOfOrigin = document.getElementById("stateSelect4").value;
+  const lgaOfOrigin = document.getElementById("lgaSelect4").value;
+  const homeTown = document.getElementById("homeTown").value;
+  const spouseName = document.getElementById("spouseName").value;
+  const spousePhoneNumber = document.getElementById("spousePhoneNumber").value;
+  const spouseDateOfBirth = document.getElementById("spouseDateOfBirth").value;
+  const nextOfKinName = document.getElementById("nextOfKinName").value;
+  const nextOfKinPhoneNumber = document.getElementById("nextOfKinPhoneNumber").value;
+  const nextOfKinRelationship = document.getElementById("nextOfKinRelationship").value;
+  const residentialAddress = document.getElementById("residentialAddress").value;
+  const stateOfResidence = document.getElementById("stateSelect1").value;
+  const lgaOfResidence = document.getElementById("lgaSelect1").value;
+  const employmentCategory = document.getElementById("empCategory").value;
+  const occupation = document.getElementById("occupation").value;
+  //second form
+  const yearBornAgain = document.getElementById("yearBornAgain").value;
+  const waterBaptized = document.getElementById("waterBaptized").value;
+  const holyghostBaptism = document.getElementById("holyghostBaptism").value;
+  const joinedSotsm = document.getElementById("joinedSotsm").value;
+  const becameWorker = document.getElementById("becameWorker").value;
+  const becameMinister = document.getElementById("becameMinister").value;
+  const ordainedDcns = document.getElementById("ordainedDcns").value;
+  const becamePastor = document.getElementById("becamePastor").value;
+  const becameSnrPastor = document.getElementById("becameSnrPastor").value;
+  const ordainedElder = document.getElementById("ordainedElder").value;
+  const ordainedBishop = document.getElementById("ordainedBishop").value;
+  const lastOrdinationDate = document.getElementById("lastOrdinationDate").value;
+  const IBSCOMS = document.getElementById("IBSCOMS").value;
+  const WOOCOME = document.getElementById("WOOCOME").value;
+  const ILS = document.getElementById("ILS").value;
+  const NGBTI = document.getElementById("NGBTI").value;
+
+  //Task 1. Only validate if element pastor is checke with value
+  const pastor = document.getElementById("pastorStatus").checked;
+  const placeOfAssignment = document.getElementById("placeOfAssignment").value;
+  const nameOfzone = document.getElementById("nameOfzone").value;
+  const nameOfDiocese = document.getElementById("nameOfDiocese").value;
+  const nameOfDivision = document.getElementById("nameOfDivision").value;
+  const stateChurch = document.getElementById("stateSelect2").value;
+  const lgaChurch= document.getElementById("lgaSelect2").value;
+  const placeOfAssignmentAddress = document.getElementById("placeOfAssignmentAddress").value;
+  const countryChurch = document.getElementById("countryChurch").value;
+
+  // Task2. only validate  set of elements if professional is choosen/checked with value
+  const professional = document.getElementById("professionalStatus").checked;
+  const jobTitle = document.getElementById("jobTitle").value;
+  const yrEmployed = document.getElementById("yrEmployed").value;
+  const unitInDepartment = document.getElementById("unitInDepartment").value;
+  const gradeLevel = document.getElementById("gradeLevel").value;
+  const stepLevel = document.getElementById("stepLevel").value;
+  const deptAdress = document.getElementById("deptAdress").value;
+  const stateOrg = document.getElementById("stateSelect3").value;
+  const lgaOrg= document.getElementById("lgaSelect3").value;
+  const countryOrg = document.getElementById("countryOrg").value;
+
+  //Task 3 if ispastor_parish value is  No skip validation element of careerPastor
+  const ispastor_parish = document.getElementById("ispastor_parish").value;
+  const careerPastorOffice = document.getElementById("careerPastorOffice").value;
+  const dateEstablished = document.getElementById('dateEstablished').value;
+  const churchProperty = document.getElementById('churchProperty').value;
+  const propertyEstimatedValue = document.getElementById('propertyEstimatedValue').value;
+  const clcBuilding = document.getElementById('clcBuilding').value;
+  const leaseType = document.getElementById('leaseType').value;
+  const avgadult = document.getElementById('avgadult').value;
+  const avgyouth = document.getElementById('avgyouth').value;
+  const avgchildren = document.getElementById('avgchildren').value;
+  const total = document.getElementById('total').value;
+  const totalWorkers = document.getElementById('totalWorkers').value;
+  const workersInTraining = document.getElementById('workersInTraining').value;
+  const unordainedLeaders = document.getElementById('unordainedLeaders').value;
+  const noofMinisters = document.getElementById('noofMinisters').value;
+  const noofdcns = document.getElementById('noofdcns').value;
+  const noofpastor = document.getElementById('noofpastor').value;
+  const noofsnrpastor = document.getElementById('noofsnrpastor').value;
+  const noofelder = document.getElementById('noofelder').value;
+  const noofbishops = document.getElementById('noofbishops').value;
+
+  if (title.trim() === "") {
+    emptyFields.push("Title");
+  }
+  if (firstname.trim() === "") {
+    emptyFields.push("First Name");
+  }
+  if (lastname.trim() === "") {
+    emptyFields.push("Last Name");
+  }
+  if (otherName.trim() === "") {
+    emptyFields.push("Other Name");
+  }
+  if (email.trim() === "") {
+    emptyFields.push("Email");
+  }
+  if (phone.trim() === "") {
+    emptyFields.push("Phone");
+  }
+  if (!genderMale && !genderFemale) {
+    emptyFields.push("Gender");
+  }
+  if (dateOfBirth.trim() === "") {
+    emptyFields.push("Date of Birth");
+  }
+  if (highestQualification.trim() === "") {
+    emptyFields.push("Highest Qualification");
+  }
+  if (professionalQualification.trim() === "") {
+    emptyFields.push("Professional Qualification");
+  }
+  if (maritalStatus.trim() === "") {
+    emptyFields.push("Marital Status");
+  }
+  if (stateOfOrigin.trim() === "") {
+    emptyFields.push("State of Origin");
+  }
+  if (lgaOfOrigin.trim() === "") {
+    emptyFields.push("LGA of Origin");
+  }
+  if (homeTown.trim() === "") {
+    emptyFields.push("Home Town");
+  }
+  if (spouseName.trim() === "") {
+    emptyFields.push("Spouse Name");
+  }
+  if (spousePhoneNumber.trim() === "") {
+    emptyFields.push("Spouse Phone Number");
+  }
+  if (spouseDateOfBirth.trim() === "") {
+    emptyFields.push("Spouse Date of Birth");
+  }
+  if (nextOfKinName.trim() === "") {
+    emptyFields.push("Next of Kin Name");
+  }
+  if (nextOfKinPhoneNumber.trim() === "") {
+    emptyFields.push("Next of Kin Phone Number");
+  }
+  if (nextOfKinRelationship.trim() === "") {
+    emptyFields.push("Next of Kin Relationship");
+  }
+  if (residentialAddress.trim() === "") {
+    emptyFields.push("Residential Address");
+  }
+  if (stateOfResidence.trim() === "") {
+    emptyFields.push("State of Residence");
+  }
+  if (lgaOfResidence.trim() === "") {
+    emptyFields.push("LGA of Residence");
+  }
+  if (employmentCategory.trim() === "") {
+    emptyFields.push("Employment Category");
+  }
+  if (occupation.trim() === "") {
+    emptyFields.push("Occupation");
+  }
+// Validate each field for the second form
+  if (yearBornAgain.trim() === "") {
+    emptyFields.push("Year Born Again");
+  }
+  if (waterBaptized.trim() === "") {
+    emptyFields.push("Water Baptized");
+  }
+  if (holyghostBaptism.trim() === "") {
+    emptyFields.push("Holy Ghost Baptism");
+  }
+  if (joinedSotsm.trim() === "") {
+    emptyFields.push("Joined Sotsm");
+  }
+  if (becameWorker.trim() === "") {
+    emptyFields.push("Became Worker");
+  }
+  if (becameMinister.trim() === "") {
+    emptyFields.push("Became Minister");
+  }
+  if (ordainedDcns.trim() === "") {
+    emptyFields.push("Ordained Dcns");
+  }
+  if (becamePastor.trim() === "") {
+    emptyFields.push("Became Pastor");
+  }
+  if (becameSnrPastor.trim() === "") {
+    emptyFields.push("Became Senior Pastor");
+  }
+  if (ordainedElder.trim() === "") {
+    emptyFields.push("Ordained Elder");
+  }
+  if (ordainedBishop.trim() === "") {
+    emptyFields.push("Ordained Bishop");
+  }
+  if (lastOrdinationDate.trim() === "") {
+    emptyFields.push("Last Ordination Date");
+  }
+  if (IBSCOMS.trim() === "") {
+    emptyFields.push("IBS COMS");
+  }
+  if (WOOCOME.trim() === "") {
+    emptyFields.push("WOO COME");
+  }
+  if (ILS.trim() === "") {
+    emptyFields.push("ILS");
+  }
+  if (NGBTI.trim() === "") {
+    emptyFields.push("NGBTI");
+  }
+
+/*
+// Task 1: Only validate if element pastor is checked with value
+if (pastor) {
+  if (placeOfAssignment.trim() === "") {
+    emptyFields.push("Place of Assignment");
+  }
+  if (nameOfZone.trim() === "") {
+    emptyFields.push("Name of Zone");
+  }
+  if (nameOfDiocese.trim() === "") {
+    emptyFields.push("Name of Diocese");
+  }
+  if (nameOfDivision.trim() === "") {
+    emptyFields.push("Name of Division");
+  }
+  if (stateSelect2.trim() === "") {
+    emptyFields.push("State (for the second form)");
+  }
+  if (lgaSelect2.trim() === "") {
+    emptyFields.push("LGA (for the second form)");
+  }
+  if (placeOfAssignmentAddress.trim() === "") {
+    emptyFields.push("Place of Assignment Address");
+  }
+  if (countryChurch.trim() === "") {
+      emptyFields.push("Country Church");
+  }
+}
+
+
+// Task 2: Only validate set of elements if professional is chosen/checked with value
+if (professional) {
+if (jobTitle.trim() === "") {
+    emptyFields.push("Job Title");
+  }
+  if (yrEmployed.trim() === "") {
+    emptyFields.push("Year Employed");
+  }
+  if (unitInDepartment.trim() === "") {
+    emptyFields.push("Unit in Department");
+  }
+  if (gradeLevel.trim() === "") {
+    emptyFields.push("Grade Level");
+  }
+  if (stepLevel.trim() === "") {
+    emptyFields.push("Step Level");
+  }
+  if (deptAdress.trim() === "") {
+    emptyFields.push("Department Address");
+  }
+  if (stateSelect3.trim() === "") {
+    emptyFields.push("State (for the third form)");
+  }
+  if (lgaSelect3.trim() === "") {
+    emptyFields.push("LGA (for the third form)");
+  }
+  if (countryOrg.trim() === "") {
+    emptyFields.push("Country (for the third form)");
+  }
+  if (ispastor_parish.trim() === "") {
+    emptyFields.push("Is Pastor Parish");
+  }
+  if (careerPastorOffice.trim() === "") {
+    emptyFields.push("Career Pastor Office");
+  }
+}
+
+// Task 3: If ispastor_parish value is No, skip validation element of careerPastor
+if (ispastor_parish === "No" && careerPastorOffice.trim() === "") {
+  emptyFields.push("Career Pastor Office");
+}
+*/
+
+  if (emptyFields.length > 0) {
+    // If there are empty fields, alert and return false
+    alert("The following fields are required:\n" + emptyFields.join("\n"));
+    return false;
+  } else {
+    // If no empty fields, return true
+    return true;
+  }
+}
+
+
+
+
+// Function to create the pastorData object
+function createPastorData() {
+  // Add data to pastorData object if the field is not empty
+  function addToPastorData(fieldId, fieldName) {
+    const fieldValue = document.getElementById(fieldId).value.trim();
+    if (fieldValue !== "") {
+      pastorData[fieldName] = fieldValue;
+    }
+  }
+
+  addToPastorData("title", "Title");
+  addToPastorData("firstname", "First Name");
+  addToPastorData("lastname", "Last Name");
+  addToPastorData("otherName", "Other Name");
+  addToPastorData("email", "Email");
+  addToPastorData("phone", "Phone");
+  addToPastorData("gender", "gender");
+  addToPastorData("dateOfBirth", "Date of Birth");
+  addToPastorData("highestQualification", "Highest Qualification");
+  addToPastorData("professionalQualification", "Professional Qualification");
+  addToPastorData("maritalStatus", "Marital Status");
+  addToPastorData("stateSelect4", "State of Origin");
+  addToPastorData("lgaSelect4", "LGA of Origin");
+  addToPastorData("homeTown", "Home Town");
+  addToPastorData("spouseName", "Spouse Name");
+  addToPastorData("spousePhoneNumber", "Spouse Phone Number");
+  addToPastorData("spouseDateOfBirth", "Spouse Date of Birth");
+  addToPastorData("nextOfKinName", "Next of Kin Name");
+  addToPastorData("nextOfKinPhoneNumber", "Next of Kin Phone Number");
+  addToPastorData("nextOfKinRelationship", "Next of Kin Relationship");
+  addToPastorData("residentialAddress", "Residential Address");
+  addToPastorData("stateSelect1", "State of Residence");
+  addToPastorData("lgaSelect1", "LGA of Residence");
+  addToPastorData("empCategory", "Employment Category");
+  addToPastorData("occupation", "Occupation");
+
+  // Add extracted variables to pastorData object
+  addToPastorData("yearBornAgain", "Year Born Again");
+  addToPastorData("waterBaptized", "Water Baptized");
+  addToPastorData("holyghostBaptism", "Holy Ghost Baptism");
+  addToPastorData("joinedSotsm", "Joined SOTSM");
+  addToPastorData("becameWorker", "Became Worker");
+  addToPastorData("becameMinister", "Became Minister");
+  addToPastorData("ordainedDcns", "Ordained Deacons");
+  addToPastorData("becamePastor", "Became Pastor");
+  addToPastorData("becameSnrPastor", "Became Senior Pastor");
+  addToPastorData("ordainedElder", "Ordained Elder");
+  addToPastorData("ordainedBishop", "Ordained Bishop");
+  addToPastorData("lastOrdinationDate", "Last Ordination Date");
+  addToPastorData("IBSCOMS", "Completed IBSCOMS");
+  addToPastorData("WOOCOME", "Completed WOOCOME");
+  addToPastorData("ILS", "Completed ILS");
+  addToPastorData("NGBTI", "Completed NGBTI");
+
+    // Add Task 1 fields if pastor status is checked
+  //if (document.getElementById("pastorStatus").checked) {
+    addToPastorData("placeOfAssignment", "Parish Code");
+    addToPastorData("nameOfzone", "Zone Code");
+    addToPastorData("nameOfDiocese", "Diocese Code");
+    addToPastorData("nameOfDivision", "Division Code");
+    addToPastorData("stateChurch", "State of Church");
+    addToPastorData("lgaChurch", "LGA of Church");
+    addToPastorData("placeOfAssignmentAddress", "Place of Assignment Address");
+    addToPastorData("countryChurch", "Country of Church");
+  //}
+
+  // Add Task 2 fields if professional status is checked
+ // if (document.getElementById("professionalStatus").checked) {
+    addToPastorData("jobTitle", "Job Title");
+    addToPastorData("yrEmployed", "Year Employed");
+    addToPastorData("unitInDepartment", "Unit in Department");
+    addToPastorData("gradeLevel", "Grade Level");
+    addToPastorData("stepLevel", "Step Level");
+    addToPastorData("deptAdress", "Department Address");
+    addToPastorData("stateOrg", "State of Organization");
+    addToPastorData("lgaOrg", "LGA of Organization");
+    addToPastorData("countryOrg", "Country of Organization");
+  //}
+
+// Add Task 3 field if ispastor_parish value is 'No'
+  const isPastorParish = document.getElementById("ispastor_parish").value;
+  //if (isPastorParish === "No") {
+    addToPastorData("careerPastorOffice", "Career Pastor Office");
+  //}
+
+  // Add Task 4 fields
+  addToPastorData("dateEstablished", "Date Established");
+  addToPastorData("churchProperty", "Church Property");
+  const churchProperty = document.getElementById("churchProperty").value;
+
+//if (churchProperty === "Leased Property" || churchProperty === "Freehold" || churchProperty === "Rented Property") {
+  addToPastorData("propertyEstimatedValue", "Property Estimated Value");
+  addToPastorData("clcBuilding", "CLC Building");
+  addToPastorData("leaseType", "Lease Type");
+  //}
+
+  addToPastorData("avgadult", "Average Adult Attendance");
+  addToPastorData("avgyouth", "Average Youth Attendance");
+  addToPastorData("avgchildren", "Average Children Attendance");
+  addToPastorData("total", "Total Attendance");
+  addToPastorData("totalWorkers", "Total Workers");
+  addToPastorData("workersInTraining", "Workers in Training");
+  addToPastorData("unordainedLeaders", "Unordained Leaders");
+  addToPastorData("noofMinisters", "Number of Ministers");
+  addToPastorData("noofdcns", "Number of Deacons");
+  addToPastorData("noofpastor", "Number of Pastors");
+  addToPastorData("noofsnrpastor", "Number of Senior Pastors");
+  addToPastorData("noofelder", "Number of Elders");
+  addToPastorData("noofbishops", "Number of Bishops");
+
+  return pastorData;
+}
+
+
+
 // JavaScript for managing multi-step form
 let currentStep = 1;
 
+//function for nextStep of application 
 function nextStep() {
-if (currentStep < 3) {
-document.querySelector(".step" + currentStep).style.display = "none";
-currentStep++;
-document.querySelector(".step" + currentStep).style.display = "block";
-if (currentStep === 3) {
-document.querySelector(".nextBtn").style.display = "none";
-document.querySelector(".finalBtn").style.display = "inline-block";
-}
-}
+    if (currentStep < 3) {
+        // Perform validation and data creation for step 1
+        if (currentStep === 1) {
+            if (!false) {
+             //console.log(createPastorData());
+                // If validation and data creation are successful, proceed to the next step
+                document.querySelector(".step" + currentStep).style.display = "none";
+                currentStep++;
+                document.querySelector(".step" + currentStep).style.display = "block";
+            } else {
+                // If validation or data creation fail, halt and alert the user
+                return;
+            }
+        // perform validation and data creation for step 2
+           } else if (currentStep === 2) {
+
+            if (!false ) {
+                // If validation and data creation are successful, proceed to the next step
+                document.querySelector(".step" + currentStep).style.display = "none";
+                currentStep++;
+                document.querySelector(".step" + currentStep).style.display = "block";
+            } else {
+                // If validation or data creation fail, halt and alert the user
+                return;
+            }
+
+        } else {
+            // For steps other than step 2, proceed to the next step
+            document.querySelector(".step" + currentStep).style.display = "none";
+            currentStep++;
+            document.querySelector(".step" + currentStep).style.display = "block";
+        }
+
+        if (currentStep === 3) {
+            document.querySelector(".nextBtn").style.display = "none";
+            document.querySelector(".finalBtn").style.display = "inline-block";
+        }
+    }
 }
 
 
+//function for previous step
 function prevStep() {
+ 
 if (currentStep > 1) {
 document.querySelector(".step" + currentStep).style.display = "none";
 currentStep--;
@@ -1392,22 +2160,71 @@ document.querySelector(".finalBtn").style.display = "none";
 
 
 
-const form = document.getElementById("dataCapture");
-
 // Get the submit button
-const submitBtn = document.getElementById("submitBtn");
-
+const submitBtn  = document.getElementById("submitBtn");
 // Function to handle form submission
-function submitForm() {
-// Perform any validation if needed
-// For simplicity, let's assume the form is valid
-// Then submit the form
-alert("form has been submitted . . . ");
-form.submit();
-}
 
-// Add event listener to the submit button
-submitBtn.addEventListener("click", submitForm);
+
+  // Function to send form data to the backend
+  function sendData(employeeData) {
+    // Send AJAX request to the backend
+    fetch("/receiveData", {
+      method: "POST",
+      body: JSON.stringify(employeeData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log(data);
+      //redirectUrl
+      // Handle response from the backend move to a new page 
+      window.location.href = `${data.redirectUrl}`;
+      
+
+    })
+    .catch(error => {
+      // Handle errors
+      console.error("There was a problem with the request:", error);
+      alert('You are not Authorised to fill this form, Please contact your Administrator for Authorization')
+      // Optionally, you can display an error message to the user
+    });
+  }
+
+
+  //form login Submission to /user/login
+submitBtn.addEventListener("click", function(event) {
+    // Prevent the default form submission behavior
+    event.preventDefault();
+    // Get form data
+    const form = document.getElementById("dataCapture");
+    const formData = new FormData(form);
+    // Create an object to hold form data
+    const data = {};
+
+    formData.forEach((value, key) => {
+      data[key] = value
+      console.log(formData);
+    });
+
+    //validateForm();
+    console.log(data);
+    //console.log(createPastorData());
+    //Send form data to the backend
+    sendData(data);
+  });
+
+
+
+
+
+
 
 
 //<!--Start of Tawk.to Script-->
@@ -1491,57 +2308,124 @@ window.onload = startCountdown;
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const pastorRadio = document.getElementById("pastor");
-    const professionalRadio = document.getElementById("professional");
+    const pastorRadio = document.getElementById("pastorStatus");
+    const professionalRadio = document.getElementById("professionalStatus");
     const pastorChoiceDiv = document.getElementById("pastor-choice");
     const professionalChoiceDiv = document.getElementById("professional-choice");
+
     const parishSelect = document.getElementById("ispastor_parish");
     const churchProperty = document.getElementById("churchProperty");
 
+    const careerDivision = document.getElementById("nameOfDivisionc")
+    const careerDiocese = document.getElementById("nameOfDiocesec")
+    const careerZone = document.getElementById("nameOfZonec")
+    const careerParish = document.getElementById("placeOfAssignmentc")
+
+    var loginForm = document.getElementById("loginForm");
+    var registerForm = document.getElementById("registerForm");
+    var switchToRegister = document.getElementById("switchToRegister");
+    var switchToLogin = document.getElementById("switchToLogin");
+    const labels = document.querySelectorAll('.c-label');
+
     //Hide some forms
     document.getElementById('careerPastorOffice').style.display="none";
+    document.getElementById("nameOfDivisionc").style.display="none";
+    document.getElementById("nameOfDiocesec").style.display="none";
+    document.getElementById("nameOfZonec").style.display="none";
+    document.getElementById("placeOfAssignmentc").style.display="none";
     document.getElementById('leasingInfo').style.display="none";
     generateConfirmation("finalConfirmation");
+    hideLabels();
+   
+    //labels
+        function hideLabels() {
+            labels.forEach(label => {
+                label.classList.add('hidden');
+            });
+        }
+
+        // Function to show labels
+        function showLabels() {
+            labels.forEach(label => {
+                label.classList.remove('hidden');
+            });
+        }
 
 
 
     // Set initial visibility based on default checked radio button
     if (pastorRadio.checked) {
-      pastorChoiceDiv.style.display = "block";
-      professionalChoiceDiv.style.display = "none";
+        pastorChoiceDiv.style.display = "block";
+        professionalChoiceDiv.style.display = "none";
+        careerDivision.style.display = "none";
+        careerDiocese.style.display = "none";
+        careerZone.style.display = "none";
+        careerParish.style.display = "none";
     } else {
       pastorChoiceDiv.style.display = "none";
       professionalChoiceDiv.style.display = "block";
+
     }
 
-    // Add event listeners to the radio buttons
-    pastorRadio.addEventListener("change", () => {
+
+
+/*
+switchToRegister.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the default link behavior
+
+        // Hide loginForm and show registerForm
+        loginForm.style.display = "none";
+        registerForm.style.display = "block";
+    });
+
+switchToLogin.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the default link behavior
+
+        // Hide registerForm and show loginForm
+        loginForm.style.display = "block";
+        registerForm.style.display = "none";
+    });
+  */
+
+// Add event listeners to the radio buttons
+pastorRadio.addEventListener("change", () => {
       pastorChoiceDiv.style.display = "block";
       professionalChoiceDiv.style.display = "none";
     });
 
-    //add even listener to the professional button
-    professionalRadio.addEventListener("change", () => {
+//add even listener to the professional button
+professionalRadio.addEventListener("change", () => {
       pastorChoiceDiv.style.display = "none";
       professionalChoiceDiv.style.display = "block";
       showfinalBtn();
     });
 
-    //add event listener to select parish
-    parishSelect.addEventListener("change", (event) => {
+//add event listener to select parish
+parishSelect.addEventListener("change", (event) => {
     const selectedValue = event.target.value;
     if(selectedValue === 'Yes'){
     document.getElementById('careerPastorOffice').style.display="inline-block";
+      hideConfirmation()
+      showLabels()
+      careerDivision.style.display = "block";
+      careerDiocese.style.display = "block";
+      careerZone.style.display = "block";
+      careerParish.style.display = "block";
       shownextBtn();
-    
+
     }else if(selectedValue === 'No'){
       document.getElementById('careerPastorOffice').style.display="none";
+      careerDivision.style.display = "none";
+      careerDiocese.style.display = "none";
+      careerZone.style.display = "none";
+      careerParish.style.display = "none";
       generateConfirmation("confirmation");
+      hideLabels();
       showfinalBtn();
     }
     });
 
-    churchProperty.addEventListener("change", (event) => {
+churchProperty.addEventListener("change", (event) => {
     const selectedValue = event.target.value;
         if(selectedValue === "Leased Property" || selectedValue === "Freehold" || selectedValue === "Rented Property"){
             document.getElementById('leasingInfo').style.display="inline-block";
@@ -1551,6 +2435,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
     })
+
+
 function showfinalBtn (){
 document.querySelector(".nextBtn").style.display = "none";
 document.querySelector(".finalBtn").style.display = "inline-block";
@@ -1562,7 +2448,9 @@ document.querySelector(".finalBtn").style.display = "none";
   }
 
 function hideConfirmation(){
-document.getElementById('confirmation').style.display="none";
+ const confirmationMessage =''
+ const confirmationElement = document.getElementById("confirmation");
+        confirmationElement.innerHTML = confirmationMessage;
 }
 
 function generateConfirmation(selectId) {
@@ -1593,40 +2481,35 @@ function generateConfirmation(selectId) {
 }
 
 
-    var loginForm = document.getElementById("loginForm");
-    var registerForm = document.getElementById("registerForm");
-    var switchToRegister = document.getElementById("switchToRegister");
-    var switchToLogin = document.getElementById("switchToLogin");
 
-      switchToRegister.addEventListener("click", function(event) {
-        event.preventDefault(); // Prevent the default link behavior
-
-        // Hide loginForm and show registerForm
-        loginForm.style.display = "none";
-        registerForm.style.display = "block";
-    });
-
-
-    switchToLogin.addEventListener("click", function(event) {
-        event.preventDefault(); // Prevent the default link behavior
-
-        // Hide registerForm and show loginForm
-        loginForm.style.display = "block";
-        registerForm.style.display = "none";
-    });
-  });
-
-
+const registerBtn = document.getElementById("registerForm");
+const loginBtn = document.getElementById("loginForm")
 
   //form register Submission to /user/signup
-  document.getElementById("registerForm").addEventListener("submit", function(event) {
+registerBtn.addEventListener("submit", function(event) {
     // Prevent the default form submission behavior
     event.preventDefault();
 
     // Get form data
     const formData = new FormData(this);
-   
+  
+    // Create an object to hold form data
+    const userData = {};
+    formData.forEach((value, key) => {
+      userData[key] = value;
+    });
 
+    // Send form data to the backend
+    registerUser(userData);
+  });
+ 
+  //form login Submission to /user/login
+loginBtn.addEventListener("submit", function(event) {
+    // Prevent the default form submission behavior
+    event.preventDefault();
+    // Get form data
+    const formData = new FormData(this);
+  
     // Create an object to hold form data
     const userData = {};
     formData.forEach((value, key) => {
@@ -1637,8 +2520,9 @@ function generateConfirmation(selectId) {
     registerUser(userData);
   });
 
+
   // Function to send form data to the backend
-  function registerUser(userData) {
+  function registerUsers(userData) {
     // Send AJAX request to the backend
     fetch("/user/signup", {
       method: "POST",
@@ -1655,7 +2539,6 @@ function generateConfirmation(selectId) {
     })
     .then(data => {
       // Handle response from the backend
-      console.log(data);
       // Optionally, you can redirect the user or display a success message here
     })
     .catch(error => {
@@ -1665,25 +2548,6 @@ function generateConfirmation(selectId) {
     });
   }
 
-
-
-  //form login Submission to /user/login
-  document.getElementById("loginForm").addEventListener("submit", function(event) {
-    // Prevent the default form submission behavior
-    event.preventDefault();
-    // Get form data
-    const formData = new FormData(this);
-  
-    // Create an object to hold form data
-    const userData = {};
-    formData.forEach((value, key) => {
-      userData[key] = value;
-    });
-
-    console.log(userData);
-    // Send form data to the backend
-    registerUser(userData);
-  });
 
   // Function to send form data to the backend
   function registerUser(userData) {
@@ -1702,19 +2566,39 @@ function generateConfirmation(selectId) {
       return response.json();
     })
     .then(data => {
+
       // Handle response from the backend
       window.location.href = `${data.redirectUrl}`;
-      
-      console.log(data);
+
       // Optionally, you can redirect the user or display a success message here
     })
     .catch(error => {
       // Handle errors
       console.error("There was a problem with the request:", error);
+      alert('You are not Authorised to fill this form, Please contact your Administrator for Authorization')
       // Optionally, you can display an error message to the user
     });
   }
 
+
+
+// Event listeners to trigger loading of forms
+loadDivisions(); // Load divisions on page load
+loadDivisions2(); // Load divisions on page load
+
+
+// Event listeners to handle user selections
+document.getElementById('nameOfDivision').addEventListener('change', loadDioceses);
+document.getElementById('nameOfDiocese').addEventListener('change', loadZones);
+document.getElementById('nameOfZone').addEventListener('change', loadParishes);
+
+document.getElementById('nameOfDivisionc').addEventListener('change', loadDioceses2);
+document.getElementById('nameOfDiocesec').addEventListener('change', loadZones2);
+document.getElementById('nameOfZonec').addEventListener('change', loadParishes2);
+
+
+
+  });
 
 
 </script>

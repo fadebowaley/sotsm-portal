@@ -66,7 +66,7 @@ middlewareObject.isLoggedIn = (req, res, next) => {
   if (req.isAuthenticated()) {
     return next();
   } else {
-    req.flash("error", "Please you need to login to make reservations");
+    req.flash("error", "Please you need to login to continue");
     res.redirect("/");
   }
 };

@@ -229,10 +229,9 @@ const userController = {
   //POST: Post User Login
   postUserLogin: async (req, res) => {
     try {
-      console.log("body request  ->", req.body);
       res.json({
         success: true,
-        message: "Success: login successfully",
+        message: "success: login successfully",
         redirectUrl: "/",})
     } catch (err) {
       console.log(err);

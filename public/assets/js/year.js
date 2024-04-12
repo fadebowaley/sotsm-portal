@@ -1,5 +1,5 @@
 let yearBecameWorkerOptions = [
-  { value: "", text: "Not Yet" },
+  { value: "0", text: "Not Yet" },
   { value: "1920", text: "1920" },
   { value: "1921", text: "1921" },
   { value: "1922", text: "1922" },
@@ -105,6 +105,7 @@ let yearBecameWorkerOptions = [
   { value: "2022", text: "2022" },
   { value: "2023", text: "2023" },
   { value: "2024", text: "2024" },
+  { value: "0", text: "Not Yet" },
 ];
 
 

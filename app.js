@@ -23,7 +23,7 @@ const app = express();
 
 
 
-const allowedOrigins = ["*"];
+const allowedOrigins = ["*", "http://127.0.0.1:3000"];
 
 app.use(
   cors({
