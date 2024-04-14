@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Ministry Database Engineering</title>
+
+<!-- Bootstrap -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="/assets/css/bootstrap/bootstrap.min.css" />
+<!-- Cropper.js CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" rel="stylesheet">
+<!-- Cropper.js JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+
+<!-- Font Awesome -->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<!-- Custom Styles -->
+<link rel="stylesheet" href="/assets/css/style.css" />
+<link rel="stylesheet" href="/assets/css/form.css" />
+<!-- animation -->
+<link rel="stylesheet" href="/assets/css/animation.css" />
+
+<!-- responsive -->
+<link rel="stylesheet" href="/assets/css/responsive.css" />
+<style>
+  .link{
+    text-decoration: none;
+    color:black;
+  }
+
+.vertical-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.vertical-menu li {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.vertical-menu li i {
+  margin-right: 10px;
+}
+
+.container {
+    max-width: 1600px;
+}
+</style>
+
+</head>
+
+<body>
+<!-- MAIN sTART -->
+<main class="animate position-relative">
+<!-- Header Section -->
+<header class="mb-md-5">
+<!-- Logo and Phone Info -->
+<div class="logo">
+  <!-- Link to the home page -->
+  <a href="/" style="text-decoration: none;">
+    <!-- Logo Image -->
+    <img src="/assets/images/icon.png" alt="Icon" />
+    <!-- Text next to the image -->
+    SOTM.
+  </a>
+  <p class="sideline">Pastors, Employee Record Management</p>
+</div>
+
+<!-- <div class="logo">
+<img src="/assets/images/icon.png"   alt="Icon" />SOTSM.
+<p class="sideline">Pastors, Employee Record Management</p>
+</div> -->
+<div class="row">
+  <div class="col-md-12">
+  <% if (currentUser) { %>
+ <a href="/user/logout"  class="btn btn-sm btn-primary"style="padding:10px 20px;">logout</a>
+ <% if (currentUser.firstName === 'Super') { %>
+  <a href="/admin/report" class="btn btn-sm btn-primary" style="padding:10px 20px;">Admin Report</a>
+  </div>
+ <% } %>
+<% }%>
+</div>
+<div>
+<h1 class="logo" id="timer">09:00</h1>
+</div>
+<!-- Phone Information -->
+<a href="#" class="phoneInfo">
+<img src="/assets/images/phone.png" alt="Phone" />
+<!-- Phone Details -->
+<article>
+<h4>(234) 80 85 448030</h4>
+<p>Call for Quick Support </p>
+</article>
+</a>
+
+</header>
+
+<!-- Main Content Container -->
+<div class="container mt-15">
+   <div class="row">
+    <div style="margin-left:16rem;">
+    <h2><%= pageName %></h2>
+    </div>
+  </div>
+<div class="row">
+
+<div class="col-md-2">
+      <div class="card">
+        <div class="card-body">
+          <ul class="vertical-menu">
+            <a class="link" href="/admin/analysis"><li><i class="fa-regular fa fa-bar-chart mr-2 fa-fw"></i> Church Analysis</li></a>
+            <a class="link" href="/admin/region"><li><i class="fa-regular fa fa-bar-chart mr-2 fa-fw"></i> Regions</li></a>
+            <a class="link" href="/admin/legal"><li><i class="fa-regular fa fa-legal mr-2 fa-fw"></i> Legals/Properties</li></a>
+            <a class="link" href="/admin/leadership"><li><i class="fa-regular fa-user mr-2 fa-fw"></i> Ordinations/Leaders</li></a>
+            <a class="link" href="/admin/pastors"><li><i class="fa-regular fa-user mr-2 fa-fw"></i> Pastors/Hierachy</li></a>
+            <a class="link" href="/admin/schools"><li><i class="fa-regular fa fa-bar-chart mr-2 fa-fw"></i> Mission Schools</li></a>
+            <a class="link" href="/admin/missions"><li><i class="fa-regular 	fa fa-signal mr-2 fa-fw"></i> Mission Churches</li></a>
+            <a class="link" href="/admin/campuses"><li><i class="fa-regular  fa fa-building mr-2 fa-fw"></i> Campus Ministry</li></a>
+            <a class="link" href="/admin/active-workforce"><li><i class="fa-regular fa-user mr-2 fa-fw"></i> Workforce</li></a>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+<!--/ Left Column Login Form -->
+
+
+
+<!-- Right Column -->
+<div class="col-md-10">
+
+  <table class="table table-hover table-striped">
+  <thead>
+    <tr>
+      <th scope="col">S/n</th>
+      <th scope="col">Attendance</th>
+      <th scope="col">% Attendance</th>
+      <th scope="col">Parishes</th>
+      <th scope="col">Financials</th>
+      <th scope="col">% Financials</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>0 - 49</td>
+      <td>5</td>
+      <td>25</td>
+      <td>26</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>50 - 99</td>
+      <td>10</td>
+      <td>28</td>
+      <td>30</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>100 - 149</td>
+      <td>15</td>
+      <td>30</td>
+      <td>35</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>150 - 199</td>
+      <td>20</td>
+      <td>33</td>
+      <td>40</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td>200 - 249</td>
+      <td>25</td>
+      <td>35</td>
+      <td>45</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td>250 - 299</td>
+      <td>30</td>
+      <td>38</td>
+      <td>50</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <th scope="row">7</th>
+      <td>300 - 349</td>
+      <td>35</td>
+      <td>40</td>
+      <td>55</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td>350 - 399</td>
+      <td>40</td>
+      <td>43</td>
+      <td>60</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <th scope="row">9</th>
+      <td>400 - 449</td>
+      <td>45</td>
+      <td>45</td>
+      <td>65</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th scope="row">10</th>
+      <td>450 - 499</td>
+      <td>50</td>
+      <td>48</td>
+      <td>70</td>
+      <td>37</td>
+    </tr>
+    
+    <!-- Add more rows here -->
+  </tbody>
+</table>
+
+<nav aria-label="Page navigation">
+  <ul class="pagination justify-content-left">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+
+</div> <!--stop deleting here-->
+</div>
+</div>
+</div>
+</main>
+
+<div id="error"></div>
+<!-- Bootstrap JS -->
+<script src="assets/js/bootstrap/bootstrap.min.js"></script>
+
+<!-- jQuery -->
+<script src="assets/js/jQuery/jquery-3.7.0.min.js"></script>
+
+<!-- Custom JS -->
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/lga.js"></script>
+<script src="assets/js/year.js"></script>
+<script src="assets/js/country.js"></script>
+<!-- <script src="assets/js/storage.js"></script> -->
+<script src="assets/js/app.js"></script>
+
+</body>
+</html>

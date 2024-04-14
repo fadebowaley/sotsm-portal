@@ -12,6 +12,26 @@ const { VitalStatistics } = require("../models");
 
 
 const indexController = {
+  getPastors: async (req, res) => {
+    try {
+      const successMsg = req.flash("success")[0];
+      const errorMsg = req.flash("error")[0];
+      const currentUser = req.user;
+      //count cummulative Tota
+      res.render("admin/pastors", {
+        currentUser,
+        successMsg,
+        errorMsg,
+        pageName: "Hotel Lists",
+      });
+    } catch (err) {
+      console.error(err);
+      req.flash("error", "Failed to fetch user data");
+      res.redirect("/");
+    }
+  },
+
+
   getHomePage: async (req, res) => {
     const successMsg = req.flash("success")[0];
     const errorMsg = req.flash("error")[0];
@@ -224,9 +244,11 @@ updatedAt
     //submit to table as linked with conditional statement
     //Generate a code, if user has email, send a code to Email address
 
-    res.json({ status: "successfully submitted", redirectUrl: "/confirmation" });
+    res.json({
+      status: "successfully submitted",
+      redirectUrl: "/confirmation",
+    });
     try {
-
     } catch (err) {
       console.log(err);
       res.status(500).send("Server Error");
@@ -261,6 +283,7 @@ updatedAt
     }
   },
 
+
   getZoneByDiocese: async (req, res) => {
     const { dioceseId } = req.params;
     try {
@@ -275,6 +298,7 @@ updatedAt
       res.status(500).json({ error: "Internal server error" });
     }
   },
+
 
   getParishByZone: async (req, res) => {
     const { zoneId } = req.params;

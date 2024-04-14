@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Ministry Database Engineering</title>
+
+<!-- Bootstrap -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="/assets/css/bootstrap/bootstrap.min.css" />
+<!-- Cropper.js CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" rel="stylesheet">
+<!-- Cropper.js JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+
+<!-- Font Awesome -->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<!-- Custom Styles -->
+<link rel="stylesheet" href="/assets/css/style.css" />
+<link rel="stylesheet" href="/assets/css/form.css" />
+<!-- animation -->
+<link rel="stylesheet" href="/assets/css/animation.css" />
+
+<!-- responsive -->
+<link rel="stylesheet" href="/assets/css/responsive.css" />
+<style>
+  .link{
+    text-decoration: none;
+    color:black;
+  }
+
+.vertical-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.vertical-menu li {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.vertical-menu li i {
+  margin-right: 10px;
+}
+
+.container {
+    max-width: 1600px;
+}
+</style>
+
+</head>
+
+<body>
+<!-- MAIN sTART -->
+<main class="animate position-relative">
+<!-- Header Section -->
+<header class="mb-md-5">
+<!-- Logo and Phone Info -->
+<div class="logo">
+  <!-- Link to the home page -->
+  <a href="/" style="text-decoration: none;">
+    <!-- Logo Image -->
+    <img src="/assets/images/icon.png" alt="Icon" />
+    <!-- Text next to the image -->
+    SOTM.
+  </a>
+  <p class="sideline">Pastors, Employee Record Management</p>
+</div>
+
+<!-- <div class="logo">
+<img src="/assets/images/icon.png"   alt="Icon" />SOTSM.
+<p class="sideline">Pastors, Employee Record Management</p>
+</div> -->
+<div class="row">
+  <div class="col-md-12">
+  <% if (currentUser) { %>
+ <a href="/user/logout"  class="btn btn-sm btn-primary"style="padding:10px 20px;">logout</a>
+ <% if (currentUser.firstName === 'Super') { %>
+  <a href="/admin/report" class="btn btn-sm btn-primary" style="padding:10px 20px;">Admin Report</a>
+  </div>
+ <% } %>
+<% }%>
+</div>
+<div>
+<h1 class="logo" id="timer">09:00</h1>
+</div>
+<!-- Phone Information -->
+<a href="#" class="phoneInfo">
+<img src="/assets/images/phone.png" alt="Phone" />
+<!-- Phone Details -->
+<article>
+<h4>(234) 80 85 448030</h4>
+<p>Call for Quick Support </p>
+</article>
+</a>
+
+</header>
+
+<!-- Main Content Container -->
+<div class="container mt-15">
+   <div class="row">
+    <div style="margin-left:16rem;">
+    <h2><%= pageName %></h2>
+    </div>
+  </div>
+<div class="row">
+
+<div class="col-md-2">
+      <div class="card">
+        <div class="card-body">
+          <ul class="vertical-menu">
+            <a class="link" href="/admin/analysis"><li><i class="fa-regular fa fa-bar-chart mr-2 fa-fw"></i> Church Analysis</li></a>
+            <a class="link" href="/admin/region"><li><i class="fa-regular fa fa-bar-chart mr-2 fa-fw"></i> Regions</li></a>
+            <a class="link" href="/admin/legal"><li><i class="fa-regular fa fa-legal mr-2 fa-fw"></i> Legals/Properties</li></a>
+            <a class="link" href="/admin/leadership"><li><i class="fa-regular fa-user mr-2 fa-fw"></i> Ordinations/Leaders</li></a>
+            <a class="link" href="/admin/pastors"><li><i class="fa-regular fa-user mr-2 fa-fw"></i> Pastors/Hierachy</li></a>
+            <a class="link" href="/admin/schools"><li><i class="fa-regular fa fa-bar-chart mr-2 fa-fw"></i> Mission Schools</li></a>
+            <a class="link" href="/admin/missions"><li><i class="fa-regular 	fa fa-signal mr-2 fa-fw"></i> Mission Churches</li></a>
+            <a class="link" href="/admin/campuses"><li><i class="fa-regular  fa fa-building mr-2 fa-fw"></i> Campus Ministry</li></a>
+            <a class="link" href="/admin/active-workforce"><li><i class="fa-regular fa-user mr-2 fa-fw"></i> Workforce</li></a>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+<!--/ Left Column Login Form -->
+
+
+
+<!-- Right Column -->
+<div class="col-md-10">
+<table class="table table-hover table-striped">
+  <thead>
+    <tr>
+      <th scope="col">S/n</th>
+      <th scope="col">Name Of Parish</th>
+      <th scope="col">Pastor Name</th>
+      <th scope="col">Phone Number</th>
+      <th scope="col">Email Address</th>
+      <th scope="col">Location Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Sword of Life, Loyola</td>
+      <td>Kunle Afo</td>
+      <td>07026667005</td>
+      <td>Okhimamhea@gmail.com</td>
+      <td>23, Bodija, Ibadan</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>CLC, APERIN</td>
+      <td>Oyelese Oyeniyi</td>
+      <td>07030103565</td>
+      <td>yetpraisei@yahoo.com</td>
+      <td>Plot 2 Opposite Olubadan High School Adekile Aperin</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>CLC, Living spring Diocese headquarters</td>
+      <td>Pastor Adeyinka Samuel Adedokun</td>
+      <td>08035653261</td>
+      <td>saadedokun78@gmail.com</td>
+      <td>Rinsayo Area, Ring Road, Osogbo, Osun state</td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>Dominion Arena</td>
+      <td>Akintokun Muyiwa Raphael</td>
+      <td>08038226682</td>
+      <td>akintokunmuyiwa@gmail.com</td>
+      <td>Behind Ejigbo garage, Dada Estate Osogbo</td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td>CLC Grace Arena 1</td>
+      <td>AYOADE VICTOR KEHINDE</td>
+      <td>08068482811</td>
+      <td>kenideboltonlanding@gmail.com</td>
+      <td>Adjacent RAIN OIL FILLING STATION, IFE - IBADAN EXPRESS WAY ADEGBAYI. IBADAN</td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td>CLC JENRIYIN</td>
+      <td>SENIOR PASTOR FATANMI OLADAYO OLUFEMI</td>
+      <td>07033206141</td>
+      <td>fatanmioladayo@gmail.com</td>
+      <td>SHARON AVENUE, BESIDE OMUIYADUN BLOCK INDUSTRY, JENRIYIN VIA KUTE, IBADAN</td>
+    </tr>
+    <tr>
+      <th scope="row">7</th>
+      <td>Omobolanle Assembly</td>
+      <td>Deacon Rotimi .A.Akinloye.</td>
+      <td>08033819229</td>
+      <td>rotimiakinloye2017@gmail.com</td>
+      <td>Opposite Distinguished Events Center, Trade fair, Omobolanle, Osogbo.</td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td>CLC The Place of Rest Akobo 2</td>
+      <td>Aderemi Julius Wemimo</td>
+      <td>08038527884</td>
+      <td>aderemijulius40@gmail.com</td>
+      <td>128,Also Akala way, Akobo Ibadan</td>
+    </tr>
+    <tr>
+      <th scope="row">9</th>
+      <td>Akinlabi olumide</td>
+      <td>Akinlabi olumide</td>
+      <td>08032549444</td>
+      <td>akinlabiakinsanya5@gmail.com</td>
+      <td>White House oloya Monatan iwo road lbadan</td>
+    </tr>
+    <tr>
+      <th scope="row">10</th>
+      <td>CHRIST LIFE CHURCH, GARDEN OF VICTORY, IKIRUN I</td>
+      <td>OMOFOYE JONATHAN ADEKUNLE</td>
+      <td>08035268674</td>
+      <td>jonathanomofoye80@gmail.com</td>
+      <td>84, STATION ROAD, MONDAY MARKET, IKIRUN</td>
+    </tr>
+    <tr>
+      <th scope="row">11</th>
+      <td>CLC IBCOMS Chapel</td>
+      <td>Adegboye Adeniyi Omotayo</td>
+      <td>08033914738</td>
+      <td>jilimsint@gmail.com</td>
+      <td>Chapel of Mercy, International Bible College of Ministries and Seminary, Olubadan estate opposite new Gbagi market, New Ife road, Ibadan</td>
+    </tr>
+    <!-- Add more rows here -->
+  </tbody>
+</table>
+
+<nav aria-label="Page navigation">
+  <ul class="pagination justify-content-left">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+
+</div> <!--stop deleting here-->
+</div>
+</div>
+</div>
+</main>
+
+<div id="error"></div>
+<!-- Bootstrap JS -->
+<script src="assets/js/bootstrap/bootstrap.min.js"></script>
+
+<!-- jQuery -->
+<script src="assets/js/jQuery/jquery-3.7.0.min.js"></script>
+
+<!-- Custom JS -->
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/lga.js"></script>
+<script src="assets/js/year.js"></script>
+<script src="assets/js/country.js"></script>
+<!-- <script src="assets/js/storage.js"></script> -->
+<script src="assets/js/app.js"></script>
+
+</body>
+</html>

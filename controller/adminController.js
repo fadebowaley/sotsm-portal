@@ -14,58 +14,13 @@ const adminController = {
     try {
       const successMsg = req.flash("success")[0];
       const errorMsg = req.flash("error")[0];
-      let hotels = [];
-
-      // Check if filtered hotels are available in the request object
-      if (req.filteredHotels) {
-        hotels = req.filteredHotels;
-      } else {
-        // If filtered hotels are not available, retrieve all hotels
-        hotels = await Hotel.find({}).populate("reviews").populate("rooms");
-      }
-
-      const hotelRoomsCounts = hotels.map((hotel) => {
-        const availableRooms = hotel.rooms.filter((room) => room.available);
-        const unavailableRooms = hotel.rooms.filter((room) => !room.available);
-        return {
-          hotelName: hotel.name,
-          availableRoomsCount: availableRooms.length,
-          unavailableRoomsCount: unavailableRooms.length,
-        };
-      });
-
-      //count cummulative Total
-      const availableRoomsCount = hotels.reduce((total, hotel) => {
-        const availableRooms = hotel.rooms.filter(
-          (room) => room.available && !room.lock
-        );
-        return total + availableRooms.length;
-      }, 0);
-
-      const unavailableRoomsCount = hotels.reduce((total, hotel) => {
-        const unavailableRooms = hotel.rooms.filter(
-          (room) => !room.available && !room.lock
-        );
-        return total + unavailableRooms.length;
-      }, 0);
-
-      const lockedRoomsCount = hotels.reduce((total, hotel) => {
-        const lockedRooms = hotel.rooms.filter((room) => room.lock);
-        return total + lockedRooms.length;
-      }, 0);
-
-      const total =
-        availableRoomsCount + unavailableRoomsCount + lockedRoomsCount;
-      res.render("admin/hotels/hotels", {
-        hotels,
-        hotelRoomsCounts,
-        totalRoomsCounts: total,
-        availableRoomsCount,
-        unavailableRoomsCount,
-        lockedRoomsCount,
+      const currentUser = req.user;
+      //count cummulative Tota
+      res.render("admin/pastors", {
+        currentUser,
         successMsg,
         errorMsg,
-        pageName: "Hotel Lists",
+        pageName: "Pastors Data",
       });
     } catch (err) {
       console.error(err);
@@ -77,25 +32,136 @@ const adminController = {
   getLegal: (req, res) => {
     const errorMsg = req.flash("error")[0];
     const successMsg = req.flash("success")[0];
-    res.render("index", {
+    const currentUser = req.user;
+    res.render("admin/legal", {
+      currentUser,
       errorMsg,
       successMsg,
-      pageName: "Land and Legal Development",
+      pageName: "Lands and Legal Development",
     });
   },
 
   getLeadership: (req, res) => {
     const errorMsg = req.flash("error")[0];
     const successMsg = req.flash("success")[0];
-    res.render("index", {
+    const currentUser = req.user;
+    res.render("admin/leaders", {
       errorMsg,
       successMsg,
+      currentUser,
+      pageName: " Church Leaders Information",
+    });
+  },
+
+  getActiveAge: (req, res) => {
+    const errorMsg = req.flash("error")[0];
+    const successMsg = req.flash("success")[0];
+    const currentUser = req.user;
+    res.render("admin/active", {
+      currentUser,
+      errorMsg,
+      successMsg,
+      pageName: "All Active Workers Data",
+    });
+  },
+
+  getMissions: (req, res) => {
+    const errorMsg = req.flash("error")[0];
+    const successMsg = req.flash("success")[0];
+    const currentUser = req.user;
+    res.render("admin/missions", {
+      errorMsg,
+      successMsg,
+      currentUser,
+      pageName: "All Missions Church",
+    });
+  },
+
+  getCampus: (req, res) => {
+    const errorMsg = req.flash("error")[0];
+    const successMsg = req.flash("success")[0];
+    const currentUser = req.user;
+
+    res.render("admin/campus", {
+      errorMsg,
+      successMsg,
+      currentUser,
+      pageName: "All Campuses Data",
+    });
+  },
+
+  getRegions: (req, res) => {
+    const errorMsg = req.flash("error")[0];
+    const successMsg = req.flash("success")[0];
+    const currentUser = req.user;
+    res.render("admin/region", {
+      currentUser,
+      errorMsg,
+      successMsg,
+      pageName: "All Regional Analysis",
+    });
+  },
+
+  getNations: (req, res) => {
+    const errorMsg = req.flash("error")[0];
+    const successMsg = req.flash("success")[0];
+    const currentUser = req.user;
+    res.render("admin/nations", {
+      errorMsg,
+      successMsg,
+      currentUser,
       pageName: "Leadership in the church",
     });
   },
 
+  getAnalysis: (req, res) => {
+    const errorMsg = req.flash("error")[0];
+    const successMsg = req.flash("success")[0];
+    const currentUser = req.user;
 
+    res.render("admin/analysis", {
+      errorMsg,
+      successMsg,
+      currentUser,
+      pageName: "Church Growth Analysis",
+    });
+  },
 
+  getReport: (req, res) => {
+    const successMsg = req.flash("success")[0];
+    const errorMsg = req.flash("error")[0];
+    const currentUser = req.user;
+    res.render("admin/report", {
+      errorMsg,
+      successMsg,
+      currentUser,
+      pageName: "Christ Life: Church Data Reporting",
+    });
+  },
+
+  getDivisions: (req, res) => {
+    const successMsg = req.flash("success")[0];
+    const errorMsg = req.flash("error")[0];
+    const currentUser = req.user;
+    res.render("admin/report", {
+      errorMsg,
+      successMsg,
+      currentUser,
+      pageName: "Reporting  church",
+    });
+  },
+
+  getSchools: (req, res) => {
+    const successMsg = req.flash("success")[0];
+    const errorMsg = req.flash("error")[0];
+    const currentUser = req.user;
+    res.render("admin/schools", {
+      errorMsg,
+      successMsg,
+      currentUser,
+      pageName: "Mission Schhools",
+    });
+  },
 };
 
 

@@ -89,6 +89,16 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 <img src="assets/images/icon.png" alt="Icon" />SOTSM.
 <p class="sideline">Pastors, Employee Record Management</p>
 </div>
+<div class="row">
+  <div class="col-md-12">
+  <% if (currentUser) { %>
+ <a href="/user/logout"  class="btn btn-sm btn-primary"style="padding:10px 20px;">logout</a>
+ <% if (currentUser.firstName === 'Super') { %>
+  <a href="/admin/report" class="btn btn-sm btn-primary" style="padding:10px 20px;">Admin Report</a>
+  </div>
+ <% } %>
+<% }%>
+</div>
 <div>
 <h1 class="logo" id="timer">09:00</h1>
 </div>
@@ -101,11 +111,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 <p>Call for Quick Support </p>
 </article>
 </a>
-<article>
-  <% if (currentUser) { %>
- <a href="/user/logout" style="height:90px;">logout</a>
-<% }%>
-</article>
+
 </header>
 
 <!-- Main Content Container -->
@@ -113,7 +119,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 <div class="row">
 
 <!-- Left Column Login Form -->
-<div class="col-md-4">
+<div class="col-md-3">
 
   <% if (currentUser) { %>
 <div class="card">
@@ -210,7 +216,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 
 
 <!-- Right Column -->
-<div class="col-md-8">
+<div class="col-md-9">
   <% if (errorMsg) { %>
         <div class="alert alert-danger alert-dismissible rounded-pill fade show" role="alert">
         <%= errorMsg %>

@@ -6,6 +6,7 @@ const router = express.Router();
 
 
 router.get("/", indexController.getHomePage);
+router.get("/pastors", indexController.getPastors);
 router.get("/confirmation", indexController.getConfirmation);
 router.post("/receiveData", indexController.postData);
 router.get("/divisions", indexController.getDivision);
