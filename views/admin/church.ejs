@@ -115,8 +115,7 @@ updatedAt -->
       <th scope="col">Divison Code</th>
       <th scope="col">National Code</th>
       <th scope="col">Hq Status</th>
-      <th scope="col">Edit</th>
-      <th scope="col">Delete</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
 
@@ -149,12 +148,9 @@ updatedAt -->
       <td><%= church.divisionCode %></td>
       <td><%= church.nationalCode %></td>
       <td><%= church.hqStatus %></td>
-      <td><button id="openModalButton" data-set="<%= church.id %>" class="btn-danger btn-sm openModalButton">Edit</button></td>
+      <td><button id="openModalButton" data-set="<%= church.id %>" class="btn-danger btn-sm openModalButton">Action/edit</button></td>
        <td>
-    <% if (['zone', 'diocese', 'division', 'national'].includes(church.hqStatus)) { %>
-     <button  class="btn-success  btn btn-sm"> Add Parish</button>
-
-    <% } %>
+  
   </td>
     </tr>
     <% serialNumber++; %>
