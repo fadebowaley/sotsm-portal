@@ -93,11 +93,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
   <div class="col-md-12">
   <% if (currentUser) { %>
  <a href="/user/logout"  class="btn btn-sm btn-primary"style="padding:10px 20px;">logout</a>
- <% if (currentUser.firstName === 'Super') { %>
+<% if (currentUser.firstName === 'Super' || currentUser.lastName === 'admin') { %>
   <a href="/admin/report" class="btn btn-sm btn-primary" style="padding:10px 20px;">Admin Report</a>
-  <a href="/church/parishes" class="btn btn-sm btn-primary" style="padding:10px 20px;">Churh Config</a>
-  </div>
- <% } %>
+  <a href="/church/parishes" class="btn btn-sm btn-primary" style="padding:10px 20px;">Church Configuration</a>
+</div>
+<% } %>
+
 <% }%>
 </div>
 <div>
@@ -164,10 +165,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 <!-- Contact Information -->
 <div class="col-md-12" style="margin-bottom:10px;">
 <div class="form-group mb-1">
-<input type="text" class="form-control"  placeholder="Phone Number" value="08145045108" id="loginEmail" name="phoneNumber">
+<input type="text" class="form-control"  placeholder="Phone Number"  id="loginEmail" name="phoneNumber">
 </div>
 <div class="form-group mt-2">
-<input type="password" class="form-control"  value="password123"  placeholder="password" id="loginPassword" name="password">
+<input type="password" class="form-control"    placeholder="password" id="loginPassword" name="password">
 </div>
 <!--  col-md-6   -->
 </div>
