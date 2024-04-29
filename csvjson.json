@@ -1,0 +1,4472 @@
+[
+  {
+    "firstName": "Chris",
+    "lastName": "Uwagba",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:01.84+01",
+    "updatedAt": "2024-04-06 11:12:01.84+01",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "0816578939"
+  },
+  {
+    "firstName": "Iliya",
+    "lastName": "Tonde",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:01.93+01",
+    "updatedAt": "2024-04-06 11:12:01.93+01",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07010178252"
+  },
+  {
+    "firstName": "Adeoti",
+    "lastName": "Ayinde",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.02+01",
+    "updatedAt": "2024-04-06 11:12:02.02+01",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07015743367"
+  },
+  {
+    "firstName": "Nafiu",
+    "lastName": "Bamidupe",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.111+01",
+    "updatedAt": "2024-04-06 11:12:02.111+01",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07018032037"
+  },
+  {
+    "firstName": "Adekola",
+    "lastName": "Adeniji",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+01",
+    "updatedAt": "2024-04-06 11:12:02.201+01",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07026257984"
+  },
+  {
+    "firstName": "Oyeniyi",
+    "lastName": "Oyelese",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+02",
+    "updatedAt": "2024-04-06 11:12:02.201+02",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07030103565"
+  },
+  {
+    "firstName": "Ojo",
+    "lastName": "Tosin",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+03",
+    "updatedAt": "2024-04-06 11:12:02.201+03",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07030679507"
+  },
+  {
+    "firstName": "Olunike",
+    "lastName": "Babarinde",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+04",
+    "updatedAt": "2024-04-06 11:12:02.201+04",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07031055343"
+  },
+  {
+    "firstName": "Richard",
+    "lastName": "Pius",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+05",
+    "updatedAt": "2024-04-06 11:12:02.201+05",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07031387822"
+  },
+  {
+    "firstName": "Ayodele",
+    "lastName": "Alaba",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+06",
+    "updatedAt": "2024-04-06 11:12:02.201+06",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07031552553"
+  },
+  {
+    "firstName": "Tunde",
+    "lastName": "Adejumo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+07",
+    "updatedAt": "2024-04-06 11:12:02.201+07",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07031819553"
+  },
+  {
+    "firstName": "Lanaeoluwa",
+    "lastName": "Emmanuel",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+08",
+    "updatedAt": "2024-04-06 11:12:02.201+08",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07031848396"
+  },
+  {
+    "firstName": "Emmanuel",
+    "lastName": "Oladejo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+09",
+    "updatedAt": "2024-04-06 11:12:02.201+09",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07031968314"
+  },
+  {
+    "firstName": "Iriemi",
+    "lastName": "Mercy",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+10",
+    "updatedAt": "2024-04-06 11:12:02.201+10",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07032029993"
+  },
+  {
+    "firstName": "Adewole",
+    "lastName": "Olalekan",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+11",
+    "updatedAt": "2024-04-06 11:12:02.201+11",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07032366751"
+  },
+  {
+    "firstName": "Damilare",
+    "lastName": "Olakiigbe",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+12",
+    "updatedAt": "2024-04-06 11:12:02.201+12",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07033131669"
+  },
+  {
+    "firstName": "Oladayo",
+    "lastName": "O.",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+13",
+    "updatedAt": "2024-04-06 11:12:02.201+13",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07033206141"
+  },
+  {
+    "firstName": "Atanda",
+    "lastName": "Matthew",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+14",
+    "updatedAt": "2024-04-06 11:12:02.201+14",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07033301544"
+  },
+  {
+    "firstName": "Gbenro",
+    "lastName": "Aderibigbe",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+15",
+    "updatedAt": "2024-04-06 11:12:02.201+15",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07033306518"
+  },
+  {
+    "firstName": "Silas",
+    "lastName": "Miniyos",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+16",
+    "updatedAt": "2024-04-06 11:12:02.201+16",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07033333702"
+  },
+  {
+    "firstName": "Meshach",
+    "lastName": "Oyekanmi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+17",
+    "updatedAt": "2024-04-06 11:12:02.201+17",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07033793466"
+  },
+  {
+    "firstName": "Abraham",
+    "lastName": "Nurudeen",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+18",
+    "updatedAt": "2024-04-06 11:12:02.201+18",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07034342107"
+  },
+  {
+    "firstName": "David",
+    "lastName": "Olumide",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+19",
+    "updatedAt": "2024-04-06 11:12:02.201+19",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07035168375"
+  },
+  {
+    "firstName": "Olumide",
+    "lastName": "David",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+20",
+    "updatedAt": "2024-04-06 11:12:02.201+20",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07035168375"
+  },
+  {
+    "firstName": "Taiwo",
+    "lastName": "Obayemi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+21",
+    "updatedAt": "2024-04-06 11:12:02.201+21",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07035666650"
+  },
+  {
+    "firstName": "Adio",
+    "lastName": "Oluseyi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+22",
+    "updatedAt": "2024-04-06 11:12:02.201+22",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07037616197"
+  },
+  {
+    "firstName": "Stella",
+    "lastName": "Ayeni",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+23",
+    "updatedAt": "2024-04-06 11:12:02.201+23",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07038168070"
+  },
+  {
+    "firstName": "Kayode",
+    "lastName": "Akinsola",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+24",
+    "updatedAt": "2024-04-06 11:12:02.201+24",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07038391553"
+  },
+  {
+    "firstName": "Obayuwana",
+    "lastName": "Richard",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+25",
+    "updatedAt": "2024-04-06 11:12:02.201+25",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07038834282"
+  },
+  {
+    "firstName": "Adetoro",
+    "lastName": "Adedotun",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+26",
+    "updatedAt": "2024-04-06 11:12:02.201+26",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07038948567"
+  },
+  {
+    "firstName": "Ojeyinka",
+    "lastName": "Abosede",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+27",
+    "updatedAt": "2024-04-06 11:12:02.201+27",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07039295979"
+  },
+  {
+    "firstName": "Adebayo",
+    "lastName": "Taiwo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+28",
+    "updatedAt": "2024-04-06 11:12:02.201+28",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07039367883"
+  },
+  {
+    "firstName": "Adedotun",
+    "lastName": "Christianah",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+29",
+    "updatedAt": "2024-04-06 11:12:02.201+29",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07039399101"
+  },
+  {
+    "firstName": "Akinwale",
+    "lastName": "Emmanuel",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+30",
+    "updatedAt": "2024-04-06 11:12:02.201+30",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07039471943"
+  },
+  {
+    "firstName": "Olanrewaju",
+    "lastName": "Adekunle",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+31",
+    "updatedAt": "2024-04-06 11:12:02.201+31",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07039625396"
+  },
+  {
+    "firstName": "Taiwo",
+    "lastName": "Badmus",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+32",
+    "updatedAt": "2024-04-06 11:12:02.201+32",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07039997150"
+  },
+  {
+    "firstName": "Sunday",
+    "lastName": "Jegede",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+33",
+    "updatedAt": "2024-04-06 11:12:02.201+33",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07040173359"
+  },
+  {
+    "firstName": "Olosunde",
+    "lastName": "Olosunde",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+34",
+    "updatedAt": "2024-04-06 11:12:02.201+34",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07041140298"
+  },
+  {
+    "firstName": "Yetunde",
+    "lastName": "Oloside",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+35",
+    "updatedAt": "2024-04-06 11:12:02.201+35",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07041140298"
+  },
+  {
+    "firstName": "Balogun",
+    "lastName": "Olusayo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+36",
+    "updatedAt": "2024-04-06 11:12:02.201+36",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07051408003"
+  },
+  {
+    "firstName": "Ayodeji",
+    "lastName": "Timileyin",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+37",
+    "updatedAt": "2024-04-06 11:12:02.201+37",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07054372294"
+  },
+  {
+    "firstName": "Adeleke",
+    "lastName": "Matthew",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+38",
+    "updatedAt": "2024-04-06 11:12:02.201+38",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07055308192"
+  },
+  {
+    "firstName": "Williams",
+    "lastName": "Bababunmi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+39",
+    "updatedAt": "2024-04-06 11:12:02.201+39",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07055330073"
+  },
+  {
+    "firstName": "Olanrewaju",
+    "lastName": "Olanrewaju",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+40",
+    "updatedAt": "2024-04-06 11:12:02.201+40",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07055520531"
+  },
+  {
+    "firstName": "Tosin",
+    "lastName": "Adeniyi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+41",
+    "updatedAt": "2024-04-06 11:12:02.201+41",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07059715445"
+  },
+  {
+    "firstName": "Femi",
+    "lastName": "Adesanoye",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+42",
+    "updatedAt": "2024-04-06 11:12:02.201+42",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07061275089"
+  },
+  {
+    "firstName": "Ukpong",
+    "lastName": "Udofia",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+43",
+    "updatedAt": "2024-04-06 11:12:02.201+43",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07062045500"
+  },
+  {
+    "firstName": "Lateef",
+    "lastName": "Fatumbi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+44",
+    "updatedAt": "2024-04-06 11:12:02.201+44",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07062048968"
+  },
+  {
+    "firstName": "Ajayi",
+    "lastName": "Daniel",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+45",
+    "updatedAt": "2024-04-06 11:12:02.201+45",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07062188172"
+  },
+  {
+    "firstName": "Daniel",
+    "lastName": "Ajayi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+46",
+    "updatedAt": "2024-04-06 11:12:02.201+46",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07062188172"
+  },
+  {
+    "firstName": "Olufemi",
+    "lastName": "Akindele",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+47",
+    "updatedAt": "2024-04-06 11:12:02.201+47",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07062257669"
+  },
+  {
+    "firstName": "Oladiti",
+    "lastName": "Elijah",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+48",
+    "updatedAt": "2024-04-06 11:12:02.201+48",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07063717927"
+  },
+  {
+    "firstName": "Akande",
+    "lastName": "Joel",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+49",
+    "updatedAt": "2024-04-06 11:12:02.201+49",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07066377491"
+  },
+  {
+    "firstName": "Goodluck",
+    "lastName": "Ajeye",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+50",
+    "updatedAt": "2024-04-06 11:12:02.201+50",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07066377491"
+  },
+  {
+    "firstName": "Oladejo",
+    "lastName": "Florence",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+51",
+    "updatedAt": "2024-04-06 11:12:02.201+51",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07068342809"
+  },
+  {
+    "firstName": "James",
+    "lastName": "Jenyo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+52",
+    "updatedAt": "2024-04-06 11:12:02.201+52",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07069074118"
+  },
+  {
+    "firstName": "Kayode",
+    "lastName": "Amusan",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+53",
+    "updatedAt": "2024-04-06 11:12:02.201+53",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07069080918"
+  },
+  {
+    "firstName": "Adejumo",
+    "lastName": "M.",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+54",
+    "updatedAt": "2024-04-06 11:12:02.201+54",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07081788907"
+  },
+  {
+    "firstName": "Olaoluwapo",
+    "lastName": "Ifeoluwa",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+55",
+    "updatedAt": "2024-04-06 11:12:02.201+55",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07089311441"
+  },
+  {
+    "firstName": "Adewumi",
+    "lastName": "Adekugbe",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+56",
+    "updatedAt": "2024-04-06 11:12:02.201+56",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07411130965"
+  },
+  {
+    "firstName": "Mary",
+    "lastName": "Ojediran",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+57",
+    "updatedAt": "2024-04-06 11:12:02.201+57",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07454833181"
+  },
+  {
+    "firstName": "Kola",
+    "lastName": "Ibikunle",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+58",
+    "updatedAt": "2024-04-06 11:12:02.201+58",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07733167415"
+  },
+  {
+    "firstName": "Kola",
+    "lastName": "Ibikunle",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+59",
+    "updatedAt": "2024-04-06 11:12:02.201+59",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07733167415"
+  },
+  {
+    "firstName": "Adelani",
+    "lastName": "Ayeni",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+60",
+    "updatedAt": "2024-04-06 11:12:02.201+60",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07847530525"
+  },
+  {
+    "firstName": "Mobolaji",
+    "lastName": "Carew",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+61",
+    "updatedAt": "2024-04-06 11:12:02.201+61",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07878233841"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Adejumo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+62",
+    "updatedAt": "2024-04-06 11:12:02.201+62",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08020503649"
+  },
+  {
+    "firstName": "Bolaji",
+    "lastName": "Olatunde",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+63",
+    "updatedAt": "2024-04-06 11:12:02.201+63",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08022036344"
+  },
+  {
+    "firstName": "Olusola",
+    "lastName": "Awe",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+64",
+    "updatedAt": "2024-04-06 11:12:02.201+64",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08022467206"
+  },
+  {
+    "firstName": "Olorunfemi",
+    "lastName": "Adetoro",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+65",
+    "updatedAt": "2024-04-06 11:12:02.201+65",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08022627031"
+  },
+  {
+    "firstName": "Anthony",
+    "lastName": "Adeosun",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+66",
+    "updatedAt": "2024-04-06 11:12:02.201+66",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08023158607"
+  },
+  {
+    "firstName": "Adegbite",
+    "lastName": "Olalekan",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+67",
+    "updatedAt": "2024-04-06 11:12:02.201+67",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08023366076"
+  },
+  {
+    "firstName": "Zacheus",
+    "lastName": "Oloruntola",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+68",
+    "updatedAt": "2024-04-06 11:12:02.201+68",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08023462054"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Ajibade",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+69",
+    "updatedAt": "2024-04-06 11:12:02.201+69",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08023504402"
+  },
+  {
+    "firstName": "Ibukun",
+    "lastName": "Abioye",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+70",
+    "updatedAt": "2024-04-06 11:12:02.201+70",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08023841633"
+  },
+  {
+    "firstName": "Ayodele",
+    "lastName": "Laogun",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+71",
+    "updatedAt": "2024-04-06 11:12:02.201+71",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08024204085"
+  },
+  {
+    "firstName": "Peter",
+    "lastName": "Adeniran",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+72",
+    "updatedAt": "2024-04-06 11:12:02.201+72",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08024666180"
+  },
+  {
+    "firstName": "Oluwakunle",
+    "lastName": "Moses",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+73",
+    "updatedAt": "2024-04-06 11:12:02.201+73",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08025353746"
+  },
+  {
+    "firstName": "Adebisi",
+    "lastName": "Ademola",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+74",
+    "updatedAt": "2024-04-06 11:12:02.201+74",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08026998818"
+  },
+  {
+    "firstName": "Dare",
+    "lastName": "Akeju",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+75",
+    "updatedAt": "2024-04-06 11:12:02.201+75",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08027817852"
+  },
+  {
+    "firstName": "Femi",
+    "lastName": "Fayemi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+76",
+    "updatedAt": "2024-04-06 11:12:02.201+76",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08028450749"
+  },
+  {
+    "firstName": "Kayode",
+    "lastName": "Olusola",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+77",
+    "updatedAt": "2024-04-06 11:12:02.201+77",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08028584394"
+  },
+  {
+    "firstName": "Ogunremi",
+    "lastName": "Soji",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+78",
+    "updatedAt": "2024-04-06 11:12:02.201+78",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08028625088"
+  },
+  {
+    "firstName": "Awe",
+    "lastName": "Olusegun",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+79",
+    "updatedAt": "2024-04-06 11:12:02.201+79",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08028625127"
+  },
+  {
+    "firstName": "Jacob",
+    "lastName": "Gbolagbade",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+80",
+    "updatedAt": "2024-04-06 11:12:02.201+80",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08028799517"
+  },
+  {
+    "firstName": "Olabode",
+    "lastName": "K.",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+81",
+    "updatedAt": "2024-04-06 11:12:02.201+81",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08028940099"
+  },
+  {
+    "firstName": "Oluwasesan",
+    "lastName": "Adeyemo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+82",
+    "updatedAt": "2024-04-06 11:12:02.201+82",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08028949960"
+  },
+  {
+    "firstName": "Adeola",
+    "lastName": "Akinbola",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+83",
+    "updatedAt": "2024-04-06 11:12:02.201+83",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08030406022"
+  },
+  {
+    "firstName": "Deola",
+    "lastName": "Akinbola",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+84",
+    "updatedAt": "2024-04-06 11:12:02.201+84",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08030406022"
+  },
+  {
+    "firstName": "Deola",
+    "lastName": "Akinbola",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+85",
+    "updatedAt": "2024-04-06 11:12:02.201+85",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08030406022"
+  },
+  {
+    "firstName": "Lawal",
+    "lastName": "Paul",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+86",
+    "updatedAt": "2024-04-06 11:12:02.201+86",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08030462486"
+  },
+  {
+    "firstName": "Omoya",
+    "lastName": "Olagoke",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+87",
+    "updatedAt": "2024-04-06 11:12:02.201+87",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08030637978"
+  },
+  {
+    "firstName": "Omoya",
+    "lastName": "Olagoke",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+88",
+    "updatedAt": "2024-04-06 11:12:02.201+88",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08030637978"
+  },
+  {
+    "firstName": "Yomi",
+    "lastName": "Akingbade",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+89",
+    "updatedAt": "2024-04-06 11:12:02.201+89",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08030769963"
+  },
+  {
+    "firstName": "Deji",
+    "lastName": "Omisakin",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+90",
+    "updatedAt": "2024-04-06 11:12:02.201+90",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08030820910"
+  },
+  {
+    "firstName": "Ademola",
+    "lastName": "Akinlabi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+91",
+    "updatedAt": "2024-04-06 11:12:02.201+91",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08032030484"
+  },
+  {
+    "firstName": "Ademola",
+    "lastName": "Akinlabi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+92",
+    "updatedAt": "2024-04-06 11:12:02.201+92",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08032030484"
+  },
+  {
+    "firstName": "Babawale",
+    "lastName": "Ayinde",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+93",
+    "updatedAt": "2024-04-06 11:12:02.201+93",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08032065498"
+  },
+  {
+    "firstName": "Adeyi",
+    "lastName": "A.",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+94",
+    "updatedAt": "2024-04-06 11:12:02.201+94",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08032219582"
+  },
+  {
+    "firstName": "Oladeni",
+    "lastName": "Omolara",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+95",
+    "updatedAt": "2024-04-06 11:12:02.201+95",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08032242496"
+  },
+  {
+    "firstName": "Adetipe",
+    "lastName": "Adeniyi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+96",
+    "updatedAt": "2024-04-06 11:12:02.201+96",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08032299954"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Ajayi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+97",
+    "updatedAt": "2024-04-06 11:12:02.201+97",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08032350700"
+  },
+  {
+    "firstName": "Omikunle",
+    "lastName": "Olakunle",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+98",
+    "updatedAt": "2024-04-06 11:12:02.201+98",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08032415304"
+  },
+  {
+    "firstName": "Muyiwa",
+    "lastName": "Isola",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+99",
+    "updatedAt": "2024-04-06 11:12:02.201+99",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08032468940"
+  },
+  {
+    "firstName": "Olumide",
+    "lastName": "Akinlabi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+100",
+    "updatedAt": "2024-04-06 11:12:02.201+100",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08032549444"
+  },
+  {
+    "firstName": "Seye",
+    "lastName": "Alenkhe",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+101",
+    "updatedAt": "2024-04-06 11:12:02.201+101",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08033181422"
+  },
+  {
+    "firstName": "David",
+    "lastName": "Popoola",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+102",
+    "updatedAt": "2024-04-06 11:12:02.201+102",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08033184867"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Afolabi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+103",
+    "updatedAt": "2024-04-06 11:12:02.201+103",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08033189558"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Afolabi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+104",
+    "updatedAt": "2024-04-06 11:12:02.201+104",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08033189558"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Adekanye",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+105",
+    "updatedAt": "2024-04-06 11:12:02.201+105",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08033280371"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Oloyede",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+106",
+    "updatedAt": "2024-04-06 11:12:02.201+106",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08033281401"
+  },
+  {
+    "firstName": "Timothy",
+    "lastName": "Abodunrin",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+107",
+    "updatedAt": "2024-04-06 11:12:02.201+107",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08033436852"
+  },
+  {
+    "firstName": "Moses",
+    "lastName": "Adigun",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+108",
+    "updatedAt": "2024-04-06 11:12:02.201+108",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08033490612"
+  },
+  {
+    "firstName": "Taiwo",
+    "lastName": "Yerokun",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+109",
+    "updatedAt": "2024-04-06 11:12:02.201+109",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08033515833"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Adeniji",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+110",
+    "updatedAt": "2024-04-06 11:12:02.201+110",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08033519150"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Taiwo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+111",
+    "updatedAt": "2024-04-06 11:12:02.201+111",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08033530345"
+  },
+  {
+    "firstName": "Dara",
+    "lastName": "Awe",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+112",
+    "updatedAt": "2024-04-06 11:12:02.201+112",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08033535309"
+  },
+  {
+    "firstName": "Adelabu",
+    "lastName": "Adesokan",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+113",
+    "updatedAt": "2024-04-06 11:12:02.201+113",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08033575184"
+  },
+  {
+    "firstName": "Ayeni",
+    "lastName": "Samuel",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+114",
+    "updatedAt": "2024-04-06 11:12:02.201+114",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08033576393"
+  },
+  {
+    "firstName": "Oluseyi",
+    "lastName": "Adebayo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+115",
+    "updatedAt": "2024-04-06 11:12:02.201+115",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08033606038"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Ademiju",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+116",
+    "updatedAt": "2024-04-06 11:12:02.201+116",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08033606038"
+  },
+  {
+    "firstName": "Sina",
+    "lastName": "Ogunrotimi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+117",
+    "updatedAt": "2024-04-06 11:12:02.201+117",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08033643523"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Coker",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+118",
+    "updatedAt": "2024-04-06 11:12:02.201+118",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08033644074"
+  },
+  {
+    "firstName": "Oluseun",
+    "lastName": "Osifeko",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+119",
+    "updatedAt": "2024-04-06 11:12:02.201+119",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08033663100"
+  },
+  {
+    "firstName": "Atinuke",
+    "lastName": "Olunloyo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+120",
+    "updatedAt": "2024-04-06 11:12:02.201+120",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08033704157"
+  },
+  {
+    "firstName": "Busari",
+    "lastName": "Kehinde",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+121",
+    "updatedAt": "2024-04-06 11:12:02.201+121",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08033713971"
+  },
+  {
+    "firstName": "Akinlolu",
+    "lastName": "Olugbenga",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+122",
+    "updatedAt": "2024-04-06 11:12:02.201+122",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08033774522"
+  },
+  {
+    "firstName": "Adio",
+    "lastName": "Oluwaseun",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+123",
+    "updatedAt": "2024-04-06 11:12:02.201+123",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08033815129"
+  },
+  {
+    "firstName": "Elijah",
+    "lastName": "Oyedotun",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+124",
+    "updatedAt": "2024-04-06 11:12:02.201+124",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08033819184"
+  },
+  {
+    "firstName": "Akinloye",
+    "lastName": "Rotimi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+125",
+    "updatedAt": "2024-04-06 11:12:02.201+125",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08033819229"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Adisa",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+126",
+    "updatedAt": "2024-04-06 11:12:02.201+126",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08033832870"
+  },
+  {
+    "firstName": "Michael",
+    "lastName": "Avwerhota",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+127",
+    "updatedAt": "2024-04-06 11:12:02.201+127",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08033960794"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Oyeyemi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+128",
+    "updatedAt": "2024-04-06 11:12:02.201+128",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08033978456"
+  },
+  {
+    "firstName": "Oluyomi",
+    "lastName": "Lawal",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+129",
+    "updatedAt": "2024-04-06 11:12:02.201+129",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08034061970"
+  },
+  {
+    "firstName": "Abiodun",
+    "lastName": "Adeniji",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+130",
+    "updatedAt": "2024-04-06 11:12:02.201+130",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08034063406"
+  },
+  {
+    "firstName": "Abiodun",
+    "lastName": "Adeniji",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+131",
+    "updatedAt": "2024-04-06 11:12:02.201+131",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08034063406"
+  },
+  {
+    "firstName": "Michael",
+    "lastName": "Oyebisi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+132",
+    "updatedAt": "2024-04-06 11:12:02.201+132",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08034064726"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Adeyinka",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+133",
+    "updatedAt": "2024-04-06 11:12:02.201+133",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08034079605"
+  },
+  {
+    "firstName": "Adeniyi",
+    "lastName": "Adetunji",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+134",
+    "updatedAt": "2024-04-06 11:12:02.201+134",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08034171691"
+  },
+  {
+    "firstName": "Adeyeni",
+    "lastName": "Adewole",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+135",
+    "updatedAt": "2024-04-06 11:12:02.201+135",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08034213094"
+  },
+  {
+    "firstName": "Abifarin",
+    "lastName": "Olatunde",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+136",
+    "updatedAt": "2024-04-06 11:12:02.201+136",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08034229559"
+  },
+  {
+    "firstName": "L.O.",
+    "lastName": "Olayiwola",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+137",
+    "updatedAt": "2024-04-06 11:12:02.201+137",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08034262961"
+  },
+  {
+    "firstName": "Dotun",
+    "lastName": "Omokemi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+138",
+    "updatedAt": "2024-04-06 11:12:02.201+138",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08034274118"
+  },
+  {
+    "firstName": "Oladejo",
+    "lastName": "Olusegun",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+139",
+    "updatedAt": "2024-04-06 11:12:02.201+139",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08034312378"
+  },
+  {
+    "firstName": "Tolu",
+    "lastName": "Omotoso",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+140",
+    "updatedAt": "2024-04-06 11:12:02.201+140",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08034336240"
+  },
+  {
+    "firstName": "Joseph",
+    "lastName": "Ogar",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+141",
+    "updatedAt": "2024-04-06 11:12:02.201+141",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08034362684"
+  },
+  {
+    "firstName": "Olanisebe",
+    "lastName": "Adeyemi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+142",
+    "updatedAt": "2024-04-06 11:12:02.201+142",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08034418798"
+  },
+  {
+    "firstName": "Fagbemi",
+    "lastName": "John",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+143",
+    "updatedAt": "2024-04-06 11:12:02.201+143",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08034540363"
+  },
+  {
+    "firstName": "Tunde",
+    "lastName": "Akinola",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+144",
+    "updatedAt": "2024-04-06 11:12:02.201+144",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08034627636"
+  },
+  {
+    "firstName": "Olayiwola",
+    "lastName": "Abosede",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+145",
+    "updatedAt": "2024-04-06 11:12:02.201+145",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08034661984"
+  },
+  {
+    "firstName": "Adegbenjo",
+    "lastName": "Olanrewaju",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+146",
+    "updatedAt": "2024-04-06 11:12:02.201+146",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08034732422"
+  },
+  {
+    "firstName": "Ige",
+    "lastName": "Samson",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+147",
+    "updatedAt": "2024-04-06 11:12:02.201+147",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08034818066"
+  },
+  {
+    "firstName": "Oguntunde",
+    "lastName": "L.O.",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+148",
+    "updatedAt": "2024-04-06 11:12:02.201+148",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08034830484"
+  },
+  {
+    "firstName": "Ojewale",
+    "lastName": "Bukola",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+149",
+    "updatedAt": "2024-04-06 11:12:02.201+149",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08035153506"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Adebayo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+150",
+    "updatedAt": "2024-04-06 11:12:02.201+150",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08035181303"
+  },
+  {
+    "firstName": "Kuti",
+    "lastName": "Olusegun",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+151",
+    "updatedAt": "2024-04-06 11:12:02.201+151",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08035181350"
+  },
+  {
+    "firstName": "Bimbo",
+    "lastName": "Ajala",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+152",
+    "updatedAt": "2024-04-06 11:12:02.201+152",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08035222010"
+  },
+  {
+    "firstName": "Abiodun",
+    "lastName": "Kolawole",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+153",
+    "updatedAt": "2024-04-06 11:12:02.201+153",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08035225426"
+  },
+  {
+    "firstName": "Abiodun",
+    "lastName": "Kolawole",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+154",
+    "updatedAt": "2024-04-06 11:12:02.201+154",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08035225426"
+  },
+  {
+    "firstName": "Fadayomi",
+    "lastName": "O.",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+155",
+    "updatedAt": "2024-04-06 11:12:02.201+155",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08035266072"
+  },
+  {
+    "firstName": "Jonathan",
+    "lastName": "Omofoye",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+156",
+    "updatedAt": "2024-04-06 11:12:02.201+156",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08035268674"
+  },
+  {
+    "firstName": "Temitope",
+    "lastName": "Oyadeyi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+157",
+    "updatedAt": "2024-04-06 11:12:02.201+157",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08035269515"
+  },
+  {
+    "firstName": "Olaniyi",
+    "lastName": "Ajani",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+158",
+    "updatedAt": "2024-04-06 11:12:02.201+158",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08035369671"
+  },
+  {
+    "firstName": "Ayodele",
+    "lastName": "Ogunleye",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+159",
+    "updatedAt": "2024-04-06 11:12:02.201+159",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08035427125"
+  },
+  {
+    "firstName": "Ajetumobi",
+    "lastName": "O.",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+160",
+    "updatedAt": "2024-04-06 11:12:02.201+160",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08035525730"
+  },
+  {
+    "firstName": "O.",
+    "lastName": "Adebiyi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+161",
+    "updatedAt": "2024-04-06 11:12:02.201+161",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08035567375"
+  },
+  {
+    "firstName": "Oludele",
+    "lastName": "Oyelere",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+162",
+    "updatedAt": "2024-04-06 11:12:02.201+162",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08035623850"
+  },
+  {
+    "firstName": "Toba",
+    "lastName": "Gideon",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+163",
+    "updatedAt": "2024-04-06 11:12:02.201+163",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08035639765"
+  },
+  {
+    "firstName": "Fatai",
+    "lastName": "Adams",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+164",
+    "updatedAt": "2024-04-06 11:12:02.201+164",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08035641617"
+  },
+  {
+    "firstName": "Adeyinka",
+    "lastName": "Adedokun",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+165",
+    "updatedAt": "2024-04-06 11:12:02.201+165",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08035653261"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Mabayoje",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+166",
+    "updatedAt": "2024-04-06 11:12:02.201+166",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08035673720"
+  },
+  {
+    "firstName": "Moses",
+    "lastName": "Oloruntoba",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+167",
+    "updatedAt": "2024-04-06 11:12:02.201+167",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08035704907"
+  },
+  {
+    "firstName": "Gbenga",
+    "lastName": "Ibitoye",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+168",
+    "updatedAt": "2024-04-06 11:12:02.201+168",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08035749597"
+  },
+  {
+    "firstName": "Kunmi",
+    "lastName": "Adedeji",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+169",
+    "updatedAt": "2024-04-06 11:12:02.201+169",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08035833916"
+  },
+  {
+    "firstName": "Abioye",
+    "lastName": "Ayorinde",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+170",
+    "updatedAt": "2024-04-06 11:12:02.201+170",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08035872625"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "S.",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+171",
+    "updatedAt": "2024-04-06 11:12:02.201+171",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08036058323"
+  },
+  {
+    "firstName": "Olalekan",
+    "lastName": "Akinsipe",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+172",
+    "updatedAt": "2024-04-06 11:12:02.201+172",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08036093357"
+  },
+  {
+    "firstName": "James",
+    "lastName": "Odumeru",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+173",
+    "updatedAt": "2024-04-06 11:12:02.201+173",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08036148029"
+  },
+  {
+    "firstName": "Olugbogi",
+    "lastName": "Moses",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+174",
+    "updatedAt": "2024-04-06 11:12:02.201+174",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08036170288"
+  },
+  {
+    "firstName": "Aliu",
+    "lastName": "Peter",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+175",
+    "updatedAt": "2024-04-06 11:12:02.201+175",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08036297648"
+  },
+  {
+    "firstName": "Olatemiju",
+    "lastName": "Sunday",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+176",
+    "updatedAt": "2024-04-06 11:12:02.201+176",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08036372416"
+  },
+  {
+    "firstName": "Adeniran",
+    "lastName": "Adeolu",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+177",
+    "updatedAt": "2024-04-06 11:12:02.201+177",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08036434246"
+  },
+  {
+    "firstName": "Isaac",
+    "lastName": "Oke",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+178",
+    "updatedAt": "2024-04-06 11:12:02.201+178",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08036953245"
+  },
+  {
+    "firstName": "Rosemary",
+    "lastName": "Okotie",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+179",
+    "updatedAt": "2024-04-06 11:12:02.201+179",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08037037197"
+  },
+  {
+    "firstName": "Comfort",
+    "lastName": "Adebola",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+180",
+    "updatedAt": "2024-04-06 11:12:02.201+180",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08037115966"
+  },
+  {
+    "firstName": "Olaide",
+    "lastName": "Badru",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+181",
+    "updatedAt": "2024-04-06 11:12:02.201+181",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08037196393"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Onilude",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+182",
+    "updatedAt": "2024-04-06 11:12:02.201+182",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08037271221"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Onilude",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+183",
+    "updatedAt": "2024-04-06 11:12:02.201+183",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08037271221"
+  },
+  {
+    "firstName": "Dayo",
+    "lastName": "Ajayi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+184",
+    "updatedAt": "2024-04-06 11:12:02.201+184",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08037286233"
+  },
+  {
+    "firstName": "Onadele",
+    "lastName": "Muyiwa",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+185",
+    "updatedAt": "2024-04-06 11:12:02.201+185",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08037505831"
+  },
+  {
+    "firstName": "Bamidele",
+    "lastName": "Adegunwa",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+186",
+    "updatedAt": "2024-04-06 11:12:02.201+186",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08038006784"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Nathaniel",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+187",
+    "updatedAt": "2024-04-06 11:12:02.201+187",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08038060717"
+  },
+  {
+    "firstName": "Simeon",
+    "lastName": "Kayode",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+188",
+    "updatedAt": "2024-04-06 11:12:02.201+188",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08038060775"
+  },
+  {
+    "firstName": "Goke",
+    "lastName": "Omotoso",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+189",
+    "updatedAt": "2024-04-06 11:12:02.201+189",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08038076121"
+  },
+  {
+    "firstName": "Agboola",
+    "lastName": "O.",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+190",
+    "updatedAt": "2024-04-06 11:12:02.201+190",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08038163372"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Akintokun",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+191",
+    "updatedAt": "2024-04-06 11:12:02.201+191",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08038226682"
+  },
+  {
+    "firstName": "Olujide",
+    "lastName": "Olujaye",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+192",
+    "updatedAt": "2024-04-06 11:12:02.201+192",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08038239439"
+  },
+  {
+    "firstName": "Justina",
+    "lastName": "Ajayi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+193",
+    "updatedAt": "2024-04-06 11:12:02.201+193",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08038271923"
+  },
+  {
+    "firstName": "Babajide",
+    "lastName": "Damilola",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+194",
+    "updatedAt": "2024-04-06 11:12:02.201+194",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08038300759"
+  },
+  {
+    "firstName": "Orimoloye",
+    "lastName": "Mercy",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+195",
+    "updatedAt": "2024-04-06 11:12:02.201+195",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08038300759"
+  },
+  {
+    "firstName": "Kunle",
+    "lastName": "Adesanya",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+196",
+    "updatedAt": "2024-04-06 11:12:02.201+196",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08038302191"
+  },
+  {
+    "firstName": "Abiola",
+    "lastName": "Ajibola",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+197",
+    "updatedAt": "2024-04-06 11:12:02.201+197",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08038302209"
+  },
+  {
+    "firstName": "Abiola",
+    "lastName": "Ajibola",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+198",
+    "updatedAt": "2024-04-06 11:12:02.201+198",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08038302209"
+  },
+  {
+    "firstName": "Abiodun",
+    "lastName": "Omotoso",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+199",
+    "updatedAt": "2024-04-06 11:12:02.201+199",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08038303374"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Aderombi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+200",
+    "updatedAt": "2024-04-06 11:12:02.201+200",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08038381836"
+  },
+  {
+    "firstName": "Ayeni",
+    "lastName": "Stella",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+201",
+    "updatedAt": "2024-04-06 11:12:02.201+201",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08038404092"
+  },
+  {
+    "firstName": "Ajao",
+    "lastName": "Peter",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+202",
+    "updatedAt": "2024-04-06 11:12:02.201+202",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08038461956"
+  },
+  {
+    "firstName": "Olowolayemo",
+    "lastName": "Tope",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+203",
+    "updatedAt": "2024-04-06 11:12:02.201+203",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08038498428"
+  },
+  {
+    "firstName": "Kehinde",
+    "lastName": "Eto'Oluwa",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+204",
+    "updatedAt": "2024-04-06 11:12:02.201+204",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08038534682"
+  },
+  {
+    "firstName": "Abomide",
+    "lastName": "Tolulope",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+205",
+    "updatedAt": "2024-04-06 11:12:02.201+205",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08038594709"
+  },
+  {
+    "firstName": "Jayeoba",
+    "lastName": "Sunday",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+206",
+    "updatedAt": "2024-04-06 11:12:02.201+206",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08038625188"
+  },
+  {
+    "firstName": "Samuel",
+    "lastName": "Peter",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+207",
+    "updatedAt": "2024-04-06 11:12:02.201+207",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08038637292"
+  },
+  {
+    "firstName": "David",
+    "lastName": "Oluwaseun",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+208",
+    "updatedAt": "2024-04-06 11:12:02.201+208",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08038739279"
+  },
+  {
+    "firstName": "Adeniyi",
+    "lastName": "Familua",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+209",
+    "updatedAt": "2024-04-06 11:12:02.201+209",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08039183293"
+  },
+  {
+    "firstName": "Adekunle",
+    "lastName": "Obilade",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+210",
+    "updatedAt": "2024-04-06 11:12:02.201+210",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08039706833"
+  },
+  {
+    "firstName": "Adekunle",
+    "lastName": "Obilade",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+211",
+    "updatedAt": "2024-04-06 11:12:02.201+211",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08039706833"
+  },
+  {
+    "firstName": "Bolatito",
+    "lastName": "Ayoola",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+212",
+    "updatedAt": "2024-04-06 11:12:02.201+212",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08050618792"
+  },
+  {
+    "firstName": "Isaac",
+    "lastName": "K.Klenz",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+213",
+    "updatedAt": "2024-04-06 11:12:02.201+213",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08050946426"
+  },
+  {
+    "firstName": "O.",
+    "lastName": "Akanni",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+214",
+    "updatedAt": "2024-04-06 11:12:02.201+214",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08051500940"
+  },
+  {
+    "firstName": "Aderonke",
+    "lastName": "Oluokun",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+215",
+    "updatedAt": "2024-04-06 11:12:02.201+215",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08051947288"
+  },
+  {
+    "firstName": "Dipo",
+    "lastName": "Oke",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+216",
+    "updatedAt": "2024-04-06 11:12:02.201+216",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08052075008"
+  },
+  {
+    "firstName": "Oladeji",
+    "lastName": "O.Olusola",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+217",
+    "updatedAt": "2024-04-06 11:12:02.201+217",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08052334926"
+  },
+  {
+    "firstName": "Isaac",
+    "lastName": "Oloogunebi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+218",
+    "updatedAt": "2024-04-06 11:12:02.201+218",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08052573511"
+  },
+  {
+    "firstName": "Felix",
+    "lastName": "Ogbon-otan",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+219",
+    "updatedAt": "2024-04-06 11:12:02.201+219",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08052648086"
+  },
+  {
+    "firstName": "Saba",
+    "lastName": "Gbolahan",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+220",
+    "updatedAt": "2024-04-06 11:12:02.201+220",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08053054585"
+  },
+  {
+    "firstName": "Gbenga",
+    "lastName": "Adebambo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+221",
+    "updatedAt": "2024-04-06 11:12:02.201+221",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08053139316"
+  },
+  {
+    "firstName": "Toki",
+    "lastName": "Oluwole",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+222",
+    "updatedAt": "2024-04-06 11:12:02.201+222",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08053368692"
+  },
+  {
+    "firstName": "Banjo",
+    "lastName": "Adedeji",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+223",
+    "updatedAt": "2024-04-06 11:12:02.201+223",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08053531022"
+  },
+  {
+    "firstName": "Adekunle",
+    "lastName": "Adedolapo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+224",
+    "updatedAt": "2024-04-06 11:12:02.201+224",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08053624121"
+  },
+  {
+    "firstName": "Adeagbo",
+    "lastName": "Oluwatoyin",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+225",
+    "updatedAt": "2024-04-06 11:12:02.201+225",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08053741949"
+  },
+  {
+    "firstName": "Hammed Oladiran",
+    "lastName": "Famojuro",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+226",
+    "updatedAt": "2024-04-06 11:12:02.201+226",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08055115940"
+  },
+  {
+    "firstName": "Akinyemi",
+    "lastName": "Olusegun",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+227",
+    "updatedAt": "2024-04-06 11:12:02.201+227",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08055122749"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Ajibola",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+228",
+    "updatedAt": "2024-04-06 11:12:02.201+228",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08055257130"
+  },
+  {
+    "firstName": "Oladimeji",
+    "lastName": "Olusegun",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+229",
+    "updatedAt": "2024-04-06 11:12:02.201+229",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08055309619"
+  },
+  {
+    "firstName": "Abiodun",
+    "lastName": "Ogunniyi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+230",
+    "updatedAt": "2024-04-06 11:12:02.201+230",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08055373584"
+  },
+  {
+    "firstName": "J.",
+    "lastName": "Agunbiade",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+231",
+    "updatedAt": "2024-04-06 11:12:02.201+231",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08055476042"
+  },
+  {
+    "firstName": "Adetutu",
+    "lastName": "Akintayo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+232",
+    "updatedAt": "2024-04-06 11:12:02.201+232",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08055601832"
+  },
+  {
+    "firstName": "Oladeji",
+    "lastName": "A.O.",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+233",
+    "updatedAt": "2024-04-06 11:12:02.201+233",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08055862926"
+  },
+  {
+    "firstName": "Olayinka",
+    "lastName": "Adubi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+234",
+    "updatedAt": "2024-04-06 11:12:02.201+234",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08055881844"
+  },
+  {
+    "firstName": "Olusegun",
+    "lastName": "Ojesanmi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+235",
+    "updatedAt": "2024-04-06 11:12:02.201+235",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08056052007"
+  },
+  {
+    "firstName": "Oladokun",
+    "lastName": "O.",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+236",
+    "updatedAt": "2024-04-06 11:12:02.201+236",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08056168075"
+  },
+  {
+    "firstName": "Olatunji",
+    "lastName": "Afolabi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+237",
+    "updatedAt": "2024-04-06 11:12:02.201+237",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08056511492"
+  },
+  {
+    "firstName": "Amoo",
+    "lastName": "Olayinka",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+238",
+    "updatedAt": "2024-04-06 11:12:02.201+238",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08056549358"
+  },
+  {
+    "firstName": "Niyi",
+    "lastName": "Olanipekun",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+239",
+    "updatedAt": "2024-04-06 11:12:02.201+239",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08056926204"
+  },
+  {
+    "firstName": "Aboderin",
+    "lastName": "Joseph",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+240",
+    "updatedAt": "2024-04-06 11:12:02.201+240",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08056978536"
+  },
+  {
+    "firstName": "Susana",
+    "lastName": "Nwosu",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+241",
+    "updatedAt": "2024-04-06 11:12:02.201+241",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08057358535"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Oladimeji",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+242",
+    "updatedAt": "2024-04-06 11:12:02.201+242",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08057673455"
+  },
+  {
+    "firstName": "Olalekan",
+    "lastName": "Akanni",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+243",
+    "updatedAt": "2024-04-06 11:12:02.201+243",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08057823618"
+  },
+  {
+    "firstName": "Adeyemo",
+    "lastName": "O.",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+244",
+    "updatedAt": "2024-04-06 11:12:02.201+244",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08058146801"
+  },
+  {
+    "firstName": "Bibilola",
+    "lastName": "Oladeji",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+245",
+    "updatedAt": "2024-04-06 11:12:02.201+245",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08058312614"
+  },
+  {
+    "firstName": "Adewuyi",
+    "lastName": "Bamise",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+246",
+    "updatedAt": "2024-04-06 11:12:02.201+246",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08058356898"
+  },
+  {
+    "firstName": "Ademola",
+    "lastName": "Dare",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+247",
+    "updatedAt": "2024-04-06 11:12:02.201+247",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08058930914"
+  },
+  {
+    "firstName": "Moses",
+    "lastName": "Laoye",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+248",
+    "updatedAt": "2024-04-06 11:12:02.201+248",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08059134756"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Owomoyela",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+249",
+    "updatedAt": "2024-04-06 11:12:02.201+249",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08059722655"
+  },
+  {
+    "firstName": "Olayiwola",
+    "lastName": "Omolabi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+250",
+    "updatedAt": "2024-04-06 11:12:02.201+250",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08059759455"
+  },
+  {
+    "firstName": "Oyeyemi",
+    "lastName": "Olapade",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+251",
+    "updatedAt": "2024-04-06 11:12:02.201+251",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08060040098"
+  },
+  {
+    "firstName": "Oladiti",
+    "lastName": "Oludele",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+252",
+    "updatedAt": "2024-04-06 11:12:02.201+252",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08060093311"
+  },
+  {
+    "firstName": "Ibukun",
+    "lastName": "Olayinka",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+253",
+    "updatedAt": "2024-04-06 11:12:02.201+253",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08060171035"
+  },
+  {
+    "firstName": "Lekan",
+    "lastName": "Olakorede",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+254",
+    "updatedAt": "2024-04-06 11:12:02.201+254",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08060184389"
+  },
+  {
+    "firstName": "Ayodele",
+    "lastName": "Olaleye",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+255",
+    "updatedAt": "2024-04-06 11:12:02.201+255",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08060261734"
+  },
+  {
+    "firstName": "Uzoka",
+    "lastName": "Patrick",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+256",
+    "updatedAt": "2024-04-06 11:12:02.201+256",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08060436606"
+  },
+  {
+    "firstName": "Akinro",
+    "lastName": "Bolaji",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+257",
+    "updatedAt": "2024-04-06 11:12:02.201+257",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08060461249"
+  },
+  {
+    "firstName": "Kareem",
+    "lastName": "Olayinka",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+258",
+    "updatedAt": "2024-04-06 11:12:02.201+258",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08060496423"
+  },
+  {
+    "firstName": "Awotunde",
+    "lastName": "Olusola",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+259",
+    "updatedAt": "2024-04-06 11:12:02.201+259",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08060698526"
+  },
+  {
+    "firstName": "Grace",
+    "lastName": "Akin-Ajayi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+260",
+    "updatedAt": "2024-04-06 11:12:02.201+260",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08060755188"
+  },
+  {
+    "firstName": "James",
+    "lastName": "Ajiroba",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+261",
+    "updatedAt": "2024-04-06 11:12:02.201+261",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08060942366"
+  },
+  {
+    "firstName": "Olaibi",
+    "lastName": "Taiwo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+262",
+    "updatedAt": "2024-04-06 11:12:02.201+262",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08060943544"
+  },
+  {
+    "firstName": "Adegboyega",
+    "lastName": "Raphael",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+263",
+    "updatedAt": "2024-04-06 11:12:02.201+263",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08061489269"
+  },
+  {
+    "firstName": "Peter",
+    "lastName": "Ojuluwayo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+264",
+    "updatedAt": "2024-04-06 11:12:02.201+264",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08061663654"
+  },
+  {
+    "firstName": "Bukunmi",
+    "lastName": "Adetunji",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+265",
+    "updatedAt": "2024-04-06 11:12:02.201+265",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08061668962"
+  },
+  {
+    "firstName": "Olayiwola",
+    "lastName": "Adebayo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+266",
+    "updatedAt": "2024-04-06 11:12:02.201+266",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08062153950"
+  },
+  {
+    "firstName": "Abiodun",
+    "lastName": "Adebowale",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+267",
+    "updatedAt": "2024-04-06 11:12:02.201+267",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08062196394"
+  },
+  {
+    "firstName": "Tunde",
+    "lastName": "Yoade",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+268",
+    "updatedAt": "2024-04-06 11:12:02.201+268",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08062374943"
+  },
+  {
+    "firstName": "Prof.)",
+    "lastName": "Oladapo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+269",
+    "updatedAt": "2024-04-06 11:12:02.201+269",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08062483207"
+  },
+  {
+    "firstName": "Prof.)",
+    "lastName": "Oladapo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+270",
+    "updatedAt": "2024-04-06 11:12:02.201+270",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08062483207"
+  },
+  {
+    "firstName": "Bisi",
+    "lastName": "Adetifa",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+271",
+    "updatedAt": "2024-04-06 11:12:02.201+271",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08062588274"
+  },
+  {
+    "firstName": "Azeez",
+    "lastName": "M.",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+272",
+    "updatedAt": "2024-04-06 11:12:02.201+272",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08063171045"
+  },
+  {
+    "firstName": "Abiodun",
+    "lastName": "Adegoke",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+273",
+    "updatedAt": "2024-04-06 11:12:02.201+273",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08063450500"
+  },
+  {
+    "firstName": "Ojo",
+    "lastName": "Ademola",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+274",
+    "updatedAt": "2024-04-06 11:12:02.201+274",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08064199065"
+  },
+  {
+    "firstName": "Ishola",
+    "lastName": "Tunde",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+275",
+    "updatedAt": "2024-04-06 11:12:02.201+275",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08064492167"
+  },
+  {
+    "firstName": "Ogundele",
+    "lastName": "Ibrahim",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+276",
+    "updatedAt": "2024-04-06 11:12:02.201+276",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08065008793"
+  },
+  {
+    "firstName": "Efemedoh",
+    "lastName": "Hope",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+277",
+    "updatedAt": "2024-04-06 11:12:02.201+277",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08065625312"
+  },
+  {
+    "firstName": "Emmanuel",
+    "lastName": "Adenegan",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+278",
+    "updatedAt": "2024-04-06 11:12:02.201+278",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08065751863"
+  },
+  {
+    "firstName": "Paul",
+    "lastName": "Ige",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+279",
+    "updatedAt": "2024-04-06 11:12:02.201+279",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08065759454"
+  },
+  {
+    "firstName": "Dolapo",
+    "lastName": "Jaiyeola",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+280",
+    "updatedAt": "2024-04-06 11:12:02.201+280",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08066097052"
+  },
+  {
+    "firstName": "Wole",
+    "lastName": "Okunola",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+281",
+    "updatedAt": "2024-04-06 11:12:02.201+281",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08066478204"
+  },
+  {
+    "firstName": "Oyewusi",
+    "lastName": "Deborah",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+282",
+    "updatedAt": "2024-04-06 11:12:02.201+282",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08066683699"
+  },
+  {
+    "firstName": "Akintunde",
+    "lastName": "Olufemi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+283",
+    "updatedAt": "2024-04-06 11:12:02.201+283",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08066850800"
+  },
+  {
+    "firstName": "Tinubu",
+    "lastName": "Olubunmi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+284",
+    "updatedAt": "2024-04-06 11:12:02.201+284",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08066872934"
+  },
+  {
+    "firstName": "Adeoye",
+    "lastName": "Taiwo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+285",
+    "updatedAt": "2024-04-06 11:12:02.201+285",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08067183600"
+  },
+  {
+    "firstName": "Segun",
+    "lastName": "Wright",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+286",
+    "updatedAt": "2024-04-06 11:12:02.201+286",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08067186794"
+  },
+  {
+    "firstName": "Olaniyan",
+    "lastName": "Oluyemi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+287",
+    "updatedAt": "2024-04-06 11:12:02.201+287",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08067623246"
+  },
+  {
+    "firstName": "Adesina",
+    "lastName": "Omotayo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+288",
+    "updatedAt": "2024-04-06 11:12:02.201+288",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08067769699"
+  },
+  {
+    "firstName": "Samuel",
+    "lastName": "Ajayi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+289",
+    "updatedAt": "2024-04-06 11:12:02.201+289",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08067863209"
+  },
+  {
+    "firstName": "Julius",
+    "lastName": "Fayemi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+290",
+    "updatedAt": "2024-04-06 11:12:02.201+290",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08067917911"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Ayoade",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+291",
+    "updatedAt": "2024-04-06 11:12:02.201+291",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08068482811"
+  },
+  {
+    "firstName": "Folami",
+    "lastName": "Ayodele",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+292",
+    "updatedAt": "2024-04-06 11:12:02.201+292",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08068586089"
+  },
+  {
+    "firstName": "John",
+    "lastName": "Oladapo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+293",
+    "updatedAt": "2024-04-06 11:12:02.201+293",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08068692226"
+  },
+  {
+    "firstName": "Rotimi",
+    "lastName": "Lawal",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+294",
+    "updatedAt": "2024-04-06 11:12:02.201+294",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08069150368"
+  },
+  {
+    "firstName": "Adepoju",
+    "lastName": "Aderopo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+295",
+    "updatedAt": "2024-04-06 11:12:02.201+295",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08069163640"
+  },
+  {
+    "firstName": "Alade",
+    "lastName": "Esther",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+296",
+    "updatedAt": "2024-04-06 11:12:02.201+296",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08069181563"
+  },
+  {
+    "firstName": "Wole",
+    "lastName": "Adeyemi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+297",
+    "updatedAt": "2024-04-06 11:12:02.201+297",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08069414052"
+  },
+  {
+    "firstName": "James",
+    "lastName": "Kayode",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+298",
+    "updatedAt": "2024-04-06 11:12:02.201+298",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08069778670"
+  },
+  {
+    "firstName": "Bolanle",
+    "lastName": "Adelabu",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+299",
+    "updatedAt": "2024-04-06 11:12:02.201+299",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08071475563"
+  },
+  {
+    "firstName": "Obalana",
+    "lastName": "Francis",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+300",
+    "updatedAt": "2024-04-06 11:12:02.201+300",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08071855911"
+  },
+  {
+    "firstName": "Sogunle",
+    "lastName": "Oluyemisi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+301",
+    "updatedAt": "2024-04-06 11:12:02.201+301",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08072010029"
+  },
+  {
+    "firstName": "Aderinwale",
+    "lastName": "Jaralyne",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+302",
+    "updatedAt": "2024-04-06 11:12:02.201+302",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08073165104"
+  },
+  {
+    "firstName": "Jude",
+    "lastName": "Oseghole",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+303",
+    "updatedAt": "2024-04-06 11:12:02.201+303",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08074349056"
+  },
+  {
+    "firstName": "Oluwasegun",
+    "lastName": "Adejare",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+304",
+    "updatedAt": "2024-04-06 11:12:02.201+304",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08074451851"
+  },
+  {
+    "firstName": "Gbolagade",
+    "lastName": "Adebayo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+305",
+    "updatedAt": "2024-04-06 11:12:02.201+305",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08074497766"
+  },
+  {
+    "firstName": "Blessing",
+    "lastName": "Adekole",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+306",
+    "updatedAt": "2024-04-06 11:12:02.201+306",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08074499799"
+  },
+  {
+    "firstName": "Kunmi",
+    "lastName": "Gbenro",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+307",
+    "updatedAt": "2024-04-06 11:12:02.201+307",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08075457129"
+  },
+  {
+    "firstName": "Olubunmi",
+    "lastName": "Adeyemi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+308",
+    "updatedAt": "2024-04-06 11:12:02.201+308",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08076003353"
+  },
+  {
+    "firstName": "Tunde",
+    "lastName": "Olaiya",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+309",
+    "updatedAt": "2024-04-06 11:12:02.201+309",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08076217338"
+  },
+  {
+    "firstName": "Oyeleke",
+    "lastName": "Shina",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+310",
+    "updatedAt": "2024-04-06 11:12:02.201+310",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08077466356"
+  },
+  {
+    "firstName": "Adeniyi",
+    "lastName": "",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+311",
+    "updatedAt": "2024-04-06 11:12:02.201+311",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08077877730"
+  },
+  {
+    "firstName": "Ojo",
+    "lastName": "T.",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+312",
+    "updatedAt": "2024-04-06 11:12:02.201+312",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08081653922"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Oyeyiola",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+313",
+    "updatedAt": "2024-04-06 11:12:02.201+313",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08083423871"
+  },
+  {
+    "firstName": "Oyekunle",
+    "lastName": "Olubunmi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+314",
+    "updatedAt": "2024-04-06 11:12:02.201+314",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08086525347"
+  },
+  {
+    "firstName": "Afolabi",
+    "lastName": "Johnson",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+315",
+    "updatedAt": "2024-04-06 11:12:02.201+315",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08086896528"
+  },
+  {
+    "firstName": "Afolabi",
+    "lastName": "Martins",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+316",
+    "updatedAt": "2024-04-06 11:12:02.201+316",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08087528649"
+  },
+  {
+    "firstName": "Francis",
+    "lastName": "Ojo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+317",
+    "updatedAt": "2024-04-06 11:12:02.201+317",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08088133766"
+  },
+  {
+    "firstName": "Adedayo",
+    "lastName": "Enobahor",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+318",
+    "updatedAt": "2024-04-06 11:12:02.201+318",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08094974964"
+  },
+  {
+    "firstName": "Odekunle",
+    "lastName": "M.A.",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+319",
+    "updatedAt": "2024-04-06 11:12:02.201+319",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08098057971"
+  },
+  {
+    "firstName": "Ogunribido",
+    "lastName": "Damilola",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+320",
+    "updatedAt": "2024-04-06 11:12:02.201+320",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08101115006"
+  },
+  {
+    "firstName": "Fabiyi",
+    "lastName": "Ezekiel",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+321",
+    "updatedAt": "2024-04-06 11:12:02.201+321",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08101147137"
+  },
+  {
+    "firstName": "Bamidele",
+    "lastName": "John",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+322",
+    "updatedAt": "2024-04-06 11:12:02.201+322",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08101223654"
+  },
+  {
+    "firstName": "Funke",
+    "lastName": "Oladebo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+323",
+    "updatedAt": "2024-04-06 11:12:02.201+323",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08102552564"
+  },
+  {
+    "firstName": "Adesola",
+    "lastName": "Emmanuel",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+324",
+    "updatedAt": "2024-04-06 11:12:02.201+324",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08102859430"
+  },
+  {
+    "firstName": "Ayewa",
+    "lastName": "Samuel",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+325",
+    "updatedAt": "2024-04-06 11:12:02.201+325",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08105321555"
+  },
+  {
+    "firstName": "Emmanuel",
+    "lastName": "Adewale",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+326",
+    "updatedAt": "2024-04-06 11:12:02.201+326",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08106778080"
+  },
+  {
+    "firstName": "Alabi",
+    "lastName": "Oluwadamilare",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+327",
+    "updatedAt": "2024-04-06 11:12:02.201+327",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08107261414"
+  },
+  {
+    "firstName": "Aladetan",
+    "lastName": "Endurance",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+328",
+    "updatedAt": "2024-04-06 11:12:02.201+328",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08107831098"
+  },
+  {
+    "firstName": "Idowu",
+    "lastName": "Kehinde",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+329",
+    "updatedAt": "2024-04-06 11:12:02.201+329",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08108711311"
+  },
+  {
+    "firstName": "Adelanwa",
+    "lastName": "Ayomide",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+330",
+    "updatedAt": "2024-04-06 11:12:02.201+330",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08109873725"
+  },
+  {
+    "firstName": "Oyetunde",
+    "lastName": "Aiyedun",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+331",
+    "updatedAt": "2024-04-06 11:12:02.201+331",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08110198482"
+  },
+  {
+    "firstName": "Peter",
+    "lastName": "Moses",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+332",
+    "updatedAt": "2024-04-06 11:12:02.201+332",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08119646986"
+  },
+  {
+    "firstName": "Gbenga",
+    "lastName": "Ogunlesi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+333",
+    "updatedAt": "2024-04-06 11:12:02.201+333",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08123239286"
+  },
+  {
+    "firstName": "Oyesola",
+    "lastName": "Paul",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+334",
+    "updatedAt": "2024-04-06 11:12:02.201+334",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08123662663"
+  },
+  {
+    "firstName": "Nathaniel",
+    "lastName": "Denis",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+335",
+    "updatedAt": "2024-04-06 11:12:02.201+335",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08124629530"
+  },
+  {
+    "firstName": "Yemi",
+    "lastName": "Fagbolahan",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+336",
+    "updatedAt": "2024-04-06 11:12:02.201+336",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08126566248"
+  },
+  {
+    "firstName": "Pius",
+    "lastName": "James",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+337",
+    "updatedAt": "2024-04-06 11:12:02.201+337",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08126960047"
+  },
+  {
+    "firstName": "Dare",
+    "lastName": "Omoniyi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+338",
+    "updatedAt": "2024-04-06 11:12:02.201+338",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08127690645"
+  },
+  {
+    "firstName": "Favour",
+    "lastName": "Adeyeye",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+339",
+    "updatedAt": "2024-04-06 11:12:02.201+339",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08127830391"
+  },
+  {
+    "firstName": "Ogedengbe",
+    "lastName": "Kayode",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+340",
+    "updatedAt": "2024-04-06 11:12:02.201+340",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08130491367"
+  },
+  {
+    "firstName": "Olaobayemi",
+    "lastName": "O.J.",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+341",
+    "updatedAt": "2024-04-06 11:12:02.201+341",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08130795993"
+  },
+  {
+    "firstName": "James",
+    "lastName": "Jedieal",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+342",
+    "updatedAt": "2024-04-06 11:12:02.201+342",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08130888005"
+  },
+  {
+    "firstName": "Ojo",
+    "lastName": "Ibukun",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+343",
+    "updatedAt": "2024-04-06 11:12:02.201+343",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08131181856"
+  },
+  {
+    "firstName": "David",
+    "lastName": "Olaigbe",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+344",
+    "updatedAt": "2024-04-06 11:12:02.201+344",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08132186658"
+  },
+  {
+    "firstName": "Audu",
+    "lastName": "Oziododo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+345",
+    "updatedAt": "2024-04-06 11:12:02.201+345",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08132565845"
+  },
+  {
+    "firstName": "Philip",
+    "lastName": "Windapo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+346",
+    "updatedAt": "2024-04-06 11:12:02.201+346",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08134116345"
+  },
+  {
+    "firstName": "David",
+    "lastName": "Ekeagbo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+347",
+    "updatedAt": "2024-04-06 11:12:02.201+347",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08134220262"
+  },
+  {
+    "firstName": "Segun",
+    "lastName": "Awopeju",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+348",
+    "updatedAt": "2024-04-06 11:12:02.201+348",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08134580665"
+  },
+  {
+    "firstName": "Femi",
+    "lastName": "Adesoye",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+349",
+    "updatedAt": "2024-04-06 11:12:02.201+349",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08135618189"
+  },
+  {
+    "firstName": "Ajala",
+    "lastName": "Oladipupo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+350",
+    "updatedAt": "2024-04-06 11:12:02.201+350",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08135658438"
+  },
+  {
+    "firstName": "Alabi",
+    "lastName": "Dolapo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+351",
+    "updatedAt": "2024-04-06 11:12:02.201+351",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08135758855"
+  },
+  {
+    "firstName": "Timileyin",
+    "lastName": "Awosanya",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+352",
+    "updatedAt": "2024-04-06 11:12:02.201+352",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08135848493"
+  },
+  {
+    "firstName": "Oluwatosin",
+    "lastName": "Akinrinde",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+353",
+    "updatedAt": "2024-04-06 11:12:02.201+353",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08136632586"
+  },
+  {
+    "firstName": "Olabintan",
+    "lastName": "Celilia",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+354",
+    "updatedAt": "2024-04-06 11:12:02.201+354",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08136785992"
+  },
+  {
+    "firstName": "Alex",
+    "lastName": "Akinsanya",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+355",
+    "updatedAt": "2024-04-06 11:12:02.201+355",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08137316232"
+  },
+  {
+    "firstName": "Akomolafe",
+    "lastName": "Esther",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+356",
+    "updatedAt": "2024-04-06 11:12:02.201+356",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08137634945"
+  },
+  {
+    "firstName": "Olayinka",
+    "lastName": "Oluwatomiwa",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+357",
+    "updatedAt": "2024-04-06 11:12:02.201+357",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08137854505"
+  },
+  {
+    "firstName": "Hannah",
+    "lastName": "Gbolagade",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+358",
+    "updatedAt": "2024-04-06 11:12:02.201+358",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08138385715"
+  },
+  {
+    "firstName": "Femi",
+    "lastName": "Akanle",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+359",
+    "updatedAt": "2024-04-06 11:12:02.201+359",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08138525262"
+  },
+  {
+    "firstName": "Adegoke",
+    "lastName": "Oluwajarewon",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+360",
+    "updatedAt": "2024-04-06 11:12:02.201+360",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08138594389"
+  },
+  {
+    "firstName": "Ojewande",
+    "lastName": "Olukayode",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+361",
+    "updatedAt": "2024-04-06 11:12:02.201+361",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08139471915"
+  },
+  {
+    "firstName": "Olusegun",
+    "lastName": "Ojo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+362",
+    "updatedAt": "2024-04-06 11:12:02.201+362",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08140479891"
+  },
+  {
+    "firstName": "Michael",
+    "lastName": "Adeniyi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+363",
+    "updatedAt": "2024-04-06 11:12:02.201+363",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08143598855"
+  },
+  {
+    "firstName": "Maiyaki",
+    "lastName": "Oveze",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+364",
+    "updatedAt": "2024-04-06 11:12:02.201+364",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08150745074"
+  },
+  {
+    "firstName": "Muyiwa",
+    "lastName": "Akinbode",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+365",
+    "updatedAt": "2024-04-06 11:12:02.201+365",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08152036100"
+  },
+  {
+    "firstName": "Paul",
+    "lastName": "Anjorin",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+366",
+    "updatedAt": "2024-04-06 11:12:02.201+366",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08152602031"
+  },
+  {
+    "firstName": "Sunday",
+    "lastName": "Olabode",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+367",
+    "updatedAt": "2024-04-06 11:12:02.201+367",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08152829953"
+  },
+  {
+    "firstName": "Olanlokun",
+    "lastName": "Kehinde",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+368",
+    "updatedAt": "2024-04-06 11:12:02.201+368",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08155081695"
+  },
+  {
+    "firstName": "Kuku",
+    "lastName": "Abayomi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+369",
+    "updatedAt": "2024-04-06 11:12:02.201+369",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08156073895"
+  },
+  {
+    "firstName": "Toluwabori",
+    "lastName": "Adedeji",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+370",
+    "updatedAt": "2024-04-06 11:12:02.201+370",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08156733849"
+  },
+  {
+    "firstName": "Oladiran",
+    "lastName": "Bolanle",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+371",
+    "updatedAt": "2024-04-06 11:12:02.201+371",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08156937323"
+  },
+  {
+    "firstName": "Bello",
+    "lastName": "Akeem",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+372",
+    "updatedAt": "2024-04-06 11:12:02.201+372",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08160934375"
+  },
+  {
+    "firstName": "Olubayo",
+    "lastName": "Olubunmi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+373",
+    "updatedAt": "2024-04-06 11:12:02.201+373",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08162086099"
+  },
+  {
+    "firstName": "Filani",
+    "lastName": "Omolara",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+374",
+    "updatedAt": "2024-04-06 11:12:02.201+374",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08162887959"
+  },
+  {
+    "firstName": "Peters",
+    "lastName": "Abiodun",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+375",
+    "updatedAt": "2024-04-06 11:12:02.201+375",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08163193515"
+  },
+  {
+    "firstName": "Sunday",
+    "lastName": "Jayeoba",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+376",
+    "updatedAt": "2024-04-06 11:12:02.201+376",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08164659436"
+  },
+  {
+    "firstName": "Muyiwa",
+    "lastName": "Aluko",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+377",
+    "updatedAt": "2024-04-06 11:12:02.201+377",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08165061902"
+  },
+  {
+    "firstName": "Fadoju",
+    "lastName": "John",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+378",
+    "updatedAt": "2024-04-06 11:12:02.201+378",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08165639398"
+  },
+  {
+    "firstName": "Kolawole",
+    "lastName": "Hamzat",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+379",
+    "updatedAt": "2024-04-06 11:12:02.201+379",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08166313958"
+  },
+  {
+    "firstName": "Salawu",
+    "lastName": "Mathias",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+380",
+    "updatedAt": "2024-04-06 11:12:02.201+380",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08166600871"
+  },
+  {
+    "firstName": "Ore",
+    "lastName": "Ore",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+381",
+    "updatedAt": "2024-04-06 11:12:02.201+381",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08167648920"
+  },
+  {
+    "firstName": "Emiola",
+    "lastName": "Temitope",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+382",
+    "updatedAt": "2024-04-06 11:12:02.201+382",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08168181544"
+  },
+  {
+    "firstName": "Adewale",
+    "lastName": "Temitope",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+383",
+    "updatedAt": "2024-04-06 11:12:02.201+383",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08169599606"
+  },
+  {
+    "firstName": "Adewumi",
+    "lastName": "Sijibomi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+384",
+    "updatedAt": "2024-04-06 11:12:02.201+384",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08169978315"
+  },
+  {
+    "firstName": "Oluseye",
+    "lastName": "Oyeniran",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+385",
+    "updatedAt": "2024-04-06 11:12:02.201+385",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08185100930"
+  },
+  {
+    "firstName": "Oyetunde",
+    "lastName": "Abiola",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+386",
+    "updatedAt": "2024-04-06 11:12:02.201+386",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08185671851"
+  },
+  {
+    "firstName": "Omotayo",
+    "lastName": "Esther",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+387",
+    "updatedAt": "2024-04-06 11:12:02.201+387",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "09014499192"
+  },
+  {
+    "firstName": "Ajiboye",
+    "lastName": "S.",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+388",
+    "updatedAt": "2024-04-06 11:12:02.201+388",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "09014593533"
+  },
+  {
+    "firstName": "Oladimeji",
+    "lastName": "Israel",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+389",
+    "updatedAt": "2024-04-06 11:12:02.201+389",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "09034542611"
+  },
+  {
+    "firstName": "Opeyemi",
+    "lastName": "John",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+390",
+    "updatedAt": "2024-04-06 11:12:02.201+390",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "09034821828"
+  },
+  {
+    "firstName": "David",
+    "lastName": "Femi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+391",
+    "updatedAt": "2024-04-06 11:12:02.201+391",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "09035784052"
+  },
+  {
+    "firstName": "Adeleke",
+    "lastName": "Nelson",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+392",
+    "updatedAt": "2024-04-06 11:12:02.201+392",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "09037635572"
+  },
+  {
+    "firstName": "Ademoyegun",
+    "lastName": "Tobiloba",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+393",
+    "updatedAt": "2024-04-06 11:12:02.201+393",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "09037904031"
+  },
+  {
+    "firstName": "Sangolade",
+    "lastName": "Joseph",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+394",
+    "updatedAt": "2024-04-06 11:12:02.201+394",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "09039580430"
+  },
+  {
+    "firstName": "Samuel",
+    "lastName": "Amosu",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+395",
+    "updatedAt": "2024-04-06 11:12:02.201+395",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "09048905812"
+  },
+  {
+    "firstName": "James",
+    "lastName": "Friday",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+396",
+    "updatedAt": "2024-04-06 11:12:02.201+396",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "09051281409"
+  },
+  {
+    "firstName": "Tomide",
+    "lastName": "Olayiwola",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+397",
+    "updatedAt": "2024-04-06 11:12:02.201+397",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "09060045790"
+  },
+  {
+    "firstName": "Oladejo",
+    "lastName": "Kunle",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+398",
+    "updatedAt": "2024-04-06 11:12:02.201+398",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "09061648326"
+  },
+  {
+    "firstName": "Longe",
+    "lastName": "Alfred",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+399",
+    "updatedAt": "2024-04-06 11:12:02.201+399",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "09066681483"
+  },
+  {
+    "firstName": "Falade",
+    "lastName": "Olusoji",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+400",
+    "updatedAt": "2024-04-06 11:12:02.201+400",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "09067216792"
+  },
+  {
+    "firstName": "Tobi",
+    "lastName": "Olasoji",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+401",
+    "updatedAt": "2024-04-06 11:12:02.201+401",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "09070790416"
+  },
+  {
+    "firstName": "Olatunde",
+    "lastName": "O.",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+402",
+    "updatedAt": "2024-04-06 11:12:02.201+402",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "09090628780"
+  },
+  {
+    "firstName": "Sola",
+    "lastName": "Arowolo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+403",
+    "updatedAt": "2024-04-06 11:12:02.201+403",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "09123825432"
+  },
+  {
+    "firstName": "Efeneme",
+    "lastName": "Godbless",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+404",
+    "updatedAt": "2024-04-06 11:12:02.201+404",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "09156080300"
+  },
+  {
+    "firstName": "Ayo",
+    "lastName": "Ajayi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+405",
+    "updatedAt": "2024-04-06 11:12:02.201+405",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "97430060680"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Emikpe",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+406",
+    "updatedAt": "2024-04-06 11:12:02.201+406",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "233549000000"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Olubunmi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+407",
+    "updatedAt": "2024-04-06 11:12:02.201+407",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "254718000000"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Olubunmi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+408",
+    "updatedAt": "2024-04-06 11:12:02.201+408",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "254718000000"
+  },
+  {
+    "firstName": "Samson",
+    "lastName": "Ologunola",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+409",
+    "updatedAt": "2024-04-06 11:12:02.201+409",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "353899000000"
+  },
+  {
+    "firstName": "Akinwande",
+    "lastName": "Tobi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+410",
+    "updatedAt": "2024-04-06 11:12:02.201+410",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "447734000000"
+  },
+  {
+    "firstName": "Temitope",
+    "lastName": "Oyadeyi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+411",
+    "updatedAt": "2024-04-06 11:12:02.201+411",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "447770000000"
+  },
+  {
+    "firstName": "Funmilola",
+    "lastName": "Bamidele",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+412",
+    "updatedAt": "2024-04-06 11:12:02.201+412",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "447831000000"
+  },
+  {
+    "firstName": "Yemi",
+    "lastName": "Adeleke",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+413",
+    "updatedAt": "2024-04-06 11:12:02.201+413",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "7014930055"
+  },
+  {
+    "firstName": "Dosumu",
+    "lastName": "Oludayo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+414",
+    "updatedAt": "2024-04-06 11:12:02.201+414",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07018803229"
+  },
+  {
+    "firstName": "Timothy",
+    "lastName": "Akinremi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+415",
+    "updatedAt": "2024-04-06 11:12:02.201+415",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07030126694"
+  },
+  {
+    "firstName": "Oyeleke",
+    "lastName": "Temitayo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+416",
+    "updatedAt": "2024-04-06 11:12:02.201+416",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07038850089"
+  },
+  {
+    "firstName": "Godwin",
+    "lastName": "Ogudu",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+417",
+    "updatedAt": "2024-04-06 11:12:02.201+417",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "07084740390"
+  },
+  {
+    "firstName": "Adeaga",
+    "lastName": "Niyi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+418",
+    "updatedAt": "2024-04-06 11:12:02.201+418",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08030840224"
+  },
+  {
+    "firstName": "Olatubosun",
+    "lastName": "Olayemi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+419",
+    "updatedAt": "2024-04-06 11:12:02.201+419",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08032230038"
+  },
+  {
+    "firstName": "Oyedele",
+    "lastName": "Sola",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+420",
+    "updatedAt": "2024-04-06 11:12:02.201+420",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08032569742"
+  },
+  {
+    "firstName": "Omoniyi",
+    "lastName": "Imafojie",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+421",
+    "updatedAt": "2024-04-06 11:12:02.201+421",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08033596032"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Moses",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+422",
+    "updatedAt": "2024-04-06 11:12:02.201+422",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08050381820"
+  },
+  {
+    "firstName": "Bamiduro",
+    "lastName": "Taiwo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+423",
+    "updatedAt": "2024-04-06 11:12:02.201+423",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08053512142"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Laniyan",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+424",
+    "updatedAt": "2024-04-06 11:12:02.201+424",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08053592557"
+  },
+  {
+    "firstName": "Tunji",
+    "lastName": "Onasanwo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+425",
+    "updatedAt": "2024-04-06 11:12:02.201+425",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08055264769"
+  },
+  {
+    "firstName": "Edward",
+    "lastName": "Ogabor",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+426",
+    "updatedAt": "2024-04-06 11:12:02.201+426",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08055676932"
+  },
+  {
+    "firstName": "Michael",
+    "lastName": "Talubi",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+427",
+    "updatedAt": "2024-04-06 11:12:02.201+427",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08060276340"
+  },
+  {
+    "firstName": "Aramide",
+    "lastName": "Olaniyan",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+428",
+    "updatedAt": "2024-04-06 11:12:02.201+428",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08062115269"
+  },
+  {
+    "firstName": "Olawale",
+    "lastName": "Aluko",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+429",
+    "updatedAt": "2024-04-06 11:12:02.201+429",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08066185951"
+  },
+  {
+    "firstName": "Olusola",
+    "lastName": "Akindele",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+430",
+    "updatedAt": "2024-04-06 11:12:02.201+430",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08069016756"
+  },
+  {
+    "firstName": "Olusegun",
+    "lastName": "Lawson",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+431",
+    "updatedAt": "2024-04-06 11:12:02.201+431",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08074487296"
+  },
+  {
+    "firstName": "Awogbade",
+    "lastName": "A.",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+432",
+    "updatedAt": "2024-04-06 11:12:02.201+432",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08076044080"
+  },
+  {
+    "firstName": "Isaac",
+    "lastName": "Olubayo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+433",
+    "updatedAt": "2024-04-06 11:12:02.201+433",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08079725083"
+  },
+  {
+    "firstName": "Busari",
+    "lastName": "Kayode",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+434",
+    "updatedAt": "2024-04-06 11:12:02.201+434",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08094247688"
+  },
+  {
+    "firstName": "Akanbi",
+    "lastName": "Oludayo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+435",
+    "updatedAt": "2024-04-06 11:12:02.201+435",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08098356200"
+  },
+  {
+    "firstName": "John",
+    "lastName": "Fatoki",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+436",
+    "updatedAt": "2024-04-06 11:12:02.201+436",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08125022799"
+  },
+  {
+    "firstName": "Olumide",
+    "lastName": "Adio",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+437",
+    "updatedAt": "2024-04-06 11:12:02.201+437",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "08145848627"
+  },
+  {
+    "firstName": "Olumuyiwa",
+    "lastName": "Ojo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+438",
+    "updatedAt": "2024-04-06 11:12:02.201+438",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "14047671450"
+  },
+  {
+    "firstName": "Oladokun",
+    "lastName": "John",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+440",
+    "updatedAt": "2024-04-06 11:12:02.201+440",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "14049510146"
+  },
+  {
+    "firstName": "Anibaba",
+    "lastName": "Taiwo",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+441",
+    "updatedAt": "2024-04-06 11:12:02.201+441",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "14252328209"
+  },
+  {
+    "firstName": "Pastor",
+    "lastName": "Moses",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+442",
+    "updatedAt": "2024-04-06 11:12:02.201+442",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "14437903704"
+  },
+  {
+    "firstName": "Amoo",
+    "lastName": "Bukola",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+443",
+    "updatedAt": "2024-04-06 11:12:02.201+443",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "14696718135"
+  },
+  {
+    "firstName": "Alabi",
+    "lastName": "Olutunde",
+    "emailVerificationToken": "NULL",
+    "password": "$2b$10$M6Td4jc7AE3BKSSPh5iqlOZN.5Q0hWgaLDcaSPHewOn4tz/Qqxp1W",
+    "createdAt": "2024-04-06 11:12:02.201+444",
+    "updatedAt": "2024-04-06 11:12:02.201+444",
+    "emailVerificationTokenExpiresAt": "NULL",
+    "phoneNumber": "18327745340"
+  }
+]

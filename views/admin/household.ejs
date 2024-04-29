@@ -1,0 +1,360 @@
+
+<!-- include head.ejs-->
+<%- include ("../partials/head") %>
+<style>
+    .form-control{
+    border-radius: 18px;
+    padding: 4px;
+    font-size: 22px;
+    }
+  .mb-1{
+    margin-bottom:1rem;
+  }
+  .mb-2{
+     margin-bottom: 0.5rem;
+  }
+
+/* Style for the section label */
+.section-label {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333; /* Text color */
+  margin: 20px 0; /* Adjust the top and bottom margin as needed */
+}
+
+/* Style for the horizontal rule */
+.hr-section {
+  border: none; /* Remove default border */
+  height: 1px; /* Set the height of the line */
+  background-color: #999; /* Color of the line */
+  margin: 10px 0; /* Adjust the top and bottom margin as needed */
+}
+
+/* Style for the text beside the horizontal rule */
+.hr-text {
+  display: inline-block;
+  padding: 0 10px; /* Space between text and hr */
+  color: #999; /* Color of the text */
+}
+
+.prevBtn, .nextBtn, .finalBtn {
+    font-size: 30px;
+    background-color: black;
+    color: white;
+    padding: 10px 45px;
+    border: none;
+    border-radius: 25px;
+    margin-right: 20px;
+}
+</style>
+<body>
+<!-- MAIN sTART -->
+<main class="animate position-relative">
+
+<!-- Header Section -->
+<!-- include Heaser.ejs-->
+<!--header.ejs-->
+<%- include ("../partials/header") %>
+
+
+<!-- Main Content Container -->
+<div class="container mt-15">
+   <div class="row">
+    <div style="margin-left:16rem;">
+    <h2><%= pageName %></h2>
+    </div>
+
+    <div style="text-align: right;">
+    <button id="openModalButton" class="btn-success  btn btn-sm"> Create Church Structure</button>
+    </div>
+  </div>
+<div class="row">
+
+
+
+<!--/ Left Column Login Form -->
+<%- include ("../partials/sidebar") %>
+
+
+
+<!-- Right Column -->
+<div class="col-md-10">
+  <table class="table table-hover table-striped">
+  <thead>
+    <tr>
+     <th scope="col">S/n</th>
+        <th scope="col">Level Rank</th>
+        <th scope="col">Label Name</th>
+        <th scope="col">Code</th>
+        <th scope="col">Status</th>
+        <th scope="col">Status Code</th>
+        <th scope="col">Code Format</th>
+        <th scope="col">ID FKE</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+      <% var serialNumber = 1; %>
+    <% households.forEach(household => { %>
+<tr>
+<td><%= serialNumber++ %></td>
+<td><%= household.levelRank %></td>
+<td><%= household.labelName %></td>
+<td><%= household.code %></td>
+<td><%= household.status %></td>
+<td><%= household.statusCode %></td>
+<td><%= household.codeFormat %></td>
+<td><%= household.idFke %></td>
+c<td><button class="btn-danger btn-sm delete-btn" data-user-id="<%= household.id %>">Delete</button></td>
+
+        </tr>
+  <% }); %>
+    <!-- Add more rows here -->
+  </tbody>
+</table>
+
+<form id="householdForm"  method="POST">
+  <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl"> <!-- Changed modal size to extra large (10-md) -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="userModalLabel">Create Household</h5>
+          <br>
+          <p>create your church structure, ranking from 1 - 10, highest is 1, lowest is 10</p>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="householdRows"> <!-- Container for dynamic rows -->
+            <!-- Default row id="roomFields-->
+            <div  class="row mb-4" id="formRow0">  
+                <div class="col-md-4">
+              <label for="labelName0" class="form-label">Label Name</label>
+    <input type="text" class="form-control" name="labelName[]" id="labelName0" required>
+              </div>
+
+              <div class="col-md-4">
+                <label for="levelRank0" class="form-label">Level Rank</label>
+    <select class="form-control" name="levelRank[]" id="levelRank0" required>
+               <option value="" selected>Ranking</option>
+               <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+                
+              </div>
+
+              <div class="col-md-4">
+                   <label for="status0" class="form-label">Status</label>
+                <select class="form-control" name="status[]" id="status0" required>
+                  <option value="" selected>Select Status
+                  </option>
+                  <option value="mainfold">Main Cluster</option>
+                  <option value="Special version">Special Version</option>
+                  <!-- Add more options as needed -->
+                </select>
+              </div>
+              <!-- Add more columns for additional fields -->
+            </div>
+            <!-- End of default row -->
+          </div>
+          <div class="d-flex justify-content-end mb-3">
+          <button type="button" id="addRowBtn" class="btn btn-success me-3">Add Row</button>
+          <button type="submit" class="btn btn-danger">Submit</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+
+
+
+<nav aria-label="Page navigation">
+  <ul class="pagination justify-content-left">
+    <li class="page-item <%= currentPage === 1 ? 'disabled' : '' %>">
+      <a class="page-link" href="?page=<%= currentPage - 1 %>" tabindex="-1" aria-disabled="true">Previous</a>
+    </li>
+    <% for (let i = 1; i <= totalPages; i++) { %>
+      <li class="page-item <%= currentPage === i ? 'active' : '' %>">
+        <a class="page-link" href="?page=<%= i %>"><%= i %></a>
+      </li>
+    <% } %>
+    <li class="page-item <%= currentPage === totalPages ? 'disabled' : '' %>">
+      <a class="page-link" href="?page=<%= currentPage + 1 %>">Next</a>
+    </li>
+  </ul>
+</nav>
+
+
+</div> <!--stop deleting here-->
+</div>
+</div>
+</div>
+</main>
+
+<%- include ("../partials/footer") %>
+
+<script>
+  let rowCounter = 0; 
+
+  const openModalButton = document.getElementById("openModalButton");
+  const userForm = document.getElementById("userForm");
+
+  // Initialize Bootstrap modal
+  var myModal = new bootstrap.Modal(document.getElementById('userModal'));
+
+  // Open modal when button is clicked
+  openModalButton.addEventListener('click', function() {
+    myModal.show();
+  });
+
+
+document.querySelectorAll('.delete-btn').forEach(button => {
+    button.addEventListener('click', function() {
+      const userId = button.dataset.userId; // Get the user ID from data attribute
+      if (confirm('Are you sure you want to delete this user?')) {
+        deleteUser(userId);
+      }
+    });
+  });
+
+function deleteUser(userId) {
+fetch(`/deleteUser/${userId}`, {
+method: 'DELETE'
+})
+.then(response => {
+if (!response.ok) {
+throw new Error('Failed to delete user');
+}
+return response.json();
+})
+.then(data => {
+// Handle success response
+console.log(data.message);
+window.location.href = data.redirectUrl;
+
+})
+.catch(error => {
+console.error('Error:', error.message);
+// Handle error
+});
+}
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+const addRowBtn = document.getElementById('addRowBtn');
+const householdRows = document.getElementById('householdRows');
+// Counter for generating unique IDs
+
+addRowBtn.addEventListener('click', function() {
+rowCounter++; // Increment the row counter
+const newRow = document.createElement('div');
+newRow.classList.add('row', 'mb-3');
+newRow.id=`formRow${rowCounter}`;
+newRow.innerHTML = `
+<div class="col-md-4">
+<label for="labelName${rowCounter}" class="form-label">Label Name</label>
+<input type="text" class="form-control" name="labelName[]" id="labelName${rowCounter}" required>
+</div>
+
+<div class="col-md-4">
+<label for="levelRank${rowCounter}" class="form-label">Level Rank</label>
+<select class="form-control" name="levelRank[]" id="levelRank${rowCounter}" required>
+<option value="" selected>Ranking</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+</select>
+</div>
+
+<div class="col-md-4">
+<label for="status${rowCounter}" class="form-label">Status</label>
+<select class="form-control" name="status[]" id="status${rowCounter}" required>
+<option value="" selected> Select Status</option>
+<option value="main cluster">Mainfold</option>
+<option value="Special version">Special Version</option>
+</select>
+</div>
+`;
+householdRows.appendChild(newRow);
+});
+
+
+
+
+// Form submission handler
+const form = document.getElementById("householdForm");
+form.addEventListener("submit", async function (event) {
+      event.preventDefault();
+
+      const formData = {
+      labelName: [],
+      levelRank: [],
+      status: []
+    };
+
+    //get the length of the forms in the DOM
+    let i =0;
+    while(document.getElementById(`formRow${i}`)){
+    i++;
+    }
+    const length = i;
+
+  for (let i = 0; i < length; i++) {
+
+  const labelNameField = document.getElementById(`labelName${i}`);
+  const levelRankField = document.getElementById(`levelRank${i}`);
+  const statusField = document.getElementById(`status${i}`);
+
+  formData.labelName.push(labelNameField.value);
+  formData.levelRank.push(levelRankField.value);
+  formData.status.push(statusField.value);
+}
+
+    console.log(formData);
+
+      try {
+        const response = await fetch("/households", {
+         method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+        });
+
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+
+        const responseData = await response.json();
+        console.log("Response from server:", responseData);
+
+        // Optionally, handle the response here (e.g., display success message)
+      } catch (error) {
+        console.error("Error:", error);
+        // Optionally, handle errors here (e.g., display error message)
+      }
+    });
+ });
+
+
+</script>
+
+</body>
+</html>

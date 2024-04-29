@@ -86,9 +86,19 @@ const userRoutes = require("./routes/userRoutes");
 const adminRoutes = require("./routes/adminRoutes");
 const indexRoutes = require("./routes/indexRoutes");
 
+
+//For the new app and routes 
+const appRoutes = require("./routes/appRoutes");
+const authRoutes = require("./routes/authRoutes");
+
+
 app.use("/", indexRoutes);
 app.use("/user", userRoutes);
 app.use("/admin", adminRoutes);
+
+//For the new App Structure
+app.use("/app", appRoutes);
+app.use("/auth", authRoutes);
 
 
 

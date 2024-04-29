@@ -6,6 +6,7 @@ const { UserData } = require("../models");
 
 //Create new controller for the User
 const userController = {
+  
   getForgotPassword: (req, res) => {
     const errorMsg = req.flash("error")[0];
     const successMsg = req.flash("success")[0];
@@ -173,7 +174,6 @@ const userController = {
   },
 
 
-
   //GET: router for verifying Token
   getVerifiedToken: async (req, res, next) => {
     try {
@@ -241,143 +241,6 @@ const userController = {
     }
   },
 
-  // GET: display user's profile
-  getUserProfile: async (req, res) => {
-    const successMsg = req.flash("success")[0];
-    const errorMsg = req.flash("error")[0];
-    try {
-      // find all orders of this user
-      //allOrders = await Order.find({ user: req.user });
-
-      res.render("user/profile", {
-        orders: allOrders,
-        errorMsg,
-        successMsg,
-        pageName: "User Profile",
-      });
-    } catch (err) {
-      console.log(err);
-      return res.redirect("/");
-    }
-  },
-
-  //GET: get user Account
-  getUserAccount: async (req, res) => {
-    const successMsg = req.flash("success")[0];
-    const errorMsg = req.flash("error")[0];
-    try {
-      // Find all orders of the current user
-      const userId = req.user._id; // Assuming you have access to the current user's ID
-      const allOrders = await Order.find({ user: userId });
-      res.render("user/profile", {
-        orders: allOrders,
-        errorMsg,
-        successMsg,
-        pageName: "User Profile",
-      });
-    } catch (err) {
-      console.log(err);
-      return res.redirect("/");
-    }
-  },
-
-  //GET: get user Bookings
-  getUserBookings: async (req, res) => {
-    const successMsg = req.flash("success")[0];
-    const errorMsg = req.flash("error")[0];
-    try {
-      // Find all orders of the current user
-      const userId = req.user._id; // Assuming you have access to the current user's ID
-      const allOrders = await Order.find({ user: userId });
-      res.render("user/bookings", {
-        orders: allOrders,
-        errorMsg,
-        successMsg,
-        pageName: "Bookings",
-      });
-    } catch (err) {
-      console.log(err);
-      return res.redirect("/");
-    }
-  },
-
-  getUserNotification: async (req, res) => {
-    const successMsg = req.flash("success")[0];
-    const errorMsg = req.flash("error")[0];
-    try {
-      // Find all orders of the current user
-      const userId = req.user._id; // Assuming you have access to the current user's ID
-      const allOrders = await Order.find({ user: userId });
-      res.render("user/notification", {
-        orders: allOrders,
-        errorMsg,
-        successMsg,
-        pageName: "Notifications",
-      });
-    } catch (err) {
-      console.log(err);
-      return res.redirect("/");
-    }
-  },
-
-  getUserPreference: async (req, res) => {
-    const successMsg = req.flash("success")[0];
-    const errorMsg = req.flash("error")[0];
-    try {
-      // Find all orders of the current user
-      const userId = req.user._id; // Assuming you have access to the current user's ID
-      const allOrders = await Order.find({ user: userId });
-      res.render("user/preference", {
-        orders: allOrders,
-        errorMsg,
-        successMsg,
-        pageName: "Preference",
-      });
-    } catch (err) {
-      console.log(err);
-      return res.redirect("/");
-    }
-  },
-
-  getUserSecurity: async (req, res) => {
-    const successMsg = req.flash("success")[0];
-    const errorMsg = req.flash("error")[0];
-    try {
-      // Find all orders of the current user
-      const userId = req.user._id; // Assuming you have access to the current user's ID
-      const allOrders = await Order.find({ user: userId });
-      res.render("user/security", {
-        orders: allOrders,
-        errorMsg,
-        successMsg,
-        pageName: "Security",
-      });
-    } catch (err) {
-      console.log(err);
-      return res.redirect("/");
-    }
-  },
-
-  getUserPayment: async (req, res) => {
-    const successMsg = req.flash("success")[0];
-    const errorMsg = req.flash("error")[0];
-    try {
-      // Find all orders of the current user
-      const userId = req.user._id; // Assuming you have access to the current user's ID
-      const payment = await Order.find({ user: userId }).populate("user");
-
-      res.render("user/payment", {
-        payment,
-        errorMsg,
-        successMsg,
-        pageName: "Payments",
-      });
-    } catch (err) {
-      console.log(err);
-      return res.redirect("/");
-    }
-  },
-
   // GET: logout
   getUserLogout: (req, res) => {
     req.logout(req.user, (err) => {
@@ -386,6 +249,9 @@ const userController = {
       res.redirect("/");
     });
   },
+
+
+
 };
 
 module.exports = userController;

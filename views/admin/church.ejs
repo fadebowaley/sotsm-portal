@@ -1,0 +1,536 @@
+
+<!-- include head.ejs-->
+<%- include ("../partials/head") %>
+<style>
+    .form-control{
+    border-radius: 18px;
+    padding: 4px;
+    font-size: 22px;
+    }
+  .mb-1{
+    margin-bottom:1rem;
+  }
+  .mb-2{
+     margin-bottom: 0.5rem;
+  }
+
+/* Style for the section label */
+.section-label {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333; /* Text color */
+  margin: 20px 0; /* Adjust the top and bottom margin as needed */
+}
+
+/* Style for the horizontal rule */
+.hr-section {
+  border: none; /* Remove default border */
+  height: 1px; /* Set the height of the line */
+  background-color: #999; /* Color of the line */
+  margin: 10px 0; /* Adjust the top and bottom margin as needed */
+}
+
+/* Style for the text beside the horizontal rule */
+.hr-text {
+  display: inline-block;
+  padding: 0 10px; /* Space between text and hr */
+  color: #999; /* Color of the text */
+}
+
+.prevBtn, .nextBtn, .finalBtn {
+    font-size: 30px;
+    background-color: black;
+    color: white;
+    padding: 10px 45px;
+    border: none;
+    border-radius: 25px;
+    margin-right: 20px;
+}
+</style>
+<body>
+<!-- MAIN sTART -->
+<main class="animate position-relative">
+
+<!-- Header Section -->
+<!-- include Heaser.ejs-->
+<!--header.ejs-->
+<%- include ("../partials/header") %>
+
+
+<!-- Main Content Container -->
+<div class="container mt-15">
+   <div class="row">
+    <div style="margin-left:16rem;">
+    <h2><%= pageName %></h2>
+    </div>
+
+    <div style="text-align: right;">
+    <!-- <button id="openModalButton" class="btn-success  btn btn-sm"> Create New Parish</button> -->
+    </div>
+  </div>
+<div class="row">
+
+
+
+<!--/ Left Column Login Form -->
+<%- include ("../partials/sidebar") %>
+
+<!-- id	
+parishOrPlaceOfAssignment	
+zoneName	
+dioceseRegionName	
+divisionName	
+churchState	
+churchLGA	
+churchAddress	
+churchCountry	
+dateOfEstablishment	
+propertyStatus	
+estimatedValue	
+building	
+paymentFrequency	
+leaseRentAgreement	
+status	
+alias	
+parishCode	
+zonalCode	
+dioceseCode	
+divisionCode	
+nationalCode	
+employeeId	
+hqStatus	
+createdAt	
+updatedAt -->
+
+<!-- Right Column -->
+<div class="col-md-10">
+  <table class="table table-hover table-striped table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">S/n</th>
+      <th scope="col">Parish Name</th>
+      <th scope="col">ParishCode</th>
+      <th scope="col">Zonal Code</th>
+      <th scope="col">Diocese Code</th>
+      <th scope="col">Divison Code</th>
+      <th scope="col">National Code</th>
+      <th scope="col">Hq Status</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+
+<tbody>
+  <% let serialNumber = 1; %>
+  <% for (const church of churches) { %>
+    <% if (church.hqStatus === 'national') { %>
+      <tr>
+        <th colspan="10" style="font-size: larger; color:white; background-color:blue;"> <%= church.parishOrPlaceOfAssignment %>  National Hqtrs </th>
+      </tr>
+    <% } else if (church.hqStatus === 'division') { %>
+      <tr>
+        <th colspan="10" style="font-size: larger; color:white; background-color:rgb(1, 40, 14);"> <%= church.parishOrPlaceOfAssignment %> Divisional Hqtrs </th>
+      </tr>
+      <% } else if (church.hqStatus === 'diocese') { %>
+      <tr>
+        <th colspan="10" style="font-size: larger; color:white; background-color:rgba(0, 106, 155, 0.946);"> <%= church.parishOrPlaceOfAssignment %> Diocese Hqtrs </th>
+      </tr>
+      <% } else if (church.hqStatus === 'zone') { %>
+      <tr>
+        <th colspan="10" style="font-size: larger; color:white; background-color:rgb(2, 2, 2);"> <%= church.parishOrPlaceOfAssignment %> Zonal Hqtrs </th>
+      </tr>
+    <% } %>
+    <tr>
+      <th scope="row"><%= serialNumber %></th>  
+      <td><%= church.parishOrPlaceOfAssignment %></td>
+      <td><%= church.parishCode %></td>
+      <td><%= church.zonalCode %></td>
+      <td><%= church.dioceseCode %></td>
+      <td><%= church.divisionCode %></td>
+      <td><%= church.nationalCode %></td>
+      <td><%= church.hqStatus %></td>
+      <td><button id="openModalButton" data-set="<%= church.id %>" class="btn-danger btn-sm openModalButton">Edit</button></td>
+       <td>
+    <% if (['zone', 'diocese', 'division', 'national'].includes(church.hqStatus)) { %>
+     <button  class="btn-success  btn btn-sm"> Add Parish</button>
+
+    <% } %>
+  </td>
+    </tr>
+    <% serialNumber++; %>
+  <% } %>
+</tbody>
+</table>
+
+<!-- Modal -->
+<div class="modal fade" id="editParishModal" tabindex="-1" role="dialog" aria-labelledby="editParishModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editParishModalLabel">Edit Parish Data</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+      </div>
+      <div class="modal-body">
+        <form id="editParishForm">
+    
+     <div class="form-group mb-3">
+    <label for="isNewParish">Is this a new parish?</label>
+    <input type="checkbox" id="isNewParish" name="isNewParish">
+  </div>
+    <input type="hidden" id="churchId" name="churchId" value="">
+
+          <div class="form-group mb-2">
+            <label for="parishName">Parish Name [code]</label>
+            <input type="text" class="form-control" id="parishName" name="parishName">
+          </div>
+         
+        <div class="form-group mb-2" id="zonalCodeContainer">
+        <label for="zonalCode">Zonal Name [code]</label>
+        <select class="form-control" id="zonalCode" name="zonalCode">
+            <option value="">Load Zone</option>
+            <option value="addNew">Add New Zone</option>
+        </select>
+        </div>
+        <div class="form-group mb-2 d-none" id="newZonalCodeContainer">
+        <label for="newZonalCode">New Zonal Name [code]</label>
+        <input type="text" class="form-control" id="newZonalCode" name="newZonalCode">
+        </div>
+
+        <div class="form-group mb-2" id="dioceseCodeContainer">
+        <label for="dioceseCode">Diocese name [code]</label>
+        <select class="form-control" id="dioceseCode" name="dioceseCode">
+        <option value="">Load Diocese</option>
+        <option value="addNew">Add New</option>
+        </select>
+        </div>
+        <div class="form-group mb-2 d-none" id="newDioceseCodeContainer">
+        <label for="newDioceseCode">New Diocese Name [code]</label>
+        <input type="text" class="form-control" id="newDioceseCode" name="newDioceseCode">
+        </div>
+
+
+<div class="form-group mb-2" id="divisionCodeContainer">
+  <label for="divisionCode">Division name [code]</label>
+  <select class="form-control" id="divisionCode" name="divisionCode">
+    <option value="">Load Division</option>
+    <option value="addNew">Add New</option>
+  </select>
+</div>
+<div class="form-group mb-2 d-none" id="newDivisionCodeContainer">
+  <label for="newDivisionCode">New Division Name [code]</label>
+  <input type="text" class="form-control" id="newDivisionCode" name="newDivisionCode">
+</div>
+
+
+
+          <div class="form-group mb-3">
+            <label for="hqStatus">HQ Status</label>
+            <select class="form-control" id="hqStatus" name="hqStatus">
+                <option value="" selected>select status</option>
+                <option value="parish">parish</option>
+                <option value="zone">zone</option>
+                <option value="diocese">diocese</option>
+                <option value="division">division</option>
+                </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Modal -->
+
+<nav aria-label="Page navigation">
+  <ul class="pagination justify-content-left">
+    <li class="page-item <%= currentPage === 1 ? 'disabled' : '' %>">
+      <a class="page-link" href="?page=<%= currentPage - 1 %>" tabindex="-1" aria-disabled="true">Previous</a>
+    </li>
+    <% for (let i = 1; i <= totalPages; i++) { %>
+      <li class="page-item <%= currentPage === i ? 'active' : '' %>">
+        <a class="page-link" href="?page=<%= i %>"><%= i %></a>
+      </li>
+    <% } %>
+    <li class="page-item <%= currentPage === totalPages ? 'disabled' : '' %>">
+      <a class="page-link" href="?page=<%= currentPage + 1 %>">Next</a>
+    </li>
+  </ul>
+</nav>
+
+
+</div> <!--stop deleting here-->
+</div>
+</div>
+</div>
+</main>
+
+<%- include ("../partials/footer") %>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var myModal = new bootstrap.Modal(document.getElementById('editParishModal'));
+  const openModalButtons = document.querySelectorAll(".openModalButton");
+
+
+  openModalButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      // Retrieve church ID from data-set attribute
+      const churchId = button.dataset.set;
+
+      // Fetch church data from the server based on the ID
+      // Replace '/get-church-data' with the actual endpoint to fetch church data
+      fetch(`/get-church-data?id=${churchId}`)
+        .then(response => response.json())
+        .then(data => {
+
+        // Extract church, zones, dioceses, and divisions from the received data
+          document.getElementById('parishName').value= `${data.church.parishCode} - ${data.church.parishOrPlaceOfAssignment}`;
+          document.getElementById('churchId').value = `${data.church.id}`
+
+         // Loop through zones and populate select dropdown
+          data.zones.forEach(zone => {
+          const option = document.createElement('option');
+          option.value = zone.zonalCode; // Assuming zone has an 'id' property
+          option.textContent = `${zone.zonalCode}`;
+          // Append the option to the select dropdown
+          document.getElementById('zonalCode').appendChild(option);
+          // If the current zone matches the fetched church data's zonalCode, select it
+          if (zone.zonalCode === data.church.zonalCode) {
+            option.selected = true;
+          }
+        });
+
+         // Loop through zones and populate select dropdown
+          data.dioceses.forEach(diocese => {
+          const option = document.createElement('option');
+          option.value = diocese.dioceseCode; // Assuming zone has an 'id' property
+          option.textContent = `${diocese.dioceseCode}`;
+          // Append the option to the select dropdown
+          document.getElementById('dioceseCode').appendChild(option);
+          // If the current zone matches the fetched church data's zonalCode, select it
+          if (diocese.dioceseCode === data.church.dioceseCode) {
+            option.selected = true;
+          }
+        });
+
+         // Loop through divisions and populate select dropdown
+          data.divisions.forEach(division => {
+          const option = document.createElement('option');
+          option.value = division.divisionCode; // Assuming zone has an 'id' property
+          option.textContent = `${division.divisionCode}`;
+          // Append the option to the select dropdown
+          document.getElementById('divisionCode').appendChild(option);
+          // If the current zone matches the fetched church data's zonalCode, select it
+          if (division.divisionCode === data.church.divisionCode) {
+            option.selected = true;
+          }
+        });
+
+        const select = { 'parish': 'parish', 'zone': 'zone', 'diocese': 'diocese', 'division': 'division', 'national': 'national' };
+        // Clear existing options in the select dropdown
+        document.getElementById('hqStatus').innerHTML = '';
+
+// Iterate over the keys of the select object
+Object.keys(select).forEach(key => {
+  const option = document.createElement('option');
+  option.value = key; // Use the key as the option value
+  option.textContent = select[key]; // Use the corresponding value as the option text
+  // Append the option to the select dropdown
+  document.getElementById('hqStatus').appendChild(option);
+  // If the current key matches the fetched church data's hqStatus, select it
+  if (key === data.church.hqStatus) {
+    option.selected = true;
+  }
+});
+          // Show the modal
+          myModal.show();
+        })
+        .catch(error => console.error('Error fetching church data:', error));
+    });
+  });
+
+
+//Add a new Zone or Modify a parish to a zone
+// Get references to the select element and the container divs
+const selectZonalCode = document.getElementById('zonalCode');
+const zonalCodeContainer = document.getElementById('zonalCodeContainer');
+const newZonalCodeContainer = document.getElementById('newZonalCodeContainer');
+
+// Hide the input field by default
+newZonalCodeContainer.classList.add('d-none');
+// Add event listener to select element
+selectZonalCode.addEventListener('change', function() {
+  // Check if the selected option is to add a new value
+  if (selectZonalCode.value === 'addNew') {
+    // Hide the select element
+    zonalCodeContainer.classList.add('d-none');
+    // Show the input field for adding new value
+    newZonalCodeContainer.classList.remove('d-none');
+  } else {
+    // If another option is selected, ensure the input field is hidden
+    newZonalCodeContainer.classList.add('d-none');
+    // Show the select element
+    zonalCodeContainer.classList.remove('d-none');
+  }
+});
+
+
+// Add a new Diocese or Modify a parish to a diocese
+// Get references to the select element and the container divs
+const selectDioceseCode = document.getElementById('dioceseCode');
+const dioceseCodeContainer = document.getElementById('dioceseCodeContainer');
+const newDioceseCodeContainer = document.getElementById('newDioceseCodeContainer');
+
+// Hide the input field by default
+newDioceseCodeContainer.classList.add('d-none');
+
+// Add event listener to select element
+selectDioceseCode.addEventListener('change', function() {
+  // Check if the selected option is to add a new value
+  if (selectDioceseCode.value === 'addNew') {
+    // Hide the select element
+    dioceseCodeContainer.classList.add('d-none');
+    // Show the input field for adding new value
+    newDioceseCodeContainer.classList.remove('d-none');
+  } else {
+    // If another option is selected, ensure the input field is hidden
+    newDioceseCodeContainer.classList.add('d-none');
+    // Show the select element
+    dioceseCodeContainer.classList.remove('d-none');
+  }
+});
+
+
+
+// Add a new Division or Modify a parish to a division
+const selectDivisionCode = document.getElementById('divisionCode');
+const divisionCodeContainer = document.getElementById('divisionCodeContainer');
+const newDivisionCodeContainer = document.getElementById('newDivisionCodeContainer');
+
+// Hide the input field by default
+newDivisionCodeContainer.classList.add('d-none');
+
+// Add event listener to select element
+selectDivisionCode.addEventListener('change', function() {
+  // Check if the selected option is to add a new value
+  if (selectDivisionCode.value === 'addNew') {
+    // Hide the select element
+    divisionCodeContainer.classList.add('d-none');
+    // Show the input field for adding new value
+    newDivisionCodeContainer.classList.remove('d-none');
+  } else {
+    // If another option is selected, ensure the input field is hidden
+    newDivisionCodeContainer.classList.add('d-none');
+    // Show the select element
+    divisionCodeContainer.classList.remove('d-none');
+  }
+});
+
+
+
+
+
+
+
+const editForm = document.getElementById("editParishForm");
+
+
+// Submit form data using fetch
+editForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    let originalChurchId = document.getElementById('churchId').value;
+
+  // Get the church ID from the form
+  let churchId;
+  const isNewParish = document.getElementById('isNewParish').checked;
+
+  // If it's a new parish, set churchId to null
+  if (isNewParish) {
+    churchId = null;
+  } else {
+    // If it's not a new parish and the checkbox was unchecked, restore the original churchId value
+    churchId = originalChurchId;
+  }
+
+  // Construct the URL based on whether it's an update or create operation
+  const url = isNewParish ? '/createChurch' : `/updateChurch/${churchId}`;
+
+  console.log('the url is', url);
+  console.log('the church id id -> ',  churchId);
+
+ // Gather form data
+  let formData = {
+    parishName: document.getElementById('parishName').value,
+    hqStatus: document.getElementById('hqStatus').value
+  };
+
+  // Check if the zone select option is "Add New"
+  const zonalCode = document.getElementById('zonalCode').value;
+  if (zonalCode === 'addNew') {
+    formData.newZonalCode = document.getElementById('newZonalCode').value;
+  } else {
+    // Otherwise, use the selected value from the select element
+    formData.zonalCode = zonalCode;
+  }
+
+  // Check if the diocese select option is "Add New"
+  const dioceseCode = document.getElementById('dioceseCode').value;
+  if (dioceseCode === 'addNew') {
+    formData.newDioceseCode = document.getElementById('newDioceseCode').value;
+  } else {
+    // Otherwise, use the selected value from the select element
+    formData.dioceseCode = dioceseCode;
+  }
+
+  // Check if the division select option is "Add New"
+  const divisionCode = document.getElementById('divisionCode').value;
+  if (divisionCode === 'addNew') {
+    formData.newDivisionCode = document.getElementById('newDivisionCode').value;
+  } else {
+    // Otherwise, use the selected value from the select element
+    formData.divisionCode = divisionCode;
+  }
+
+
+  // Determine the HTTP method based on the presence of churchId
+  const method = churchId ? 'PUT' : 'POST';
+
+
+  // Perform the fetch request
+  fetch(url, {
+    method: method,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    if (data.success) {
+      // If operation is successful, hide the modal and possibly redirect
+      myModal.hide();
+      alert('Church data updated successfully');
+      // Optionally redirect
+      window.location.href = `/church/parishes`;
+    } else {
+      console.error(data.message);
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error.message);
+  });
+});
+
+});
+</script>
+
+</body>
+</html>

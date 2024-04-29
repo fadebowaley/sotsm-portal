@@ -7,7 +7,7 @@
     "dialect": "postgres", 
     "port": 5432 
   },
-  
+
   "test": {
     "username": "bishop",
     "password": "password",

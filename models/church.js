@@ -37,7 +37,7 @@ module.exports = (sequelize, DataTypes) => {
       leaseRentAgreement: { type: DataTypes.STRING, allowNull: true },
       status: DataTypes.STRING,
       //add alias
-      alias:{type:DataTypes.STRING, allowNull:true },
+      alias: { type: DataTypes.STRING, allowNull: true },
 
       //codes for parishes
       parishCode: { type: DataTypes.STRING, allowNull: true }, // Nullable field
@@ -46,7 +46,6 @@ module.exports = (sequelize, DataTypes) => {
       divisionCode: { type: DataTypes.STRING, allowNull: true }, // Nullable field
       nationalCode: { type: DataTypes.STRING, allowNull: true }, // Nullable field
       employeeId: { type: DataTypes.STRING, allowNull: true },
-
 
       // HQ Status enum
       hqStatus: {
@@ -60,6 +59,28 @@ module.exports = (sequelize, DataTypes) => {
         ),
         allowNull: true, // Nullable field
       },
+      // New additions for levels and labels
+      faithCode0: { type: DataTypes.STRING, allowNull: true }, // Nullable field
+      faithCode1: { type: DataTypes.STRING, allowNull: true }, // Nullable field
+      faithCode2: { type: DataTypes.STRING, allowNull: true }, // Nullable field
+      faithCode3: { type: DataTypes.STRING, allowNull: true }, // Nullable field
+      faithCode4: { type: DataTypes.STRING, allowNull: true }, // Nullable field
+      faithCode5: { type: DataTypes.STRING, allowNull: true }, // Nullable field
+      faithCode6: { type: DataTypes.STRING, allowNull: true }, // Nullable field
+      faithCode7: { type: DataTypes.STRING, allowNull: true }, // Nullable field
+      faithCode8: { type: DataTypes.STRING, allowNull: true }, // Nullable field
+      faithCode9: { type: DataTypes.STRING, allowNull: true }, // Nullable field
+
+      faithFold0: { type: DataTypes.STRING, allowNull: true }, // Nullable field
+      faithFold1: { type: DataTypes.STRING, allowNull: true }, // Nullable field
+      faithFold2: { type: DataTypes.STRING, allowNull: true }, // Nullable field
+      faithFold3: { type: DataTypes.STRING, allowNull: true }, // Nullable field
+      faithFold4: { type: DataTypes.STRING, allowNull: true }, // Nullable field
+      faithFold5: { type: DataTypes.STRING, allowNull: true }, // Nullable field
+      faithFold6: { type: DataTypes.STRING, allowNull: true }, // Nullable field
+      faithFold7: { type: DataTypes.STRING, allowNull: true }, // Nullable field
+      faithFold8: { type: DataTypes.STRING, allowNull: true }, // Nullable field
+      faithFold9: { type: DataTypes.STRING, allowNull: true }, // Nullable field
     },
     {
       sequelize,

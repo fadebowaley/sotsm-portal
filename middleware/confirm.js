@@ -33,15 +33,6 @@ middlewareObject.isAdmin = (req, res, next) => {
       churchQuery = { _id: { $in: userChurch } };
     }
 
-    // Query the hotels collection with populated reviews and rooms
-    /**
-    let hotel  = Hotel.find(hotelQuery)
-    .populate("reviews")
-    .populate("rooms")
-    .exec();
-    hotel =  req.filteredHotels; // Add the filtered hotels to the request object
-    */
-
     next(); // Proceed to the next middleware or route handler
   } else {
     res.redirect("error/403");

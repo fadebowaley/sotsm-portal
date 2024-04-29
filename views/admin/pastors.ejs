@@ -1,109 +1,56 @@
-<?xml version="1.0" encoding="UTF-8"?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-<title>Ministry Database Engineering</title>
-
-<!-- Bootstrap -->
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="/assets/css/bootstrap/bootstrap.min.css" />
-<!-- Cropper.js CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" rel="stylesheet">
-<!-- Cropper.js JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
-
-<!-- Font Awesome -->
-<link
-rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-<!-- Custom Styles -->
-<link rel="stylesheet" href="/assets/css/style.css" />
-<link rel="stylesheet" href="/assets/css/form.css" />
-<!-- animation -->
-<link rel="stylesheet" href="/assets/css/animation.css" />
-
-<!-- responsive -->
-<link rel="stylesheet" href="/assets/css/responsive.css" />
+<!-- include head.ejs-->
+<%- include ("../partials/head") %>
 <style>
-  .link{
-    text-decoration: none;
-    color:black;
+  .mb-1{
+    margin-bottom:1rem;
+  }
+  .mb-2{
+     margin-bottom: 0.5rem;
   }
 
-.vertical-menu {
-  list-style: none;
-  padding: 0;
+/* Style for the section label */
+.section-label {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333; /* Text color */
+  margin: 20px 0; /* Adjust the top and bottom margin as needed */
 }
 
-.vertical-menu li {
-  margin-bottom: 10px;
-  cursor: pointer;
+/* Style for the horizontal rule */
+.hr-section {
+  border: none; /* Remove default border */
+  height: 1px; /* Set the height of the line */
+  background-color: #999; /* Color of the line */
+  margin: 10px 0; /* Adjust the top and bottom margin as needed */
 }
 
-.vertical-menu li i {
-  margin-right: 10px;
+/* Style for the text beside the horizontal rule */
+.hr-text {
+  display: inline-block;
+  padding: 0 10px; /* Space between text and hr */
+  color: #999; /* Color of the text */
 }
 
-.container {
-    max-width: 1600px;
+.prevBtn, .nextBtn, .finalBtn {
+    font-size: 30px;
+    background-color: black;
+    color: white;
+    padding: 10px 45px;
+    border: none;
+    border-radius: 25px;
+    margin-right: 20px;
 }
 </style>
-
-</head>
-
 <body>
 <!-- MAIN sTART -->
 <main class="animate position-relative">
+
 <!-- Header Section -->
-<header class="mb-md-5">
-<!-- Logo and Phone Info -->
-<div class="logo">
-  <!-- Link to the home page -->
-  <a href="/" style="text-decoration: none;">
-    <!-- Logo Image -->
-    <img src="/assets/images/icon.png" alt="Icon" />
-    <!-- Text next to the image -->
-    SOTM.
-  </a>
-  <p class="sideline">Pastors, Employee Record Management</p>
-</div>
+<!-- include Heaser.ejs-->
+<!--header.ejs-->
+<%- include ("../partials/header") %>
 
-<!-- <div class="logo">
-<img src="/assets/images/icon.png"   alt="Icon" />SOTSM.
-<p class="sideline">Pastors, Employee Record Management</p>
-</div> -->
-<div class="row">
-  <div class="col-md-12">
-  <% if (currentUser) { %>
- <a href="/user/logout"  class="btn btn-sm btn-primary"style="padding:10px 20px;">logout</a>
- <% if (currentUser.firstName === 'Super') { %>
-  <a href="/admin/report" class="btn btn-sm btn-primary" style="padding:10px 20px;">Admin Report</a>
-  </div>
- <% } %>
-<% }%>
-</div>
-<div>
-<h1 class="logo" id="timer">09:00</h1>
-</div>
-<!-- Phone Information -->
-<a href="#" class="phoneInfo">
-<img src="/assets/images/phone.png" alt="Phone" />
-<!-- Phone Details -->
-<article>
-<h4>(234) 80 85 448030</h4>
-<p>Call for Quick Support </p>
-</article>
-</a>
-
-</header>
 
 <!-- Main Content Container -->
 <div class="container mt-15">
@@ -111,28 +58,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     <div style="margin-left:16rem;">
     <h2><%= pageName %></h2>
     </div>
+
+    <div style="text-align: right;">
+    <button id="openModalButton" class="btn-success  btn btn-sm"> Create Employee</button>
+    </div>
   </div>
 <div class="row">
 
-<div class="col-md-2">
-      <div class="card">
-        <div class="card-body">
-          <ul class="vertical-menu">
-            <a class="link" href="/admin/analysis"><li><i class="fa-regular fa fa-bar-chart mr-2 fa-fw"></i> Church Analysis</li></a>
-            <a class="link" href="/admin/region"><li><i class="fa-regular fa fa-bar-chart mr-2 fa-fw"></i> Regions</li></a>
-            <a class="link" href="/admin/legal"><li><i class="fa-regular fa fa-legal mr-2 fa-fw"></i> Legals/Properties</li></a>
-            <a class="link" href="/admin/leadership"><li><i class="fa-regular fa-user mr-2 fa-fw"></i> Ordinations/Leaders</li></a>
-            <a class="link" href="/admin/pastors"><li><i class="fa-regular fa-user mr-2 fa-fw"></i> Pastors/Hierachy</li></a>
-            <a class="link" href="/admin/schools"><li><i class="fa-regular fa fa-bar-chart mr-2 fa-fw"></i> Mission Schools</li></a>
-            <a class="link" href="/admin/missions"><li><i class="fa-regular 	fa fa-signal mr-2 fa-fw"></i> Mission Churches</li></a>
-            <a class="link" href="/admin/campuses"><li><i class="fa-regular  fa fa-building mr-2 fa-fw"></i> Campus Ministry</li></a>
-            <a class="link" href="/admin/active-workforce"><li><i class="fa-regular fa-user mr-2 fa-fw"></i> Workforce</li></a>
-          </ul>
-        </div>
-      </div>
-    </div>
+
 
 <!--/ Left Column Login Form -->
+<%- include ("../partials/sidebar") %>
 
 
 
@@ -142,111 +78,529 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
   <thead>
     <tr>
       <th scope="col">S/n</th>
-      <th scope="col">Attendance</th>
-      <th scope="col">% Attendance</th>
-      <th scope="col">Parishes</th>
-      <th scope="col">Financials</th>
-      <th scope="col">% Financials</th>
+      <th scope="col">EmployeeId</th>
+      <th scope="col">Firstname</th>
+      <th scope="col">Last name</th>
+      <th scope="col">Phone Number</th>
+      <th scope="col">Occupation</th>
+      <th scope="col">Email</th>
+      <th scope="col">Date Created</th>
+      <th scope="col">Delete</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>0 - 49</td>
-      <td>5</td>
-      <td>25</td>
-      <td>26</td>
-      <td>15</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>50 - 99</td>
-      <td>10</td>
-      <td>28</td>
-      <td>30</td>
-      <td>17</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>100 - 149</td>
-      <td>15</td>
-      <td>30</td>
-      <td>35</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>150 - 199</td>
-      <td>20</td>
-      <td>33</td>
-      <td>40</td>
-      <td>22</td>
-    </tr>
-    <tr>
-      <th scope="row">5</th>
-      <td>200 - 249</td>
-      <td>25</td>
-      <td>35</td>
-      <td>45</td>
-      <td>25</td>
-    </tr>
-    <tr>
-      <th scope="row">6</th>
-      <td>250 - 299</td>
-      <td>30</td>
-      <td>38</td>
-      <td>50</td>
-      <td>27</td>
-    </tr>
-    <tr>
-      <th scope="row">7</th>
-      <td>300 - 349</td>
-      <td>35</td>
-      <td>40</td>
-      <td>55</td>
-      <td>30</td>
-    </tr>
-    <tr>
-      <th scope="row">8</th>
-      <td>350 - 399</td>
-      <td>40</td>
-      <td>43</td>
-      <td>60</td>
-      <td>32</td>
-    </tr>
-    <tr>
-      <th scope="row">9</th>
-      <td>400 - 449</td>
-      <td>45</td>
-      <td>45</td>
-      <td>65</td>
-      <td>35</td>
-    </tr>
-    <tr>
-      <th scope="row">10</th>
-      <td>450 - 499</td>
-      <td>50</td>
-      <td>48</td>
-      <td>70</td>
-      <td>37</td>
-    </tr>
-    
+    <% for (const user of users) { %>
+      <tr>
+        <th scope="row"><%= user.id %></th>  
+        <td><%= user.employeeId %></td>
+        <td><%= user.firstName %></td>
+        <td><%= user.lastName %></td>
+        <td><%= user.phoneNumber %></td>
+        <td><%= user.occupation %></td>
+        <td><%= user.email ? user.email : "No Email" %></td>
+        <td><%= new Date(user.createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }) %></td>
+        <td><button class="btn-danger btn-sm delete-btn" data-user-id="<%= user.id %>">Delete</button></td>
+
+        </tr>
+      <% } %>
+
     <!-- Add more rows here -->
   </tbody>
 </table>
+
+<div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="userModalLabel">Create Auth User</h5>
+
+        <div style="margin-left:15rem;">
+                <label for="loadUser" class="form-label">Load Employee</label>
+                <input type="text" class="form-control" id="loadUser" name="loadUser">
+              </div>
+        <div>
+          <br>
+        <button id="search" type="button" class="btn  btn-lg">Fetch</button>
+       </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+<form id="userForm">
+<div class="col-md-12 inputField" style="background-color:rgb(227, 233, 255);">
+<div class="row">
+<h2 class="mb-3">Personal Data <span id="CLC"></span></h2>
+<div class="col-md-2" style="width:8rem;">
+<label for="title">Title</label>
+<select class="form-control"  name="title" required="" id="title">
+<option value="">Title</option>
+<option value="Mr">Mr</option>
+<option value="Mrs">Mrs</option>
+<option value="Miss">Miss</option>
+<option value="Ms">Ms</option>
+<option value="Dr">Dr</option>
+<option value="Rev">Rev</option>
+<option value="Prof">Prof</option>
+<option value="Pastor">Pastor</option>
+<option value="Senior Pastor">Senior Pastor</option>
+<option value="Pastor">Pastor</option>
+<option value="Sister">Sister</option>
+<option value="Brother">Brother</option>
+<option value="Bishop">Bishop</option>
+<option value="Minister">Minister</option>
+</select>
+
+</div>
+
+<div class="col-md-5">
+<div class="form-group">
+<label for="first">First Name</label>
+<input type="text" class="form-control"   name="firstname" placeholder="firstname" required="" id="firstName">
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="form-group">
+<label for="lastname">Last Name</label>
+<input type="text" class="form-control"  placeholder="lastname" name="lastname" required="" id="lastName">
+</div>
+</div>
+
+
+<!--  col-md-6   -->
+</div>
+
+
+<div class="row">
+
+<div class="col-md-4">
+<div class="form-group">
+<label for="otherName">Other Name</label>
+<input type="text" class="form-control"  placeholder="Other name" required="" id="otherName">
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="form-group">
+<label for="email">Email</label>
+<input type="email" class="form-control"  placeholder="email" required="" id="email">
+</div>
+</div>
+<!--  col-md-6   -->
+
+<div class="col-md-4">
+<div class="form-group">
+<label for="phone">Phone Number</label>
+<input type="tel" class="form-control"  required="" id="phoneNumber" placeholder="phone" readonly>
+</div>
+</div>
+
+<!--  col-md-6   -->
+</div>
+<!--  row   -->
+
+
+<div class="row">
+<h5 class="mt-3">Gender</h5>
+<div class="col-md-3">
+  <!-- <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" required="" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div> -->
+
+<div class="form-check">
+<input class="form-check-input" type="checkbox"  name="male"  id="male">
+<label class="form-check-label" for="male">
+Male 
+</label>
+</div>
+</div>
+<div class="col-md-3">
+<div class="form-check">
+<input class="form-check-input" type="checkbox"  name="female"  id="female" >
+<label class="form-check-label" for="female">
+Female
+</label>
+</div>
+</div>
+
+<!--  col-md-6   -->
+<div class="col-md-6 mb-2">
+<div class="form-group">
+<label for="dob">Date of  Birth</label>
+<input type="date" class="form-control  date-picker" name="dateOfBirth" required="" id="dateOfBirth" placeholder="">
+</div>
+</div>
+<!--  col-md-6   -->
+</div>
+
+
+<div class="row">
+
+<div class="col-md-3">
+<div class="form-group">
+<label for="highest">Qualification</label>
+<select class="form-control"  name="highestQualification" required="" id="highestQualification"  style="width: 170px;">
+<option value="">Select here</option>
+<option value="Phd">Phd</option>
+<option value="Msc">Msc</option>
+<option value="PGD">PGD</option>
+<option value="Bsc">Bsc</option>
+<option value="HND">HND</option>
+<option value="OND">OND</option>
+<option value="ThD">ThD</option>
+<option value="Dmiss">Dmiss</option>
+<option value="Diploma">Diploma</option>
+<option value="Advance Diploma">Advance Diploma</option>
+<option value="Certificate">Certificate</option>
+<option value="Professional Cert">Professional Cert</option>
+<option value="School Cert">School Cert</option>
+<option value="Primary School">Primary School</option>
+</select>
+
+</div>
+</div>
+
+<div class="col-md-5">
+<div class="form-group">
+<label for="highest">Professional Qualification</label>
+<select class="form-control"  name="professionalQualification" required="" id="professional"  style="width: 280px;">
+  <option value="">Select Professional Qualification</option>
+  <option value="NA">Not Applicable</option>
+  <option value="ACA">ACA (Associate Chartered Accountant) - ICAN</option>
+  <option value="ACPA">ACPA (Associate Chartered Public Accountant) - ICPAN</option>
+  <option value="ACIB">ACIB (Associate Chartered Institute of Bankers) - CIBN</option>
+  <option value="ACIPM">ACIPM (Associate Chartered Institute of Personnel Management) - CIPM</option>
+  <option value="ANIM">ANIM (Associate Nigerian Institute of Management) - NIM</option>
+  <option value="ACTI">ACTI (Associate Chartered Taxation of Nigeria) - CITN</option>
+  <option value="ANIVS">ANIVS (Associate Nigerian Institution of Estate Surveyors and Valuers) - NIESV</option>
+  <option value="R.Eng.">Registered Engineer (R.Eng.) - COREN</option>
+  <option value="BL">BL (Barrister-at-Law) - NBA</option>
+  <option value="ANIMN">ANIMN (Associate Nigerian Institute of Marketing) - NIMN</option>
+  <option value="ANIPR">ANIPR (Associate Nigerian Institute of Public Relations) - NIPR</option>
+  <option value="AIOB">AIOB (Associate Nigerian Institute of Building) - NIOB</option>
+  <option value="AIA">AIA (Associate Nigeria Institute of Architects) - NIA</option>
+  <option value="AIQS">AIQS (Associate Nigerian Institute of Quantity Surveyors) - NIQS</option>
+  <option value="ANITP">ANITP (Associate Nigerian Institute of Town Planners) - NITP</option>
+  <option value="ANCI">ANCI (Associate Nigeria Computer Society) - NCS</option>
+  <option value="ACIM">ACIM (Associate Chartered Institute of Management) - CIM</option>
+  <option value="ANIPS">ANIPS (Associate Nigeria Institute of Purchasing and Supply) - NIPS</option>
+  <option value="AMNIM">AMNIM (Associate Member, Nigeria Institute of Management) - NIM</option>
+  <option value="FNAE">FNAE (Fellow Nigerian Association of Engineers) - NSE</option>
+  <option value="FIIS">FIIS (Fellow, Institute of Industrial Security) - IIS</option>
+  <option value="FNIM">FNIM (Fellow Nigerian Institute of Management) - NIM</option>
+  <option value="FCA">FCA (Fellow Chartered Accountant) - ICAN</option>
+  <option value="FCTI">FCTI (Fellow Chartered Taxation of Nigeria) - CITN</option>
+  <option value="FCAI">FCAI (Fellow Chartered Institute of Administration) - CIA</option>
+  <option value="FNIQS">FNIQS (Fellow Nigerian Institute of Quantity Surveyors) - NIQS</option>
+  <option value="FNIQS">FNIVS (Fellow Nigerian Institution of Estate Surveyors and Valuers) - NIESV</option>
+  <option value="FCILT">FCILT (Fellow Chartered Institute of Logistics and Transport) - CILT</option>
+  <option value="SE">Software Engineer(BE or FE)</option>
+  <option value="DE">Data Engineer</option>
+  <option value="DA">Data Analyst</option>
+  <option value="OTP">Other IT Professions</option>
+  <option value="OPQ">Other Professional Qualifications</option>
+
+</select>
+
+
+</div>
+</div>
+
+<!--  col-md-6   -->
+<div class="col-md-4">
+<div class="form-group">
+<label for="highest">Marital Status</label>
+<select class="form-control"  name="maritalStatus" required="" id="maritalStatus"  style="width: 220px;">
+<option value="">Marital Status</option>
+<option value="Married">Married</option>
+<option value="Single">Single</option>
+<option value="Widowed">Widowed</option>
+<option value="Separated">Separated</option>
+</select> 
+</div>
+</div>
+
+<!--  col-md-6   -->
+</div>
+
+<div class="row">
+<H5><br></H5>
+<div class="col-md-4">
+<div class="form-group">
+<label for="stateSelect4">State of Origin</label>
+<select required="" id="stateSelect4" onchange="populateLGAs('lgaSelect4')" name="StateOfOrigin"  style="width: 220px;">
+<option value="">Select State</option>
+</select>
+
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="form-group">
+  <label for="stateSelect4">LGA of Origin</label>
+  <select  class="form-control"  name="localGovtOrigin"  required="" id="lgaSelect4" style="width: 220px;">
+  <option value="">Select LGA of Origin</option>
+</select>  
+
+
+</div>
+</div>
+
+<!--  col-md-6   -->
+<div class="col-md-4">
+<div class="form-group">
+<label for="highest">Home Town</label>
+<input type="text" class="form-control"  placeholder="Home Town" required="" id="homeTown" style="width: 220px;">
+</div>
+</div>
+
+<!--  col-md-6   -->
+</div>
+
+
+<!--spouse details-->
+<div class="row">
+
+  <hr class="hr-section">
+  <div class="section-label">Spouse Details</div>
+
+<div class="col-md-4">
+<div class="form-group">
+<label for="highest">Spouse Name</label>
+<input type="text" class="form-control"  placeholder="Spouse Name" name="spouseName" required="" id="spouseName" style="width: 220px;">
+
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="form-group">
+  <label for="stateSelect4">Spouse Phone Number</label>
+<input type="tel" class="form-control"  placeholder="Spouse Phone Number" name="spousePhoneNumber" required="" id="spousePhoneNumber" style="width: 220px;">
+
+
+</div>
+</div>
+
+<!--  col-md-6   -->
+<div class="col-md-4">
+<div class="form-group">
+<label for="highest"> Spouse Date of Birth</label>
+<input type="date" class="form-control"  placeholder="Spouse Date " name="spouseDateOfBirth" required="" id="spouseDateOfBirth" style="width: 220px;">
+</div>
+</div>
+
+<!--  col-md-6   -->
+</div>
+<!--/ spouse details-->
+
+<!--spouse details-->
+<div class="row">
+
+<hr class="hr-section">
+<div class="section-label">Next Of Kin</div>
+
+<div class="col-md-4">
+<div class="form-group">
+<label for="highest">Next Of Kin Name</label>
+<input type="text" class="form-control"  placeholder="Next of Kin"  name="nextOfKinName" required="" id="nextOfKinName" style="width: 220px;">
+
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="form-group">
+  <label for="stateSelect4"> Phone Number</label>
+<input type="tel" class="form-control"  placeholder="Next Of Kin Phone Number" phone="nextOfKinPhoneNumber" required="" id="nextOfKinPhoneNumber" style="width: 220px;">
+
+
+</div>
+</div>
+
+<!--  col-md-6   -->
+<div class="col-md-4">
+<div class="form-group">
+<label for="highest">Relationship</label>
+<select class="form-control"  name="nextOfKinRelationship" required="" id="nextOfKinRelationship"  style="width: 220px;">
+  <option value="">Select Relationship Status</option>
+  <option value="Spouse">Spouse</option>
+  <option value="Father">Father</option>
+  <option value="Mother">Mother</option>
+  <option value="Sibling">Sibling</option>
+  <option value="Child">Child</option>
+  <option value="Other">Other</option>
+</select></div>
+</div>
+
+<!--  col-md-6   -->
+</div>
+
+<!--/ spouse details-->
+
+
+
+
+
+
+
+ <hr class="hr-section">
+  <div class="section-label">Residential Address</div>
+<div class="col-md-12">
+<div class="form-group">
+<label>Residential Address </label>
+<textarea required="" id="residentialAddress" name="residentialAddress" placeholder="Please type your full address"></textarea>
+</div>
+<span class="maxChar">
+<span class="count">0</span>/<span class="tillcount">200</span>
+min characters
+</span>
+</div>
+
+<div class="row">
+<!--  col-md-6   -->
+<div class="col-md-6">
+<div class="form-group">
+<label for="stateSelect1">State<small>State of Residence</small></label>
+<select required="" id="stateSelect1" onchange="populateLGAs('lgaSelect1')" name="residentialState"  style="width:330px;">
+<option value="">Select State</option>
+</select>
+</div>
+</div>
+<!--  col-md-6   -->
+
+<div class="col-md-6">
+<div class="form-group">
+<!-- <label for="lgaSelect">Local Government</label> -->
+<option value="">Select LGA of Residence</option>
+<select  class="form-control"  name="residentialLGA"  required="" id="lgaSelect1" style="width:330px;">
+</select>
+</div>
+</div>
+
+</div>
+<div class="row">
+
+<div class="col-md-6">
+<div class="form-group">
+<label for="designation">Employment Category</label>
+<select class="form-control"  name="empCategory"  required="" id="empCategory" style="width: 330px;">
+<option value="">Select Category</option>
+<option value="Full-Time Pastor">Full-Time Pastor</option>
+<option value="Part-Time Pastor">Part-Time Pastor</option>
+<option value="Field Missionaries">Field Missionaries</option>
+<option value="Professional Staff">Professional Staff</option>
+<option value="Department Staff">Department Staff</option>
+<option value="Contract Staff">Contract Staff</option>
+</select>
+</div>
+</div>
+<!--  col-md-6   -->
+<div class="col-md-6">
+<div class="form-group">
+<label for="occupation">Occupation</label>
+<select class="form-control"  name="occupation"  required="" id="occupation" style="width:330px;">
+<option value="">Select Occupation</option>
+<option value="Accountant">Accountant</option>
+<option value="Actor">Actor</option>
+<option value="Administrator">Administrator</option>
+<option value="Agricultural Extension Officer">Agricultural Extension Officer</option>
+<option value="Air Traffic Controller">Air Traffic Controller</option>
+<option value="Architect">Architect</option>
+<option value="Artist">Artist</option>
+<option value="Author">Author</option>
+<option value="Baker">Baker</option>
+<option value="Banker">Banker</option>
+<option value="Barber">Barber</option>
+<option value="Chef">Chef</option>
+<option value="Civil Engineer">Civil Engineer</option>
+<option value="Clergy">Clergy</option>
+<option value="Community Health Worker">Community Health Worker</option>
+<option value="Computer Programmer">Computer Programmer</option>
+<option value="Custom Officer">Custom Officer</option>
+<option value="Dentist">Dentist</option>
+<option value="Doctor">Doctor</option>
+<option value="Economist">Economist</option>
+<option value="Electrician">Electrician</option>
+<option value="Engineer">Engineer</option>
+<option value="Farmer">Farmer</option>
+<option value="Financial Analyst">Financial Analyst</option>
+<option value="Firefighter">Firefighter</option>
+<option value="Geologist">Geologist</option>
+<option value="Graphic Designer">Graphic Designer</option>
+<option value="Hairdresser">Hairdresser</option>
+<option value="Historian">Historian</option>
+<option value="Journalist">Journalist</option>
+<option value="Lecturer">Lecturer</option>
+<option value="Legal Adviser">Legal Adviser</option>
+<option value="Librarian">Librarian</option>
+<option value="Marine Engineer">Marine Engineer</option>
+<option value="Market Trader">Market Trader</option>
+<option value="Mechanic">Mechanic</option>
+<option value="Missionary">Missionary</option>
+<option value="Musician">Musician</option>
+<option value="Nurse">Nurse</option>
+<option value="Oil and Gas Engineer">Oil and Gas Engineer</option>
+<option value="Painter">Painter</option>
+<option value="Pharmacist">Pharmacist</option>
+<option value="Pharmacist Assistant">Pharmacist Assistant</option>
+<option value="Photographer">Photographer</option>
+<option value="Pilot">Pilot</option>
+<option value="Plumber">Plumber</option>
+<option value="Police Officer">Police Officer</option>
+<option value="Professor">Professor</option>
+<option value="Programmer">Programmer</option>
+<option value="Psychiatrist">Psychiatrist</option>
+<option value="Psychologist">Psychologist</option>
+<option value="Radio Presenter">Radio Presenter</option>
+<option value="Real Estate Agent">Real Estate Agent</option>
+<option value="Scientist">Scientist</option>
+<option value="Singer">Singer</option>
+<option value="Social Worker">Social Worker</option>
+<option value="Software Developer">Software Developer</option>
+<option value="Surgeon">Surgeon</option>
+<option value="Tax Consultant">Tax Consultant</option>
+<option value="Teacher">Teacher</option>
+<option value="Translator">Translator</option>
+<option value="University Registrar">University Registrar</option>
+<option value="Veterinarian">Veterinarian</option>
+<option value="Waiter/Waitress">Waiter/Waitress</option>
+<option value="Web Developer">Web Developer</option>
+<option value="Wildlife Conservationist">Wildlife Conservationist</option>
+
+</select>
+
+</div>
+</div>
+<!--  col-md-6   -->
+<input type="hidden" id="userId" name="userId">
+
+</div>
+
+</div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <nav aria-label="Page navigation">
   <ul class="pagination justify-content-left">
-    <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+    <li class="page-item <%= currentPage === 1 ? 'disabled' : '' %>">
+      <a class="page-link" href="?page=<%= currentPage - 1 %>" tabindex="-1" aria-disabled="true">Previous</a>
     </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Next</a>
+    <% for (let i = 1; i <= totalPages; i++) { %>
+      <li class="page-item <%= currentPage === i ? 'active' : '' %>">
+        <a class="page-link" href="?page=<%= i %>"><%= i %></a>
+      </li>
+    <% } %>
+    <li class="page-item <%= currentPage === totalPages ? 'disabled' : '' %>">
+      <a class="page-link" href="?page=<%= currentPage + 1 %>">Next</a>
     </li>
   </ul>
 </nav>
+
 
 </div> <!--stop deleting here-->
 </div>
@@ -254,20 +608,166 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 </div>
 </main>
 
-<div id="error"></div>
-<!-- Bootstrap JS -->
-<script src="assets/js/bootstrap/bootstrap.min.js"></script>
+<%- include ("../partials/footer") %>
+<script src="/assets/js/lga.js"></script>
+<script src="/assets/js/year.js"></script>
+<script src="/assets/js/country.js"></script>
+<script>
+  
+  const openModalButton = document.getElementById("openModalButton");
+  const userForm = document.getElementById("userForm");
 
-<!-- jQuery -->
-<script src="assets/js/jQuery/jquery-3.7.0.min.js"></script>
+  // Initialize Bootstrap modal
+  var myModal = new bootstrap.Modal(document.getElementById('userModal'));
 
-<!-- Custom JS -->
-<script src="assets/js/custom.js"></script>
-<script src="assets/js/lga.js"></script>
-<script src="assets/js/year.js"></script>
-<script src="assets/js/country.js"></script>
-<!-- <script src="assets/js/storage.js"></script> -->
-<script src="assets/js/app.js"></script>
+  // Open modal when button is clicked
+  openModalButton.addEventListener('click', function() {
+    myModal.show();
+  });
+
+  document.getElementById('search').addEventListener('click', async function() {
+    const phoneNumber = document.getElementById('loadUser').value; // Get the phone number input value
+    if (phoneNumber.trim() !== '') {
+      // If the phone number input is not empty
+      try {
+        const response = await fetch(`/searchUser?phoneNumber=${phoneNumber}`); // Send a request to the server to search for the user
+        const userData = await response.json(); // Parse the response as JSON
+      // Check if the userData object is not null and contains the userId property
+      if (userData.user && 'userId' in userData.user && userData.user.userId) {
+        // Loop through each property in userData.user
+        document.getElementById('CLC').textContent = userData.user.employeeId;
+
+        for (const key in userData.user) {
+          const element = document.getElementById(key);
+          // Check if element exists with the same ID as the property name
+          if (element) {
+            // Update the element's value
+            element.value = userData.user[key];
+            element.style.backgroundColor = 'lightyellow';
+          } else {
+            console.warn(`Element with ID "${key}" not found.`);
+          }
+        }
+      } else if (!userData.user.userId) {
+        // If userData exists but userId is not found or falsy
+        document.getElementById('firstName').value = userData.user.firstName;
+        document.getElementById('firstName').style.backgroundColor = 'lightgreen';
+        document.getElementById('lastName').value = userData.user.lastName;
+        document.getElementById('lastName').style.backgroundColor = 'lightgreen';
+        document.getElementById('phoneNumber').value = userData.user.phoneNumber;
+        document.getElementById('phoneNumber').style.backgroundColor = 'lightgreen';
+        document.getElementById('userId').value = userData.user.id;
+      } else {
+        // If userData is null or undefined
+        console.log('User data not found.');
+      }
+      } catch (error) {
+        console.error('Error fetching user data:', error);
+        alert('Failed to fetch user data'); // Display an error message if fetching fails
+      }
+    } else {
+      alert('Please enter a phone number'); // Display a message if phone number input is empty
+    }
+  });
+
+  // Submit form data using fetch
+  userForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const userId = document.getElementById('userId').value;
+
+    const method = userId ? 'PUT' : 'POST';
+    const url = userId ? `/updateUser/${userId}` : '/createUser';
+
+    fetch(url, {
+      method: method,
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+      title: document.getElementById('title').value,
+      firstName: document.getElementById('firstName').value,
+      lastName: document.getElementById('lastName').value,
+      otherName: document.getElementById('otherName').value,
+      email: document.getElementById('email').value,
+      phoneNumber: document.getElementById('phoneNumber').value,
+      gender: document.getElementById('male').checked ? 'male' : document.getElementById('female').checked ? 'female' : '',
+      dateOfBirth: document.getElementById('dateOfBirth').value,
+      highestQualification: document.getElementById('highestQualification').value,
+      professionalQualification: document.getElementById('professional').value,
+      maritalStatus: document.getElementById('maritalStatus').value,
+      stateOfOrigin: document.getElementById('stateSelect4').value,
+      lgaOfOrigin: document.getElementById('lgaSelect4').value,
+      homeTown: document.getElementById('homeTown').value,
+      spouseName: document.getElementById('spouseName').value,
+      spousePhoneNumber: document.getElementById('spousePhoneNumber').value,
+      spouseDateOfBirth: document.getElementById('spouseDateOfBirth').value,
+      nextOfKinName: document.getElementById('nextOfKinName').value,
+      nextOfKinPhoneNumber: document.getElementById('nextOfKinPhoneNumber').value,
+      nextOfKinRelationship: document.getElementById('nextOfKinRelationship').value,
+      residentialAddress: document.getElementById('residentialAddress').value,
+      stateOfResidence: document.getElementById('stateSelect1').value,
+      lgaOfResidence: document.getElementById('lgaSelect1').value,
+      employmentCategory: document.getElementById('empCategory').value,
+      occupation: document.getElementById('occupation').value,
+      userId: document.getElementById('userId').value
+    })
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    if (data.success) {
+      myModal.hide();
+      window.location.href = data.redirectUrl;
+      alert('User added successfully');
+    } else {
+      console.error(data.message);
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error.message);
+  });
+});
+
+
+
+document.querySelectorAll('.delete-btn').forEach(button => {
+    button.addEventListener('click', function() {
+      const userId = button.dataset.userId; // Get the user ID from data attribute
+      if (confirm('Are you sure you want to delete this user?')) {
+        deleteUser(userId);
+      }
+    });
+  });
+
+  function deleteUser(userId) {
+  fetch(`/deleteUser/${userId}`, {
+    method: 'DELETE'
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Failed to delete user');
+    }
+    return response.json();
+  })
+  .then(data => {
+    // Handle success response
+    console.log(data.message);
+    window.location.href = data.redirectUrl;
+
+  })
+  .catch(error => {
+    console.error('Error:', error.message);
+    // Handle error
+  });
+}
+
+
+
+</script>
 
 </body>
 </html>

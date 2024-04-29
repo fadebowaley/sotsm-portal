@@ -72,24 +72,11 @@ router.post(
   userController.postUserLogin
 );
 
-
-
 //User Adminitrations
-router.get("/profile", middleware.isLoggedIn, userController.getUserProfile);
-router.get("/account", middleware.isLoggedIn, userController.getUserAccount);
-router.get("/bookings", middleware.isLoggedIn, userController.getUserBookings);
-router.get(
-  "/notifications",
-  middleware.isLoggedIn,
-  userController.getUserNotification
-);
-router.get(
-  "/preference",
-  middleware.isLoggedIn,
-  userController.getUserPreference
-);
-router.get("/security", middleware.isLoggedIn, userController.getUserSecurity);
-router.get("/payments", middleware.isLoggedIn, userController.getUserPayment);
 router.get("/logout", middleware.isLoggedIn, userController.getUserLogout);
+
+
+
+
 
 module.exports = router;

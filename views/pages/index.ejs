@@ -95,6 +95,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
  <a href="/user/logout"  class="btn btn-sm btn-primary"style="padding:10px 20px;">logout</a>
  <% if (currentUser.firstName === 'Super') { %>
   <a href="/admin/report" class="btn btn-sm btn-primary" style="padding:10px 20px;">Admin Report</a>
+  <a href="/church/parishes" class="btn btn-sm btn-primary" style="padding:10px 20px;">Churh Config</a>
   </div>
  <% } %>
 <% }%>
@@ -832,6 +833,7 @@ min characters
 <select class="worker-select form-control"  required="" id="IBSCOMS"  name="IBSCOMS"  style="width: 180px;">
   <!-- Placeholder option -->
   <option value="">Select</option>
+  <option value="">Not Applicable</option>
 </select>
 </div>
 </div>
@@ -842,6 +844,8 @@ min characters
 <select class="worker-select form-control"  required="" id="WOOCOME"  name="WOOCOME"  style="width: 180px;">
   <!-- Placeholder option -->
   <option value="">Select</option>
+  <option value="">Not Applicable</option>
+
 </select>
 </div>
 </div>
@@ -852,6 +856,8 @@ min characters
 <select class="worker-select form-control"  required="" id="ILS"  name="ILS"  style="width: 180px;">
   <!-- Placeholder option -->
   <option value="">Select</option>
+    <option value="">Not Applicable</option>
+
 </select></div>
 </div>
 <!--  col-md-6   -->
@@ -862,6 +868,8 @@ min characters
 <select class="worker-select form-control"  required="" id="NGBTI"  name="NGBTI"  style="width: 180px;">
   <!-- Placeholder option -->
   <option value="">Select</option>
+  <option value="">Not Applicable</option>
+
 </select></div>
 </div>
 

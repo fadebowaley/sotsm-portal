@@ -14,10 +14,11 @@ module.exports = (sequelize, DataTypes) => {
       // Define one-to-one relationship with VitalStatistics using parishCode
         User.hasOne(models.CareerMinistry);
         User.hasOne(models.SpiritualProfile);
+        User.hasOne(models.Household, { foreignKey: "userId", optional: true });
         User.hasOne(models.Department, { foreignKey: "employeeId", optional: true });
         User.hasOne(models.Church, { foreignKey: "employeeId", optional: true });
+        User.belongsTo(models.UserData, { foreignKey: "userId" });
 
-        User.belongsTo(models.UserData);
 
     }
   }
@@ -52,7 +53,8 @@ module.exports = (sequelize, DataTypes) => {
     lgaOfResidence: DataTypes.STRING,
     employmentCategory: DataTypes.STRING,
     occupation: DataTypes.STRING,
-    employeeId: DataTypes.INTEGER,
+    employeeId: DataTypes.STRING,
+    userId: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'User',
