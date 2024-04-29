@@ -48,7 +48,19 @@ app.use(
 );
 
 
-
+// Global variables across routes
+app.use(async (req, res, next) => {
+  try {
+    res.locals.session = req.session;
+    res.locals.currentUser = req.user;
+    res.locals.url = process.env.FETCH_HOST;
+    // Set global variable for EJS templates
+    next();
+  } catch (error) {
+    console.log(error);
+    res.redirect("/");
+  }
+});
 
 
 app.use(bodyParser.json());
@@ -102,17 +114,7 @@ app.use("/auth", authRoutes);
 
 
 
-// Global variables across routes
-app.use(async (req, res, next) => {
-  try {
-    res.locals.session = req.session;
-    res.locals.currentUser = req.user;
-    next();
-  } catch (error) {
-    console.log(error);
-    res.redirect("/");
-  }
-});
+
 
 
 const PORT = process.env.PORT || 5000;

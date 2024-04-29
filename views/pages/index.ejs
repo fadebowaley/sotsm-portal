@@ -165,10 +165,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 <!-- Contact Information -->
 <div class="col-md-12" style="margin-bottom:10px;">
 <div class="form-group mb-1">
-<input type="text" class="form-control"  placeholder="Phone Number"  id="loginEmail" name="phoneNumber">
+<input type="text" class="form-control"  placeholder="Phone Number" value="08145045108" id="loginEmail" name="phoneNumber">
 </div>
 <div class="form-group mt-2">
-<input type="password" class="form-control"    placeholder="password" id="loginPassword" name="password">
+<input type="password" class="form-control"  value="password123"  placeholder="password" id="loginPassword" name="password">
 </div>
 <!--  col-md-6   -->
 </div>
@@ -1472,7 +1472,7 @@ async function loadDivisions() {
 }
 */
 async function loadDivisions() {
-    const divisionsResponse = await fetch('/divisions');
+    const divisionsResponse = await fetch('<%= url %>/divisions');
     const divisions = await divisionsResponse.json();
     const divisionSelect = document.getElementById('nameOfDivision');
     divisionSelect.innerHTML = '';
@@ -1496,7 +1496,7 @@ async function loadDivisions() {
 async function loadDioceses() {
     const divisionId = document.getElementById('nameOfDivision').value;
 
-    const diocesesResponse = await fetch(`/divisions/${divisionId}/dioceses`);
+    const diocesesResponse = await fetch(`<%= url %>/divisions/${divisionId}/dioceses`);
     const dioceses = await diocesesResponse.json();
     const dioceseSelect = document.getElementById('nameOfDiocese');
     dioceseSelect.innerHTML = '';
@@ -1511,7 +1511,7 @@ async function loadDioceses() {
 // Function to load zones based on selected diocese
 async function loadZones() {
     const dioceseId = document.getElementById('nameOfDiocese').value;
-    const zonesResponse = await fetch(`/dioceses/${dioceseId}/zones`);
+    const zonesResponse = await fetch(`<%= url %>/dioceses/${dioceseId}/zones`);
     const zones = await zonesResponse.json();
     const zoneSelect = document.getElementById('nameOfZone');
     zoneSelect.innerHTML = '';
@@ -1525,7 +1525,7 @@ async function loadZones() {
 
 async function loadParishes() {
     const zoneId = document.getElementById('nameOfZone').value;
-    const parishResponse = await fetch(`/zones/${zoneId}/parishes`);
+    const parishResponse = await fetch(`<%= url %>/zones/${zoneId}/parishes`);
     const parishes = await parishResponse.json();
     const parishSelect = document.getElementById('placeOfAssignment');
     parishSelect.innerHTML = '';
@@ -1541,7 +1541,7 @@ async function loadParishes() {
 //-----------load for  career employee-----------//
 
 async function loadDivisions2() {
-    const divisionsResponse = await fetch('/divisions');
+    const divisionsResponse = await fetch('<%= url %>/divisions');
     const divisions = await divisionsResponse.json();
     const divisionSelect = document.getElementById('nameOfDivisionc');
     divisionSelect.innerHTML = '';
@@ -1564,7 +1564,7 @@ async function loadDivisions2() {
 // Function to load dioceses based on selected division
 async function loadDioceses2() {
     const divisionId = document.getElementById('nameOfDivisionc').value;
-    const diocesesResponse = await fetch(`/divisions/${divisionId}/dioceses`);
+    const diocesesResponse = await fetch(`<%= url %>/divisions/${divisionId}/dioceses`);
     const dioceses = await diocesesResponse.json();
     const dioceseSelect = document.getElementById('nameOfDiocesec');
     dioceseSelect.innerHTML = '';
@@ -1579,7 +1579,7 @@ async function loadDioceses2() {
 // Function to load zones based on selected diocese
 async function loadZones2() {
     const dioceseId = document.getElementById('nameOfDiocesec').value;
-    const zonesResponse = await fetch(`/dioceses/${dioceseId}/zones`);
+    const zonesResponse = await fetch(`<%= url %>/dioceses/${dioceseId}/zones`);
     const zones = await zonesResponse.json();
     const zoneSelect = document.getElementById('nameOfZonec');
     zoneSelect.innerHTML = '';
@@ -1593,7 +1593,7 @@ async function loadZones2() {
 
 async function loadParishes2() {
     const zoneId = document.getElementById('nameOfZonec').value;
-    const parishResponse = await fetch(`/zones/${zoneId}/parishes`);
+    const parishResponse = await fetch(`<%= url %>/zones/${zoneId}/parishes`);
     const parishes = await parishResponse.json();
     const parishSelect = document.getElementById('placeOfAssignmentc');
     parishSelect.innerHTML = '';
@@ -2183,7 +2183,7 @@ const submitBtn  = document.getElementById("submitBtn");
   // Function to send form data to the backend
   function sendData(employeeData) {
     // Send AJAX request to the backend
-    fetch("/receiveData", {
+    fetch("<%= url %>/receiveData", {
       method: "POST",
       body: JSON.stringify(employeeData),
       headers: {
@@ -2539,7 +2539,7 @@ loginBtn.addEventListener("submit", function(event) {
   // Function to send form data to the backend
   function registerUsers(userData) {
     // Send AJAX request to the backend
-    fetch("/user/signup", {
+    fetch("<%= url %>/user/signup", {
       method: "POST",
       body: JSON.stringify(userData),
       headers: {
@@ -2567,7 +2567,7 @@ loginBtn.addEventListener("submit", function(event) {
   // Function to send form data to the backend
   function registerUser(userData) {
     // Send AJAX request to the backend
-    fetch("/user/login", {
+    fetch("<%= url %>/user/login", {
       method: "POST",
       body: JSON.stringify(userData),
       headers: {

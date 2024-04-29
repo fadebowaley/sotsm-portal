@@ -278,7 +278,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Fetch church data from the server based on the ID
       // Replace '/get-church-data' with the actual endpoint to fetch church data
-      fetch(`/get-church-data?id=${churchId}`)
+      fetch(`<%= url %>/get-church-data?id=${churchId}`)
         .then(response => response.json())
         .then(data => {
 
@@ -452,7 +452,7 @@ editForm.addEventListener('submit', function(event) {
   }
 
   // Construct the URL based on whether it's an update or create operation
-  const url = isNewParish ? '/createChurch' : `/updateChurch/${churchId}`;
+  const url = isNewParish ? '<%= url %>/createChurch' : `<%= url %>/updateChurch/${churchId}`;
 
   console.log('the url is', url);
   console.log('the church id id -> ',  churchId);

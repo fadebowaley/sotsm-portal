@@ -666,7 +666,7 @@ min characters
     if (phoneNumber.trim() !== '') {
       // If the phone number input is not empty
       try {
-        const response = await fetch(`/searchUser?phoneNumber=${phoneNumber}`); // Send a request to the server to search for the user
+        const response = await fetch(`<%= url %>/searchUser?phoneNumber=${phoneNumber}`); // Send a request to the server to search for the user
         const userData = await response.json(); // Parse the response as JSON
       // Check if the userData object is not null and contains the userId property
       if (userData.user && 'userId' in userData.user && userData.user.userId) {

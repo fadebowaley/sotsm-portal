@@ -227,7 +227,7 @@ document.querySelectorAll('.delete-btn').forEach(button => {
   });
 
 function deleteUser(userId) {
-fetch(`/deleteUser/${userId}`, {
+fetch(`<%= url %>/deleteUser/${userId}`, {
 method: 'DELETE'
 })
 .then(response => {
@@ -330,7 +330,7 @@ form.addEventListener("submit", async function (event) {
     console.log(formData);
 
       try {
-        const response = await fetch("/households", {
+        const response = await fetch("<%= url %>/households", {
          method: 'POST',
         headers: {
           'Content-Type': 'application/json'
