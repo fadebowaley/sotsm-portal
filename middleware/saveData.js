@@ -109,7 +109,12 @@ async function saveUserData(req, res, reqBody) {
           console.log("Place of assignment cannot be empty");
           // You might want to throw an error, return a response, or handle it in another appropriate way
           await t.rollback(); // Rollback the transaction if any error occurs
-          throw new Error("Place of assignment cannot be empty");
+          //throw new Error("Place of assignment cannot be empty");
+         res.json({
+           status: "error",
+           message: "Place of assignment cannot be empty",
+           redirectUrl: "/"
+         });
         }
 
         const searchedChurch = await Church.findOne({
@@ -321,7 +326,7 @@ async function saveUserData(req, res, reqBody) {
     res.json({
       status: "success",
       message: `Registrant enrollment Successful Code: ${nextEmpCode}`,
-      redirectUrl: "/confirmation",
+      redirectUrl: `/confirmation/${nextEmpCode}`,
     });
   } catch (err) {
     console.log(err);

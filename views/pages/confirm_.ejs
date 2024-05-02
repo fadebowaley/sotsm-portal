@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Ministry Database Engineering</title>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css" />
+<!-- Cropper.js CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" rel="stylesheet">
+<!-- Cropper.js JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+
+<!-- Font Awesome -->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<!-- Custom Styles -->
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="assets/css/form.css" />
+<!-- animation -->
+<link rel="stylesheet" href="assets/css/animation.css" />
+
+<!-- responsive -->
+<link rel="stylesheet" href="assets/css/responsive.css" />
+
+<style>
+
+  
+  .mb-1{
+    margin-bottom:1rem;
+  }
+  .mb-2{
+     margin-bottom: 0.5rem;
+  }
+   .hidden, #registerForm{
+        display: none;
+    }
+/* Style for the section label */
+.section-label {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333; /* Text color */
+  margin: 20px 0; /* Adjust the top and bottom margin as needed */
+}
+
+/* Style for the horizontal rule */
+.hr-section {
+  border: none; /* Remove default border */
+  height: 1px; /* Set the height of the line */
+  background-color: #999; /* Color of the line */
+  margin: 10px 0; /* Adjust the top and bottom margin as needed */
+}
+
+/* Style for the text beside the horizontal rule */
+.hr-text {
+  display: inline-block;
+  padding: 0 10px; /* Space between text and hr */
+  color: #999; /* Color of the text */
+}
+
+.prevBtn, .nextBtn, .finalBtn {
+    font-size: 30px;
+    background-color: black;
+    color: white;
+    padding: 10px 45px;
+    border: none;
+    border-radius: 25px;
+    margin-right: 20px;
+}
+</style>
+</head>
+
+<body>
+<!-- MAIN sTART -->
+<main class="animate position-relative">
+<!-- Header Section -->
+<header class="mb-md-5">
+<!-- Logo and Phone Info -->
+<div class="logo">
+<!-- Logo Image -->
+<img src="assets/images/icon.png" alt="Icon" />SOTSM.
+<p class="sideline">Pastors, Employee Record Management</p>
+</div>
+<div>
+<h1 class="logo" id="timer">09:00</h1>
+</div>
+<!-- Phone Information -->
+<a href="#" class="phoneInfo">
+<img src="assets/images/phone.png" alt="Phone" />
+<!-- Phone Details -->
+<article>
+<h4>(234) 80 85 448030</h4>
+<p>Call for Quick Support </p>
+</article>
+</a>
+<article>
+  <% if (currentUser) { %>
+ <a href="/user/logout" style="height:90px;">logout</a>
+<% }%>
+</article>
+</header>
+
+<div class="container mt-5">
+<div class="row">
+<!-- Left Column Login Form -->
+<div class="col-md-8 offset-2" >
+    <div class="alert alert-success" role="alert">
+ Staff Record  Successfully Updated !
+</div>
+<div class="card">
+<div class="card-header">
+<h4>Staff Code: CLC00021 </h4>
+</div>
+
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><h4> Name: <%= currentUser.firstName %> <%= currentUser.lastName %></h4></li>
+    <li class="list-group-item"> <h4>Phone Number: <%= currentUser.phoneNumber %> </h4></li>
+        <a href="#" class="btn btn-primary">Send to Email</a>
+
+  </ul>
+
+</div>
+
+</div>
+
+
+</div>
+</div>
+
+
+</main>
+</body>
+</html>

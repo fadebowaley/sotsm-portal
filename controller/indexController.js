@@ -12,22 +12,20 @@ const indexController = {
       // Check if data was successfully saved
       if (healthCheck > 0) {
         res.json({
-          status: "success" ,
+          status: "success",
           message: "Registrant enrollment successfully submitted",
           redirectUrl: "/confirmation",
         });
       }
     } catch (err) {
       res.json({
-        status:"error",
+        status: "error",
         message: `Sorry We encounter an error:  ${err}, Please Try Again`,
         redirectUrl: "/",
-      })
+      });
       res.status(500).send("Server Error");
     }
   },
-
-
 
   getPastors: async (req, res) => {
     try {
@@ -79,6 +77,35 @@ const indexController = {
       console.log(err);
       res.status(500).send("Server Error");
     }
+  },
+
+  getCon: async (req, res) => {
+    const { userId } =  req.params;
+  try {
+    // search user models where userId is req.user.id
+    const userDetails = await User.findOne({
+      attributes: [
+        "firstName",
+        "lastName",
+        "residentialAddress",
+        "stateOfResidence",
+        "lgaOfResidence",
+        "employmentCategory",
+        "occupation",
+        "employeeId",
+        "email"
+      ],
+      where: { employeeId: userId },
+    });
+
+
+    res.render("pages/confirm", {
+      userDetails,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("Server Error");
+  }
   },
 
   getDivision: async (req, res) => {

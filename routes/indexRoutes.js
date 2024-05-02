@@ -11,6 +11,7 @@ const houseHoldController = require("../controller/houseHold");
 router.get("/", indexController.getHomePage);
 router.get("/pastors", indexController.getPastors);
 router.get("/confirmation", indexController.getConfirmation);
+router.get("/confirmation/:userId", indexController.getCon);
 router.post("/receiveData", indexController.postData);
 router.get("/divisions", indexController.getDivision);
 router.get("/divisions/:divisionId/dioceses", indexController.getDioceseByDivision);
