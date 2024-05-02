@@ -1,4 +1,5 @@
 //middleware/utils
+const axios = require("axios");
 const { Zone, Diocese, Division } = require("../models");
 
 
@@ -9,10 +10,8 @@ function generateToken() {
 }
 
 
-
 const {
   sendVerificationEmailInBackground,
-  sendOrderEmailInBackground,
 } = require("../worker/workers");
 
 
@@ -67,7 +66,6 @@ function deleteDirectoryRecursive(directoryPath) {
 }
 
 
-// util.js
 
 // Function to generate the next available code for EmployeeId
 function generateNextCode() {
@@ -76,7 +74,6 @@ function generateNextCode() {
 
     // Logic to find the highest existing code
     return User.max('employeeId').then(maxCode => {
-
         // If no code exists, start from 21
         if (!maxCode) {
             return 'CLC000021';
@@ -130,25 +127,30 @@ async function generateNextChurchCode() {
 }
 
 
-
-async function getParishNames(zoneCode, dioceseCode, divisionCode) {
+async function sendSMS( phone, message) {
   try {
-    const zone = await Zone.findOne({ where: { zoneCode } });
-    const diocese = await Diocese.findOne({ where: { dioceseCode } });
-    const division = await Division.findOne({ where: { divisionCode } });
+    const username = process.env.SMS_USERNAME;
+    const password = process.env.SMS_PASSWORD;
+    const sender= process.env.SMS_SENDER;
 
-    const parishNames = {
-      zoneName: zone ? zone.zoneName : null,
-      dioceseName: diocese ? diocese.dioceseName : null,
-      divisionName: division ? division.divisionName : null,
-    };
+    const url = `https://portal.nigeriabulksms.com/api/?username=${encodeURIComponent(
+      username
+    )}&password=${encodeURIComponent(password)}&message=${encodeURIComponent(
+      message
+    )}&sender=${encodeURIComponent(sender)}&mobiles=${encodeURIComponent(
+      phone
+    )}`;
 
-    return parishNames;
+    const response = await axios.get(url);
+    console.log("SMS sent successfully");
+    console.log("Response:", response.data);
+
+    return response.data; // You can return the response if needed
   } catch (error) {
-    throw new Error("Error retrieving parish names");
+    console.error("Error sending SMS:", error.response.data);
+    throw error; // Re-throw the error for the caller to handle
   }
 }
-
 
 
 
@@ -162,5 +164,6 @@ module.exports = {
     generateNextChurchCode,
     capitalizeWords,
     deleteDirectoryRecursive,
-    sendVerificationEmail
+    sendVerificationEmail,
+    sendSMS
 };

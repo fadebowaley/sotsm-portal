@@ -222,6 +222,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 
 <!-- Right Column -->
 <div class="col-md-8">
+  <div id="alert-container">
+  </div>
   <% if (errorMsg) { %>
         <div class="alert alert-danger alert-dismissible rounded-pill fade show" role="alert">
         <%= errorMsg %>
@@ -1291,12 +1293,6 @@ min characters
 <select required="" id="countryChurchc"  name="countryChurchc"  style="width:200px;">
 <option value="" selected>Select Country</option>
 
-<!--
-  churchAddressc
-  stateSelect5
-  lgaSelect5
-  countryChurchc
--->
 </select>
 </div>
 </div>
@@ -1552,6 +1548,7 @@ s0.parentNode.insertBefore(s1,s0);
 //<!--End of Tawk.to Script-->
 </script>
 <script>
+
 var pastorData = {};
 // Function to load divisions on page load
 
@@ -1730,100 +1727,6 @@ async function loadParishes2() {
     });
 }
 
-/*
-//personal Data
-  const title = document.getElementById("title").value;
-  const firstname = document.getElementById("firstname").value;
-  const lastname = document.getElementById("lastname").value;
-  const otherName = document.getElementById("otherName").value;
-  const email = document.getElementById("email").value;
-  const phone = document.getElementById("phone").value;
-  const genderMale = document.getElementById("male").checked;
-  const genderFemale = document.getElementById("female").checked;
-  const dateOfBirth = document.getElementById("dateOfBirth").value;
-  const highestQualification = document.getElementById("highestQualification").value;
-  const professionalQualification = document.getElementById("professionalQualification").value;
-  const maritalStatus = document.getElementById("maritalStatus").value;
-  const stateOfOrigin = document.getElementById("stateSelect4").value;
-  const lgaOfOrigin = document.getElementById("lgaSelect4").value;
-  const homeTown = document.getElementById("homeTown").value;
-  const spouseName = document.getElementById("spouseName").value;
-  const spousePhoneNumber = document.getElementById("spousePhoneNumber").value;
-  const spouseDateOfBirth = document.getElementById("spouseDateOfBirth").value;
-  const nextOfKinName = document.getElementById("nextOfKinName").value;
-  const nextOfKinPhoneNumber = document.getElementById("nextOfKinPhoneNumber").value;
-  const nextOfKinRelationship = document.getElementById("nextOfKinRelationship").value;
-  const residentialAddress = document.getElementById("residentialAddress").value;
-  const stateOfResidence = document.getElementById("stateSelect1").value;
-  const lgaOfResidence = document.getElementById("lgaSelect1").value;
-  const employmentCategory = document.getElementById("empCategory").value;
-  const occupation = document.getElementById("occupation").value;
-  //Spiritual Data
-  const yearBornAgain = document.getElementById("yearBornAgain").value;
-  const waterBaptized = document.getElementById("waterBaptized").value;
-  const holyghostBaptism = document.getElementById("holyghostBaptism").value;
-  const joinedSotsm = document.getElementById("joinedSotsm").value;
-  const becameWorker = document.getElementById("becameWorker").value;
-  const becameMinister = document.getElementById("becameMinister").value;
-  const ordainedDcns = document.getElementById("ordainedDcns").value;
-  const becamePastor = document.getElementById("becamePastor").value;
-  const becameSnrPastor = document.getElementById("becameSnrPastor").value;
-  const ordainedElder = document.getElementById("ordainedElder").value;
-  const ordainedBishop = document.getElementById("ordainedBishop").value;
-  const lastOrdinationDate = document.getElementById("lastOrdinationDate").value;
-  const IBSCOMS = document.getElementById("IBSCOMS").value;
-  const WOOCOME = document.getElementById("WOOCOME").value;
-  const ILS = document.getElementById("ILS").value;
-  const NGBTI = document.getElementById("NGBTI").value;
-  
-  //Task for Fulltimer Option
-  const pastor = document.getElementById("pastorStatus").checked;
-  const placeOfAssignment = document.getElementById("placeOfAssignment").value;
-  const stateChurch = document.getElementById("stateSelect2").value;
-  const lgaChurch= document.getElementById("lgaSelect2").value;
-  const placeOfAssignmentAddress = document.getElementById("placeOfAssignmentAddress").value;
-  const countryChurch = document.getElementById("countryChurch").value;
-
-  // Task2. for Career Officer
-  const professional = document.getElementById("professionalStatus").checked;
-  const jobTitle = document.getElementById("jobTitle").value;
-  const yrEmployed = document.getElementById("yrEmployed").value;
-  const nameOfDepartment = document.getElementById("nameOfDepartment").value;
-  const gradeLevel = document.getElementById("gradeLevel").value;
-  const stepLevel = document.getElementById("stepLevel").value;
-  const deptAdress = document.getElementById("deptAdress").value;
-  const stateOrg = document.getElementById("stateSelect3").value;
-  const lgaOrg= document.getElementById("lgaSelect3").value;
-  const countryOrg = document.getElementById("countryOrg").value;
-  //Task 3 Career Officer that are pastoring
-  const ispastor_parish = document.getElementById("ispastor_parish").value;
-  const careerPastorOffice = document.getElementById("careerPastorOffice").value;
-  const pastorOffice = document.getElementById("pastorOffice").value;
-  const assistant = document.getElementById("assistant").checked;
-  const placeOfAssignmentc = document.getElementById("placeOfAssignment").value;
-  const assistantc = document.getElementById("assistantc").checked;
-  //Task 4 rest of the form 
-  const dateEstablished = document.getElementById('dateEstablished').value;
-  const churchProperty = document.getElementById('churchProperty').value;
-  const propertyEstimatedValue = document.getElementById('propertyEstimatedValue').value;
-  const clcBuilding = document.getElementById('clcBuilding').value;
-  const leaseType = document.getElementById('leaseType').value;
-  const avgadult = document.getElementById('avgadult').value;
-  const avgyouth = document.getElementById('avgyouth').value;
-  const avgchildren = document.getElementById('avgchildren').value;
-  const total = document.getElementById('total').value;
-  const totalWorkers = document.getElementById('totalWorkers').value;
-  const workersInTraining = document.getElementById('workersInTraining').value;
-  const unordainedLeaders = document.getElementById('unordainedLeaders').value;
-  const noofMinisters = document.getElementById('noofMinisters').value;
-  const noofdcns = document.getElementById('noofdcns').value;
-  const noofpastor = document.getElementById('noofpastor').value;
-  const noofsnrpastor = document.getElementById('noofsnrpastor').value;
-  const noofelder = document.getElementById('noofelder').value;
-  const noofbishops = document.getElementById('noofbishops').value;
-*/
-
-
 // JavaScript for managing multi-step form
 let currentStep = 1;
 
@@ -1882,14 +1785,21 @@ document.querySelector(".finalBtn").style.display = "none";
 }
 }
 
+// Example validation function
+function validateRequiredField(fieldValue) {
+    if (fieldValue.trim() === '') {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+
 
 
 // Get the submit button
 const submitBtn  = document.getElementById("submitBtn");
 // Function to handle form submission
-
-
-
 
   // Function to send form data to the backend
   function sendData(employeeData) {
@@ -1902,24 +1812,37 @@ const submitBtn  = document.getElementById("submitBtn");
       },
     })
     .then(response => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
       return response.json();
     })
     .then(data => {
-      console.log('this is th dtata', data);
-      //redirectUrl
-      // Handle response from the backend move to a new page 
-      window.location.href = `${data.redirectUrl}`;
-      
+
+     const message = `<div class="alert alert-${data.status === 'success' ? 'success!' : 'danger!'} alert-dismissible fade show" role="alert">
+      <strong>${data.status === 'success' ? 'Success!' : 'Error!'}</strong> ${data.message}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>`;
+
+    // Append alert message to the DOM
+    document.getElementById('alert-container').innerHTML = message;
+   // Handle any redirect if needed
+    if (data.redirectUrl) {
+      window.location.href = data.redirectUrl;
+    }
 
     })
     .catch(error => {
       // Handle errors
-      console.error("There was a problem with the request:", error);
-      alert('You are not Authorised to fill this form, Please contact your Administrator for Authorization')
-      // Optionally, you can display an error message to the user
+  // Construct error alert message
+    const errorMessage = `<div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <strong>Error!</strong> There was a problem with the request. ${error}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>`;
+
+    // Append error alert message to the DOM
+    document.getElementById('alert-container').innerHTML = errorMessage;
     });
   }
 
@@ -1997,7 +1920,7 @@ submitBtn.addEventListener("click", function(event) {
   careerPastorOffice: document.getElementById("careerPastorOffice").value,
   pastorOffice: document.getElementById("pastorOffice").value,
   assistant: document.getElementById("assistant").checked,
-  placeOfAssignmentc: document.getElementById("placeOfAssignment").value,
+  placeOfAssignmentc: document.getElementById("placeOfAssignmentc").value,
   assistantc: document.getElementById("assistantc").checked,
   churchAdressc : document.getElementById("churchAddressc").value,
   stateChurchc : document.getElementById("stateSelect5").value,
@@ -2029,8 +1952,6 @@ submitBtn.addEventListener("click", function(event) {
     sendData(pastorData);
 
   });
-
-
 
 
 
@@ -2187,6 +2108,7 @@ document.addEventListener("DOMContentLoaded", () => {
         shownextBtn();
         }
     });
+
     //function to check the final button
    checkAssistant1.addEventListener('change', function() {
         // Check if the checkbox is checked
@@ -2213,9 +2135,6 @@ professionalRadio.addEventListener("change", () => {
       professionalChoiceDiv.style.display = "block";
       showfinalBtn();
     });
-
-
-
 
 //add event listener to select parish
 parishSelect.addEventListener("change", (event) => {

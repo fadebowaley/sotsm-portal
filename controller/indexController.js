@@ -7,16 +7,22 @@ const {Sequelize } = require("sequelize");
 const indexController = {
   postData: async (req, res) => {
     try {
-      const healthCheck = await saveUserData(req.body);
+      const healthCheck = await saveUserData(req, res, req.body);
+
       // Check if data was successfully saved
       if (healthCheck > 0) {
         res.json({
-          status: "successfully submitted",
+          status: "success" ,
+          message: "Registrant enrollment successfully submitted",
           redirectUrl: "/confirmation",
         });
       }
     } catch (err) {
-      console.log(err);
+      res.json({
+        status:"error",
+        message: `Sorry We encounter an error:  ${err}, Please Try Again`,
+        redirectUrl: "/",
+      })
       res.status(500).send("Server Error");
     }
   },

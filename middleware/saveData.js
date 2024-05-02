@@ -1,6 +1,7 @@
 const {
   generateNextCode,
   generateNextChurchCode,
+  sendSMS,
 } = require("../middleware/utils");
 const {
   sequelize,
@@ -14,11 +15,10 @@ const {
 const bcrypt = require("bcrypt");
 const saltRounds = 10;
 
-async function saveUserData(reqBody) {
+
+async function saveUserData(req, res, reqBody) {
   const nextEmpCode = await generateNextCode();
   let healthCheck = 0;
-  console.log("this is the code .  .", nextEmpCode);
-  console.log(reqBody);
   const currentDate = new Date().toISOString();
   const hashed_password = await bcrypt.hash("glory@2024", saltRounds);
   const t = await sequelize.transaction(); // Start a transaction
@@ -36,7 +36,7 @@ async function saveUserData(reqBody) {
         password: hashed_password,
         phoneNumber: reqBody.phone,
         otherName: reqBody.otherName,
-        gender: reqBody.genderMale === "true" ? "male" : "female",
+        gender: reqBody.genderMale ? "male" : "female",
         dateOfBirth: reqBody.dateOfBirth,
         professional: reqBody.professionalQualification,
         maritalStatus: reqBody.maritalStatus,
@@ -100,6 +100,18 @@ async function saveUserData(reqBody) {
     // Conditionally Logic for Full-Time/PartTime pastor or Assistant
     if (reqBody.pastor === true) {
       try {
+        // Check if placeOfAssignment is empty
+        if (
+          !reqBody.placeOfAssignment ||
+          reqBody.placeOfAssignment.trim() === ""
+        ) {
+          // If empty, handle the error
+          console.log("Place of assignment cannot be empty");
+          // You might want to throw an error, return a response, or handle it in another appropriate way
+          await t.rollback(); // Rollback the transaction if any error occurs
+          throw new Error("Place of assignment cannot be empty");
+        }
+
         const searchedChurch = await Church.findOne({
           where: { parishCode: reqBody.placeOfAssignment },
           transaction: t,
@@ -160,7 +172,7 @@ async function saveUserData(reqBody) {
             searchedChurch.pastorOffice = reqBody.pastorOffice;
             await searchedChurch.save({ transaction: t });
             healthCheck++;
-            console.log("Pastor is assistant pastor");
+            console.log("Pastor is full  pastor");
             console.log(healthCheck);
           }
         } else {
@@ -192,11 +204,27 @@ async function saveUserData(reqBody) {
         { transaction: t }
       );
       healthCheck++;
+
       console.log("this is an employee staff");
       console.log(healthCheck);
 
       if (reqBody.ispastor_parish === "Yes") {
         try {
+          if (
+            !reqBody.placeOfAssignment ||
+            reqBody.placeOfAssignmentc.trim() === ""
+          ) {
+            // If empty, handle the error
+            console.log("Place of assignment cannot be empty");
+            // You might want to throw an error, return a response, or handle it in another appropriate way
+            await t.rollback(); // Rollback the transaction if any error occurs
+            res.json({
+              status: "error",
+              message: "Church name cannot be empty! please fix",
+              redirectUrl: "/",
+            });
+          }
+
           const searchedEmploymentChurch = await Church.findOne({
             where: { parishCode: reqBody.placeOfAssignmentc },
             transaction: t, // Pass the transaction object to the query
@@ -260,10 +288,20 @@ async function saveUserData(reqBody) {
               console.log(healthCheck);
             } else {
               console.log("Church not Found");
+              res.json({
+                status: "error",
+                message: "Church search was not found ! please fix",
+                redirectUrl: "/",
+              });
             }
           }
         } catch (error) {
           console.error("Error in findOne query:", error);
+          res.json({
+            status: "error",
+            message: `Error in findOne query:y! ${error} `,
+            redirectUrl: "/",
+          });
         }
       } else {
         // Handle error: Invalid scenario
@@ -273,12 +311,28 @@ async function saveUserData(reqBody) {
 
     await t.commit(); // Commit the transaction if all operations are successful
     console.log("returned health check -> ", healthCheck);
-    return healthCheck;
+    const message = `Dear ${reqBody.firstname} ${reqBody.lastname}, Your enrollment code is: ${nextEmpCode}.Please use this code for accessing the SOTSM portal.Thank you."`;
+    const formattedPhoneNumber = `234${reqBody.phone
+      .trim()
+      .replace(/\s/g, "")
+      .substring(1)}`;
+    sendSMS(formattedPhoneNumber, message);
+
+    res.json({
+      status: "success",
+      message: `Registrant enrollment Successful Code: ${nextEmpCode}`,
+      redirectUrl: "/confirmation",
+    });
   } catch (err) {
     console.log(err);
     await t.rollback(); // Rollback the transaction if any error occurs
-    throw new Error("Error saving user data");
+    res.json({
+      status: "error",
+      message: `Registrant enrollment error, Please attempt again`,
+      redirectUrl: "/",
+    });
   }
 }
+
 
 module.exports = { saveUserData };
