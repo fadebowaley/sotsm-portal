@@ -50,6 +50,7 @@ router.get("/church/missions", clcService.getMission);
 router.get("/get-church-data", clcService.getChurchDataById);
 router.post('/createChurch', clcService.updateOrCreateChurch);
 router.put('/updateChurch/:churchId', clcService.updateOrCreateChurch);
+router.delete("/deleteChurch/:id", clcService.deleteChurch);
 
 
 

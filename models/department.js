@@ -17,12 +17,15 @@ module.exports = (sequelize, DataTypes) => {
   Department.init(
     {
       placeOfAssignment: DataTypes.STRING,
-      unitName: DataTypes.STRING,
       departmentAddress: DataTypes.STRING,
       departmentState: DataTypes.STRING,
-      departmentLGA: DataTypes.STRING,
+      departmentLGA:  DataTypes.STRING,
       departmentCountry: DataTypes.STRING,
-      employeeId: DataTypes.INTEGER,
+      employeeId:   DataTypes.INTEGER,
+      yearEmployed: DataTypes.DATE,
+      gradeLevel:  DataTypes.INTEGER,
+      stepLevel:  DataTypes.INTEGER,
+      jobTitle:  DataTypes.STRING
     },
     {
       sequelize,

@@ -23,7 +23,13 @@ const app = express();
 
 
 
-const allowedOrigins = ["*", "http://127.0.0.1:3000"];
+const allowedOrigins = [
+  "*",
+  "http://127.0.0.1:3000",
+  "http://10.17.1.252:3000",
+  "http://0.0.0.0:3000/",
+  "http://localhost:3000",
+];
 
 app.use(
   cors({
@@ -116,6 +122,12 @@ app.use("/auth", authRoutes);
 
 
 
+// const PORT = process.env.PORT || 5000;
+// const HOST = "0.0.0.0"; // Listen on all network interfaces
+
+// app.listen(PORT, HOST, () => {
+//   console.log(`Server is running on http://${HOST}:${PORT}`);
+// });
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

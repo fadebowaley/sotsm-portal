@@ -86,6 +86,7 @@
       <th scope="col">Email</th>
       <th scope="col">Date Created</th>
       <th scope="col">Delete</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -100,31 +101,32 @@
         <td><%= user.email ? user.email : "No Email" %></td>
         <td><%= new Date(user.createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }) %></td>
         <td><button class="btn-danger btn-sm delete-btn" data-user-id="<%= user.id %>">Delete</button></td>
-
+        <td><button class="btn-danger btn-sm edit-btn" data-user-id="<%= user.id %>">Edit/Action</button></td>
+        <td><button id="openspModal" class="btn-success btn-sm spiritual-btn" data-user-id="<%= user.id %>">spiritual Data</button></td>
         </tr>
       <% } %>
-
-    <!-- Add more rows here -->
   </tbody>
 </table>
 
-<div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="userModalLabel">Create Auth User</h5>
 
-        <div style="margin-left:15rem;">
-                <label for="loadUser" class="form-label">Load Employee</label>
-                <input type="text" class="form-control" id="loadUser" name="loadUser">
-              </div>
-        <div>
-          <br>
-        <button id="search" type="button" class="btn  btn-lg">Fetch</button>
-       </div>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
+
+<div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="userModalLabel">Create New User</h5>
+
+<div style="margin-left:15rem;">
+<label for="loadUser" class="form-label">Load Employee</label>
+<input type="text" class="form-control" id="loadUser" name="loadUser">
+</div>
+<div>
+<br>
+<button id="search" type="button" class="btn  btn-lg">Fetch</button>
+</div>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
 <form id="userForm">
 <div class="col-md-12 inputField" style="background-color:rgb(227, 233, 255);">
 <div class="row">
@@ -202,10 +204,10 @@
 <div class="row">
 <h5 class="mt-3">Gender</h5>
 <div class="col-md-3">
-  <!-- <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" required="" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div> -->
+<!-- <div class="form-group form-check">
+<input type="checkbox" class="form-check-input" required="" id="exampleCheck1">
+<label class="form-check-label" for="exampleCheck1">Check me out</label>
+</div> -->
 
 <div class="form-check">
 <input class="form-check-input" type="checkbox"  name="male"  id="male">
@@ -264,41 +266,41 @@ Female
 <div class="form-group">
 <label for="highest">Professional Qualification</label>
 <select class="form-control"  name="professionalQualification" required="" id="professional"  style="width: 280px;">
-  <option value="">Select Professional Qualification</option>
-  <option value="NA">Not Applicable</option>
-  <option value="ACA">ACA (Associate Chartered Accountant) - ICAN</option>
-  <option value="ACPA">ACPA (Associate Chartered Public Accountant) - ICPAN</option>
-  <option value="ACIB">ACIB (Associate Chartered Institute of Bankers) - CIBN</option>
-  <option value="ACIPM">ACIPM (Associate Chartered Institute of Personnel Management) - CIPM</option>
-  <option value="ANIM">ANIM (Associate Nigerian Institute of Management) - NIM</option>
-  <option value="ACTI">ACTI (Associate Chartered Taxation of Nigeria) - CITN</option>
-  <option value="ANIVS">ANIVS (Associate Nigerian Institution of Estate Surveyors and Valuers) - NIESV</option>
-  <option value="R.Eng.">Registered Engineer (R.Eng.) - COREN</option>
-  <option value="BL">BL (Barrister-at-Law) - NBA</option>
-  <option value="ANIMN">ANIMN (Associate Nigerian Institute of Marketing) - NIMN</option>
-  <option value="ANIPR">ANIPR (Associate Nigerian Institute of Public Relations) - NIPR</option>
-  <option value="AIOB">AIOB (Associate Nigerian Institute of Building) - NIOB</option>
-  <option value="AIA">AIA (Associate Nigeria Institute of Architects) - NIA</option>
-  <option value="AIQS">AIQS (Associate Nigerian Institute of Quantity Surveyors) - NIQS</option>
-  <option value="ANITP">ANITP (Associate Nigerian Institute of Town Planners) - NITP</option>
-  <option value="ANCI">ANCI (Associate Nigeria Computer Society) - NCS</option>
-  <option value="ACIM">ACIM (Associate Chartered Institute of Management) - CIM</option>
-  <option value="ANIPS">ANIPS (Associate Nigeria Institute of Purchasing and Supply) - NIPS</option>
-  <option value="AMNIM">AMNIM (Associate Member, Nigeria Institute of Management) - NIM</option>
-  <option value="FNAE">FNAE (Fellow Nigerian Association of Engineers) - NSE</option>
-  <option value="FIIS">FIIS (Fellow, Institute of Industrial Security) - IIS</option>
-  <option value="FNIM">FNIM (Fellow Nigerian Institute of Management) - NIM</option>
-  <option value="FCA">FCA (Fellow Chartered Accountant) - ICAN</option>
-  <option value="FCTI">FCTI (Fellow Chartered Taxation of Nigeria) - CITN</option>
-  <option value="FCAI">FCAI (Fellow Chartered Institute of Administration) - CIA</option>
-  <option value="FNIQS">FNIQS (Fellow Nigerian Institute of Quantity Surveyors) - NIQS</option>
-  <option value="FNIQS">FNIVS (Fellow Nigerian Institution of Estate Surveyors and Valuers) - NIESV</option>
-  <option value="FCILT">FCILT (Fellow Chartered Institute of Logistics and Transport) - CILT</option>
-  <option value="SE">Software Engineer(BE or FE)</option>
-  <option value="DE">Data Engineer</option>
-  <option value="DA">Data Analyst</option>
-  <option value="OTP">Other IT Professions</option>
-  <option value="OPQ">Other Professional Qualifications</option>
+<option value="">Select Professional Qualification</option>
+<option value="NA">Not Applicable</option>
+<option value="ACA">ACA (Associate Chartered Accountant) - ICAN</option>
+<option value="ACPA">ACPA (Associate Chartered Public Accountant) - ICPAN</option>
+<option value="ACIB">ACIB (Associate Chartered Institute of Bankers) - CIBN</option>
+<option value="ACIPM">ACIPM (Associate Chartered Institute of Personnel Management) - CIPM</option>
+<option value="ANIM">ANIM (Associate Nigerian Institute of Management) - NIM</option>
+<option value="ACTI">ACTI (Associate Chartered Taxation of Nigeria) - CITN</option>
+<option value="ANIVS">ANIVS (Associate Nigerian Institution of Estate Surveyors and Valuers) - NIESV</option>
+<option value="R.Eng.">Registered Engineer (R.Eng.) - COREN</option>
+<option value="BL">BL (Barrister-at-Law) - NBA</option>
+<option value="ANIMN">ANIMN (Associate Nigerian Institute of Marketing) - NIMN</option>
+<option value="ANIPR">ANIPR (Associate Nigerian Institute of Public Relations) - NIPR</option>
+<option value="AIOB">AIOB (Associate Nigerian Institute of Building) - NIOB</option>
+<option value="AIA">AIA (Associate Nigeria Institute of Architects) - NIA</option>
+<option value="AIQS">AIQS (Associate Nigerian Institute of Quantity Surveyors) - NIQS</option>
+<option value="ANITP">ANITP (Associate Nigerian Institute of Town Planners) - NITP</option>
+<option value="ANCI">ANCI (Associate Nigeria Computer Society) - NCS</option>
+<option value="ACIM">ACIM (Associate Chartered Institute of Management) - CIM</option>
+<option value="ANIPS">ANIPS (Associate Nigeria Institute of Purchasing and Supply) - NIPS</option>
+<option value="AMNIM">AMNIM (Associate Member, Nigeria Institute of Management) - NIM</option>
+<option value="FNAE">FNAE (Fellow Nigerian Association of Engineers) - NSE</option>
+<option value="FIIS">FIIS (Fellow, Institute of Industrial Security) - IIS</option>
+<option value="FNIM">FNIM (Fellow Nigerian Institute of Management) - NIM</option>
+<option value="FCA">FCA (Fellow Chartered Accountant) - ICAN</option>
+<option value="FCTI">FCTI (Fellow Chartered Taxation of Nigeria) - CITN</option>
+<option value="FCAI">FCAI (Fellow Chartered Institute of Administration) - CIA</option>
+<option value="FNIQS">FNIQS (Fellow Nigerian Institute of Quantity Surveyors) - NIQS</option>
+<option value="FNIQS">FNIVS (Fellow Nigerian Institution of Estate Surveyors and Valuers) - NIESV</option>
+<option value="FCILT">FCILT (Fellow Chartered Institute of Logistics and Transport) - CILT</option>
+<option value="SE">Software Engineer(BE or FE)</option>
+<option value="DE">Data Engineer</option>
+<option value="DA">Data Analyst</option>
+<option value="OTP">Other IT Professions</option>
+<option value="OPQ">Other Professional Qualifications</option>
 
 </select>
 
@@ -337,9 +339,9 @@ Female
 
 <div class="col-md-4">
 <div class="form-group">
-  <label for="stateSelect4">LGA of Origin</label>
-  <select  class="form-control"  name="localGovtOrigin"  required="" id="lgaSelect4" style="width: 220px;">
-  <option value="">Select LGA of Origin</option>
+<label for="stateSelect4">LGA of Origin</label>
+<select  class="form-control"  name="localGovtOrigin"  required="" id="lgaSelect4" style="width: 220px;">
+<option value="">Select LGA of Origin</option>
 </select>  
 
 
@@ -361,8 +363,8 @@ Female
 <!--spouse details-->
 <div class="row">
 
-  <hr class="hr-section">
-  <div class="section-label">Spouse Details</div>
+<hr class="hr-section">
+<div class="section-label">Spouse Details</div>
 
 <div class="col-md-4">
 <div class="form-group">
@@ -374,7 +376,7 @@ Female
 
 <div class="col-md-4">
 <div class="form-group">
-  <label for="stateSelect4">Spouse Phone Number</label>
+<label for="stateSelect4">Spouse Phone Number</label>
 <input type="tel" class="form-control"  placeholder="Spouse Phone Number" name="spousePhoneNumber" required="" id="spousePhoneNumber" style="width: 220px;">
 
 
@@ -409,7 +411,7 @@ Female
 
 <div class="col-md-4">
 <div class="form-group">
-  <label for="stateSelect4"> Phone Number</label>
+<label for="stateSelect4"> Phone Number</label>
 <input type="tel" class="form-control"  placeholder="Next Of Kin Phone Number" phone="nextOfKinPhoneNumber" required="" id="nextOfKinPhoneNumber" style="width: 220px;">
 
 
@@ -421,13 +423,13 @@ Female
 <div class="form-group">
 <label for="highest">Relationship</label>
 <select class="form-control"  name="nextOfKinRelationship" required="" id="nextOfKinRelationship"  style="width: 220px;">
-  <option value="">Select Relationship Status</option>
-  <option value="Spouse">Spouse</option>
-  <option value="Father">Father</option>
-  <option value="Mother">Mother</option>
-  <option value="Sibling">Sibling</option>
-  <option value="Child">Child</option>
-  <option value="Other">Other</option>
+<option value="">Select Relationship Status</option>
+<option value="Spouse">Spouse</option>
+<option value="Father">Father</option>
+<option value="Mother">Mother</option>
+<option value="Sibling">Sibling</option>
+<option value="Child">Child</option>
+<option value="Other">Other</option>
 </select></div>
 </div>
 
@@ -442,8 +444,8 @@ Female
 
 
 
- <hr class="hr-section">
-  <div class="section-label">Residential Address</div>
+<hr class="hr-section">
+<div class="section-label">Residential Address</div>
 <div class="col-md-12">
 <div class="form-group">
 <label>Residential Address </label>
@@ -576,12 +578,571 @@ min characters
 </div>
 
 </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-      </div>
-    </div>
-  </div>
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
 </div>
+</div>
+</div>
+</div>
+
+
+<!--modal page for adding and editing spiritual Data-->
+
+<div class="modal fade" id="spModal" tabindex="-1" aria-labelledby="spModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="spModalLabel">Add Spirital Data</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<form id="spiritualForm">
+<div class="col-md-12 step2 inputField " style="display:none; background-color:rgb(237, 249, 227);">
+
+
+<div class="row">
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="boa">Year: Born Again</label>
+<select class="worker-select form-control"  required="" id="yearBornAgain"  name="yearBornAgain"  style="width: 180px;">
+  <!-- Placeholder option -->
+  <option value="">Select</option>
+</select>
+</div>
+</div>
+<!--  col-md-6   -->
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="bow">Year: Water Baptised</label>
+<select class="worker-select form-control"  required="" id="waterBaptized"  name="waterBaptized"  style="width: 180px;">
+  <!-- Placeholder option -->
+  <option value="">Select</option>
+</select></div>
+</div>
+
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="hgb">Holyghost Baptism</label>
+<select class="worker-select form-control"  required="" id="holyghostBaptism"  name="holyghostBaptism"  style="width: 180px;">
+  <!-- Placeholder option -->
+  <option value="">Select</option>
+</select></div>
+</div>
+
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="hgb">Year: Joined SOTSM</label>
+<select class="worker-select form-control"  required="" id="joinedSotsm"  name="joinedSotsm"  style="width: 180px;">
+  <!-- Placeholder option -->
+  <option value="">Select</option>
+</select>
+</div>
+</div>
+<!--  col-md-6   -->
+</div>
+
+
+<div class="row">
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="boa">Year: Became Worker</label>
+<select class="worker-select form-control"  required="" id="becameWorker"  name="becameWorker"  style="width: 180px;">
+  <!-- Placeholder option -->
+  <option value="">Select</option>
+</select>
+</div>
+</div>
+<!--  col-md-6   -->
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="bow">Year: Became Minister</label>
+<select class="worker-select form-control"  required="" id="becameMinister"  name="becameMinister"  style="width: 180px;">
+  <!-- Placeholder option -->
+  <option value="">Select</option>
+</select></div>
+</div>
+
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="hgb">Year: Deacon/Dns</label>
+<select class="worker-select form-control"  required="" id="ordainedDcns"  name="ordainedDcns"  style="width: 180px;">
+  <!-- Placeholder option -->
+  <option value="">Select</option>
+</select></div>
+</div>
+
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="hgb">Year: Ordained Pastor</label>
+<select class="worker-select form-control"  required="" id="becamePastor"  name="becamePastor"  style="width: 180px;">
+<!-- Placeholder option -->
+<option value="">Select</option>
+</select>
+</div>
+</div>
+<!--  col-md-6   -->
+</div>
+
+
+<div class="row">
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="boa">Year: Senior Pastor</label>
+<select class="worker-select form-control"  required="" id="becameSnrPastor"  name="becameSnrPastor"  style="width: 180px;">
+  <!-- Placeholder option -->
+  <option value="">Select</option>
+</select>
+</div>
+</div>
+<!--  col-md-6   -->
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="bow">Year: Ordained Elder</label>
+<select class="worker-select form-control"  required="" id="ordainedElder"  name="ordainedElder"  style="width: 180px;">
+  <!-- Placeholder option -->
+  <option value="">Select</option>
+</select></div>
+</div>
+
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="hgb">Year: Bishop</label>
+<select class="worker-select form-control"  required="" id="ordainedBishop"  name="ordainedBishop"  style="width: 180px;">
+  <!-- Placeholder option -->
+  <option value="">Select</option>
+</select></div>
+</div>
+
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="hgb">Last Ordination Date</label>
+<input type="date" class="form-control"   name="lastOrdinationDate" placeholder="LastordinationDate" required="" id="lastOrdinationDate">
+
+</div>
+</div>
+<!--  col-md-6   -->
+</div>
+
+
+<div class="row">
+<hr class="hr-section">
+<div class="section-label">Ministry Schools</div>
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="ibcoms">Year: IBCOMS</label>
+<select class="worker-select form-control"  required="" id="IBSCOMS"  name="IBSCOMS"  style="width: 180px;">
+  <!-- Placeholder option -->
+  <option value="">Select</option>
+  <option value="">Not Applicable</option>
+</select>
+</div>
+</div>
+
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="woocome">Year: WOOCOME</label>
+<select class="worker-select form-control"  required="" id="WOOCOME"  name="WOOCOME"  style="width: 180px;">
+  <!-- Placeholder option -->
+  <option value="">Select</option>
+  <option value="">Not Applicable</option>
+
+</select>
+</div>
+</div>
+<!--  col-md-6   -->
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="join-sotsm">Year: ILS</label>
+<select class="worker-select form-control"  required="" id="ILS"  name="ILS"  style="width: 180px;">
+  <!-- Placeholder option -->
+  <option value="">Select</option>
+    <option value="">Not Applicable</option>
+
+</select></div>
+</div>
+<!--  col-md-6   -->
+
+<div class="col-md-6 col-lg-3 mb-3">
+<div class="form-group">
+<label for="join-sotsm">Year: NGBTI</label>
+<select class="worker-select form-control"  required="" id="NGBTI"  name="NGBTI"  style="width: 180px;">
+  <!-- Placeholder option -->
+  <option value="">Select</option>
+  <option value="">Not Applicable</option>
+
+</select></div>
+</div>
+
+</div>
+<!--  row   -->
+
+<div class="row" style="background-color:rgb(227, 247, 209); border-radius:15px; margin-right:5px;">
+
+<div class="row">
+<h2 class="mt-3">Career/Ministry</h2>
+<div class="col-md-6">
+<div class="form-check">
+<input class="form-check-input" type="checkbox" value="pastorStatus" name="pastorStatus"  id="pastorStatus">
+<label class="form-check-label" for="pastor">
+Full/PT Pastor
+</label>
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-check">
+<input class="form-check-input" type="checkbox" value="professionalStatus" name="professional"  id="professionalStatus" >
+<label class="form-check-label" for="professional">
+Career officer
+</label>
+</div>
+</div>
+<!-- id -professional - professional-choice, pastor , pastor-choice-->
+
+
+</div>
+
+<div class="row" required="" id="pastor-choice" style="display: true;">
+<div class="row">
+<!--  col-md-6   -->
+<div class="col-md-4 mb-2">
+<div class="form-group">
+<label for="pc">Status</label>
+<select name="statusOfEmployment" required="" id="statusOfEmployment" class="form-control"  style="width:180px;">
+  <option value="">select status</option>
+  <option value="part-time">Part time</option>
+  <option value="full-time"> Full-time</option>
+</select>
+</div>
+</div>
+
+<div class="col-md-6 mb-2">
+    <div class="form-group">
+        <label for="nameOfDivision">Name of Division/Region</label>
+        <select class="form-control"  name="nameOfDivision" required="" id="nameOfDivision" style="width:360px;">
+            <!-- Options will be dynamically added here -->
+        </select>
+    </div>
+</div>
+
+
+<div class="col-md-6">
+    <div class="form-group">
+        <label for="nameOfDiocese">Name of Diocese</label>
+        <select class="form-control"  name="nameOfDiocese" required="" id="nameOfDiocese" style="width:340px;">
+            <!-- Options will be dynamically added here -->
+        </select>
+    </div>
+</div>
+
+<div class="col-md-6">
+    <div class="form-group">
+        <label for="nameOfZone">Name of Zone</label>
+        <select class="form-control"  name="nameOfZone" required="" id="nameOfZone" style="width:340px;">
+            <!-- Options will be dynamically added here -->
+        </select>
+    </div>
+</div>
+
+
+<!--  col-md-6   -->
+</div>
+
+<div class="row">
+<!--- Below forms is for FULLTIME/PART-TIME PASTORS-->
+
+<!--  col-md-6   -->
+<div class="col-md-4">
+    <div class="form-group">
+        <label for="placeOfAssignment">Name of Parish</label>
+          <select class="form-control"  name="placeOfAssignment" required="" id="placeOfAssignment" style="width:230px;">
+            <!-- Options will be dynamically added here -->
+        </select>   
+      </div>
+</div>
+
+<div class="col-md-4">
+<div class="form-group">
+<label for="dob">State</label>
+<select required="" id="stateSelect2" onchange="populateLGAs('lgaSelect2')" name="stateOfAssignment"  style="width:230px;">
+<option value="">Select Church State </option>
+</select>
+</div>
+</div>
+<div class="col-md-4">
+<div class="form-group">
+<label for="dob">Name  of LGA</label>
+<select  class="form-control"  name="lgaOfAssignment"  required="" id="lgaSelect2"  style="width:230px;">
+  <option value="">Select Church LGA </option>
+</select>  </div>
+</div>
+
+<div class="col-md-6">
+<div class="form-group">
+<label></label>
+<select  class="form-control"  name="pastorOffice"  required="" id="pastorrOffice" style="width:330px;">
+  <option value="">Current Leadership Role </option>
+  <option value="Parish Pastor">Parish Pastor</option>
+  <option value="Zonal Pastor (ZP)">Zonal Pastor (ZP)</option>
+  <option value="Regional Pastor (RP)">Regional Pastor (RP)</option>
+  <option value="Diocesan Mission Director (DMD)">Diocesan Mission Director (DMD)</option>
+  <option value="Head of Division (HOD)">Head of Division (HOD)</option>
+  <option value="Bishop">Bishop</option>
+  <option value="Presiding Bishop">Presiding Bishop</option>
+</select>  
+</div>
+</div>
+<!--  col-md-6   -->
+</div>
+
+<div class="row">
+<div class="col-md-12">
+<div class="form-group">
+<label>Church Address/Location </label>
+<textarea required="" id="placeOfAssignmentAddress" name="placeOfAssignmentAddress" placeholder="Please type Church address"></textarea>
+</div>
+<span class="maxChar">
+<span class="count">0</span>/<span class="tillcount">200</span>
+min characters
+</span>
+</div>
+
+<div class="col-md-6">
+<div class="form-group">
+<label for="churchCountry">Church Country</label>
+<select required="" id="countryChurch"  name="countryChurch"  style="width:200px;">
+<option value="">Select Country</option>
+</select>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="row" required="" id="professional-choice" style="display: none;">
+
+<div class="row">
+
+<div class="col-md-6">
+<div class="form-group">
+<label for="dob">Name of Department</label>
+<input type="text" class="form-control  date-picker" name="nameOfDepartment" required="" id="nameOfDepartment" placeholder="">
+</div>
+</div>
+<!--  col-md-6   -->
+<div class="col-md-6">
+<div class="form-group">
+<label for="dob">Year Employed </label>
+<input type="date" class="form-control  date-picker" required="" id="yrEmployed" name="yrEmployed" placeholder="">
+</div>
+</div>
+<!--  col-md-6   -->
+</div>
+
+<div class="row">
+<!--- Below forms is for FULLTIME/PART-TIME PASTORS-->
+
+<!--  col-md-6   -->
+<div class="col-md-6">
+<div class="form-group">
+<label for="dept">Designation/Job Title</label>
+<input type="text" class="form-control"  name="jobTitle" required="" id="jobTitle" placeholder="">
+</div>
+</div>
+<!--  col-md-6   -->
+
+<!--  col-md-6   -->
+<div class="col-md-4">
+<div class="form-group">
+<label for="grade">Grade Level</label>
+<select class="form-control"  name="gradeLevel" required="" id="gradeLevel"  style="width: 200px;">
+  <option value="">Select</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>
+  <option value="19">19</option>
+  <option value="20">20</option>
+</select>
+</div>
+</div>
+<div class="col-md-2">
+<div class="form-group">
+<label for="step">Step</label>
+<select class="form-control"  name="stepLevel" required="" id="stepLevel"  style="width: 120px;">
+  <option value="">Select</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>
+  <option value="19">19</option>
+  <option value="20">20</option>
+</select>
+</div>
+</div>
+<!--  col-md-6   -->
+</div>
+
+<div class="col-md-12">
+<div class="form-group">
+<label>Department Address/Location </label>
+<textarea required="" id="deptAdress" name="deptAdress" placeholder="Please type Church address"></textarea>
+</div>
+<span class="maxChar">
+<span class="count">0</span>/<span class="tillcount">200</span>
+min characters
+</span>
+</div>
+
+<div class="row">
+<!--  col-md-6   -->
+<div class="col-md-4">
+<div class="form-group">
+<select required="" id="stateSelect3" onchange="populateLGAs('lgaSelect3')" name="deptState"  style="width:200px;">
+<option value="">Select  State </option>
+</select>
+</div>
+</div>
+<!--  col-md-6   -->
+
+<div class="col-md-4">
+<div class="form-group">
+<select  class="form-control"  name="deptLGA"  required="" id="lgaSelect3" style="width:200px;">
+  <option value="">Select  LGA </option>
+</select>  
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="form-group">
+<select required="" id="countryOrg"  name="countryOrg"  style="width:200px;">
+<option value="" selected>Select Country</option>
+
+</select>
+</div>
+</div>
+
+</div>
+
+
+<!--declaration as a career officer If I also pastor a Parish -->
+<div class="row">
+
+  <hr class="hr-section">
+  <div class="section-label">Career Officer with Pastoral Responsiility</div>
+
+<!--  col-md-6   -->
+<div class="col-md-6">
+<div class="form-group">
+  <label>I am pastor in a parish </label>
+<select required="" id="ispastor_parish" name="ispastor_parish" style="width:330px;">
+<option value="" selected>Select </option>
+<option value="Yes">Yes</option>
+<option value="No">No </option>
+</select>
+</div>
+</div>
+<!--  col-md-6   -->
+<!--pastoring while serving as career officer-->
+<div class="col-md-6">
+<div class="form-group">
+<label></label>
+<select  class="form-control"  name="careerPastorOffice"  required="" id="careerPastorOffice" style="width:330px;">
+  <option value="">Current Leadership Role </option>
+  <option value="Parish Pastor">Parish Pastor</option>
+  <option value="Zonal Pastor (ZP)">Zonal Pastor (ZP)</option>
+  <option value="Regional Pastor (RP)">Regional Pastor (RP)</option>
+  <option value="Diocesan Mission Director (DMD)">Diocesan Mission Director (DMD)</option>
+  <option value="Head of Division (HOD)">Head of Division (HOD)</option>
+  <option value="Bishop">Bishop</option>
+  <option value="Presiding Bishop">Presiding Bishop</option>
+</select>  
+</div>
+</div>
+   
+
+
+
+<div class="col-md-6 mb-2">
+    <div class="form-group">
+        <label class="c-label" for="nameOfDivisionc">Name of Division/Region</label>
+        <select class="form-control"  name="nameOfDivision" required="" id="nameOfDivisionc" style="width:340px;">
+            <!-- Options will be dynamically added here -->
+        </select>
+    </div>
+</div>
+
+<div class="col-md-6">
+    <div class="form-group">
+        <label class="c-label" for="nameOfDiocesec">Name of Diocese</label>
+        <select class="form-control"  name="nameOfDiocese" required="" id="nameOfDiocesec" style="width:340px;">
+            <!-- Options will be dynamically added here -->
+        </select>
+    </div>
+</div>
+
+<div class="col-md-6">
+    <div class="form-group">
+        <label class="c-label" for="nameOfZonec">Name of Zone</label>
+        <select class="form-control"  name="nameOfZone" required="" id="nameOfZonec" style="width:340px;">
+            <!-- Options will be dynamically added here -->
+        </select>
+    </div>
+</div>
+
+<div class="col-md-6">
+<div class="form-group">
+<label  class="c-label" for="placeOfAssignmentc">Name of Parish</label>
+<select class="form-control"  name="placeOfAssignment" required="" id="placeOfAssignmentc" style="width:340px;">
+<!-- Options will be dynamically added here -->
+</select>
+</div>
+</div>
+
+  <hr class="hr-section">
+
+<div required="" id="confirmation"></div>
+</div>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<!--modal page for adding and editing employee Data-->
+
+
+
 
 
 
@@ -612,14 +1173,41 @@ min characters
 <script src="/assets/js/lga.js"></script>
 <script src="/assets/js/year.js"></script>
 <script src="/assets/js/country.js"></script>
+
 <script>
-  
+document.addEventListener('DOMContentLoaded', function() {
+
+
+  var spModal = new bootstrap.Modal(document.getElementById('spModal'));
+  const openspModal = document.querySelectorAll(".spiritual-btn");
+
+
+  openspModal.forEach(button => {
+     button.addEventListener('click', function() {
+    // Retrieve church ID from data-set attribute
+    const userId = button.dataset.set;
+    // Replace '/get-church-data' with the actual endpoint to fetch church data
+    fetch(`<%= url %>/get-spiritual-data?id=${userId}`)
+    .then(response => response.json())
+    .then(data => {
+    // Extract church, zones, dioceses, and divisions from the received data
+    document.getElementById('parishName').value= `${data.church.parishOrPlaceOfAssignment}`;
+    document.getElementById('parishCode').value = `${data.church.parishCode}`
+    document.getElementById('churchId').value = `${data.church.id}`
+    // Show the modal
+    spModal.show();
+    });
+ 
+  });
+  });
+
+
+
+
   const openModalButton = document.getElementById("openModalButton");
   const userForm = document.getElementById("userForm");
-
   // Initialize Bootstrap modal
   var myModal = new bootstrap.Modal(document.getElementById('userModal'));
-
   // Open modal when button is clicked
   openModalButton.addEventListener('click', function() {
     myModal.show();
@@ -764,6 +1352,10 @@ document.querySelectorAll('.delete-btn').forEach(button => {
     // Handle error
   });
 }
+
+
+});
+
 
 
 

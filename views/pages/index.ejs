@@ -121,36 +121,40 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 <div class="row">
 
 <!-- Left Column Login Form -->
-<div class="col-md-3">
+<div class="col-md-4">
 
-  <% if (currentUser) { %>
+<% if (currentUser) { %>
+
 <div class="card">
-  <div class="card-header">
-    <h5>Welcome <%= currentUser.firstName  %> <%= currentUser.lastName %></h5>
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Important Instruction</h5>
-  <ul>
-    <li>
-        <p class="card-text">Complete Personal Information: Provide accurate personal details including name, contact info, and job title within CLC.</p>
-    </li>
-    <li>
-        <p class="card-text">Fill Data Sections Accurately: Enter required data with precision, ensuring numerical accuracy and correct spellings.</p>
-    </li>
-    <li>
-        <p class="card-text">Agree to Confidentiality: Read and accept the confidentiality agreement before proceeding.</p>
-    </li>
-    <li>
-        <p class="card-text">Submit Form: Once all sections are filled correctly, submit the form and await your identity code.</p>
-    </li>
-    <li>
-        <p class="card-text">Note Identity Code and Follow Instructions: Record the identity code provided upon submission and follow any further instructions given.</p>
-    </li>
+<div class="card-header">
+<h5>Welcome <%= currentUser.firstName  %> <%= currentUser.lastName %> </h5>
+<input type="text"  class="number" id="number" value="<%= currentUser.id %>" hidden>
+
+</div>
+<div class="card-body">
+<h5 class="card-title">Important Instruction</h5>
+<ul>
+<li>
+<p class="card-text">Complete Personal Information: Provide accurate personal details including name, contact info, and job title within CLC.</p>
+</li>
+<li>
+<p class="card-text">Fill Data Sections Accurately: Enter required data with precision, ensuring numerical accuracy and correct spellings.</p>
+</li>
+<li>
+<p class="card-text">Agree to Confidentiality: Read and accept the confidentiality agreement before proceeding.</p>
+</li>
+<li>
+<p class="card-text">Submit Form: Once all sections are filled correctly, submit the form and await your identity code.</p>
+</li>
+<li>
+<p class="card-text">Note Identity Code and Follow Instructions: Record the identity code provided upon submission and follow any further instructions given.</p>
+</li>
 </ul>
 
-    <a href="/user/logout" class="btn btn-sm btn-primary">Logout here</a>
-  </div>
+<a href="/user/logout" class="btn btn-sm btn-primary">Logout here</a>
 </div>
+</div>
+
 <% }%>
 <!-- Heading -->
 
@@ -164,10 +168,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 <h5 class="mb-2">Continue where you stopped or edit your record </h5>
 <!-- Contact Information -->
 <div class="col-md-12" style="margin-bottom:10px;">
-<div class="form-group mb-1">
+<div class="form-group">
 <input type="text" class="form-control"  placeholder="Phone Number" value="08145045108" id="loginEmail" name="phoneNumber">
 </div>
-<div class="form-group mt-2">
+<div class="form-group">
 <input type="password" class="form-control"  value="password123"  placeholder="password" id="loginPassword" name="password">
 </div>
 <!--  col-md-6   -->
@@ -179,7 +183,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 </div>
 </div>
 </form>
-
 
 <form  action="#" method="POST" id="registerForm" >
 <!-- Hotel Information -->
@@ -218,7 +221,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 
 
 <!-- Right Column -->
-<div class="col-md-9">
+<div class="col-md-8">
   <% if (errorMsg) { %>
         <div class="alert alert-danger alert-dismissible rounded-pill fade show" role="alert">
         <%= errorMsg %>
@@ -834,7 +837,7 @@ min characters
 <select class="worker-select form-control"  required="" id="IBSCOMS"  name="IBSCOMS"  style="width: 180px;">
   <!-- Placeholder option -->
   <option value="">Select</option>
-  <option value="">Not Applicable</option>
+  <option value="0">Not Applicable</option>
 </select>
 </div>
 </div>
@@ -845,7 +848,7 @@ min characters
 <select class="worker-select form-control"  required="" id="WOOCOME"  name="WOOCOME"  style="width: 180px;">
   <!-- Placeholder option -->
   <option value="">Select</option>
-  <option value="">Not Applicable</option>
+  <option value="0">Not Applicable</option>
 
 </select>
 </div>
@@ -857,7 +860,7 @@ min characters
 <select class="worker-select form-control"  required="" id="ILS"  name="ILS"  style="width: 180px;">
   <!-- Placeholder option -->
   <option value="">Select</option>
-    <option value="">Not Applicable</option>
+    <option value="0">Not Applicable</option>
 
 </select></div>
 </div>
@@ -869,7 +872,7 @@ min characters
 <select class="worker-select form-control"  required="" id="NGBTI"  name="NGBTI"  style="width: 180px;">
   <!-- Placeholder option -->
   <option value="">Select</option>
-  <option value="">Not Applicable</option>
+  <option value="0">Not Applicable</option>
 
 </select></div>
 </div>
@@ -925,7 +928,6 @@ Career officer
     </div>
 </div>
 
-
 <div class="col-md-6">
     <div class="form-group">
         <label for="nameOfDiocese">Name of Diocese</label>
@@ -974,13 +976,14 @@ Career officer
 <label for="dob">Name  of LGA</label>
 <select  class="form-control"  name="lgaOfAssignment"  required="" id="lgaSelect2"  style="width:230px;">
   <option value="">Select Church LGA </option>
-</select>  </div>
+</select>  
+</div>
 </div>
 
 <div class="col-md-6">
 <div class="form-group">
 <label></label>
-<select  class="form-control"  name="pastorOffice"  required="" id="pastorrOffice" style="width:330px;">
+<select  class="form-control"  name="pastorOffice"  required="" id="pastorOffice" style="width:330px;">
   <option value="">Current Leadership Role </option>
   <option value="Parish Pastor">Parish Pastor</option>
   <option value="Zonal Pastor (ZP)">Zonal Pastor (ZP)</option>
@@ -989,11 +992,29 @@ Career officer
   <option value="Head of Division (HOD)">Head of Division (HOD)</option>
   <option value="Bishop">Bishop</option>
   <option value="Presiding Bishop">Presiding Bishop</option>
+<option value="Assistant Parish Pastor">Assistant to the Parish Pastor</option>
+<option value="Assistant to the Zonal Pastor (AZP)">Assistant to the Zonal Pastor (AZP)</option>
+<option value="Assistant to the Regional Pastor (ARP)">Assistant to the Regional Pastor (ARP)</option>
+<option value="Assistant to the Diocesan Mission Director (ADMD)">Assistant to the Diocesan Mission Director (ADMD)</option>
+<option value="Assistant to the Head of Division (AHOD)">Assistant to the Head of Division (AHOD)</option>
+<option value="Assistant to the Bishop">Assistant to the Bishop</option>
+<option value="Assistant to the Presiding Bishop">Assistant to the Presiding Bishop</option>
+
 </select>  
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-check">
+    <label class="form-check-label" for="assistant">
+I assist at the Church Hqrts
+</label>
+<input class="form-check-input" type="checkbox"  name="assistant"  id="assistant">
 </div>
 </div>
 <!--  col-md-6   -->
 </div>
+
+
 
 <div class="row">
 <div class="col-md-12">
@@ -1162,7 +1183,7 @@ min characters
 <!--  col-md-6   -->
 <div class="col-md-6">
 <div class="form-group">
-  <label>I am pastor in a parish </label>
+  <label>I am pastor or (Assitant Pastor) in a parish </label>
 <select required="" id="ispastor_parish" name="ispastor_parish" style="width:330px;">
 <option value="" selected>Select </option>
 <option value="Yes">Yes</option>
@@ -1184,6 +1205,14 @@ min characters
   <option value="Head of Division (HOD)">Head of Division (HOD)</option>
   <option value="Bishop">Bishop</option>
   <option value="Presiding Bishop">Presiding Bishop</option>
+  <option value="Assistant Parish Pastor">Assistant to the Parish Pastor</option>
+  <option value="Assistant to the Zonal Pastor (AZP)">Assistant to the Zonal Pastor (AZP)</option>
+  <option value="Assistant to the Regional Pastor (ARP)">Assistant to the Regional Pastor (ARP)</option>
+  <option value="Assistant to the Diocesan Mission Director (ADMD)">Assistant to the Diocesan Mission Director (ADMD)</option>
+  <option value="Assistant to the Head of Division (AHOD)">Assistant to the Head of Division (AHOD)</option>
+  <option value="Assistant to the Bishop">Assistant to the Bishop</option>
+  <option value="Assistant to the Presiding Bishop">Assistant to the Presiding Bishop</option>
+
 </select>  
 </div>
 </div>
@@ -1226,6 +1255,63 @@ min characters
 </select>
 </div>
 </div>
+
+<div class="col-md-12">
+<div class="form-group">
+<label class="c-label">Church Address/Location </label>
+<textarea required="" id="churchAddressc" name="churchAddressc" placeholder="Please type Church address"></textarea>
+</div>
+<span class="maxChar c-label">
+<span class="count ">0</span>/<span class="tillcount">200</span>
+min characters
+</span>
+</div>
+
+<div class="row">
+<!--  col-md-6   -->
+<div class="col-md-4">
+<div class="form-group">
+<select required="" id="stateSelect5" onchange="populateLGAs('lgaSelect5')" name="churchStatec"  style="width:200px;">
+<option value="">Select  State </option>
+</select>
+</div>
+</div>
+<!--  col-md-6   -->
+
+<div class="col-md-4">
+<div class="form-group">
+<select  class="form-control"  name="churchLGAc"  required="" id="lgaSelect5" style="width:200px;">
+  <option value="">Select  LGA </option>
+</select>  
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="form-group">
+<select required="" id="countryChurchc"  name="countryChurchc"  style="width:200px;">
+<option value="" selected>Select Country</option>
+
+<!--
+  churchAddressc
+  stateSelect5
+  lgaSelect5
+  countryChurchc
+-->
+</select>
+</div>
+</div>
+
+</div>
+
+<div class="col-md-6">
+<div class="form-check">
+<label class="c-label form-check-label" for="assistant">
+I assist at the Church Hqrts
+</label>
+<input class="form-check-input" type="checkbox"  name="assistantc"  id="assistantc">
+</div>
+</div>
+
 
   <hr class="hr-section">
 
@@ -1324,7 +1410,7 @@ min characters
 <div class="col-md-3">
 <div class="form-group">
 <label for="total">Total</label>
-<input type="number" class="form-control  avg"  name="totalAttedance"  id="total" placeholder="" readonly>
+<input type="number" class="form-control  avg"  name="totalAttedance"  id="total" placeholder="">
 </div>
 </div>
 
@@ -1452,25 +1538,23 @@ min characters
 <script src="assets/js/country.js"></script>
 <!-- <script src="assets/js/storage.js"></script> -->
 <script src="assets/js/app.js"></script>
-
-
+<script>
+//<!--Start of Tawk.to Script-->
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/65fd77271ec1082f04da2365/1hpj1isne';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+//<!--End of Tawk.to Script-->
+</script>
 <script>
 var pastorData = {};
 // Function to load divisions on page load
-/*
-async function loadDivisions() {
-    const divisionsResponse = await fetch('/divisions');
-    const divisions = await divisionsResponse.json();
-    const divisionSelect = document.getElementById('nameOfDivision');
-    divisionSelect.innerHTML = '';
-    divisions.forEach(division => {
-        const option = document.createElement('option');
-        option.value = division.divisionCode; // Adjust according to your data structure
-        option.text = `${division.parishOrPlaceOfAssignment} Division`; // Adjust according to your data structure
-        divisionSelect.appendChild(option);
-    });
-}
-*/
+
 async function loadDivisions() {
     const divisionsResponse = await fetch('<%= url %>/divisions');
     const divisions = await divisionsResponse.json();
@@ -1495,11 +1579,17 @@ async function loadDivisions() {
 // Function to load dioceses based on selected division
 async function loadDioceses() {
     const divisionId = document.getElementById('nameOfDivision').value;
-
     const diocesesResponse = await fetch(`<%= url %>/divisions/${divisionId}/dioceses`);
     const dioceses = await diocesesResponse.json();
     const dioceseSelect = document.getElementById('nameOfDiocese');
     dioceseSelect.innerHTML = '';
+
+        // Create the first option element for 'select division'
+    const firstOption = document.createElement('option');
+    firstOption.value = ''; // Set the value to an empty string
+    firstOption.text = 'Select Diocese'; // Set the text to 'Select Division'
+    dioceseSelect.appendChild(firstOption);
+
     dioceses.forEach(diocese => {
         const option = document.createElement('option');
         option.value = diocese.dioceseCode; // Adjust according to your data structure
@@ -1515,6 +1605,13 @@ async function loadZones() {
     const zones = await zonesResponse.json();
     const zoneSelect = document.getElementById('nameOfZone');
     zoneSelect.innerHTML = '';
+
+        // Create the first option element for 'select division'
+    const firstOption = document.createElement('option');
+    firstOption.value = ''; // Set the value to an empty string
+    firstOption.text = 'Select Zones'; // Set the text to 'Select Division'
+    zoneSelect.appendChild(firstOption);
+
     zones.forEach(zone => {
         const option = document.createElement('option');
         option.value = zone.zonalCode; // Adjust according to your data structure
@@ -1529,6 +1626,13 @@ async function loadParishes() {
     const parishes = await parishResponse.json();
     const parishSelect = document.getElementById('placeOfAssignment');
     parishSelect.innerHTML = '';
+
+        // Create the first option element for 'select division'
+    const firstOption = document.createElement('option');
+    firstOption.value = ''; // Set the value to an empty string
+    firstOption.text = 'Select Parishes'; // Set the text to 'Select Division'
+    parishSelect.appendChild(firstOption);
+
     parishes.forEach(parish => {
         const option = document.createElement('option');
         option.value = parish.parishCode; // Adjust according to your data structure
@@ -1568,6 +1672,13 @@ async function loadDioceses2() {
     const dioceses = await diocesesResponse.json();
     const dioceseSelect = document.getElementById('nameOfDiocesec');
     dioceseSelect.innerHTML = '';
+
+    // Create the first option element for 'select division'
+    const firstOption = document.createElement('option');
+    firstOption.value = ''; // Set the value to an empty string
+    firstOption.text = 'Select Diocese'; // Set the text to 'Select Division'
+    dioceseSelect.appendChild(firstOption);
+
     dioceses.forEach(diocese => {
         const option = document.createElement('option');
         option.value = diocese.dioceseCode; // Adjust according to your data structure
@@ -1583,6 +1694,13 @@ async function loadZones2() {
     const zones = await zonesResponse.json();
     const zoneSelect = document.getElementById('nameOfZonec');
     zoneSelect.innerHTML = '';
+
+    // Create the first option element for 'select division'
+    const firstOption = document.createElement('option');
+    firstOption.value = ''; // Set the value to an empty string
+    firstOption.text = 'Select Zone'; // Set the text to 'Select Division'
+    zoneSelect.appendChild(firstOption);
+
     zones.forEach(zone => {
         const option = document.createElement('option');
         option.value = zone.zonalCode; // Adjust according to your data structure
@@ -1597,6 +1715,13 @@ async function loadParishes2() {
     const parishes = await parishResponse.json();
     const parishSelect = document.getElementById('placeOfAssignmentc');
     parishSelect.innerHTML = '';
+
+      // Create the first option element for 'select division'
+    const firstOption = document.createElement('option');
+    firstOption.value = ''; // Set the value to an empty string
+    firstOption.text = 'Select Zone'; // Set the text to 'Select Division'
+    parishSelect.appendChild(firstOption);
+
     parishes.forEach(parish => {
         const option = document.createElement('option');
         option.value = parish.parishCode; // Adjust according to your data structure
@@ -1605,9 +1730,8 @@ async function loadParishes2() {
     });
 }
 
-
-
-
+/*
+//personal Data
   const title = document.getElementById("title").value;
   const firstname = document.getElementById("firstname").value;
   const lastname = document.getElementById("lastname").value;
@@ -1634,7 +1758,7 @@ async function loadParishes2() {
   const lgaOfResidence = document.getElementById("lgaSelect1").value;
   const employmentCategory = document.getElementById("empCategory").value;
   const occupation = document.getElementById("occupation").value;
-  //second form
+  //Spiritual Data
   const yearBornAgain = document.getElementById("yearBornAgain").value;
   const waterBaptized = document.getElementById("waterBaptized").value;
   const holyghostBaptism = document.getElementById("holyghostBaptism").value;
@@ -1651,17 +1775,16 @@ async function loadParishes2() {
   const WOOCOME = document.getElementById("WOOCOME").value;
   const ILS = document.getElementById("ILS").value;
   const NGBTI = document.getElementById("NGBTI").value;
-  //Task 1. Only validate if element pastor is checke with value
+  
+  //Task for Fulltimer Option
   const pastor = document.getElementById("pastorStatus").checked;
   const placeOfAssignment = document.getElementById("placeOfAssignment").value;
-  const nameOfzone = document.getElementById("nameOfZone").value;
-  const nameOfDiocese = document.getElementById("nameOfDiocese").value;
-  const nameOfDivision = document.getElementById("nameOfDivision").value;
   const stateChurch = document.getElementById("stateSelect2").value;
   const lgaChurch= document.getElementById("lgaSelect2").value;
   const placeOfAssignmentAddress = document.getElementById("placeOfAssignmentAddress").value;
   const countryChurch = document.getElementById("countryChurch").value;
-  // Task2. only validate  set of elements if professional is choosen/checked with value
+
+  // Task2. for Career Officer
   const professional = document.getElementById("professionalStatus").checked;
   const jobTitle = document.getElementById("jobTitle").value;
   const yrEmployed = document.getElementById("yrEmployed").value;
@@ -1672,9 +1795,13 @@ async function loadParishes2() {
   const stateOrg = document.getElementById("stateSelect3").value;
   const lgaOrg= document.getElementById("lgaSelect3").value;
   const countryOrg = document.getElementById("countryOrg").value;
-  //Task 3 if ispastor_parish value is  No skip validation element of careerPastor
+  //Task 3 Career Officer that are pastoring
   const ispastor_parish = document.getElementById("ispastor_parish").value;
   const careerPastorOffice = document.getElementById("careerPastorOffice").value;
+  const pastorOffice = document.getElementById("pastorOffice").value;
+  const assistant = document.getElementById("assistant").checked;
+  const placeOfAssignmentc = document.getElementById("placeOfAssignment").value;
+  const assistantc = document.getElementById("assistantc").checked;
   //Task 4 rest of the form 
   const dateEstablished = document.getElementById('dateEstablished').value;
   const churchProperty = document.getElementById('churchProperty').value;
@@ -1694,425 +1821,7 @@ async function loadParishes2() {
   const noofsnrpastor = document.getElementById('noofsnrpastor').value;
   const noofelder = document.getElementById('noofelder').value;
   const noofbishops = document.getElementById('noofbishops').value;
-
-
-
-
-function validateForm() {
-  const emptyFields = [];
-  const title = document.getElementById("title").value;
-  const firstname = document.getElementById("firstname").value;
-  const lastname = document.getElementById("lastname").value;
-  const otherName = document.getElementById("otherName").value;
-  const email = document.getElementById("email").value;
-  const phone = document.getElementById("phone").value;
-  const genderMale = document.getElementById("male").checked;
-  const genderFemale = document.getElementById("female").checked;
-  const dateOfBirth = document.getElementById("dateOfBirth").value;
-  const highestQualification = document.getElementById("highestQualification").value;
-  const professionalQualification = document.getElementById("professionalQualification").value;
-  const maritalStatus = document.getElementById("maritalStatus").value;
-  const stateOfOrigin = document.getElementById("stateSelect4").value;
-  const lgaOfOrigin = document.getElementById("lgaSelect4").value;
-  const homeTown = document.getElementById("homeTown").value;
-  const spouseName = document.getElementById("spouseName").value;
-  const spousePhoneNumber = document.getElementById("spousePhoneNumber").value;
-  const spouseDateOfBirth = document.getElementById("spouseDateOfBirth").value;
-  const nextOfKinName = document.getElementById("nextOfKinName").value;
-  const nextOfKinPhoneNumber = document.getElementById("nextOfKinPhoneNumber").value;
-  const nextOfKinRelationship = document.getElementById("nextOfKinRelationship").value;
-  const residentialAddress = document.getElementById("residentialAddress").value;
-  const stateOfResidence = document.getElementById("stateSelect1").value;
-  const lgaOfResidence = document.getElementById("lgaSelect1").value;
-  const employmentCategory = document.getElementById("empCategory").value;
-  const occupation = document.getElementById("occupation").value;
-  //second form
-  const yearBornAgain = document.getElementById("yearBornAgain").value;
-  const waterBaptized = document.getElementById("waterBaptized").value;
-  const holyghostBaptism = document.getElementById("holyghostBaptism").value;
-  const joinedSotsm = document.getElementById("joinedSotsm").value;
-  const becameWorker = document.getElementById("becameWorker").value;
-  const becameMinister = document.getElementById("becameMinister").value;
-  const ordainedDcns = document.getElementById("ordainedDcns").value;
-  const becamePastor = document.getElementById("becamePastor").value;
-  const becameSnrPastor = document.getElementById("becameSnrPastor").value;
-  const ordainedElder = document.getElementById("ordainedElder").value;
-  const ordainedBishop = document.getElementById("ordainedBishop").value;
-  const lastOrdinationDate = document.getElementById("lastOrdinationDate").value;
-  const IBSCOMS = document.getElementById("IBSCOMS").value;
-  const WOOCOME = document.getElementById("WOOCOME").value;
-  const ILS = document.getElementById("ILS").value;
-  const NGBTI = document.getElementById("NGBTI").value;
-
-  //Task 1. Only validate if element pastor is checke with value
-  const pastor = document.getElementById("pastorStatus").checked;
-  const placeOfAssignment = document.getElementById("placeOfAssignment").value;
-  const nameOfzone = document.getElementById("nameOfzone").value;
-  const nameOfDiocese = document.getElementById("nameOfDiocese").value;
-  const nameOfDivision = document.getElementById("nameOfDivision").value;
-  const stateChurch = document.getElementById("stateSelect2").value;
-  const lgaChurch= document.getElementById("lgaSelect2").value;
-  const placeOfAssignmentAddress = document.getElementById("placeOfAssignmentAddress").value;
-  const countryChurch = document.getElementById("countryChurch").value;
-
-  // Task2. only validate  set of elements if professional is choosen/checked with value
-  const professional = document.getElementById("professionalStatus").checked;
-  const jobTitle = document.getElementById("jobTitle").value;
-  const yrEmployed = document.getElementById("yrEmployed").value;
-  const unitInDepartment = document.getElementById("unitInDepartment").value;
-  const gradeLevel = document.getElementById("gradeLevel").value;
-  const stepLevel = document.getElementById("stepLevel").value;
-  const deptAdress = document.getElementById("deptAdress").value;
-  const stateOrg = document.getElementById("stateSelect3").value;
-  const lgaOrg= document.getElementById("lgaSelect3").value;
-  const countryOrg = document.getElementById("countryOrg").value;
-
-  //Task 3 if ispastor_parish value is  No skip validation element of careerPastor
-  const ispastor_parish = document.getElementById("ispastor_parish").value;
-  const careerPastorOffice = document.getElementById("careerPastorOffice").value;
-  const dateEstablished = document.getElementById('dateEstablished').value;
-  const churchProperty = document.getElementById('churchProperty').value;
-  const propertyEstimatedValue = document.getElementById('propertyEstimatedValue').value;
-  const clcBuilding = document.getElementById('clcBuilding').value;
-  const leaseType = document.getElementById('leaseType').value;
-  const avgadult = document.getElementById('avgadult').value;
-  const avgyouth = document.getElementById('avgyouth').value;
-  const avgchildren = document.getElementById('avgchildren').value;
-  const total = document.getElementById('total').value;
-  const totalWorkers = document.getElementById('totalWorkers').value;
-  const workersInTraining = document.getElementById('workersInTraining').value;
-  const unordainedLeaders = document.getElementById('unordainedLeaders').value;
-  const noofMinisters = document.getElementById('noofMinisters').value;
-  const noofdcns = document.getElementById('noofdcns').value;
-  const noofpastor = document.getElementById('noofpastor').value;
-  const noofsnrpastor = document.getElementById('noofsnrpastor').value;
-  const noofelder = document.getElementById('noofelder').value;
-  const noofbishops = document.getElementById('noofbishops').value;
-
-  if (title.trim() === "") {
-    emptyFields.push("Title");
-  }
-  if (firstname.trim() === "") {
-    emptyFields.push("First Name");
-  }
-  if (lastname.trim() === "") {
-    emptyFields.push("Last Name");
-  }
-  if (otherName.trim() === "") {
-    emptyFields.push("Other Name");
-  }
-  if (email.trim() === "") {
-    emptyFields.push("Email");
-  }
-  if (phone.trim() === "") {
-    emptyFields.push("Phone");
-  }
-  if (!genderMale && !genderFemale) {
-    emptyFields.push("Gender");
-  }
-  if (dateOfBirth.trim() === "") {
-    emptyFields.push("Date of Birth");
-  }
-  if (highestQualification.trim() === "") {
-    emptyFields.push("Highest Qualification");
-  }
-  if (professionalQualification.trim() === "") {
-    emptyFields.push("Professional Qualification");
-  }
-  if (maritalStatus.trim() === "") {
-    emptyFields.push("Marital Status");
-  }
-  if (stateOfOrigin.trim() === "") {
-    emptyFields.push("State of Origin");
-  }
-  if (lgaOfOrigin.trim() === "") {
-    emptyFields.push("LGA of Origin");
-  }
-  if (homeTown.trim() === "") {
-    emptyFields.push("Home Town");
-  }
-  if (spouseName.trim() === "") {
-    emptyFields.push("Spouse Name");
-  }
-  if (spousePhoneNumber.trim() === "") {
-    emptyFields.push("Spouse Phone Number");
-  }
-  if (spouseDateOfBirth.trim() === "") {
-    emptyFields.push("Spouse Date of Birth");
-  }
-  if (nextOfKinName.trim() === "") {
-    emptyFields.push("Next of Kin Name");
-  }
-  if (nextOfKinPhoneNumber.trim() === "") {
-    emptyFields.push("Next of Kin Phone Number");
-  }
-  if (nextOfKinRelationship.trim() === "") {
-    emptyFields.push("Next of Kin Relationship");
-  }
-  if (residentialAddress.trim() === "") {
-    emptyFields.push("Residential Address");
-  }
-  if (stateOfResidence.trim() === "") {
-    emptyFields.push("State of Residence");
-  }
-  if (lgaOfResidence.trim() === "") {
-    emptyFields.push("LGA of Residence");
-  }
-  if (employmentCategory.trim() === "") {
-    emptyFields.push("Employment Category");
-  }
-  if (occupation.trim() === "") {
-    emptyFields.push("Occupation");
-  }
-// Validate each field for the second form
-  if (yearBornAgain.trim() === "") {
-    emptyFields.push("Year Born Again");
-  }
-  if (waterBaptized.trim() === "") {
-    emptyFields.push("Water Baptized");
-  }
-  if (holyghostBaptism.trim() === "") {
-    emptyFields.push("Holy Ghost Baptism");
-  }
-  if (joinedSotsm.trim() === "") {
-    emptyFields.push("Joined Sotsm");
-  }
-  if (becameWorker.trim() === "") {
-    emptyFields.push("Became Worker");
-  }
-  if (becameMinister.trim() === "") {
-    emptyFields.push("Became Minister");
-  }
-  if (ordainedDcns.trim() === "") {
-    emptyFields.push("Ordained Dcns");
-  }
-  if (becamePastor.trim() === "") {
-    emptyFields.push("Became Pastor");
-  }
-  if (becameSnrPastor.trim() === "") {
-    emptyFields.push("Became Senior Pastor");
-  }
-  if (ordainedElder.trim() === "") {
-    emptyFields.push("Ordained Elder");
-  }
-  if (ordainedBishop.trim() === "") {
-    emptyFields.push("Ordained Bishop");
-  }
-  if (lastOrdinationDate.trim() === "") {
-    emptyFields.push("Last Ordination Date");
-  }
-  if (IBSCOMS.trim() === "") {
-    emptyFields.push("IBS COMS");
-  }
-  if (WOOCOME.trim() === "") {
-    emptyFields.push("WOO COME");
-  }
-  if (ILS.trim() === "") {
-    emptyFields.push("ILS");
-  }
-  if (NGBTI.trim() === "") {
-    emptyFields.push("NGBTI");
-  }
-
-/*
-// Task 1: Only validate if element pastor is checked with value
-if (pastor) {
-  if (placeOfAssignment.trim() === "") {
-    emptyFields.push("Place of Assignment");
-  }
-  if (nameOfZone.trim() === "") {
-    emptyFields.push("Name of Zone");
-  }
-  if (nameOfDiocese.trim() === "") {
-    emptyFields.push("Name of Diocese");
-  }
-  if (nameOfDivision.trim() === "") {
-    emptyFields.push("Name of Division");
-  }
-  if (stateSelect2.trim() === "") {
-    emptyFields.push("State (for the second form)");
-  }
-  if (lgaSelect2.trim() === "") {
-    emptyFields.push("LGA (for the second form)");
-  }
-  if (placeOfAssignmentAddress.trim() === "") {
-    emptyFields.push("Place of Assignment Address");
-  }
-  if (countryChurch.trim() === "") {
-      emptyFields.push("Country Church");
-  }
-}
-
-
-// Task 2: Only validate set of elements if professional is chosen/checked with value
-if (professional) {
-if (jobTitle.trim() === "") {
-    emptyFields.push("Job Title");
-  }
-  if (yrEmployed.trim() === "") {
-    emptyFields.push("Year Employed");
-  }
-  if (unitInDepartment.trim() === "") {
-    emptyFields.push("Unit in Department");
-  }
-  if (gradeLevel.trim() === "") {
-    emptyFields.push("Grade Level");
-  }
-  if (stepLevel.trim() === "") {
-    emptyFields.push("Step Level");
-  }
-  if (deptAdress.trim() === "") {
-    emptyFields.push("Department Address");
-  }
-  if (stateSelect3.trim() === "") {
-    emptyFields.push("State (for the third form)");
-  }
-  if (lgaSelect3.trim() === "") {
-    emptyFields.push("LGA (for the third form)");
-  }
-  if (countryOrg.trim() === "") {
-    emptyFields.push("Country (for the third form)");
-  }
-  if (ispastor_parish.trim() === "") {
-    emptyFields.push("Is Pastor Parish");
-  }
-  if (careerPastorOffice.trim() === "") {
-    emptyFields.push("Career Pastor Office");
-  }
-}
-
-// Task 3: If ispastor_parish value is No, skip validation element of careerPastor
-if (ispastor_parish === "No" && careerPastorOffice.trim() === "") {
-  emptyFields.push("Career Pastor Office");
-}
 */
-
-  if (emptyFields.length > 0) {
-    // If there are empty fields, alert and return false
-    alert("The following fields are required:\n" + emptyFields.join("\n"));
-    return false;
-  } else {
-    // If no empty fields, return true
-    return true;
-  }
-}
-
-
-
-
-// Function to create the pastorData object
-function createPastorData() {
-  // Add data to pastorData object if the field is not empty
-  function addToPastorData(fieldId, fieldName) {
-    const fieldValue = document.getElementById(fieldId).value.trim();
-    if (fieldValue !== "") {
-      pastorData[fieldName] = fieldValue;
-    }
-  }
-
-  addToPastorData("title", "Title");
-  addToPastorData("firstname", "First Name");
-  addToPastorData("lastname", "Last Name");
-  addToPastorData("otherName", "Other Name");
-  addToPastorData("email", "Email");
-  addToPastorData("phone", "Phone");
-  addToPastorData("gender", "gender");
-  addToPastorData("dateOfBirth", "Date of Birth");
-  addToPastorData("highestQualification", "Highest Qualification");
-  addToPastorData("professionalQualification", "Professional Qualification");
-  addToPastorData("maritalStatus", "Marital Status");
-  addToPastorData("stateSelect4", "State of Origin");
-  addToPastorData("lgaSelect4", "LGA of Origin");
-  addToPastorData("homeTown", "Home Town");
-  addToPastorData("spouseName", "Spouse Name");
-  addToPastorData("spousePhoneNumber", "Spouse Phone Number");
-  addToPastorData("spouseDateOfBirth", "Spouse Date of Birth");
-  addToPastorData("nextOfKinName", "Next of Kin Name");
-  addToPastorData("nextOfKinPhoneNumber", "Next of Kin Phone Number");
-  addToPastorData("nextOfKinRelationship", "Next of Kin Relationship");
-  addToPastorData("residentialAddress", "Residential Address");
-  addToPastorData("stateSelect1", "State of Residence");
-  addToPastorData("lgaSelect1", "LGA of Residence");
-  addToPastorData("empCategory", "Employment Category");
-  addToPastorData("occupation", "Occupation");
-
-  // Add extracted variables to pastorData object
-  addToPastorData("yearBornAgain", "Year Born Again");
-  addToPastorData("waterBaptized", "Water Baptized");
-  addToPastorData("holyghostBaptism", "Holy Ghost Baptism");
-  addToPastorData("joinedSotsm", "Joined SOTSM");
-  addToPastorData("becameWorker", "Became Worker");
-  addToPastorData("becameMinister", "Became Minister");
-  addToPastorData("ordainedDcns", "Ordained Deacons");
-  addToPastorData("becamePastor", "Became Pastor");
-  addToPastorData("becameSnrPastor", "Became Senior Pastor");
-  addToPastorData("ordainedElder", "Ordained Elder");
-  addToPastorData("ordainedBishop", "Ordained Bishop");
-  addToPastorData("lastOrdinationDate", "Last Ordination Date");
-  addToPastorData("IBSCOMS", "Completed IBSCOMS");
-  addToPastorData("WOOCOME", "Completed WOOCOME");
-  addToPastorData("ILS", "Completed ILS");
-  addToPastorData("NGBTI", "Completed NGBTI");
-
-    // Add Task 1 fields if pastor status is checked
-  //if (document.getElementById("pastorStatus").checked) {
-    addToPastorData("placeOfAssignment", "Parish Code");
-    addToPastorData("nameOfzone", "Zone Code");
-    addToPastorData("nameOfDiocese", "Diocese Code");
-    addToPastorData("nameOfDivision", "Division Code");
-    addToPastorData("stateChurch", "State of Church");
-    addToPastorData("lgaChurch", "LGA of Church");
-    addToPastorData("placeOfAssignmentAddress", "Place of Assignment Address");
-    addToPastorData("countryChurch", "Country of Church");
-  //}
-
-  // Add Task 2 fields if professional status is checked
- // if (document.getElementById("professionalStatus").checked) {
-    addToPastorData("jobTitle", "Job Title");
-    addToPastorData("yrEmployed", "Year Employed");
-    addToPastorData("unitInDepartment", "Unit in Department");
-    addToPastorData("gradeLevel", "Grade Level");
-    addToPastorData("stepLevel", "Step Level");
-    addToPastorData("deptAdress", "Department Address");
-    addToPastorData("stateOrg", "State of Organization");
-    addToPastorData("lgaOrg", "LGA of Organization");
-    addToPastorData("countryOrg", "Country of Organization");
-  //}
-
-// Add Task 3 field if ispastor_parish value is 'No'
-  const isPastorParish = document.getElementById("ispastor_parish").value;
-  //if (isPastorParish === "No") {
-    addToPastorData("careerPastorOffice", "Career Pastor Office");
-  //}
-
-  // Add Task 4 fields
-  addToPastorData("dateEstablished", "Date Established");
-  addToPastorData("churchProperty", "Church Property");
-  const churchProperty = document.getElementById("churchProperty").value;
-
-//if (churchProperty === "Leased Property" || churchProperty === "Freehold" || churchProperty === "Rented Property") {
-  addToPastorData("propertyEstimatedValue", "Property Estimated Value");
-  addToPastorData("clcBuilding", "CLC Building");
-  addToPastorData("leaseType", "Lease Type");
-  //}
-
-  addToPastorData("avgadult", "Average Adult Attendance");
-  addToPastorData("avgyouth", "Average Youth Attendance");
-  addToPastorData("avgchildren", "Average Children Attendance");
-  addToPastorData("total", "Total Attendance");
-  addToPastorData("totalWorkers", "Total Workers");
-  addToPastorData("workersInTraining", "Workers in Training");
-  addToPastorData("unordainedLeaders", "Unordained Leaders");
-  addToPastorData("noofMinisters", "Number of Ministers");
-  addToPastorData("noofdcns", "Number of Deacons");
-  addToPastorData("noofpastor", "Number of Pastors");
-  addToPastorData("noofsnrpastor", "Number of Senior Pastors");
-  addToPastorData("noofelder", "Number of Elders");
-  addToPastorData("noofbishops", "Number of Bishops");
-
-  return pastorData;
-}
-
 
 
 // JavaScript for managing multi-step form
@@ -2180,6 +1889,8 @@ const submitBtn  = document.getElementById("submitBtn");
 // Function to handle form submission
 
 
+
+
   // Function to send form data to the backend
   function sendData(employeeData) {
     // Send AJAX request to the backend
@@ -2197,7 +1908,7 @@ const submitBtn  = document.getElementById("submitBtn");
       return response.json();
     })
     .then(data => {
-      console.log(data);
+      console.log('this is th dtata', data);
       //redirectUrl
       // Handle response from the backend move to a new page 
       window.location.href = `${data.redirectUrl}`;
@@ -2213,46 +1924,116 @@ const submitBtn  = document.getElementById("submitBtn");
   }
 
 
-  //form login Submission to /user/login
+    //form login Submission to /user/login
 submitBtn.addEventListener("click", function(event) {
     // Prevent the default form submission behavior
     event.preventDefault();
-    // Get form data
-    const form = document.getElementById("dataCapture");
-    const formData = new FormData(form);
-    // Create an object to hold form data
-    const data = {};
-
-    formData.forEach((value, key) => {
-      data[key] = value
-      console.log(formData);
-    });
-
-    //validateForm();
-    console.log(data);
-    //console.log(createPastorData());
+    const pastorData = {
+  // Personal Data
+  id:document.getElementById("number").value,
+  title: document.getElementById("title").value,
+  firstname: document.getElementById("firstname").value,
+  lastname: document.getElementById("lastname").value,
+  otherName: document.getElementById("otherName").value,
+  email: document.getElementById("email").value,
+  phone: document.getElementById("phone").value,
+  genderMale: document.getElementById("male").checked,
+  genderFemale: document.getElementById("female").checked,
+  dateOfBirth: document.getElementById("dateOfBirth").value,
+  highestQualification: document.getElementById("highestQualification").value,
+  professionalQualification: document.getElementById("professionalQualification").value,
+  maritalStatus: document.getElementById("maritalStatus").value,
+  stateOfOrigin: document.getElementById("stateSelect4").value,
+  lgaOfOrigin: document.getElementById("lgaSelect4").value,
+  homeTown: document.getElementById("homeTown").value,
+  spouseName: document.getElementById("spouseName").value,
+  spousePhoneNumber: document.getElementById("spousePhoneNumber").value,
+  spouseDateOfBirth: document.getElementById("spouseDateOfBirth").value,
+  nextOfKinName: document.getElementById("nextOfKinName").value,
+  nextOfKinPhoneNumber: document.getElementById("nextOfKinPhoneNumber").value,
+  nextOfKinRelationship: document.getElementById("nextOfKinRelationship").value,
+  residentialAddress: document.getElementById("residentialAddress").value,
+  stateOfResidence: document.getElementById("stateSelect1").value,
+  lgaOfResidence: document.getElementById("lgaSelect1").value,
+  employmentCategory: document.getElementById("empCategory").value,
+  occupation: document.getElementById("occupation").value,
+  // Spiritual Data
+  yearBornAgain: document.getElementById("yearBornAgain").value,
+  waterBaptized: document.getElementById("waterBaptized").value,
+  holyghostBaptism: document.getElementById("holyghostBaptism").value,
+  joinedSotsm: document.getElementById("joinedSotsm").value,
+  becameWorker: document.getElementById("becameWorker").value,
+  becameMinister: document.getElementById("becameMinister").value,
+  ordainedDcns: document.getElementById("ordainedDcns").value,
+  becamePastor: document.getElementById("becamePastor").value,
+  becameSnrPastor: document.getElementById("becameSnrPastor").value,
+  ordainedElder: document.getElementById("ordainedElder").value,
+  ordainedBishop: document.getElementById("ordainedBishop").value,
+  lastOrdinationDate: document.getElementById("lastOrdinationDate").value,
+  IBSCOMS: document.getElementById("IBSCOMS").value,
+  WOOCOME: document.getElementById("WOOCOME").value,
+  ILS: document.getElementById("ILS").value,
+  NGBTI: document.getElementById("NGBTI").value,
+  // Task for Fulltimer Option
+  pastor: document.getElementById("pastorStatus").checked,
+  placeOfAssignment: document.getElementById("placeOfAssignment").value,
+  stateChurch: document.getElementById("stateSelect2").value,
+  lgaChurch: document.getElementById("lgaSelect2").value,
+  placeOfAssignmentAddress: document.getElementById("placeOfAssignmentAddress").value,
+  countryChurch: document.getElementById("countryChurch").value,
+  // Task2. for Career Officer
+  professional: document.getElementById("professionalStatus").checked,
+  jobTitle: document.getElementById("jobTitle").value,
+  yrEmployed: document.getElementById("yrEmployed").value,
+  nameOfDepartment: document.getElementById("nameOfDepartment").value,
+  gradeLevel: document.getElementById("gradeLevel").value,
+  stepLevel: document.getElementById("stepLevel").value,
+  deptAdress: document.getElementById("deptAdress").value,
+  stateOrg: document.getElementById("stateSelect3").value,
+  lgaOrg: document.getElementById("lgaSelect3").value,
+  countryOrg: document.getElementById("countryOrg").value,
+  // Task 3 Career Officer that are pastoring
+  ispastor_parish: document.getElementById("ispastor_parish").value,
+  careerPastorOffice: document.getElementById("careerPastorOffice").value,
+  pastorOffice: document.getElementById("pastorOffice").value,
+  assistant: document.getElementById("assistant").checked,
+  placeOfAssignmentc: document.getElementById("placeOfAssignment").value,
+  assistantc: document.getElementById("assistantc").checked,
+  churchAdressc : document.getElementById("churchAddressc").value,
+  stateChurchc : document.getElementById("stateSelect5").value,
+  lgaChurchc: document.getElementById("lgaSelect5").value,
+  countryChurchc : document.getElementById("countryChurchc").value,
+  
+  // Task 4 rest of the form
+  dateEstablished: document.getElementById("dateEstablished").value,
+  churchProperty: document.getElementById("churchProperty").value,
+  propertyEstimatedValue: document.getElementById("propertyEstimatedValue").value,
+  clcBuilding: document.getElementById("clcBuilding").value,
+  leaseType: document.getElementById("leaseType").value,
+  avgadult: document.getElementById("avgadult").value,
+  avgyouth: document.getElementById("avgyouth").value,
+  avgchildren: document.getElementById("avgchildren").value,
+  total: document.getElementById("total").value,
+  totalWorkers: document.getElementById("totalWorkers").value,
+  workersInTraining: document.getElementById("workersInTraining").value,
+  unordainedLeaders: document.getElementById("unordainedLeaders").value,
+  noofMinisters: document.getElementById("noofMinisters").value,
+  noofdcns: document.getElementById("noofdcns").value,
+  noofpastor: document.getElementById("noofpastor").value,
+  noofsnrpastor: document.getElementById("noofsnrpastor").value,
+  noofelder: document.getElementById("noofelder").value,
+  noofbishops: document.getElementById("noofbishops").value
+};
+    console.log(pastorData);
     //Send form data to the backend
-    sendData(data);
+    sendData(pastorData);
+
   });
 
 
 
 
 
-
-
-
-//<!--Start of Tawk.to Script-->
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/65fd77271ec1082f04da2365/1hpj1isne';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-//<!--End of Tawk.to Script-->
 
 
 const countdownTime = 300; // 5 minutes * 60 seconds
@@ -2301,24 +2082,22 @@ window.onload = startCountdown;
 
 //create a uniqueCode after form Submission
   const updateTotal = () => {
-    const adultValue = parseFloat(document.getElementById("adult").value) || 0;
-    const youthValue = parseFloat(document.getElementById("youth").value) || 0;
-    const childrenValue = parseFloat(document.getElementById("children").value) || 0;
-
+    const adultValue = parseFloat(document.getElementById("avgadult").value) || 0;
+    const youthValue = parseFloat(document.getElementById("avgyouth").value) || 0;
+    const childrenValue = parseFloat(document.getElementById("avgchildren").value) || 0;
     const total = adultValue + youthValue + childrenValue;
-
     document.getElementById("total").value = total;
   };
 
   document.addEventListener("DOMContentLoaded", () => {
-    const inputs = document.querySelectorAll("#adult, #youth, #children");
-
+    const inputs = document.querySelectorAll("#avgadult, #avgyouth, #avgchildren");
     inputs.forEach(input => {
       input.onchange = updateTotal;
     });
   });
 
 
+updateTotal(); //update total
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -2330,11 +2109,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const parishSelect = document.getElementById("ispastor_parish");
     const churchProperty = document.getElementById("churchProperty");
-
     const careerDivision = document.getElementById("nameOfDivisionc")
-    const careerDiocese = document.getElementById("nameOfDiocesec")
-    const careerZone = document.getElementById("nameOfZonec")
-    const careerParish = document.getElementById("placeOfAssignmentc")
+    const careerDiocese = document.getElementById("nameOfDiocesec");
+    const careerZone = document.getElementById("nameOfZonec");
+    const careerParish = document.getElementById("placeOfAssignmentc");
+    const checkAssistant1 = document.getElementById("assistant");
+    const checkAssistant = document.getElementById("assistantc");
+    //church address career  pastor
+    const churchAdressc = document.getElementById("churchAddressc");
+    const stateChurchc  = document.getElementById("stateSelect5");
+    const lgaChurchc  =   document.getElementById("lgaSelect5");
+    const countryChurchc =  document.getElementById("countryChurchc");
 
     var loginForm = document.getElementById("loginForm");
     var registerForm = document.getElementById("registerForm");
@@ -2348,6 +2133,13 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("nameOfDiocesec").style.display="none";
     document.getElementById("nameOfZonec").style.display="none";
     document.getElementById("placeOfAssignmentc").style.display="none";
+    document.getElementById("assistantc").style.display="none";
+    //adress of career pstor
+    document.getElementById("churchAddressc").style.display="none";
+    document.getElementById("stateSelect5").style.display="none";
+    document.getElementById("lgaSelect5").style.display="none";
+    document.getElementById("countryChurchc").style.display="none";
+
     document.getElementById('leasingInfo').style.display="none";
     generateConfirmation("finalConfirmation");
     hideLabels();
@@ -2376,6 +2168,7 @@ document.addEventListener("DOMContentLoaded", () => {
         careerDiocese.style.display = "none";
         careerZone.style.display = "none";
         careerParish.style.display = "none";
+        checkAssistant.style.display="none";
     } else {
       pastorChoiceDiv.style.display = "none";
       professionalChoiceDiv.style.display = "block";
@@ -2383,29 +2176,35 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-
-/*
-switchToRegister.addEventListener("click", function(event) {
-        event.preventDefault(); // Prevent the default link behavior
-
-        // Hide loginForm and show registerForm
-        loginForm.style.display = "none";
-        registerForm.style.display = "block";
+    //function to check the final button
+   checkAssistant.addEventListener('change', function() {
+        // Check if the checkbox is checked
+        if (this.checked) {
+        // If checked, show the final button
+        showfinalBtn();
+        } else {
+        // If unchecked, hide the final button
+        shownextBtn();
+        }
+    });
+    //function to check the final button
+   checkAssistant1.addEventListener('change', function() {
+        // Check if the checkbox is checked
+        if (this.checked) {
+        // If checked, show the final button
+        showfinalBtn();
+        } else {
+        // If unchecked, hide the final button
+        shownextBtn();
+        }
     });
 
-switchToLogin.addEventListener("click", function(event) {
-        event.preventDefault(); // Prevent the default link behavior
-
-        // Hide registerForm and show loginForm
-        loginForm.style.display = "block";
-        registerForm.style.display = "none";
-    });
-  */
 
 // Add event listeners to the radio buttons
 pastorRadio.addEventListener("change", () => {
       pastorChoiceDiv.style.display = "block";
       professionalChoiceDiv.style.display = "none";
+      shownextBtn();
     });
 
 //add even listener to the professional button
@@ -2414,6 +2213,9 @@ professionalRadio.addEventListener("change", () => {
       professionalChoiceDiv.style.display = "block";
       showfinalBtn();
     });
+
+
+
 
 //add event listener to select parish
 parishSelect.addEventListener("change", (event) => {
@@ -2426,6 +2228,12 @@ parishSelect.addEventListener("change", (event) => {
       careerDiocese.style.display = "block";
       careerZone.style.display = "block";
       careerParish.style.display = "block";
+      checkAssistant.style.display="block";
+      churchAdressc.style.display="block";
+      stateChurchc.style.display="block";
+      lgaChurchc.style.display="block";
+      countryChurchc.style.display="block";
+
       shownextBtn();
 
     }else if(selectedValue === 'No'){
@@ -2434,6 +2242,11 @@ parishSelect.addEventListener("change", (event) => {
       careerDiocese.style.display = "none";
       careerZone.style.display = "none";
       careerParish.style.display = "none";
+      checkAssistant.style.display="none";
+       churchAdressc.style.display="none";
+      stateChurchc.style.display="none";
+      lgaChurchc.style.display="none";
+      countryChurchc.style.display="none";
       generateConfirmation("confirmation");
       hideLabels();
       showfinalBtn();
@@ -2441,15 +2254,15 @@ parishSelect.addEventListener("change", (event) => {
     });
 
 churchProperty.addEventListener("change", (event) => {
-    const selectedValue = event.target.value;
-        if(selectedValue === "Leased Property" || selectedValue === "Freehold" || selectedValue === "Rented Property"){
-            document.getElementById('leasingInfo').style.display="inline-block";
-        }else{
-          document.getElementById('leasingInfo').style.display="none";
+const selectedValue = event.target.value;
+if(selectedValue === "Leased Property" || selectedValue === "Freehold" || selectedValue === "Rented Property"){
+document.getElementById('leasingInfo').style.display="inline-block";
+}else{
+document.getElementById('leasingInfo').style.display="none";
 
-        }
+}
 
-    })
+})
 
 
 function showfinalBtn (){

@@ -2,6 +2,7 @@
 
 
 const lgaList = {
+  
   Abia: [
     "Aba North",
     "Aba South",

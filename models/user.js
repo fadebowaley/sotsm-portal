@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
 
       // Define one-to-one relationship with VitalStatistics using parishCode
         User.hasOne(models.CareerMinistry);
-        User.hasOne(models.SpiritualProfile);
+        User.hasOne(models.SpiritualProfile, { foreignKey: "UserId" });
         User.hasOne(models.Household, { foreignKey: "userId", optional: true });
         User.hasOne(models.Department, { foreignKey: "employeeId", optional: true });
         User.hasOne(models.Church, { foreignKey: "employeeId", optional: true });

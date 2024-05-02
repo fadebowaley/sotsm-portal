@@ -9,8 +9,6 @@ module.exports = (sequelize, DataTypes) => {
       // Define one-to-one relationship with User & HouseHold
       Household.hasOne(models.FaithTable, { foreignKey: "householdId" });
       Household.belongsTo(models.User, { foreignKey: "userId" });
-
-
     }
   }
 

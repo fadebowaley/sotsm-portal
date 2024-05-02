@@ -1,228 +1,27 @@
 const { UserData } = require("../models");
-const { CareerMinistry } = require("../models");
 const { Church } = require("../models");
-const { Department } = require("../models");
-const { MonthlyReport } = require("../models");
-const { SpiritualProfile } = require("../models");
-const { Statistics } = require("../models");
 const { User } = require("../models");
-const { VitalStatistics } = require("../models");
-const { Sequelize } = require("sequelize");
-const  { generateNextCode } = require("../middleware/utils");
-
-
-
-//code for employee code generation/
-   //const check = await generateNextCode();
-   //console.log("This is the code", check);
-
-/***
- * Utils to generate code //CLC00001 - CLC00020
- * controller to submit 
- * page to generate the receipt
- * update of the code by church
- * create CRUD for Church
- * create CRUD for User, department 
- */
-
+const {saveUserData} = require("../middleware/saveData")
+const {Sequelize } = require("sequelize");
 
 const indexController = {
   postData: async (req, res) => {
-    const data = req.body;
-    console.log(req.body);
-    /***
-    console.log(req.body);
-    const {
-      title,
-      firstname,
-      lastname,
-      gender,
-      dateOfBirth,
-      highestQualification,
-      professionalQualification,
-      maritalStatus,
-      StateOfOrigin,
-      localGovtOrigin,
-      spouseName,
-      spousePhoneNumber,
-      spouseDateOfBirth,
-      nextOfKinName,
-      nextOfKinRelationship,
-      residentialAddress,
-      residentialState,
-      empcategory,
-      occupation,
-     
- * Email
-Password
-Other Name (if applicable)
-Phone Number
-Home Town
-State of Residence
-LGA of Residence
-Employee ID (if manually entered)
-Created At (not typically entered by the user, but could be automatically generated based on current date and time)
-Updated At (same as Created At)
- * 
- */
-    /*
-      //Spiritual Profile
-      yearBornAgain,
-      waterBaptized,
-      holyghostBaptism,
-      joinedSotsm,
-      becameWorker,
-      becameMinister,
-      ordainedDcns,
-      becamePastor,
-      becameSnrPastor,
-      ordainedElder,
-      ordainedBishop,
-      lastOrdinationDate,
-      IBSCOMS,
-      WOOCOME,
-      ILS,
-      NGBTI,
-      //if career officer alone
-      statusOfEmployment,
-      nameOfDivision,
-      nameOfDiocese,
-      nameOfZone,
-      placeOfAssignment,
-      lgaOfAssignment,
-      stateOfAssignment,
-      placeOfAssignmentAddress,
-      countryChurch,
-      career,
-      //career officer
-      nameOfDepartment,
-      yrEmployed,
-      designation,
-      gradeLevel,
-      stepLevel,
-      deptAdress,
-      deptState,
-      deptLGA,
-      countryOrg,
-
-      ispastor_parish, //Yes
-      //if carrer officer  and career or only pastor  --church data and vital statistics
-      careerPastorOffice,
-      churchProperty,
-      clcBuilding,
-      leaseType,
-      avgadult,
-      avgyouth,
-      avgchildren,
-      totalAttedance,
-      totalWorkers,
-      workersInTraining,
-      unordainedLeaders,
-      noofMinisters,
-      noofdcns,
-      noofpastor,
-      noofsnrpastor,
-      noofelder,
-      noofbishops,
-    } = req.body;
-*/
-    // Step 1: Generate an employeeCode (You can implement your own logic to generate employeeCode)
-
-    // Step 2: Post data into UserData table
-    /** 
-const newUser = await UserData.create({
-firstName,
-lastName,
-email,
-emailVerificationToken,
-emailVerificationTokenExpiresAt,
-password,
-title,
-otherName,
-phoneNumber,
-gender,
-dateOfBirth,
-highestQualification,
-professional,
-maritalStatus,
-stateOfOrigin,
-lgaOfOrigin,
-homeTown,
-spouseName,
-spousePhoneNumber,
-spouseDateOfBirth,
-nextOfKinName,
-nextOfKinRelationship,
-residentialAddress,
-stateOfResidence,
-lgaOfResidence,
-employmentCategory,
-occupation,
-employeeId,
-createdAt,
-updatedAt
-    });
-*/
-
-    /*
-// Step 3: Post spiritual data into SpiritualProfile table
-    const newSpiritualProfile = await SpiritualProfile.create({
-      // Populate SpiritualProfile fields here based on data received in req.body
-      employeeId: newUser.employeeCode, // Assuming employeeId is the foreign key linking SpiritualProfile to UserData
-    });
-*/
-
-    /*
-    // Step 4: Post career data into Department table if career check is true for professional
-    if (data.career) {
-      const newDepartment = await Department.create({
-        // Populate Department fields here based on data received in req.body
-        employeeId: newUser.employeeCode, // Assuming employeeId is the foreign key linking Department to UserData
-      });
-    }
-*/
-
-    /*
-    // Step 5: Post church data into Church if the employee career check is full/time pastor
-    if (data.careerPastorOffice === "full/time pastor") {
-      const newChurch = await Church.create({
-        // Populate Church fields here based on data received in req.body
-        employeeId: newUser.employeeCode, // Assuming employeeId is the foreign key linking Church to UserData
-      });
-    }
-*/
-
-    /*
-    // Step 6: Post Vital statistics into Statistics table if career check is professional and pastor
-    if (data.career && data.careerPastorOffice) {
-      const newStatistics = await Statistics.create({
-        // Populate Statistics fields here based on data received in req.body
-        employeeId: newUser.employeeCode, // Assuming employeeId is the foreign key linking Statistics to UserData
-      });
-    }
-*/
-    //perform validation
-    //submit to table as linked with conditional statement
-    //Generate a code, if user has email, send a code to Email address
-
-    res.json({
-      status: "successfully submitted",
-      redirectUrl: "/confirmation",
-    });
     try {
+      const healthCheck = await saveUserData(req.body);
+      // Check if data was successfully saved
+      if (healthCheck > 0) {
+        res.json({
+          status: "successfully submitted",
+          redirectUrl: "/confirmation",
+        });
+      }
     } catch (err) {
       console.log(err);
       res.status(500).send("Server Error");
     }
   },
 
-  //CRUD for Tables user
 
-  //CRUD for Tables Church
-
-  //CRUD for department
-
-  //CRUD Spiritual Profile
 
   getPastors: async (req, res) => {
     try {
@@ -351,25 +150,32 @@ updatedAt
         if (user) {
           // If user record is found in the User table, return the user object
           res.json({
-          user
-        });
+            user,
+          });
         } else {
           user = userData;
-          res.json({ user});
+          res.json({ user });
         }
       } else {
         // If userData is not found, return null
         res.json(null);
-        console.log('Nulling is happening . . . .');
+        console.log("Nulling is happening . . . .");
       }
     } catch (error) {
       console.error("Error searching for user:", error);
       res.status(500).json({ error: "Failed to search for user" });
     }
   },
-
 };
 
+
+/***
+ * data as career staff
+ * data as career staff with pastoring
+ * data with fulltime pastoring
+ * 
+ * 
+ */
 
 
 

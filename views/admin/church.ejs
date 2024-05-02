@@ -115,7 +115,8 @@ updatedAt -->
       <th scope="col">Divison Code</th>
       <th scope="col">National Code</th>
       <th scope="col">Hq Status</th>
-      <th scope="col">Action</th>
+      <th scope="col">Edit</th>
+      <th scope="col"> Delete</th>
     </tr>
   </thead>
 
@@ -148,10 +149,9 @@ updatedAt -->
       <td><%= church.divisionCode %></td>
       <td><%= church.nationalCode %></td>
       <td><%= church.hqStatus %></td>
-      <td><button id="openModalButton" data-set="<%= church.id %>" class="btn-danger btn-sm openModalButton">Action/edit</button></td>
-       <td>
-  
-  </td>
+      <td><button id="openModalButton" data-set="<%= church.id %>" class="btn-success btn-sm openModalButton">Action/edit</button></td>
+        <td><button data-set="<%= church.id %>" class="btn-danger btn-sm">delete</button></td>
+
     </tr>
     <% serialNumber++; %>
   <% } %>
@@ -179,8 +179,13 @@ updatedAt -->
     <input type="hidden" id="churchId" name="churchId" value="">
 
           <div class="form-group mb-2">
-            <label for="parishName">Parish Name [code]</label>
+            <label for="parishName">Parish Name</label>
             <input type="text" class="form-control" id="parishName" name="parishName">
+          </div>
+
+          <div class="form-group mb-2">
+            <label for="parishName">Parish Code</label>
+            <input type="text" class="form-control" id="parishCode" name="parishCode">
           </div>
          
         <div class="form-group mb-2" id="zonalCodeContainer">
@@ -272,132 +277,128 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   openModalButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      // Retrieve church ID from data-set attribute
-      const churchId = button.dataset.set;
+     button.addEventListener('click', function() {
+    // Retrieve church ID from data-set attribute
+    const churchId = button.dataset.set;
+    // Fetch church data from the server based on the ID
+    // Replace '/get-church-data' with the actual endpoint to fetch church data
+    fetch(`<%= url %>/get-church-data?id=${churchId}`)
+    .then(response => response.json())
+    .then(data => {
+    // Extract church, zones, dioceses, and divisions from the received data
+    document.getElementById('parishName').value= `${data.church.parishOrPlaceOfAssignment}`;
+    document.getElementById('parishCode').value = `${data.church.parishCode}`
+    document.getElementById('churchId').value = `${data.church.id}`
 
-      // Fetch church data from the server based on the ID
-      // Replace '/get-church-data' with the actual endpoint to fetch church data
-      fetch(`<%= url %>/get-church-data?id=${churchId}`)
-        .then(response => response.json())
-        .then(data => {
-
-        // Extract church, zones, dioceses, and divisions from the received data
-          document.getElementById('parishName').value= `${data.church.parishCode} - ${data.church.parishOrPlaceOfAssignment}`;
-          document.getElementById('churchId').value = `${data.church.id}`
-
-         // Loop through zones and populate select dropdown
-          data.zones.forEach(zone => {
-          const option = document.createElement('option');
-          option.value = zone.zonalCode; // Assuming zone has an 'id' property
-          option.textContent = `${zone.zonalCode}`;
-          // Append the option to the select dropdown
-          document.getElementById('zonalCode').appendChild(option);
-          // If the current zone matches the fetched church data's zonalCode, select it
-          if (zone.zonalCode === data.church.zonalCode) {
-            option.selected = true;
-          }
-        });
-
-         // Loop through zones and populate select dropdown
-          data.dioceses.forEach(diocese => {
-          const option = document.createElement('option');
-          option.value = diocese.dioceseCode; // Assuming zone has an 'id' property
-          option.textContent = `${diocese.dioceseCode}`;
-          // Append the option to the select dropdown
-          document.getElementById('dioceseCode').appendChild(option);
-          // If the current zone matches the fetched church data's zonalCode, select it
-          if (diocese.dioceseCode === data.church.dioceseCode) {
-            option.selected = true;
-          }
-        });
-
-         // Loop through divisions and populate select dropdown
-          data.divisions.forEach(division => {
-          const option = document.createElement('option');
-          option.value = division.divisionCode; // Assuming zone has an 'id' property
-          option.textContent = `${division.divisionCode}`;
-          // Append the option to the select dropdown
-          document.getElementById('divisionCode').appendChild(option);
-          // If the current zone matches the fetched church data's zonalCode, select it
-          if (division.divisionCode === data.church.divisionCode) {
-            option.selected = true;
-          }
-        });
-
-        const select = { 'parish': 'parish', 'zone': 'zone', 'diocese': 'diocese', 'division': 'division', 'national': 'national' };
-        // Clear existing options in the select dropdown
-        document.getElementById('hqStatus').innerHTML = '';
-
-// Iterate over the keys of the select object
-Object.keys(select).forEach(key => {
-  const option = document.createElement('option');
-  option.value = key; // Use the key as the option value
-  option.textContent = select[key]; // Use the corresponding value as the option text
-  // Append the option to the select dropdown
-  document.getElementById('hqStatus').appendChild(option);
-  // If the current key matches the fetched church data's hqStatus, select it
-  if (key === data.church.hqStatus) {
-    option.selected = true;
-  }
-});
-          // Show the modal
-          myModal.show();
-        })
-        .catch(error => console.error('Error fetching church data:', error));
-    });
+    // Loop through zones and populate select dropdown
+    data.zones.forEach(zone => {
+    const option = document.createElement('option');
+    option.value = zone.zonalCode; // Assuming zone has an 'id' property
+    option.textContent = `${zone.zonalCode}`;
+    // Append the option to the select dropdown
+    document.getElementById('zonalCode').appendChild(option);
+    // If the current zone matches the fetched church data's zonalCode, select it
+    if (zone.zonalCode === data.church.zonalCode) {
+      option.selected = true;
+    }
   });
 
+    // Loop through zones and populate select dropdown
+    data.dioceses.forEach(diocese => {
+    const option = document.createElement('option');
+    option.value = diocese.dioceseCode; // Assuming zone has an 'id' property
+    option.textContent = `${diocese.dioceseCode}`;
+    // Append the option to the select dropdown
+    document.getElementById('dioceseCode').appendChild(option);
+    // If the current zone matches the fetched church data's zonalCode, select it
+    if (diocese.dioceseCode === data.church.dioceseCode) {
+      option.selected = true;
+    }
+  });
 
-//Add a new Zone or Modify a parish to a zone
-// Get references to the select element and the container divs
-const selectZonalCode = document.getElementById('zonalCode');
-const zonalCodeContainer = document.getElementById('zonalCodeContainer');
-const newZonalCodeContainer = document.getElementById('newZonalCodeContainer');
+    // Loop through divisions and populate select dropdown
+    data.divisions.forEach(division => {
+    const option = document.createElement('option');
+    option.value = division.divisionCode; // Assuming zone has an 'id' property
+    option.textContent = `${division.divisionCode}`;
+    // Append the option to the select dropdown
+    document.getElementById('divisionCode').appendChild(option);
+    // If the current zone matches the fetched church data's zonalCode, select it
+    if (division.divisionCode === data.church.divisionCode) {
+      option.selected = true;
+    }
+  });
 
-// Hide the input field by default
-newZonalCodeContainer.classList.add('d-none');
-// Add event listener to select element
-selectZonalCode.addEventListener('change', function() {
-  // Check if the selected option is to add a new value
-  if (selectZonalCode.value === 'addNew') {
+    const select = { 'parish': 'parish', 'zone': 'zone', 'diocese': 'diocese', 'division': 'division', 'national': 'national' };
+    // Clear existing options in the select dropdown
+    document.getElementById('hqStatus').innerHTML = '';
+
+    // Iterate over the keys of the select object
+    Object.keys(select).forEach(key => {
+    const option = document.createElement('option');
+    option.value = key; // Use the key as the option value
+    option.textContent = select[key]; // Use the corresponding value as the option text
+    // Append the option to the select dropdown
+    document.getElementById('hqStatus').appendChild(option);
+    // If the current key matches the fetched church data's hqStatus, select it
+    if (key === data.church.hqStatus) {
+    option.selected = true;
+    }
+    });
+    // Show the modal
+    myModal.show();
+    })
+    .catch(error => console.error('Error fetching church data:', error));
+    });
+    });
+
+
+    //Add a new Zone or Modify a parish to a zone
+    const selectZonalCode = document.getElementById('zonalCode');
+    const zonalCodeContainer = document.getElementById('zonalCodeContainer');
+    const newZonalCodeContainer = document.getElementById('newZonalCodeContainer');
+    // Hide the input field by default
+    newZonalCodeContainer.classList.add('d-none');
+    // Add event listener to select element
+    selectZonalCode.addEventListener('change', function() {
+    // Check if the selected option is to add a new value
+    if (selectZonalCode.value === 'addNew') {
     // Hide the select element
     zonalCodeContainer.classList.add('d-none');
     // Show the input field for adding new value
     newZonalCodeContainer.classList.remove('d-none');
-  } else {
+    } else {
     // If another option is selected, ensure the input field is hidden
     newZonalCodeContainer.classList.add('d-none');
     // Show the select element
     zonalCodeContainer.classList.remove('d-none');
-  }
-});
+    }
+    });
 
 
-// Add a new Diocese or Modify a parish to a diocese
-// Get references to the select element and the container divs
-const selectDioceseCode = document.getElementById('dioceseCode');
-const dioceseCodeContainer = document.getElementById('dioceseCodeContainer');
-const newDioceseCodeContainer = document.getElementById('newDioceseCodeContainer');
+    // Get references to the select element and the container divs
+    const selectDioceseCode = document.getElementById('dioceseCode');
+    const dioceseCodeContainer = document.getElementById('dioceseCodeContainer');
+    const newDioceseCodeContainer = document.getElementById('newDioceseCodeContainer');
 
-// Hide the input field by default
-newDioceseCodeContainer.classList.add('d-none');
+    // Hide the input field by default
+    newDioceseCodeContainer.classList.add('d-none');
 
-// Add event listener to select element
-selectDioceseCode.addEventListener('change', function() {
-  // Check if the selected option is to add a new value
-  if (selectDioceseCode.value === 'addNew') {
+    // Add event listener to select element
+    selectDioceseCode.addEventListener('change', function() {
+    // Check if the selected option is to add a new value
+    if (selectDioceseCode.value === 'addNew') {
     // Hide the select element
     dioceseCodeContainer.classList.add('d-none');
     // Show the input field for adding new value
     newDioceseCodeContainer.classList.remove('d-none');
-  } else {
+    } else {
     // If another option is selected, ensure the input field is hidden
     newDioceseCodeContainer.classList.add('d-none');
     // Show the select element
     dioceseCodeContainer.classList.remove('d-none');
-  }
-});
+    }
+    });
 
 
 
@@ -460,6 +461,8 @@ editForm.addEventListener('submit', function(event) {
  // Gather form data
   let formData = {
     parishName: document.getElementById('parishName').value,
+    parishCode: document.getElementById('parishCode').value,
+    nationalCode: "NT2183000001",
     hqStatus: document.getElementById('hqStatus').value
   };
 
@@ -525,6 +528,45 @@ editForm.addEventListener('submit', function(event) {
   });
 });
 
+});
+
+
+//function to delete from server 
+document.querySelectorAll('.btn-danger').forEach(button => {
+    button.addEventListener('click', function() {
+        const churchId = button.dataset.set;
+
+
+        // Ask for confirmation before proceeding
+        const isConfirmed = confirm('Are you sure you want to delete this item?');
+
+        if(isConfirmed){
+        fetch(`/deleteChurch/${churchId}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Handle success response
+            console.log('Church deleted successfully:', data);
+            alert('church deleted successfully');
+            window.location.href = `/church/parishes`;
+        })
+        .catch(error => {
+            // Handle error
+            console.error('Error deleting church:', error);
+        });
+      }else{
+        alert('Deletion is very Delicate, be careful !');
+      }
+      }); 
 });
 </script>
 

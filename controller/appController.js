@@ -1,5 +1,3 @@
-
-
 const { Statistics } = require("../models");
 const { User } = require("../models");
 const { VitalStatistics } = require("../models");

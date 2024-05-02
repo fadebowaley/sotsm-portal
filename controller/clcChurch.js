@@ -1,10 +1,15 @@
 const { Church } = require("../models");
 const { UserData } = require("../models");
 const { Sequelize } = require("sequelize");
-const {parishCode } = require("../middleware/utils");
+const { generateNextChurchCode } = require("../middleware/utils");
+// Define a function to update the parishCode column
+
+
 
 const clcChurch = {
+
   getParishes: async (req, res) => {
+
     try {
       // Extract page and limit from query parameters, default to 1 and 10 respectively
       const page = parseInt(req.query.page) || 1;
@@ -285,7 +290,7 @@ updateOrCreateChurch: async (req, res) => {
       const churchId = req.params.churchId;
 
       // Extract form data from request body
-       const { parishName, zonalCode, newZonalCode, dioceseCode, newDioceseCode, divisionCode, newDivisionCode, hqStatus } = req.body;
+       const {nationalCode, parishName, zonalCode, newZonalCode, dioceseCode, newDioceseCode, divisionCode, newDivisionCode, hqStatus } = req.body;
         console.log(req.body);
 
        if (churchId) {
@@ -297,32 +302,61 @@ updateOrCreateChurch: async (req, res) => {
         }
 
         // Update church data
-        church.parishName = parishName;
+        church.parishOrPlaceOfAssignment = parishName;
         church.zonalCode = newZonalCode || zonalCode; // If newZonalCode is provided, use it; otherwise, use the existing zonalCode
         church.dioceseCode = newDioceseCode || dioceseCode; // If newDioceseCode is provided, use it; otherwise, use the existing dioceseCode
         church.divisionCode = newDivisionCode || divisionCode; // If newDivisionCode is provided, use it; otherwise, use the existing divisionCode
         church.hqStatus = hqStatus;
+        church.nationalCode = nationalCode;
         // Save the updated church data
         await church.save();
 
         res.json({ success: true, message: 'Church updated successfully' });
       } else {
+        const generatedParishCode = await generateNextChurchCode();
         // Create operation
         const newChurch = await Church.create({
-          parishName,
-          zonalCode: newZonalCode || zonalCode,
-          dioceseCode: newDioceseCode || dioceseCode,
-          divisionCode: newDivisionCode || divisionCode
-          // Add other properties as needed
+        parishCode: generatedParishCode,
+        parishOrPlaceOfAssignment : parishName,
+        zonalCode: newZonalCode || zonalCode,
+        dioceseCode: newDioceseCode || dioceseCode,
+        divisionCode: newDivisionCode || divisionCode,
+        nationalCode: nationalCode,
+        hqStatus : hqStatus,
+        status: 'active'
         });
 
+        console.log('parish successfully created ');
         res.json({ success: true, message: 'Church created successfully', church: newChurch });
       }
     } catch (error) {
       console.error('Error:', error);
       res.status(500).json({ success: false, message: 'Internal server error' });
     }
+  },
+
+
+deleteChurch: async (req, res) => {
+    const { id } = req.params;
+
+    try {
+        const deletedChurch = await Church.destroy({
+            where: {
+                id: id
+            }
+        });
+
+        if (deletedChurch === 1) {
+            res.status(200).json({ message: 'Church deleted successfully' });
+        } else {
+            res.status(404).json({ error: 'Church not found' });
+        }
+    } catch (error) {
+        console.error('Error deleting church:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
   }
+
 };
 
 

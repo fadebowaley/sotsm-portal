@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       yearBornAgain: DataTypes.INTEGER,
       yearWaterBaptized: DataTypes.INTEGER,
-      holyGhostBaptism: DataTypes.BOOLEAN,
+      holyGhostBaptism: DataTypes.INTEGER,
       yearJoinedSOTSM: DataTypes.INTEGER,
       yearBecameWorker: DataTypes.INTEGER,
       yearBecameMinister: DataTypes.INTEGER,
@@ -25,12 +25,12 @@ module.exports = (sequelize, DataTypes) => {
       yearOrdainedElder: DataTypes.INTEGER,
       yearBishop: DataTypes.INTEGER,
       lastOrdinationDate: DataTypes.DATE,
-      ministrySchools: DataTypes.STRING,
       yearGraduatedIBCOMS: DataTypes.INTEGER,
       yearGraduatedWOOCOME: DataTypes.INTEGER,
       yearGraduatedILS: DataTypes.INTEGER,
       yearGraduatedNGBTI: DataTypes.INTEGER,
-      employeeId: DataTypes.INTEGER,
+      employeeId: DataTypes.STRING,
+      UserId:DataTypes.INTEGER
     },
     {
       sequelize,

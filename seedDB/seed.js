@@ -1,9 +1,10 @@
 const path = require("path");
 require("dotenv").config({ path: path.join(__dirname, "../.env") });
 const User = require("../models_/user");
-const bcrypt = require("bcrypt");
 const fs = require("fs/promises");
+const bcrypt = require("bcrypt");
 const saltRounds = 10;
+user.password = await bcrypt.hash(user.password, saltRounds);
 
 //create user name username: admin, email, admin@admin, password adminadmin
 const users = [

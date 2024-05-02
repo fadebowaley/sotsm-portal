@@ -34,11 +34,11 @@ module.exports = (sequelize, DataTypes) => {
       estimatedValue: { type: DataTypes.DECIMAL(10, 2), allowNull: true },
       building: { type: DataTypes.STRING, allowNull: true },
       paymentFrequency: { type: DataTypes.STRING, allowNull: true },
-      leaseRentAgreement: { type: DataTypes.STRING, allowNull: true },
-      status: DataTypes.STRING,
+      status: { type: DataTypes.STRING, allowNull: true },
       //add alias
       alias: { type: DataTypes.STRING, allowNull: true },
-
+      assistantId: { type: DataTypes.STRING, allowNull: true },
+      pastorOffice: { type: DataTypes.STRING, allowNull: true },
       //codes for parishes
       parishCode: { type: DataTypes.STRING, allowNull: true }, // Nullable field
       zonalCode: { type: DataTypes.STRING, allowNull: true }, // Nullable field

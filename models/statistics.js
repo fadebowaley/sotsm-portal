@@ -7,7 +7,6 @@ module.exports = (sequelize, DataTypes) => {
   class Statistics extends Model {
     static associate(models) {
       Statistics.belongsTo(models.Church, { foreignKey: "parishCode" });
-      
     }
   }
 
@@ -29,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
       numberOfBishops: DataTypes.INTEGER,
       parishCode: {
         allowNull: false,
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
       },
     },
     {

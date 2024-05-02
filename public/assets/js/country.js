@@ -220,4 +220,5 @@ function populateCountries(selectId, defaultCountry = "Nigeria") {
 // Call the function to populate the countries for any select element with the ID 'country' and set Nigeria as the default
 populateCountries("countryChurch", "Nigeria");
 populateCountries("countryOrg", "Nigeria");
+populateCountries("countryChurchc", "Nigeria");
 
