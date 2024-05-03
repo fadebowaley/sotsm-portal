@@ -959,7 +959,7 @@ Career officer
 <div class="col-md-4">
     <div class="form-group">
         <label for="placeOfAssignment">Name of Parish</label>
-          <select class="form-control"  name="placeOfAssignment" required="" id="placeOfAssignment" style="width:230px;">
+          <select class="form-control"  name="placeOfAssignment" required="" id="placeOfAssignment" style="width:230px;" disabled  onchange="alertSelectedValue()">
             <!-- Options will be dynamically added here -->
         </select>   
       </div>
@@ -1624,7 +1624,7 @@ async function loadParishes() {
     const parishSelect = document.getElementById('placeOfAssignment');
     parishSelect.innerHTML = '';
 
-        // Create the first option element for 'select division'
+     // Create the first option element for 'select division'
     const firstOption = document.createElement('option');
     firstOption.value = ''; // Set the value to an empty string
     firstOption.text = 'Select Parishes'; // Set the text to 'Select Division'
@@ -1636,8 +1636,16 @@ async function loadParishes() {
         option.text = parish.parishOrPlaceOfAssignment; // Adjust according to your data structure
         parishSelect.appendChild(option);
     });
+
+
+    // Enable the select element after options are loaded
+    parishSelect.removeAttribute("disabled");
 }
 
+function alertSelectedValue() {
+    const selectedValue = document.getElementById('placeOfAssignment').value;
+    alert("Selected value: " + selectedValue);
+}
 // JavaScript to load forms dynamically based on user selection
 //-----------load for  career employee-----------//
 
@@ -1727,6 +1735,9 @@ async function loadParishes2() {
     });
 }
 
+
+
+
 // JavaScript for managing multi-step form
 let currentStep = 1;
 
@@ -1772,7 +1783,6 @@ function nextStep() {
     }
 }
 
-
 //function for previous step
 function prevStep() {
  
@@ -1785,21 +1795,13 @@ document.querySelector(".finalBtn").style.display = "none";
 }
 }
 
-// Example validation function
-function validateRequiredField(fieldValue) {
-    if (fieldValue.trim() === '') {
-        return false;
-    } else {
-        return true;
-    }
-}
 
 
 
 
 // Get the submit button
-const submitBtn  = document.getElementById("submitBtn");
 // Function to handle form submission
+const submitBtn  = document.getElementById("submitBtn");
 
   // Function to send form data to the backend
   function sendData(employeeData) {
