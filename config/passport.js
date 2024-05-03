@@ -111,6 +111,9 @@ passport.use(
     },
     async (phoneNumber, password, done) => {
       try {
+        // Log the query being executed
+        console.log("Finding user with phone number:", phoneNumber);
+
         const user = await UserData.findOne({
           where: { phoneNumber: phoneNumber },
         });
@@ -126,5 +129,6 @@ passport.use(
     }
   )
 );
+
 
 module.exports = passport;
