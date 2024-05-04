@@ -14,7 +14,7 @@ const { validateUserFields } = require("./validateUser");
 const { validateProfile } = require("./validateSprofile");
 const { validateChurchData } = require("./churchValidations");
 const { validateEmploymentChurchData } = require("./churchValidation2");
-const { validateStatisticsData } = require("./validateStatistics");
+// const { validateStatisticsData } = require("./validateStatistics");
 const { validateAssistantData } = require("./validateAssistant");
 const { validateProfessionalData } = require("./validateDepartment");
 
@@ -165,11 +165,11 @@ async function saveUserData(req, res, reqBody) {
 
             console.log(healthCheck);
 
-            const statisticsErrors = await validateStatisticsData(reqBody);
-            if (statisticsErrors.length > 0) {
-              console.log("statistics error", statisticsErrors);
-              errors.push(...statisticsErrors);
-            }
+            // const statisticsErrors = await validateStatisticsData(reqBody);
+            // if (statisticsErrors.length > 0) {
+            //   console.log("statistics error", statisticsErrors);
+            //   errors.push(...statisticsErrors);
+            // }
 
             //Add Statistics table
             const statistics = await Statistics.create(
