@@ -10,24 +10,28 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
+      // Define one-to-one relationship with various models
+      User.hasOne(models.CareerMinistry);
+      User.hasOne(models.SpiritualProfile, { foreignKey: "UserId" });
+      User.hasOne(models.Household, { foreignKey: "userId", optional: true });
+      User.hasOne(models.Department, { foreignKey: "employeeId", optional: true });
+      User.hasOne(models.Church, { foreignKey: "employeeId", optional: true });
+      User.belongsTo(models.UserData, { foreignKey: "userId" });
 
-      // Define one-to-one relationship with VitalStatistics using parishCode
-        User.hasOne(models.CareerMinistry);
-        User.hasOne(models.SpiritualProfile, { foreignKey: "UserId" });
-        User.hasOne(models.Household, { foreignKey: "userId", optional: true });
-        User.hasOne(models.Department, { foreignKey: "employeeId", optional: true });
-        User.hasOne(models.Church, { foreignKey: "employeeId", optional: true });
-        User.belongsTo(models.UserData, { foreignKey: "userId" });
-
-
+      // Define many-to-many relationship with Roles
+      User.belongsToMany(models.Role, {
+        through: 'UserRoles', // This is the join table
+        foreignKey: 'userId',
+        otherKey: 'roleId'
+      });
     }
   }
   User.init({
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
     email: DataTypes.STRING,
-    emailVerificationToken:DataTypes.STRING,
-    emailVerificationTokenExpiresAt:DataTypes.DATE,
+    emailVerificationToken: DataTypes.STRING,
+    emailVerificationTokenExpiresAt: DataTypes.DATE,
     password: DataTypes.STRING,
 
     // Personal data fields
@@ -59,7 +63,9 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'User',
   });
+
+  // Ensure that the user model has been updated to allow assignment to a church
+  // This is important for the assignUserToChurch functionality in the admin controller
+
   return User;
 };
-
-

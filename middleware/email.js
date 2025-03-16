@@ -1,7 +1,7 @@
 const nodemailer = require("nodemailer");
 const path = require("path");
 const ejs = require("ejs");
-const User = require("../models/user");
+const User = require("../mongo/user");
 
 
 

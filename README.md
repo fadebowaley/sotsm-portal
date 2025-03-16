@@ -142,3 +142,59 @@ Thanks to all the contributors who have invested their time and effort into maki
 - **Model Naming**: Ensure consistency in naming conventions, e.g., `UserData` vs. `User`. If `UserData` is meant for sensitive data, consider a more indicative name.
 - **Role Definitions**: Ensure clear role definitions for each model to avoid overlap and confusion, especially where similar data points are collected across multiple models.
 
+
+NOTE:FOR CONFIGURATIONS
+ - Redis config
+** npm uninstall redis connect-redis
+** npm install redis@4.6.9 connect-redis@7.1.0
+
+const session = require("express-session");
+const RedisStore = require("connect-redis").default;
+const { createClient } = require("redis");
+
+// ✅ Use `legacyMode: true` to prevent encoding errors
+const redisClient = createClient({
+  socket: {
+    host: "127.0.0.1",
+    port: 6379,
+  },
+  legacyMode: true, // 🔥 Fixes argument type issues
+});
+
+redisClient.connect().catch(console.error);
+const store = new RedisStore({ client: redisClient });
+
+app.use(
+  session({
+    store,
+    secret: "your-secret-key",
+    resave: false,
+    saveUninitialized: false,
+    cookie: { secure: false, maxAge: 60000 },
+  })
+);
+
+
+2.
+
+let formData = new FormData(e);
+
+// Log form data for debugging
+console.log("Form Data:");
+for (let pair of formData.entries()) {
+console.log(`${pair[0]}: ${pair[1]}`);
+}
+axios
+.post(
+t.closest("form").getAttribute("action"),
+new URLSearchParams(formData),
+{
+headers: {
+"Content-Type": "application/x-www-form-urlencoded",
+},
+}
+)
+
+
+
+ //  npm install jsonwebtoken bcryptjs

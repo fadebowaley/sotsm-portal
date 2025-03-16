@@ -1,6 +1,7 @@
 //church assigned to user
 const bcrypt = require("bcrypt");
 const saltRounds = 10;
+const redisClient = require("../config/redisClient");
 
 const { UserData } = require("../models");
 
@@ -10,7 +11,7 @@ const userController = {
   getForgotPassword: (req, res) => {
     const errorMsg = req.flash("error")[0];
     const successMsg = req.flash("success")[0];
-    res.render("user/requestPassword", {
+    res.render("user/auth/forgot-password", {
       errorMsg,
       successMsg,
       pageName: "Reset Password",
@@ -34,10 +35,9 @@ const userController = {
     try {
       const successMsg = req.flash("success")[0];
       const errorMsg = req.flash("error")[0];
-      res.render("user/confirm", {
+      res.render("user/auth/verify", {
         successMsg,
         errorMsg,
-        // csrfToken: req.csrfToken(),
       });
     } catch (err) {
       console.log(err);
@@ -158,21 +158,33 @@ const userController = {
 
   //POST: post User Register just for verification email
   postUserRegister: async (req, res) => {
-    console.log('the matter reach here . . .')
+    //await sendVeri
     try {
-        await sendVerificationEmail(req.user.email);
-        req.flash(
-          "success",
-          "A verification email has been sent to your email address. Please verify your email before logging in."
-        );
-        res.redirect("/");
+      // 🧹 Invalidate cache
+      await redisClient.del("users:all");
+      console.log("user has been cleared by redis");
+      res.json({
+        success: true,
+        message: "success: successfully registered",
+        redirect: "/user/login",
+      });
     } catch (err) {
       console.log(err);
       req.flash("error", err.message);
-      return res.redirect("/");
+      return res.redirect("/user/login");
     }
   },
 
+  getUserRegister: async (req, res) => {
+    try {
+      res.render("user/auth/register", {
+        pageName: "Sign Up nows",
+      });
+    } catch (error) {
+      console.error("Error rendering registration page:", error);
+      res.status(500).send("Server Error");
+    }
+  },
 
   //GET: router for verifying Token
   getVerifiedToken: async (req, res, next) => {
@@ -217,13 +229,15 @@ const userController = {
 
   // GET: display the signin form with csrf token
   getUserLogin: async (req, res) => {
-    var errorMsg = req.flash("error")[0];
-    var successMsg = req.flash("success")[0];
-    res.render("user/login", {
-      errorMsg,
-      successMsg,
-      pageName: "Sign In",
-    });
+    try {
+      res.render("user/auth/login", {
+        pageName: "Sign In",
+      });
+    } catch (error) {
+      console.error("Error rendering login page:", error);
+      req.flash("error", "An error occurred while loading the login page.");
+      res.redirect("/");
+    }
   },
 
   //POST: Post User Login
@@ -232,7 +246,7 @@ const userController = {
       res.json({
         success: true,
         message: "success: login successfully",
-        redirectUrl: "/",})
+      });
     } catch (err) {
       console.log(err);
       req.flash("error", "this is error: " + err.message);
@@ -245,11 +259,38 @@ const userController = {
   getUserLogout: (req, res) => {
     req.logout(req.user, (err) => {
       if (err) return next(err);
-      req.session.cart = null;
-      res.redirect("/");
+      res.redirect("/user/login");
     });
   },
 
+  // GET: display the welcome page
+  getWelcome: async (req, res) => {
+    try {
+      res.render("user/auth/welcome", {
+        pageName: "Welcome",
+      });
+    } catch (error) {
+      console.error("Error rendering welcome page:", error);
+      req.flash("error", "An error occurred while loading the welcome page.");
+      res.redirect("/");
+    }
+  },
+
+  // GET: display the verification page
+  getUserVerify: async (req, res) => {
+    try {
+      res.render("user/auth/verify", {
+        pageName: "Verify Your Account",
+      });
+    } catch (error) {
+      console.error("Error rendering verification page:", error);
+      req.flash(
+        "error",
+        "An error occurred while loading the verification page."
+      );
+      res.redirect("/");
+    }
+  },
 
 
 };

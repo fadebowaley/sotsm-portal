@@ -13,7 +13,6 @@ const { validateUserFields } = require("./validateUser");
 
 const { validateProfile } = require("./validateSprofile");
 const { validateChurchData } = require("./churchValidations");
-const { validateEmploymentChurchData } = require("./churchValidation2");
 // const { validateStatisticsData } = require("./validateStatistics");
 const { validateAssistantData } = require("./validateAssistant");
 const { validateProfessionalData } = require("./validateDepartment");

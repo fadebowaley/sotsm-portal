@@ -1,14 +1,13 @@
 const express = require("express");
-const middleware = require("../middleware/confirm");
+const middleware = require("../middleware/auth");
 const indexController = require("../controller/indexController");
 const router = express.Router();
-const userService = require("../controller/clcUser")
-const clcService = require("../controller/clcChurch")
+const userService = require("../controller/clcUser");
+const clcService = require("../controller/clcChurch");
 const houseHoldController = require("../controller/houseHold");
 
-
-
-router.get("/", indexController.getHomePage);
+router.get("/", middleware.isLoggedIn, indexController.getHomePage);
+router.get("/event", indexController.getCalendar);
 router.get("/pastors", indexController.getPastors);
 router.get("/confirmation", indexController.getConfirmation);
 router.get("/confirmation/:userId", indexController.getCon);
@@ -24,7 +23,6 @@ router.get("/searchUser", indexController.searchUser);
 // Route Definitions for User
 router.get('/users', userService.getUsers);
 router.get('/auth/users', userService.getAuthUsers);
-
 //Routes to create Authenticated User and Users
 router.post("/createAuthUser", userService.postCreateAuthUser);
 router.post("/createUser", userService.postCreateUser);
@@ -34,7 +32,6 @@ router.put("/updateUser/:userId", userService.postCreateUser);
 
 router.delete("/deleteUser/:userId", userService.deleteUser);
 router.delete("/deleteAuthUser/:userId", userService.deleteAuthUser);
-
 
 
 router.get("/church/parishes", clcService.getParishes);

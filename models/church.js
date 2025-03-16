@@ -8,13 +8,14 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // Define one-to-many relationship with MonthlyReport, vitalStatistics,Statistics
+      // Define one-to-many relationship with MonthlyReport, VitalStatistics, and Statistics
       Church.hasMany(models.MonthlyReport, { foreignKey: "parishCode" });
       Church.hasMany(models.VitalStatistics, { foreignKey: "parishCode" });
       Church.hasMany(models.Statistics, { foreignKey: "parishCode" });
-      //define user{Pastor} relationship with church 1-1
-      Church.belongsTo(models.User, { foreignKey: "employeeId", optional: true });
-
+      // Define user (Pastor) relationship with church (1-1)
+      Church.belongsTo(models.User, { foreignKey: "employeeId", allowNull: true });
+      // Define relationship with ChurchLevel
+      Church.belongsTo(models.ChurchLevel, { foreignKey: "levelId", allowNull: true });
     }
   }
   Church.init(
@@ -28,18 +29,18 @@ module.exports = (sequelize, DataTypes) => {
       churchAddress: DataTypes.STRING,
       churchCountry: DataTypes.STRING,
 
-      //additional info
+      // Additional info
       dateOfEstablishment: { type: DataTypes.DATE, allowNull: true },
       propertyStatus: { type: DataTypes.STRING, allowNull: true },
       estimatedValue: { type: DataTypes.DECIMAL(10, 2), allowNull: true },
       building: { type: DataTypes.STRING, allowNull: true },
       paymentFrequency: { type: DataTypes.STRING, allowNull: true },
       status: { type: DataTypes.STRING, allowNull: true },
-      //add alias
+      // Add alias
       alias: { type: DataTypes.STRING, allowNull: true },
       assistantId: { type: DataTypes.STRING, allowNull: true },
       pastorOffice: { type: DataTypes.STRING, allowNull: true },
-      //codes for parishes
+      // Codes for parishes
       parishCode: { type: DataTypes.STRING, allowNull: true }, // Nullable field
       zonalCode: { type: DataTypes.STRING, allowNull: true }, // Nullable field
       dioceseCode: { type: DataTypes.STRING, allowNull: true }, // Nullable field

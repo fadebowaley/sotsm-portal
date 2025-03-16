@@ -47,13 +47,19 @@ const indexController = {
   },
 
   getHomePage: async (req, res) => {
-    const successMsg = req.flash("success")[0];
-    const errorMsg = req.flash("error")[0];
-    const currentUser = req.user;
     try {
       res.render("pages/index", {
-        errorMsg,
-        successMsg,
+      });
+    } catch (err) {
+      console.log(err);
+      res.status(500).send("Server Error");
+    }
+  },
+
+  getCalendar: async (req, res) => {
+    try {
+      const currentUser = req.user;
+      res.render("pages/calender", {
         currentUser,
       });
     } catch (err) {
