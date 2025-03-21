@@ -1,0 +1,1981 @@
+
+    <!DOCTYPE html>
+    <html lang="en"  class=""
+    data-bs-theme-mode="light" >
+    <head>
+    <title>Halo CRM - Church Management System</title>
+    <link rel="shortcut icon" href="/app/assets/media/logo/favicon.ico" />
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- CSRF Token -->
+
+    <link rel="canonical" href="#" />
+    <meta name="keywords" content="church management, CRM, church growth, member management, ministry database, church analytics, congregation insights, pastoral care, church administration" />
+    <meta name="description" 
+    content="Halo CRM - A comprehensive church management system for capturing member data, tracking growth metrics, and deriving actionable ministry insights. Streamline your church administration and enhance pastoral care." />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description"
+    content="Halo CRM - A comprehensive church management system for capturing member data, tracking growth metrics, and deriving actionable ministry insights." />
+    <meta name="twitter:title" content="Halo CRM - Church Management System" />
+    <meta name="twitter:url" content="#" />
+    <meta name="twitter:site" content="@halocrm" />
+    <meta name="twitter:image" content="/app/assets/images/icon.png" />
+    <meta property="og:locale" content="en" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Halo CRM - Church Management System" />
+    <meta property="og:description"
+    content="Halo CRM - A comprehensive church management system for capturing member data, tracking growth metrics, and deriving actionable ministry insights." />
+    <meta property="og:url" content="#" />
+    <meta property="og:site_name" content="Halo CRM" />
+    <meta property="og:image" content="/app/assets/images/icon.png" />
+
+    <link rel="shortcut icon" href="/app/assets/media/logo/custom-3.svg" />
+
+    <!--begin::Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700">
+    <!--end::Fonts-->
+
+    <!--begin::Global Stylesheets Bundle(used by all pages)-->
+    <link rel="stylesheet" href="/app/assets/plugins/global/plugins.bundle.css">
+    <link rel="stylesheet" href="/app/assets/css/style.bundle.css">
+    <!--end::Global Stylesheets Bundle-->
+
+
+    <!--begin::Custom Stylesheets(optional)-->
+    <!--end::Custom Stylesheets-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"/>
+    <script src="https://cdn.amplitude.com/libs/analytics-browser-2.11.1-min.js.gz"></script>
+    <script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.8.0-min.js.gz"></script>
+    <script type="text/javascript" src="https://cdn.amplitude.com/script/999992f685fb1282fdee89700deda568.experiment.js"></script>
+    </head>
+    <body id="kt_app_body" class="app-default app-default" >
+    <!--begin::Theme mode setup on page load-->
+    <script>
+    var defaultThemeMode = "light";
+    var themeMode;
+    if ( document.documentElement ) {
+    if ( document.documentElement.hasAttribute("data-bs-theme-mode")) {
+    themeMode = document.documentElement.getAttribute("data-bs-theme-mode");
+    } else {
+    if ( localStorage.getItem("data-bs-theme") !== null ) {
+    themeMode = localStorage.getItem("data-bs-theme");
+    } else {
+    themeMode = defaultThemeMode;
+    }
+    }
+
+    if (themeMode === "system") {
+    themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+
+    document.documentElement.setAttribute("data-bs-theme", themeMode);
+    }            
+    </script>
+    <!--end::Theme mode setup on page load-->
+    <div class="d-flex flex-column flex-root app-root" id="kt_app_root">
+    <div class="app-page flex-column flex-column-fluid" id="kt_app_pages">
+    <header
+    id="kt_app_header"
+    class="app-header flex-column"
+    >
+
+    <div class="" style="background: linear-gradient(90deg, #0652E4 0.01%, #6A1DE8 100%);">
+    <div class="app-container container-xxl">
+    <div class="d-flex flex-stack h-45px">
+    <div class="fs-base text-white me-2">
+    <span class="fw-bolder me-2">Introducing Halo Terminal:</span>
+    <span class="fw-semibold">Open-source data poinT CRM for Business growth and Reporting </span>
+    </div>
+
+    <a href="#"
+    class="btn btn-flex fs-7 fw-bold btn-sm text-white text-nowrap flex-shrink-0 rounded-1 h-30px lh-0"
+    style="padding: 7px 9px; border: 1px solid rgba(255, 255, 255, 0.20);background: linear-gradient(90deg, #1BADFF 0%, #1FBB41 100%);">
+    Browse Halo Terminal
+    </a>
+    </div>
+    </div>
+    </div>
+
+
+
+    <div class="app-container container-xxl d-flex justify-content-between align-items-stretch flex-grow-1">
+    <div class="d-flex align-items-center flex-grow-1">
+    <button class="btn btn-icon btn-sm btn-color-gray-600 btn-active-color-primary d-flex d-lg-none me-2 ms-n2" id="kt_app_header_menu_mobile_toggle">
+    <i class="ki-duotone ki-abstract-14 fs-2"><span class="path1"></span><span class="path2"></span></i>
+    </button>
+    <a href="#" class="app-header-logo">
+    <img alt="keenthemes logo" src="/app/assets/media/logos/default.svg" class="h-25px h-md-30px">
+    </a>
+
+
+    </div>
+
+    <div class="d-flex align-items-stretch" id="kt_app_header_menu_wrapper">
+    <div
+    class="app-header-menu app-header-mobile-drawer align-items-stretch"
+    data-kt-drawer="true"
+    data-kt-drawer-name="app-header-menu"
+    data-kt-drawer-activate="{default: true, lg: false}"
+    data-kt-drawer-overlay="true"
+    data-kt-drawer-width="250px"
+    data-kt-drawer-direction="start"
+    data-kt-drawer-toggle="#kt_app_header_menu_mobile_toggle"
+    data-kt-swapper="true"
+    data-kt-swapper-mode="{default: 'append', lg: 'prepend'}"
+    data-kt-swapper-parent="{default: '#kt_app_body', lg: '#kt_app_header_menu_wrapper'}"
+    >
+
+    <div
+    class="
+    menu
+    menu-rounded
+    menu-title-gray-800
+    menu-state-primary
+    menu-column
+    menu-lg-row
+    my-4
+    my-lg-0
+    align-items-stretch
+    fw-semibold
+    px-4
+    px-lg-0
+    "
+    id="kt_app_header_menu"
+    data-kt-menu="true"
+    >
+
+    <div
+    data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+    data-kt-menu-offset="0,1"
+    data-kt-menu-placement="bottom-start"
+    class="
+    menu-item menu-here-bg menu-lg-down-accordion me-0 me-lg-2
+    "
+    >
+
+
+
+
+    </div>
+    <a href="/app/support/login" class="menu-item me-0 me-lg-2 ">
+    <span class="menu-link px-3">
+    <span class="menu-title fs-6 fw-bold">Support</span>
+    </span>
+
+    </a>
+
+
+
+    <a href="#" class="menu-item me-0 me-lg-2 ">
+
+    <span class="menu-link px-3">
+    <span class="menu-title fs-6 fw-bold">Help</span>
+    </span>
+
+    </a>
+
+
+
+    <div
+    data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+    data-kt-menu-placement="bottom-start"
+    data-kt-menu-offset="-10, -1"
+    class="
+    menu-item menu-state-primary menu-lg-down-accordion me-0 me-lg-2 
+    "
+    >
+
+    <span class="menu-link px-3">
+    <span class="menu-title fs-6 fw-bold">More</span>
+    <span class="menu-arrow d-lg-none"></span>
+    </span>
+
+
+
+    <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown w-175px p-4 shadow menu-sub menu-sub-classic  rounded-3">
+    <div class="menu-item">
+    <a href="/app/faqs" class="menu-link px-3 my-0 py-2">
+    <span class="menu-title">
+    FAQs
+    </span>
+    </a>
+    </div>
+    <div class="menu-item">
+    <a href="/app/contact" class="menu-link px-3 my-0 py-2">
+    <span class="menu-title">
+    Contact
+    </span>
+    </a>
+    </div>
+    <div class="menu-item">
+    <a href="/app/blog" class="menu-link px-3 my-0 py-2">
+    <span class="menu-title">
+    Blog
+    </span>
+    </a>
+    </div>
+    <div class="menu-item">
+    <a href="/app/tutorials" class="menu-link px-3 my-0 py-2">
+    <span class="menu-title">
+    Tutorials
+    </span>
+    </a>
+    </div>
+    </div>
+
+    </div>
+
+    </div>
+
+    </div>
+
+    </div>
+
+    <div class="app-navbar justify-content-end">
+    <div class="app-navbar-item">
+    <div class="app-separator d-none d-lg-flex me-lg-3"></div>
+
+
+
+    <a href="#" target="_blank"  class="btn btn-icon btn-sm">
+    <img src="/app/assets/media/stack/reui-mono.svg" style="height:23px" alt=""/> 
+    </a>
+
+    <a href="#" target="_blank" class="btn btn-icon btn-sm d-none" data-bs-toggle="tooltip" data-bs-plcement="bottom" title="Check out Metronic, our most popular dashboard template">
+    <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16.8338 2.23306L20.4039 13.2119C20.6981 14.1165 20.0238 15.0448 19.0725 15.0448H16.9258C16.0544 15.0448 15.2833 14.4806 15.0196 13.6501L11.5349 2.67523C11.2482 1.77247 11.922 0.851547 12.8692 0.851547H14.9318C15.7981 0.851547 16.5659 1.40925 16.8338 2.23306Z" fill="#3D4559"/>
+    <path d="M12.7512 10.2076L10.0154 1.88961C9.81164 1.27018 9.23325 0.851547 8.58118 0.851547C7.93928 0.851547 7.40951 1.35364 7.3751 1.99462L7.07002 7.67757C7.02364 8.5416 7.13311 9.40694 7.39319 10.2322L8.60133 14.0657C8.78501 14.6485 9.3255 15.0448 9.93659 15.0448H11.247C11.6766 15.0448 12.0582 14.7705 12.1949 14.3633L12.7432 12.731C13.0181 11.9128 13.0209 11.0275 12.7512 10.2076Z" fill="#DEDEDE"/>
+    <path d="M6.32718 0.851547H8.52493C9.46894 0.851547 10.1424 1.76675 9.86154 2.66803L6.41052 13.7434C6.1501 14.5792 5.37644 15.1484 4.50107 15.1484H2.37754C1.43711 15.1484 0.764129 14.2397 1.03839 13.3402L4.41412 2.26827C4.67073 1.42662 5.44728 0.851547 6.32718 0.851547Z" fill="#3D4559"/>
+    </svg>
+    </a>
+
+    <a href="#" target="_blank"  class="btn btn-icon btn-sm">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 1.71666C7.98588 1.71271 6.03944 2.44349 4.52557 3.77202C3.0117 5.10055 2.03435 6.93561 1.77673 8.93322C1.51911 10.9308 1.9989 12.9538 3.12617 14.623C4.25343 16.2921 5.95078 17.4928 7.90002 18V16.075L7.50002 16.0333L6.90835 15.975L6.56669 15.9333C6.40596 15.932 6.24717 15.898 6.10002 15.8333C5.82741 15.6932 5.60797 15.4679 5.47502 15.1917C5.41244 15.029 5.3343 14.8727 5.24169 14.725C5.04343 14.4147 4.80213 14.1341 4.52502 13.8917C4.49932 13.8668 4.47887 13.837 4.46491 13.8041C4.45095 13.7712 4.44376 13.7358 4.44376 13.7C4.44376 13.6642 4.45095 13.6288 4.46491 13.5959C4.47887 13.563 4.49932 13.5332 4.52502 13.5083C4.56643 13.4608 4.62252 13.4284 4.68441 13.4163C4.74629 13.4043 4.81044 13.4132 4.86669 13.4417C5.22302 13.6342 5.54879 13.8785 5.83335 14.1667C5.99315 14.3231 6.13564 14.4964 6.25836 14.6833C6.32215 14.7546 6.40666 14.8042 6.50002 14.825H6.66669H6.92502L7.50002 14.7417L8.05835 14.6833C8.23465 14.1763 8.57476 13.7423 9.02502 13.45C8.56372 13.3935 8.10887 13.2931 7.66669 13.15C6.91727 12.9579 6.25799 12.5112 5.80187 11.8863C5.34575 11.2614 5.12119 10.4973 5.16669 9.725C5.1765 8.94876 5.47336 8.20365 6.00002 7.63333C5.79681 6.94256 5.77102 6.21171 5.92502 5.50833C5.93758 5.4618 5.95918 5.41821 5.9886 5.38004C6.01802 5.34187 6.05468 5.30987 6.09647 5.28588C6.13826 5.26189 6.18438 5.24637 6.23217 5.24021C6.27997 5.23405 6.32851 5.23738 6.37502 5.25C7.07852 5.38063 7.72131 5.73416 8.20835 6.25833C9.56267 5.82007 11.0207 5.82007 12.375 6.25833C12.8511 5.74184 13.4781 5.38894 14.1667 5.25C14.2605 5.22674 14.3597 5.24063 14.4436 5.28877C14.5274 5.3369 14.5894 5.41556 14.6167 5.50833C14.7682 6.17983 14.7511 6.87842 14.5667 7.54166C15.1545 8.11797 15.4926 8.90196 15.5084 9.725C15.5084 11.55 14.35 13.0583 11.6417 13.4417C11.9845 13.6586 12.2667 13.9589 12.462 14.3145C12.6573 14.67 12.7592 15.0693 12.7584 15.475V17.8083C14.6095 17.1653 16.1723 15.8862 17.1686 14.1987C18.1649 12.5112 18.53 10.525 18.199 8.59349C17.8679 6.66203 16.8621 4.91075 15.3607 3.65143C13.8592 2.39212 11.9596 1.70651 10 1.71666Z" fill="#3D4559"/>
+    </svg>
+    </a>
+
+    <a href="#" target="_blank" class="btn btn-icon btn-sm">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M11.427 8.85149L17.0111 2.50002H15.6879L10.8392 8.01491L6.9666 2.50002H2.5L8.35615 10.8395L2.5 17.5H3.82333L8.94364 11.6761L13.0334 17.5H17.5L11.4267 8.85149H11.427ZM9.61456 10.913L9.02121 10.0826L4.30014 3.47477H6.33269L10.1427 8.80747L10.736 9.6379L15.6885 16.5696H13.656L9.61456 10.9133V10.913Z" fill="#3D4559"/>
+    </svg>
+    </a>
+    </div>
+
+
+
+
+    <div class="app-navbar-item ms-lg-3 me-lg-0">
+    <a href="/user/login" class="btn btn-flex btn-outline btn-outline-default btn-active-color-primary h-35px py-0 fs-base rounded-3 px-4 fw-semibold">
+    Sign In
+    </a>
+    </div>
+
+
+    <div class="app-navbar-item app-aside-mobile-toggle ms-0 me-n2">
+    <button class="btn btn-icon btn-sm btn-color-gray-600 btn-active-color-primary" id="kt_aside_mobile_toggle">
+    <i class="ki-duotone ki-menu fs-2"><span class="path1"></span>
+    <span class="path2">
+    </span><span class="path3"></span>
+    <span class="path4"></span>
+    </i>
+    </button>
+    </div>
+
+
+    <div class="app-navbar-item ps-3">
+    <div class="app-separator d-none d-lg-flex mx-lg-3"></div>
+    </div>		
+    <div class="app-navbar-item ps-3">
+    <a href="/pricing" class="btn btn-dark btn-sm h-35px fs-base">Get All-Access</a>
+    </div>
+    </div>
+
+    </div>
+    </header>
+
+
+    <div class="app-wrapper d-flex" id="kt_app_wrapper">
+
+    <div class="app-main flex-column flex-row-fluid" id="kt_app_main">
+    <div class="d-flex flex-column flex-column-fluid">
+    <div class="">
+    <div class="app-container container-xxl py-10">
+    <div class="d-flex flex-column align-items-center justify-content p-20">
+    <div class="mb-10">
+    <a href="https://reui.io" class="text-gray-800 fw-normal border d-inline-flex align-items-center gap-2 rounded-pill px-4 py-2 fs-6 bg-hover-gray-100">
+
+    <span class="d-inline-flex align-items-center gap-2">
+    <i class="ki-duotone ki-medal-star lh-0 fs-3 text-success"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+    <span class="fw-bolder text-dark">ReUI:</span>
+    </span>
+    Open-source UI components for React & Next.js
+
+    <i class="ki-duotone ki-black-right lh-0 fs-3 text-gray-500"></i>
+    </a>
+    </div>
+
+    <h1 class="fs-3hx fw-bolder text-dark mb-7 text-center">
+    Build Your Next Idea at Warp Speed
+    </h1>
+    <p class="fs-4 fw-normal text-gray-800 text-center mb-10">
+    Access a growing collection of premium templates and boilerplates.
+    <br>
+    Build stunning, high-quality websites and apps in less time.
+    </p>
+    <div class="d-flex align-items-center justify-content-center gap-4 mb-12">
+    <a href="#products" class="btn btn-dark fw-bold w-md-180px" data-kt-scroll-toggle>
+    Explore Products
+    </a>
+    <a href="/pricing" class="btn btn-outline fw-bold w-md-180px">
+    Unlimited Access
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-center gap-6">
+            <div data-bs-toggle="tooltip" data-bs-custom-class="tooltip-inverse-" title="Tailwind">
+    <img src="/app/assets/media/stack/tailwind-color.svg" class="h-25px" alt=""/>
+    </div>
+            <div data-bs-toggle="tooltip" data-bs-custom-class="tooltip-inverse-" title="Bootstrap">
+    <img src="/app/assets/media/stack/bootstrap-color.svg" class="h-25px" alt=""/>
+    </div>
+            <div data-bs-toggle="tooltip" data-bs-custom-class="tooltip-inverse-" title="React">
+    <img src="/app/assets/media/stack/react-color.svg" class="h-25px" alt=""/>
+    </div>
+            <div data-bs-toggle="tooltip" data-bs-custom-class="tooltip-inverse-" title="Next.js">
+    <img src="/app/assets/media/stack/nextjs-mono.svg" class="h-25px" alt=""/>
+    </div>
+            <div data-bs-toggle="tooltip" data-bs-custom-class="tooltip-inverse-" title="Vite">
+    <img src="/app/assets/media/stack/vite-color.svg" class="h-25px" alt=""/>
+    </div>
+            <div data-bs-toggle="tooltip" data-bs-custom-class="tooltip-inverse-" title="ReUI">
+    <img src="/app/assets/media/stack/reui-mono.svg" class="h-25px" alt=""/>
+    </div>
+            <div data-bs-toggle="tooltip" data-bs-custom-class="tooltip-inverse-" title="TypeScript">
+    <img src="/app/assets/media/stack/typescript-color.svg" class="h-25px" alt=""/>
+    </div>
+            <div data-bs-toggle="tooltip" data-bs-custom-class="tooltip-inverse-" title="Prisma ORM">
+    <img src="/app/assets/media/stack/prisma-mono.svg" class="h-25px" alt=""/>
+    </div>
+            <div data-bs-toggle="tooltip" data-bs-custom-class="tooltip-inverse-" title="Supabase">
+    <img src="/app/assets/media/stack/supabase-color.svg" class="h-25px" alt=""/>
+    </div>
+            <div data-bs-toggle="tooltip" data-bs-custom-class="tooltip-inverse-" title="PostgreSQL">
+    <img src="/app/assets/media/stack/postgresql-color.svg" class="h-25px" alt=""/>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="border-bottom mb-5" id="products">
+    <div class="app-container container-xxl">
+
+    <ul class="products-tabs nav nav-tabs nav-justified border-start border-0" role="tablist">
+    <li class="nav-item text-center align-items-stretch p-0 border-0 ">
+    <div class="nav-link flex-shrink-0 rounded-0 px-0 py-6 active" data-bs-target="#categories_bootstrap-templates" data-bs-toggle="tab" role="tab">
+    <h3 class="nav-text fs-4 text-gray-800 fw-medium flex-shrink-0 mb-2">
+    Bootstrap Templates
+    </h3>
+    </div>
+    </li>
+    <li class="nav-item text-center align-items-stretch p-0 border-0 ">
+    <div class="nav-link flex-shrink-0 rounded-0 px-0 py-6 " data-bs-target="#categories_react-templates" data-bs-toggle="tab" role="tab">
+    <h3 class="nav-text fs-4 text-gray-800 fw-medium flex-shrink-0 mb-2">
+    React Templates
+    </h3>
+    </div>
+    </li>
+    <li class="nav-item text-center align-items-stretch p-0 border-0 ">
+    <div class="nav-link flex-shrink-0 rounded-0 px-0 py-6 " data-bs-target="#categories_boilerplates" data-bs-toggle="tab" role="tab">
+    <h3 class="nav-text fs-4 text-gray-800 fw-medium flex-shrink-0 mb-2">
+    Boilerplates
+    </h3>
+    </div>
+    </li>
+    <li class="nav-item text-center align-items-stretch p-0 border-0 ">
+    <div class="nav-link flex-shrink-0 rounded-0 px-0 py-6 " data-bs-target="#categories_vectors" data-bs-toggle="tab" role="tab">
+    <h3 class="nav-text fs-4 text-gray-800 fw-medium flex-shrink-0 mb-2">
+    Vectors
+    </h3>
+    </div>
+    </li>
+    <li class="nav-item text-center align-items-stretch p-0 border-0 ">
+    <div class="nav-link flex-shrink-0 rounded-0 px-0 py-6 " data-bs-target="#categories_freebies" data-bs-toggle="tab" role="tab">
+    <h3 class="nav-text fs-4 text-gray-800 fw-medium flex-shrink-0 mb-2">
+    Freebies
+    </h3>
+    </div>
+    </li>
+    </ul>
+
+    </div>
+    </div>
+
+    <div class="app-container container-xxl py-10">
+
+    <div class="tab-content">
+    <div class="tab-pane fade show active" id="categories_bootstrap-templates" role="tabpanel">
+    <div class="row g-10 mb-10">
+            <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/oliver-html-pro" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/73/ybPZU7r0lNMKG8BfmBovp1ctShiacYq9RDDiz7xH.png" class="w-100" alt="Oliver">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/oliver-html-pro" class="text-dark text-hover-primary fw-bold fs-6">
+    Oliver HTML Pro
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    Bootstrap 5 Admin Dashboard Theme
+    </span>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+    <div class="fw-bold fs-5 text-dark">
+    $59
+    </div>
+    </div>
+    </div>
+    </div>						</div>
+    <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/bold-html-pro" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/72/2ybOXtLOn6uAnXwkufCHlCELzrGAxlJ9EYumnAuC.png" class="w-100" alt="Bold">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/bold-html-pro" class="text-dark text-hover-primary fw-bold fs-6">
+    Bold HTML Pro
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    Bootstrap 5 Admin Dashboard Theme
+    </span>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+    <div class="fw-bold fs-5 text-dark">
+    $59
+    </div>
+    </div>
+    </div>
+    </div>						</div>
+    <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/saul-html-pro" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/64/T9CO2FzrWppmNOEYJZZBeCshFHUg2jF1XP2PyXjX.png" class="w-100" alt="Saul">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/saul-html-pro" class="text-dark text-hover-primary fw-bold fs-6">
+    Saul HTML Pro
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    Bootstrap 5 Admin Dashboard Theme
+    </span>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+    <div class="fw-bold fs-5 text-dark">
+    $59
+    </div>
+    </div>
+    </div>
+    </div>						</div>
+    <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/oswald-html-pro" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/63/108iE86j0XK9dhAMqxfme3MWTvK8mza8tFKcXnuW.png" class="w-100" alt="Oswald">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/oswald-html-pro" class="text-dark text-hover-primary fw-bold fs-6">
+    Oswald HTML Pro
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    Bootstrap 5 Admin Dashboard Theme
+    </span>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+    <div class="fw-bold fs-5 text-dark">
+    $59
+    </div>
+    </div>
+    </div>
+    </div>						</div>
+    <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/blaze-html-pro" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/62/izH5vZGdN6gr63H1dBTljwxeWmZcAjdZpWQBJAlg.png" class="w-100" alt="Blaze">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/blaze-html-pro" class="text-dark text-hover-primary fw-bold fs-6">
+    Blaze HTML Pro
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    Bootstrap 5 Admin Dashboard Theme
+    </span>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+    <div class="fw-bold fs-5 text-dark">
+    $59
+    </div>
+    </div>
+    </div>
+    </div>						</div>
+    <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/axel-html-pro" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/61/ncfZgUEvm8DXlP8qsJQc5xwb6v3VFBxq0qCVoC2d.png" class="w-100" alt="Axel">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/axel-html-pro" class="text-dark text-hover-primary fw-bold fs-6">
+    Axel HTML Pro
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    Bootstrap 5 Admin Dashboard Theme
+    </span>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+    <div class="fw-bold fs-5 text-dark">
+    $59
+    </div>
+    </div>
+    </div>
+    </div>						</div>
+    <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/star-html-pro" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/59/4RDUOiW9Ra3XqExBEzjcEXXlTUAMeVGN67Yhwyyf.png" class="w-100" alt="Star HTML Pro">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/star-html-pro" class="text-dark text-hover-primary fw-bold fs-6">
+    Star HTML Pro
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    Bootstrap 5 &amp; Asp.Net Core 7 Template
+    </span>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+    <div class="fw-bold fs-5 text-dark">
+    $59
+    </div>
+    </div>
+    </div>
+    </div>						</div>
+    <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/open-html-pro" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/58/9GDb4E18F38HtdOLmgPRhe6p5ObTRIiPtjR2Ioth.png" class="w-100" alt="Open">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/open-html-pro" class="text-dark text-hover-primary fw-bold fs-6">
+    Open HTML Pro
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    Bootstrap 5 &amp; Laravel 10 Template
+    </span>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+    <div class="fw-bold fs-5 text-dark">
+    $59
+    </div>
+    </div>
+    </div>
+    </div>						</div>
+    <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/rider-vue-pro" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/52/I43Tzw8zOq8PujMIvwqyLCKTZ3xF7yzmREnrR89d.png" class="w-100" alt="Rider">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/rider-vue-pro" class="text-dark text-hover-primary fw-bold fs-6">
+    Rider Vue Pro
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    VueJS 3 Admin Dashboard
+    </span>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+    <div class="fw-bold fs-5 text-dark">
+    $59
+    </div>
+    </div>
+    </div>
+    </div>						</div>
+    </div>
+    <div class="text-center py-10 mb-10">
+    <a href="bootstrap-templates" class="btn btn-dark fw-bold">Show more</a>
+    </div>
+    </div>
+    <div class="tab-pane fade " id="categories_react-templates" role="tabpanel">
+    <div class="row g-10 mb-10">
+            <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/shoplit" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/75/MDt3jxHm3XB70nwACevjND2BM3erU3bsaqMkvlnH.png" class="w-100" alt="Shoplit Next.js Boilerplate">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/shoplit" class="text-dark text-hover-primary fw-bold fs-6">
+    Shoplit Next.js Boilerplate
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    Next.js eCommerce Admin App Built with ReUI
+    </span>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+    <div class="fw-bold fs-5 text-dark">
+    $99
+    </div>
+    </div>
+    </div>
+    </div>						</div>
+    <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/start-react-pro" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/17/L3AFGklGksx2yHtn6jG4KpZGk8OlvvQhTp7DR8Fm.png" class="w-100" alt="Start">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/start-react-pro" class="text-dark text-hover-primary fw-bold fs-6">
+    Start React Pro
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    React Admin Dashboard
+    </span>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+    <div class="fw-bold fs-5 text-dark">
+    $59
+    </div>
+    </div>
+    </div>
+    </div>						</div>
+    </div>
+    <div class="text-center py-10 mb-10">
+    <a href="react-templates" class="btn btn-dark fw-bold">Show more</a>
+    </div>
+    </div>
+    <div class="tab-pane fade " id="categories_boilerplates" role="tabpanel">
+    <div class="row g-10 mb-10">
+            <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/shoplit" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/75/MDt3jxHm3XB70nwACevjND2BM3erU3bsaqMkvlnH.png" class="w-100" alt="Shoplit Next.js Boilerplate">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/shoplit" class="text-dark text-hover-primary fw-bold fs-6">
+    Shoplit Next.js Boilerplate
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    Next.js eCommerce Admin App Built with ReUI
+    </span>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+    <div class="fw-bold fs-5 text-dark">
+    $99
+    </div>
+    </div>
+    </div>
+    </div>						</div>
+    <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/star-html-pro" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/59/4RDUOiW9Ra3XqExBEzjcEXXlTUAMeVGN67Yhwyyf.png" class="w-100" alt="Star HTML Pro">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/star-html-pro" class="text-dark text-hover-primary fw-bold fs-6">
+    Star HTML Pro
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    Bootstrap 5 &amp; Asp.Net Core 7 Template
+    </span>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+    <div class="fw-bold fs-5 text-dark">
+    $59
+    </div>
+    </div>
+    </div>
+    </div>						</div>
+    <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/open-html-pro" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/58/9GDb4E18F38HtdOLmgPRhe6p5ObTRIiPtjR2Ioth.png" class="w-100" alt="Open">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/open-html-pro" class="text-dark text-hover-primary fw-bold fs-6">
+    Open HTML Pro
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    Bootstrap 5 &amp; Laravel 10 Template
+    </span>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+    <div class="fw-bold fs-5 text-dark">
+    $59
+    </div>
+    </div>
+    </div>
+    </div>						</div>
+    </div>
+    <div class="text-center py-10 mb-10">
+    <a href="boilerplates" class="btn btn-dark fw-bold">Show more</a>
+    </div>
+    </div>
+    <div class="tab-pane fade " id="categories_vectors" role="tabpanel">
+    <div class="row g-10 mb-10">
+            <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/auth-bundle-pro" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/70/Tgrs1k32yVsc3oc74e0w22z24qpSCnfFv9WGYMjB.png" class="w-100" alt="Auth Bundle">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/auth-bundle-pro" class="text-dark text-hover-primary fw-bold fs-6">
+    Auth Bundle Pro
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    8 Sets of Crafted 48 Vector Illustrations
+    </span>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+    <div class="fw-bold fs-5 text-dark">
+    $59
+    </div>
+    </div>
+    </div>
+    </div>						</div>
+    <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/keenicons-pro" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/68/3IgGB6zsicA7cJCO8rttKCPyROmLCE91ZtsZCH0E.png" class="w-100" alt="KeenIcons">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/keenicons-pro" class="text-dark text-hover-primary fw-bold fs-6">
+    KeenIcons Pro
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    560+ high quality icons in 3 perfect styles
+    </span>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+    <div class="fw-bold fs-5 text-dark">
+    $59
+    </div>
+    </div>
+    </div>
+    </div>						</div>
+    <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/volume" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/54/qWwCSQrfjhf73iJoxM1GaIM56ErGTh9ascPIX4pc.png" class="w-100" alt="Volume">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/volume" class="text-dark text-hover-primary fw-bold fs-6">
+    Volume Pro
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    80 Vector Illustrations
+    </span>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+    <div class="fw-bold fs-5 text-dark">
+    $59
+    </div>
+    </div>
+    </div>
+    </div>						</div>
+    <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/sketchy-pro" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/46/PgbVrRryjUtSuwtbSvyX3kalgK4FG7RbkvZ2HiuV.png" class="w-100" alt="Sketchy">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/sketchy-pro" class="text-dark text-hover-primary fw-bold fs-6">
+    Sketchy Pro
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    30 Hand Drawn Sketch Illustrations
+    </span>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+    <div class="fw-bold fs-5 text-dark">
+    $59
+    </div>
+    </div>
+    </div>
+    </div>						</div>
+    <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/jolly-pro" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/44/4bsZNci8tfqLhMAYeCZI8Q0ygMaySDvHoXpcJUm1.png" class="w-100" alt="Jolly">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/jolly-pro" class="text-dark text-hover-primary fw-bold fs-6">
+    Jolly Pro
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    30 Elegant Illustrations
+    </span>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+    <div class="fw-bold fs-5 text-dark">
+    $59
+    </div>
+    </div>
+    </div>
+    </div>						</div>
+    <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/duotune-pro" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/32/SGY7dLdHNySLEDL2vvf5S90TsrFD4iDGx2dZv8Yx.jpg" class="w-100" alt="Duotune">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/duotune-pro" class="text-dark text-hover-primary fw-bold fs-6">
+    Duotune Pro
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    280+ Duotone Icons by KeenThemes
+    </span>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+    <div class="fw-bold fs-5 text-dark">
+    $59
+    </div>
+    </div>
+    </div>
+    </div>						</div>
+    <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/unitedpalms-pro" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/42/PpadVRmb0bcbXlevweSjYxkoAT67exgmxwvPW6aP.png" class="w-100" alt="United Palms">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/unitedpalms-pro" class="text-dark text-hover-primary fw-bold fs-6">
+    United Palms Pro
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    30 Eye-catching Illustrations
+    </span>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+    <div class="fw-bold fs-5 text-dark">
+    $59
+    </div>
+    </div>
+    </div>
+    </div>						</div>
+    <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/sigma-pro" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/39/TCCnCVlBMzcif3CRkh9cYxHV8IcSkV7xuzsVSjcI.png" class="w-100" alt="Sigma">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/sigma-pro" class="text-dark text-hover-primary fw-bold fs-6">
+    Sigma Pro
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    30 Outstanding Illustrations
+    </span>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+    <div class="fw-bold fs-5 text-dark">
+    $59
+    </div>
+    </div>
+    </div>
+    </div>						</div>
+    <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/doozy-pro" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/26/Zbs7ivdgERTI62cmNTkbfFZNb59dDazd95XbM5VZ.png" class="w-100" alt="Doozy">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/doozy-pro" class="text-dark text-hover-primary fw-bold fs-6">
+    Doozy Pro
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    Set of 20 Business Illustrations
+    </span>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+    <div class="fw-bold fs-5 text-dark">
+    $59
+    </div>
+    </div>
+    </div>
+    </div>						</div>
+    </div>
+    <div class="text-center py-10 mb-10">
+    <a href="vectors" class="btn btn-dark fw-bold">Show more</a>
+    </div>
+    </div>
+    <div class="tab-pane fade " id="categories_freebies" role="tabpanel">
+    <div class="row g-10 mb-10">
+            <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/auth-bundle-free" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/69/A8RPyhZZlTEakc8Spkzy8n2esLPfrJOhNAtgfUbN.png" class="w-100" alt="Auth Bundle Free">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/auth-bundle-free" class="text-dark text-hover-primary fw-bold fs-6">
+    Auth Bundle Free
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    Vector Illustrations
+    </span>
+    </div>
+    <span class="badge badge-secondary badge-outline fw-bold text-dark">Free</span>
+    </div>
+    </div>						</div>
+    <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/keenicons-free" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/67/2NcpoCYdc1seWPYC6KgJCU48qbtqbo5DxDTtRVoo.png" class="w-100" alt="KeenIcons Free">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/keenicons-free" class="text-dark text-hover-primary fw-bold fs-6">
+    KeenIcons Free
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    High quality icons
+    </span>
+    </div>
+    <span class="badge badge-secondary badge-outline fw-bold text-dark">Free</span>
+    </div>
+    </div>						</div>
+    <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/oswald-html-free" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/66/ahR0jAGJswYEr6mLoiRSbFYI64Os4BwDBZIrO68R.png" class="w-100" alt="Oswald">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/oswald-html-free" class="text-dark text-hover-primary fw-bold fs-6">
+    Oswald HTML Free
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    Bootstrap 5 Admin Dashboard Theme
+    </span>
+    </div>
+    <span class="badge badge-secondary badge-outline fw-bold text-dark">Free</span>
+    </div>
+    </div>						</div>
+    <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/saul-html-free" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/65/rZG7zB4HkZYrtUcoXNdmBjgUoFXxvyli6uBjzmK3.png" class="w-100" alt="Saul">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/saul-html-free" class="text-dark text-hover-primary fw-bold fs-6">
+    Saul HTML Free
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    Bootstrap 5 Admin Dashboard Theme
+    </span>
+    </div>
+    <span class="badge badge-secondary badge-outline fw-bold text-dark">Free</span>
+    </div>
+    </div>						</div>
+    <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/rider-vue-free" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/53/DkJlX8i65MtPvnvIKEXkdS8F38r5GL3nL3g2balD.png" class="w-100" alt="Rider">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/rider-vue-free" class="text-dark text-hover-primary fw-bold fs-6">
+    Rider Vue Free
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    Vue 3 Admin Dashboard
+    </span>
+    </div>
+    <span class="badge badge-secondary badge-outline fw-bold text-dark">Free</span>
+    </div>
+    </div>						</div>
+    <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/ceres-html-free" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/51/HUXDCXp8jFMuy2BTCmQnXOmgI9Ipu8wcb114L993.png" class="w-100" alt="Ceres">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/ceres-html-free" class="text-dark text-hover-primary fw-bold fs-6">
+    Ceres HTML Free
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    Bootstrap 5 Dark &amp; Light Admin
+    </span>
+    </div>
+    <span class="badge badge-secondary badge-outline fw-bold text-dark">Free</span>
+    </div>
+    </div>						</div>
+    <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/seven-html-free" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/50/w46HADm0RpK3NmuoP1MtY2d0mzGVSHsfhBUlhEYV.png" class="w-100" alt="Seven">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/seven-html-free" class="text-dark text-hover-primary fw-bold fs-6">
+    Seven HTML Free
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    Bootstrap 5 Dark &amp; Light Admin
+    </span>
+    </div>
+    <span class="badge badge-secondary badge-outline fw-bold text-dark">Free</span>
+    </div>
+    </div>						</div>
+    <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/sketchy-free" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/47/bXRaxqWb1YmkocimmpcsZNlJuvVZvRhgHfeAY6at.png" class="w-100" alt="Sketchy">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/sketchy-free" class="text-dark text-hover-primary fw-bold fs-6">
+    Sketchy Free
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    15 Hand Drawn Sketch Illustrations
+    </span>
+    </div>
+    <span class="badge badge-secondary badge-outline fw-bold text-dark">Free</span>
+    </div>
+    </div>						</div>
+    <div class="col-12 col-lg-4">
+    <div>
+    <div class="mb-5">
+    <a href="/app/products/jolly-free" class="d-block overflow-hidden rounded-4 shadow border border-1 border-gray-200">
+    <img src="https://keenthemes.ams3.digitaloceanspaces.com/products/products/45/6rQ8Mkqjpx7B5qMYzWKK5lBXVYelJdkrVVlQ3BRX.png" class="w-100" alt="Jolly">
+    </a>
+    </div>
+    <div class="d-flex align-items-center justify-content-between gap-2">
+    <div class="d-flex flex-column gap-0.5">
+    <a href="/app/products/jolly-free" class="text-dark text-hover-primary fw-bold fs-6">
+    Jolly Free
+    </a>
+    <span class="fs-7 text-gray-600 fw-normal">
+    15 Elegant Illustrations
+    </span>
+    </div>
+    <span class="badge badge-secondary badge-outline fw-bold text-dark">Free</span>
+    </div>
+    </div>						</div>
+    </div>
+    <div class="text-center py-10 mb-10">
+    <a href="freebies" class="btn btn-dark fw-bold">Show more</a>
+    </div>
+    </div>
+    </div>
+
+    </div>
+    <div class="block-dark py-10">
+    <div class="app-container container-xxl py-20">        
+
+    <div class="text-center mb-10 mb-lg-17">
+
+    <h1 class="text-white lh-base ls-sm fw-bolder fs-2qx fs-lg-3qx mb-5 mb-lg-8">
+    Delivered By
+    <br/>
+    <span style="background: linear-gradient(to right, #12CE5D 0%, #189EFF 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">
+    <span id="kt_landing_hero_text">KeenThemes UI/UX Experts</span>
+    </span>
+    </h1>
+
+
+
+    <div class="fw-semibold fs-4 text-gray-600"> 
+    Since 2013, KeenThemes has pioneered affordable, high-quality UI/UX solutions <br>
+    trusted by developers, startups and leading global enterprises.
+    </div>
+
+    </div>
+
+
+
+    <div class="d-flex flex-wrap flex-center justify-content-lg-between mb-10 mx-auto w-xl-900px">   
+    <div 
+    class="d-flex flex-column flex-center h-150px w-150px h-lg-200px w-lg-200px m-3 bgi-no-repeat bgi-position-center bgi-size-contain" 
+    style="background-image: url('/app/assets/media/misc/octagon.svg')">  
+
+    <div class="text-success fw-semibold fs-4 lh-0 mb-7 pt-5">
+    Happy Customers
+    </div>
+
+    <div class="fs-2hx fw-bold text-white d-flex flex-center">
+    <div class="min-w-70px" data-kt-countup="true" data-kt-countup-value="120000" data-kt-countup-suffix="+">0</div>
+    </div>
+    </div>
+    <div 
+    class="d-flex flex-column flex-center h-150px w-150px h-lg-200px w-lg-200px m-3 bgi-no-repeat bgi-position-center bgi-size-contain" 
+    style="background-image: url('/app/assets/media/misc/octagon.svg')">  
+
+    <div class="text-success fw-semibold fs-4 lh-0 mb-7 pt-5">
+    5 Stars Ratings
+    </div>
+
+    <div class="fs-2hx fw-bold text-white d-flex flex-center">
+    <div class="min-w-70px" data-kt-countup="true" data-kt-countup-value="8000" data-kt-countup-suffix="+">0</div>
+    </div>
+    </div>
+    <div 
+    class="d-flex flex-column flex-center h-150px w-150px h-lg-200px w-lg-200px m-3 bgi-no-repeat bgi-position-center bgi-size-contain" 
+    style="background-image: url('/app/assets/media/misc/octagon.svg')">  
+
+    <div class="text-success fw-semibold fs-4 lh-0 mb-7 pt-5">
+    End Users
+    </div>
+
+    <div class="fs-2hx fw-bold text-white d-flex flex-center">
+    <div class="min-w-70px" data-kt-countup="true" data-kt-countup-value="10" data-kt-countup-suffix="M+">0</div>
+    </div>
+    </div>
+    <div 
+    class="d-flex flex-column flex-center h-150px w-150px h-lg-200px w-lg-200px m-3 bgi-no-repeat bgi-position-center bgi-size-contain" 
+    style="background-image: url('/app/assets/media/misc/octagon.svg')">  
+
+    <div class="text-success fw-semibold fs-4 lh-0 mb-7 pt-5">
+    On The Market
+    </div>
+
+    <div class="fs-2hx fw-bold text-white d-flex flex-center">
+    <div class="min-w-70px" data-kt-countup="true" data-kt-countup-value="12" data-kt-countup-suffix=" Years">0</div>
+    </div>
+    </div>
+
+    </div>
+
+
+
+    <div class="d-flex flex-center flex-wrap position-relative px-5">    
+
+    <div class="d-flex flex-center m-3 m-md-7">
+    <img src="/app/assets/media/misc/empty.png" data-src="/app/assets/media/client-logos/fujifilm.svg" class="lozad mh-30px mh-lg-40px" alt=""/> 
+    </div>
+
+    <div class="d-flex flex-center m-3 m-md-7">
+    <img src="/app/assets/media/misc/empty.png" data-src="/app/assets/media/client-logos/vodafone.svg" class="lozad mh-30px mh-lg-40px" alt=""/> 
+    </div>
+
+    <div class="d-flex flex-center m-3 m-md-7">
+    <img src="/app/assets/media/misc/empty.png" data-src="/app/assets/media/client-logos/kpmg.svg" class="lozad mh-30px mh-lg-40px" alt=""/> 
+    </div>
+
+    <div class="d-flex flex-center m-3 m-md-7">
+    <img src="/app/assets/media/misc/empty.png" data-src="/app/assets/media/client-logos/nasa.svg" class="lozad mh-30px mh-lg-40px" alt=""/> 
+    </div>
+
+    <div class="d-flex flex-center m-3 m-md-7">
+    <img src="/app/assets/media/misc/empty.png" data-src="/app/assets/media/client-logos/aspnetzero.svg" class="lozad mh-30px mh-lg-40px" alt=""/> 
+    </div>
+
+    <div class="d-flex flex-center m-3 m-md-7">
+    <img src="/app/assets/media/misc/empty.png" data-src="/app/assets/media/client-logos/aon.svg" class="lozad mh-30px mh-lg-40px" alt=""/> 
+    </div>
+
+    <div class="d-flex flex-center m-3 m-md-7">
+    <img src="/app/assets/media/misc/empty.png" data-src="/app/assets/media/client-logos/hp-3.svg" class="lozad mh-30px mh-lg-40px" alt=""/> 
+    </div>
+
+    <div class="d-flex flex-center m-3 m-md-7">
+    <img src="/app/assets/media/misc/empty.png" data-src="/app/assets/media/client-logos/truman.svg" class="lozad mh-30px mh-lg-40px" alt=""/> 
+    </div>
+    </div> 
+
+    </div>
+    </div>
+
+    <div class="mt-10 py-20">     
+
+    <div class="text-center mb-10 mb-lg-10">
+
+    <h1 class="text-dark lh-md fw-bold ls-nsm fs-2qx fs-lg-3qx mb-5">
+    Loved by Thousands
+    </h1>
+
+
+
+    <div class="fw-normal fs-4 text-gray-800">
+    Thousands of web projects have been successfully deployed over the years.<br>
+    Thanks to regular updates and professional technical support.
+    </div>
+
+    </div>
+
+
+
+    <div class="testimonials slider mx-auto mb-0 pb-5 pb-lg-10">
+    <div
+    data-tns="true" 
+    data-tns-loop="true" 
+    data-tns-swipe-angle="false" 
+    data-tns-speed="2000" 
+    data-tns-nav-as-thumbnails="true" 
+    data-tns-autoplay="false" 
+    data-tns-autoplay-timeout="7000" 
+    data-tns-controls="false" 
+    data-tns-nav="true" 
+    data-tns-items="1" 
+    data-tns-center="true" 
+    data-tns-dots="true" 
+    data-tns-responsive="{1000: {
+    fixedWidth: 800,
+    items: 1
+    }}">
+
+        
+    <div class="slider-item">
+    <div class="border shadow rounded-3 px-10 py-7 m-7">
+    <div class="text-center mb-5">
+        <img class="testimonial-stars h-25px" src="/app/assets/media/misc/review-stars.svg" alt=""/>
+    </div>
+
+    <div class="testimonial-feedback mb-7 fs-6 lh-lg">
+        
+    I can not overestimate the impact Metronic has had. I run a team of 20 product managers, developers, QA and UX resources. Previously we designed everything ourselves.
+    For our newest platform we tried out Metronic. I can not overestimate the impact Metronic has had.It's
+    accelerated development 3x and reduced QA issues by 50% If you add up the reduced need for design time/resources, the increase
+
+    </div>
+
+    <div class="mb-1">
+        <span class="testimonial-author fs-lg">
+                <span class="fw-bold">Jonathan Bartlet,</span>&nbsp;
+                Customer
+        </span>
+    </div>
+    </div>
+    </div>
+
+        
+    <div class="slider-item">
+    <div class="border shadow rounded-3 px-10 py-7 m-7">
+    <div class="text-center mb-5">
+        <img class="testimonial-stars h-25px" src="/app/assets/media/misc/review-stars.svg" alt=""/>
+    </div>
+
+    <div class="testimonial-feedback mb-7 fs-6 lh-lg">
+        
+    My first foray into the world of Administrative/Dashboard. Bootstrap templates and I have to confess,
+    the layout of the package in the filesystem was such that I had no problem figuring it out.
+    Each page is self contained and includes all the CSS, jQuery, and extra components to fully function.
+
+    </div>
+
+    <div class="mb-1">
+        <span class="testimonial-author fs-lg">
+                <span class="fw-bold">JimOQuinn,</span>&nbsp;
+                Customer
+        </span>
+    </div>
+    </div>
+    </div>
+
+        
+    <div class="slider-item">
+    <div class="border shadow rounded-3 px-10 py-7 m-7">
+    <div class="text-center mb-5">
+        <img class="testimonial-stars h-25px" src="/app/assets/media/misc/review-stars.svg" alt=""/>
+    </div>
+
+    <div class="testimonial-feedback mb-7 fs-6 lh-lg">
+        
+    This is by far the cleanest template and the most well structured. The most well thought out design theme I have ever used. The codes are up to standard.
+    The css styles are very clean. In fact the cleanest and the most up to standard I have ever seen. This is also the easiest template to customize.
+
+    </div>
+
+    <div class="mb-1">
+        <span class="testimonial-author fs-lg">
+                <span class="fw-bold">judge321,</span>&nbsp;
+                Customer
+        </span>
+    </div>
+    </div>
+    </div>
+
+        
+    <div class="slider-item">
+    <div class="border shadow rounded-3 px-10 py-7 m-7">
+    <div class="text-center mb-5">
+        <img class="testimonial-stars h-25px" src="/app/assets/media/misc/review-stars.svg" alt=""/>
+    </div>
+
+    <div class="testimonial-feedback mb-7 fs-6 lh-lg">
+        
+    After a year with this template, I decided to rate it. Why? The main reason is the constant update system< that keep helping to improve my site all the time.
+    If someone ask me why take long time to rate, well I found some issues a year ago that send through some bugs report that they answer me quickly
+    but it take long time to see the changes make happens. Now I'm glad to use this template but I wonder if they could down the price of the extended version sometime because
+    I would like to purchase it a normal price. Anyway, you are doing really good job, congratulations
+
+    </div>
+
+    <div class="mb-1">
+        <span class="testimonial-author fs-lg">
+                <span class="fw-bold">eduardoac,</span>&nbsp;
+                Customer
+        </span>
+    </div>
+    </div>
+    </div>
+
+        
+    <div class="slider-item">
+    <div class="border shadow rounded-3 px-10 py-7 m-7">
+    <div class="text-center mb-5">
+        <img class="testimonial-stars h-25px" src="/app/assets/media/misc/review-stars.svg" alt=""/>
+    </div>
+
+    <div class="testimonial-feedback mb-7 fs-6 lh-lg">
+        
+    This theme has literally everything. The documentation is AMAZING, the examples are super useful, and it's really easy to pick and choose which plugins you want to include.
+    There are so many options for basically every component of the app and it's
+    easy to switch between them (ex. changing from a compact sidebar to the full sidebar)... So far I've saved about 2 days of work and I've only had the theme for 15 hours or so
+
+    </div>
+
+    <div class="mb-1">
+        <span class="testimonial-author fs-lg">
+                <span class="fw-bold">smallanditalian5,</span>&nbsp;
+                Customer
+        </span>
+    </div>
+    </div>
+    </div>
+
+
+    </div>
+    </div>
+
+    </div>
+    </div>
+    </div>
+
+    </div>
+
+
+    <footer class="app-footer d-block">
+    <div class="app-container container-xxl positon-relative pt-20 zindex-1 mb-lg-n20">
+    <div class="d-flex align-items-stretch justify-content-between flex-wrap flex-md-nowrap rounded-3 border shadow bg-body position-relative zindex-2">
+    <!--begin::Content-->
+    <div class="d-flex flex-column justify-content-start align-items-start my-2 me-5 px-10 pt-6 pb-0 p-lg-10">
+    <!--begin::Title-->
+    <div class="fs-2x fs-lg-2qx text-gray-800 mb-1">
+    <span class="fw-bold">Stay Connected With Us</span>
+    </div>
+    <!--end::Title-->
+
+    <!--begin::Description-->
+    <div class="fs-4 fw-normal text-gray-800">
+    The More We Learn, The More We Are Able To Innovate & To Develop
+    </div>
+    <!--end::Description-->
+    </div>
+    <!--end::Content-->
+
+    <div class="rounded-3 d-flex align-items-center m-0 p-8 p-lg-12">
+    <form
+    class="validate border border-2 border-gray-300 rounded-3 d-flex position-relative m-0"
+    action="https://keenthemes.us3.list-manage.com/subscribe/post?u=b10f23244c11e2946463ea844&amp;id=3aba0b6220"
+    method="post"
+    target="_blank"
+    novalidate>
+
+    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+    <input type="text" name="b_b10f23244c11e2946463ea844_3aba0b6220" tabindex="-1" value="">
+    </div>
+
+    <input type="email" class="form-control form-control-transparent w-275px pe-10 fs-base" name="EMAIL" placeholder="Enter Email to Stay Updated">
+
+    <button class="btn btn-icon me-2" type="submit">
+    <i class="ki-duotone ki-arrow-right text-gray-400 fs-2x"><span class="path1"></span><span class="path2"></span></i>
+    </button>
+    </form>
+    </div>
+    </div>
+    </div>
+
+
+    <!--begin::Footer top-->
+    <div class="bg-gray-100 pt-15 pb-13 pt-lg-20 pb-lg-17">
+    <!--begin::Container-->
+    <div class="app-container container-xxl pt-20">
+    <!--begin::Row-->
+    <div class="row">
+    <!--begin::Col-->
+    <div class="col-lg-5 mb-10 mb-lg-0">
+    <!--begin::Block-->
+    <div class="rounded border border-gray-300 border-dashed p-10 me-lg-15">
+    <!--begin::Heading-->
+    <div class="mb-5 text-start">
+    <div class="fs-5 fw-semibold text-dark mb-0">How about</div>
+    <div class="fs-2 fw-bold text-dark">a Custom Project ?</div>
+    </div>
+    <!--end::Heading-->
+
+    <!--begin::Text-->
+    <div class="fs-6 fw-normal text-gray-800 lh-lg mb-6">
+    Since 2012, we have helped startups, blue
+    chip companies and government agencies and
+    successfully delivered over 120 custom projects.
+    </div>
+    <!--end::Text-->
+
+    <!--begin::Link-->
+    <div class="text-start">
+    <a href="/app/hireus" target="_blank" class="btn btn-dark fw-bold py-3 fs-6">Hire Experts</a>
+    </div>
+    <!--end::Link-->
+    </div>
+    <!--end::Block-->
+    </div>
+    <!--end::Col-->
+
+    <!--begin::Col-->
+    <div class="col-lg-7 ps-lg-10 fs-5">
+    <!--begin::Row-->
+    <div class="row">
+    <!--begin::Col-->
+    <div class="col-4">
+    <div class="ms-lg-5">
+    <h3 class="mb-3 fs-4 fw-bold text-dark ls-sm">Products</h3>
+
+    <!--begin::Nav-->
+    <div class="d-flex flex-column">
+                    <a href="/app/metronic" class="fw-normal text-gray-800 text-hover-primary py-2 py-lg-3">Metronic Tailwind</a>
+                    <a href="https://aspnetzero.com/?ref=keenthemes" class="fw-normal text-gray-800 text-hover-primary py-2 py-lg-3">Metronic ASP.NET</a>
+                    <a href="/app/react-templates" class="fw-normal text-gray-800 text-hover-primary py-2 py-lg-3">React Templates</a>
+                    <a href="/app/bootstrap-templates" class="fw-normal text-gray-800 text-hover-primary py-2 py-lg-3">Bootstrap Templates</a>
+                    <a href="/app/boilerplates" class="fw-normal text-gray-800 text-hover-primary py-2 py-lg-3">Boilerplates</a>
+                    <a href="/app/vectors" class="fw-normal text-gray-800 text-hover-primary py-2 py-lg-3">Vectors</a>
+                    <a href="/app/freebies" class="fw-normal text-gray-800 text-hover-primary py-2 py-lg-3">Freebies</a>
+            </div>
+    <!--end::Nav-->
+    </div>
+    </div>
+    <!--end::Col-->
+
+    <!--begin::Col-->
+    <div class="col-4">
+    <div class="ms-lg-5">
+    <h3 class="mb-3 fs-4 fw-bold text-dark ls-sm">Legal</h3>
+
+    <!--begin::Nav-->
+    <div class="d-flex flex-column">
+                    <a href="https://keenthemes.com/faqs" class="fw-normal text-gray-800 text-hover-primary py-2 py-lg-3">FAQs</a>
+                    <a href="https://keenthemes.com/contact" class="fw-normal text-gray-800 text-hover-primary py-2 py-lg-3">Contact Us</a>
+                    <a href="https://keenthemes.com/support" class="fw-normal text-gray-800 text-hover-primary py-2 py-lg-3">Support</a>
+                    <a href="https://keenthemes.com/licensing" class="fw-normal text-gray-800 text-hover-primary py-2 py-lg-3">License Terms</a>
+                    <a href="https://keenthemes.com/privacy" class="fw-normal text-gray-800 text-hover-primary py-2 py-lg-3">Privacy Policy</a>
+                    <a href="https://keenthemes.com/terms" class="fw-normal text-gray-800 text-hover-primary py-2 py-lg-3">Terms &amp; Conditions</a>
+                    <a href="https://keenthemes.com/refund-policy" class="fw-normal text-gray-800 text-hover-primary py-2 py-lg-3">Refund Policy</a>
+            </div>
+    <!--end::Nav-->
+    </div>
+    </div>
+    <!--end::Col-->
+
+    <!--begin::Col-->
+    <div class="col-4">
+    <div class="ms-lg-15">
+    <h3 class="mb-3 fs-4 fw-bold text-dark ls-sm">Stay Connected</h3>
+
+    <!--begin::Nav-->
+    <div class="d-flex flex-column">
+                    <a href="https://x.com/keenthemes" class="d-flex align-items-center text-center text-gray-700 text-hover-primary py-2 py-lg-3">
+    <img src="https://keenthemes.com/assets/media/misc/empty.png" data-src="https://keenthemes.com/assets/media/social-icons/x.svg" class="lozad w-20px me-3" alt=""/>
+    X
+    </a>
+                    <a href="https://github.com/keenthemes/" class="d-flex align-items-center text-center text-gray-700 text-hover-primary py-2 py-lg-3">
+    <img src="https://keenthemes.com/assets/media/misc/empty.png" data-src="https://keenthemes.com/assets/media/social-icons/github.svg" class="lozad w-20px me-3" alt=""/>
+    Github
+    </a>
+                    <a href="https://www.linkedin.com/company/keenthemes" class="d-flex align-items-center text-center text-gray-700 text-hover-primary py-2 py-lg-3">
+    <img src="https://keenthemes.com/assets/media/misc/empty.png" data-src="https://keenthemes.com/assets/media/social-icons/linkedin.svg" class="lozad w-20px me-3" alt=""/>
+    Linkedin
+    </a>
+                    <a href="https://instagram.com/keenthemes" class="d-flex align-items-center text-center text-gray-700 text-hover-primary py-2 py-lg-3">
+    <img src="https://keenthemes.com/assets/media/misc/empty.png" data-src="https://keenthemes.com/assets/media/social-icons/instagram.svg" class="lozad w-20px me-3" alt=""/>
+    Instagram
+    </a>
+                    <a href="https://dribbble.com/keenthemes" class="d-flex align-items-center text-center text-gray-700 text-hover-primary py-2 py-lg-3">
+    <img src="https://keenthemes.com/assets/media/misc/empty.png" data-src="https://keenthemes.com/assets/media/social-icons/dribbble.svg" class="lozad w-20px me-3" alt=""/>
+    Dribbble
+    </a>
+            </div>
+    <!--end::Nav-->
+    </div>
+    </div>
+    <!--end::Col-->
+    </div>
+    <!--end::Row-->
+    </div>
+    <!--end::Col-->
+    </div>
+    <!--end::Row-->
+    </div>
+    <!--end::Container-->
+    </div>
+    <!--end:: Footer top-->
+    <!--begin:: Footer bottom-->
+    <div class="app-container container-xxl d-flex align-items-center flex-column flex-md-row flex-md-stack gap-2 py-6 py-lg-8">
+    <!--begin::Copyright-->
+    <div class="d-flex align-items-center order-2 order-lg-1">
+
+    <a href="https://keenthemes.com" target="_blank">
+    <img class="theme-light-show h-25px" src="https://keenthemes.com/assets/media/logos/keenthemes.svg" alt=""/>
+    <img class="theme-dark-show h-25px" src="https://keenthemes.com/assets/media/logos/keenthemes-dark.svg" alt=""/>
+    </a>
+
+
+
+    <span class="fs-7 fw-semibold text-gray-600 ps-2" style="padding-top: 2px">
+    &copy; 2025        </span>
+
+    </div>
+    <!--end::Copyright-->
+
+    <!--begin::Payment methods-->
+    <div class="d-flex flex-column flex-md-row flex-center order-1 order-md-2 mb-5 mb-md-0">
+    <div class="fs-7 fw-semibold text-gray-600 mb-5 mb-md-0">
+    Secured payment by <a href="https://www.paddle.com/" target="_blank" class="fw-bold">Paddle</a> with
+    </div>
+
+    <div class="ms-4">
+    <img src="https://keenthemes.com/assets/media/misc/empty.png" data-src="https://keenthemes.com/assets/media/payment-methods/default/paypal.svg" alt="" class="lozad h-20px me-2 rounded-1">
+
+    <img src="https://keenthemes.com/assets/media/misc/empty.png" data-src="https://keenthemes.com/assets/media/payment-methods/default/visa.svg" alt="" class="lozad h-20px me-2 rounded-1">
+
+    <img src="https://keenthemes.com/assets/media/misc/empty.png" data-src="https://keenthemes.com/assets/media/payment-methods/default/mastercard.svg" alt="" class="lozad h-20px me-2 rounded-1">
+
+    <img src="https://keenthemes.com/assets/media/misc/empty.png" data-src="https://keenthemes.com/assets/media/payment-methods/default/americanexpress.svg" alt="" class="lozad h-20px rounded-1">
+    </div>
+    </div>
+    <!--end::Payment methods-->
+    </div>
+    <!--end:: Footer bottom--></footer>
+    </div>
+    </div>
+
+
+    <!--begin::Modal Wrapper-->
+    <div class="modal fade" tabindex="-1" role="dialog" id="page_modal_account_login">
+    <!--begin::Modal Dialog-->
+    <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+    <!--begin::Modal Content-->
+    <div class="modal-content p-10">
+    <!--begin::Modal Header-->
+    <div class="modal-header text-end border-0 py-0 justify-content-end me-n4">
+    <button type="button" class="btn btn-icon btn-sm btn-text-muted btn-active-text-primary" data-bs-dismiss="modal" aria-label="Close">
+    <i class="ki-duotone ki-cross-square fs-1"><span class="path1"></span><span class="path2"></span></i>
+    </button>
+    </div>
+    <!--end::Modal Header-->
+
+    <!--begin::Modal Body-->
+    <div class="modal-body pt-4 scroll-y">
+    <form method="POST" action="https://keenthemes.com/account/signin" novalidate="novalidate" id="page_account_signin_form" class="page_account_signin_form_modal">
+    <input type="hidden" name="_token" value="bpRLOAiIAFDTuE7rAMUVT7NDlcWhDzHj4RE45XlT">		<div id="my_name_aE4cPE6lrB2ZznPg_wrap" style="display: none" aria-hidden="true">
+    <input id="my_name_aE4cPE6lrB2ZznPg"
+    name="my_name_aE4cPE6lrB2ZznPg"
+    type="text"
+    value=""
+    autocomplete="nope"
+    tabindex="-1">
+    <input name="valid_from"
+    type="text"
+    value="eyJpdiI6IjlVNnlBSGxJbHNXYmIrU2FuYzhJTnc9PSIsInZhbHVlIjoiMFJUcmlVVHZSeXdXZGtYelp2bmpCdz09IiwibWFjIjoiZTEwYzI1YTc4Y2MzNmVlYTE0YzA5ZDE1NWQ1MDcwZTgyZmU0ZjVjMzczMGU1NDVkMTExNDJjZTcxMmE1YjBmOCIsInRhZyI6IiJ9"
+    autocomplete="off"
+    tabindex="-1">
+    </div>
+
+
+    <h1 class="text-center text-dark fw-bold fs-1 pt-5 mb-10">
+    Sign In
+    </h1>
+
+
+
+
+    <div id="page_account_signin_message" class="d-none py-5"></div>
+
+
+
+    <div class="form-group py-1">
+    <label class="fs-base fw-semibold">Email</label>
+    <input type="email" class="form-control from-control-custom" name="email" maxlength="50">
+    </div>
+
+
+
+    <div class="form-group py-1">
+    <div class="d-flex justify-content-between">
+    <label class="fs-base fw-semibold">Password</label>
+    <a href="#" class="text-end fw-semibold text-primary" id="page_account_password_reset_toggle">Forgot Password ?</a>
+    </div>
+    <input type="password" class="form-control from-control-custom" name="password" maxlength="50">
+    </div>
+
+
+
+    <div class="form-group py-1 mb-6 align-items-center">
+    <div class="d-flex align-items-center">
+    <div class="form-check form-check-custom form-check-solid">
+    <input type="checkbox" value="1" name="remember" class="form-check-input" id="page_account_signup_remember"/>
+    <label class="form-check-label mb-0 me-1 text-gray-600 fw-semibold" for="page_account_signup_remember">
+    Remember me
+    </label>
+    </div>
+    </div>
+    </div>
+
+
+    <!--begin::Input group-->
+    <div class="form-group">
+    <div id="signin_captcha_container"></div>
+    </div>
+    <!--end::Input group-->
+
+
+    <div class="form-group mb-12 d-flex justify-content-between pt-2">
+    <button type="submit" id="page_account_signin_submit" class="btn btn-custom btn-primary fw-semibold py-4 px-7 me-3 radius-lg" data-verfication-url="https://keenthemes.com/api/recaptcha/verify" data-sitekey="6Ld6TMgaAAAAAB2G5S5S703IxTWq-9D1_JY0Vw_i">
+    <!--begin::Indicator-->
+    <span class="indicator-label">
+    Sign In
+    </span>
+    <span class="indicator-progress">
+    Please wait...
+    <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+    </span>
+    <!--end::Indicator-->
+    </button>
+
+    <a href="https://keenthemes.com/account/redirect/google?redirect_uri=https://keenthemes.com" class="btn btn-custom btn-light-primary fw-semibold flex-grow-1 py-4 px-7 radius-lg" data-action="signin-google" rel="nofollow noopener noreferrer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none" class="h-20px me-2">
+    <path d="M27.9851 14.2618C27.9851 13.1146 27.8899 12.2775 27.6837 11.4094H14.2788V16.5871H22.1472C21.9886 17.8738 21.132 19.8116 19.2283 21.1137L19.2016 21.287L23.44 24.4956L23.7336 24.5242C26.4304 22.0904 27.9851 18.5093 27.9851 14.2618Z" fill="#4285F4"/>
+    <path d="M14.279 27.904C18.1338 27.904 21.37 26.6637 23.7338 24.5245L19.2285 21.114C18.0228 21.9356 16.4047 22.5092 14.279 22.5092C10.5034 22.5092 7.29894 20.0754 6.15663 16.7114L5.9892 16.7253L1.58205 20.0583L1.52441 20.2149C3.87224 24.7725 8.69486 27.904 14.279 27.904Z" fill="#34A853"/>
+    <path d="M6.15656 16.7113C5.85516 15.8432 5.68072 14.913 5.68072 13.9519C5.68072 12.9907 5.85516 12.0606 6.14071 11.1925L6.13272 11.0076L1.67035 7.62109L1.52435 7.68896C0.556704 9.58024 0.00146484 11.7041 0.00146484 13.9519C0.00146484 16.1997 0.556704 18.3234 1.52435 20.2147L6.15656 16.7113Z" fill="#FBBC05"/>
+    <path d="M14.279 5.3947C16.9599 5.3947 18.7683 6.52635 19.7995 7.47204L23.8289 3.6275C21.3542 1.37969 18.1338 0 14.279 0C8.69485 0 3.87223 3.1314 1.52441 7.68899L6.14077 11.1925C7.29893 7.82856 10.5034 5.3947 14.279 5.3947Z" fill="#EB4335"/>
+    </svg> Sign In with Google
+    </a>
+    </div>
+
+
+
+    <div class="d-flex flex-center fs-5 fw-bold">
+    <span class="text-muted me-2">Or</span>
+
+    <a href="#" class="text-primary" id="page_account_signup_toggle">
+    Create an Account
+    </a>
+    </div>
+
+    </form>
+
+
+    <div id="page_account_notice_complete" class="d-none page_account_notice_complete_modal">
+
+    <h1 class="text-center text-dark fw-bold fs-1 pt-5 mb-10">
+    Thank you!
+    </h1>
+
+
+
+    <div class="content text-center fw-semibold text-gray-600 pb-7 lh-lg fs-4">
+    We have sent an activation link to your email.<br/>
+    Please click it and you are done.
+    </div>
+
+
+
+    <div class="user-verified-text text-center fw-semibold text-gray-600 pb-7 lh-lg fs-4 d-none">
+    Your email is confirmed. Please sign in to use our services.<br/>
+    </div>
+
+
+
+    <div class="text-center">
+    <a href="/user/login" class="btn btn-custom btn-primary fw-semibold py-3 px-7 radius-lg">
+    Sign In
+    </a>
+    </div>
+
+
+    <img src="/app/assets/media/illustrations/customerservice.svg" alt="">
+    </div>
+
+    <form method="POST" action="/app/account/signup" novalidate="novalidate" id="page_account_signup_form" class="d-none page_account_signup_form_modal">
+    <input type="hidden" name="_token" value="bpRLOAiIAFDTuE7rAMUVT7NDlcWhDzHj4RE45XlT">
+
+    <h1 class="text-center text-dark fw-bold fs-1 pt-5 mb-10">
+    Create Account
+    </h1>
+
+
+    <input type="hidden" name="mode" value="modal">
+
+
+    <div class="form-group py-1">
+    <label class="fs-base fw-semibold">Email</label>
+    <input type="email" class="form-control from-control-custom" name="email" maxlength="50">
+    </div>
+
+
+
+    <div class="form-group py-1">
+    <label class="fs-base fw-semibold">Password</label>
+    <input type="password" class="form-control from-control-custom" name="password" maxlength="50">
+    </div>
+
+
+
+    <div class="form-group py-1">
+    <label class="fs-base fw-semibold">Confirm Password</label>
+    <input type="password" class="form-control from-control-custom" name="confirm_password" maxlength="50">
+    </div>
+
+
+
+    <div class="form-group py-1 mb-6 align-items-center">
+    <div class="d-flex align-items-center">
+    <div class="form-check form-check-custom form-check-solid">
+    <input type="checkbox" value="1" name="agree_terms" class="form-check-input" id="page_account_signup_terms"/>
+    <label class="form-check-label mb-0 me-1 text-gray-600 fw-semibold" for="page_account_signup_terms">
+    I agree with
+    </label>
+    <a href="/app/terms" class="fw-semibold ms-2">Keenthemes Term of Use</a>
+    </div>
+    </div>
+    </div>
+
+
+    <!--begin::Input group-->
+    <div class="form-group">
+    <div id="signup_captcha_container"></div>
+    </div>
+    <!--end::Input group-->
+
+
+    <div class="form-group mb-12 d-flex justify-content-between pt-2">
+    <button type="submit" id="page_account_signup_submit" class="btn btn-custom btn-primary fw-semibold py-4 px-7 me-3 radius-lg" data-verfication-url="/app/api/recaptcha/verify" data-sitekey="6Ld6TMgaAAAAAB2G5S5S703IxTWq-9D1_JY0Vw_i">
+    <!--begin::Indicator-->
+    <span class="indicator-label">
+    Sign Up
+    </span>
+    <span class="indicator-progress">
+    Please wait...
+    <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+    </span>
+    <!--end::Indicator-->
+    </button>
+
+    <a href="/app/account/redirect/google?redirect_uri=https://keenthemes.com" class="btn btn-custom btn-light-primary fw-semibold flex-grow-1 py-4 px-7 radius-lg" data-action="signin-google" rel="nofollow noopener noreferrer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none" class="h-20px me-2">
+    <path d="M27.9851 14.2618C27.9851 13.1146 27.8899 12.2775 27.6837 11.4094H14.2788V16.5871H22.1472C21.9886 17.8738 21.132 19.8116 19.2283 21.1137L19.2016 21.287L23.44 24.4956L23.7336 24.5242C26.4304 22.0904 27.9851 18.5093 27.9851 14.2618Z" fill="#4285F4"/>
+    <path d="M14.279 27.904C18.1338 27.904 21.37 26.6637 23.7338 24.5245L19.2285 21.114C18.0228 21.9356 16.4047 22.5092 14.279 22.5092C10.5034 22.5092 7.29894 20.0754 6.15663 16.7114L5.9892 16.7253L1.58205 20.0583L1.52441 20.2149C3.87224 24.7725 8.69486 27.904 14.279 27.904Z" fill="#34A853"/>
+    <path d="M6.15656 16.7113C5.85516 15.8432 5.68072 14.913 5.68072 13.9519C5.68072 12.9907 5.85516 12.0606 6.14071 11.1925L6.13272 11.0076L1.67035 7.62109L1.52435 7.68896C0.556704 9.58024 0.00146484 11.7041 0.00146484 13.9519C0.00146484 16.1997 0.556704 18.3234 1.52435 20.2147L6.15656 16.7113Z" fill="#FBBC05"/>
+    <path d="M14.279 5.3947C16.9599 5.3947 18.7683 6.52635 19.7995 7.47204L23.8289 3.6275C21.3542 1.37969 18.1338 0 14.279 0C8.69485 0 3.87223 3.1314 1.52441 7.68899L6.14077 11.1925C7.29893 7.82856 10.5034 5.3947 14.279 5.3947Z" fill="#EB4335"/>
+    </svg> Sign In with Google
+    </a>
+    </div>
+
+
+
+    <div class="d-flex flex-center fs-5 fw-bold">
+    <span class="fw-semibold text-muted me-2">Already have an account ?</span>
+    <a href="#" class="text-end fw-bold text-primary" id="page_account_signin_toggle">
+    Sign In
+    </a>
+    </div>
+
+    </form>
+
+
+    <form method="POST" action="/app/account/password/email" id="page_account_password_reset_form" class="d-none page_account_password_reset_form_modal">
+    <input type="hidden" name="_token" value="bpRLOAiIAFDTuE7rAMUVT7NDlcWhDzHj4RE45XlT">
+
+    <h1 class="text-center text-dark fw-bold fs-1 pt-5 mb-10">
+    Forgot Your Password ?
+    </h1>
+
+
+
+    <p class="m-0 pt-0 pb-10 text-center fw-semibold fs-6 text-gray-600">
+    Please enter your email and we will send a link to your email to reset your password
+    </p>
+
+
+
+    <div class="form-group py-1">
+    <input type="email" class="form-control from-control-custom" name="email" value="" placeholder="Email" maxlength="50">
+    </div>
+
+
+    <!--begin::Input group-->
+    <div class="form-group">
+    <div id="reset_password_captcha_container"></div>
+    </div>
+    <!--end::Input group-->
+
+
+    <div class="form-group py-1">
+    <div class="g-recaptcha" id="g-recaptcha-password" data-sitekey="6Lf92jMUAAAAANk8wz68r73rA2uPGr4_e0gn96BL"></div>
+    </div>
+
+
+
+    <div class="form-group mb-0 d-flex justify-content-center pt-2">
+    <button type="submit" id="page_password_reset_submit" class="btn btn-custom btn-primary fw-semibold py-4 px-7 me-3 radius-lg">
+    <!--begin::Indicator-->
+    <span class="indicator-label">
+    Reset Password
+    </span>
+    <span class="indicator-progress">
+    Please wait...
+    <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+    </span>
+    <!--end::Indicator-->
+    </button>
+
+    <a href="#" id="page_password_reset_cancel" class="btn btn-custom btn-light-primary fw-semibold py-4 px-7 radius-lg">
+    Cancel
+    </a>
+    </div>
+
+    </form>
+
+    </div>
+    <!--end::Modal Body-->
+    </div>
+    <!--end::Modal Content-->
+    </div>
+    <!--end::Modal Dialog-->
+    </div>
+    <!--end::Modal Wrapper-->
+
+    <div class="alert cookiealert" role="alert">
+    <div class="container d-flex flex-center flex-wrap py-5 fw-semibold">
+    <div class="me-5">
+    We use cookies to ensure you get the best experience on our website. 
+
+    <a href="https://cookiesandyou.com/" target="_blank">Learn more</a>
+    </div>
+
+    <button type="button" class="btn btn-primary fw-semibold acceptcookies">
+    I agree
+    </button>
+    </div>
+    </div>
+
+
+    <!--begin::Javascript-->
+    <!--begin::Global Javascript Bundle(mandatory for all pages)-->
+    <script src="/app/assets/plugins/global/plugins.bundle.js"></script>
+    <script src="/app/assets/js/scripts.bundle.js"></script>
+    <!--end::Global Javascript Bundle-->
+
+    <!--begin::Vendors Javascript(used by this page)-->
+    <!--end::Vendors Javascript-->
+
+    <!--begin::Custom Javascript(optional)-->
+    <script src="/app/js/laroute.js"></script>
+    <!--end::Custom Javascript-->
+
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+
+
+
+
+    <!--end::Javascript-->
+    </body>
+
+
+    </html>

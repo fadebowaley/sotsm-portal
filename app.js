@@ -129,6 +129,11 @@ const userRoutes = require("./routes/userRoutes");
 const adminRoutes = require("./routes/adminRoutes");
 const indexRoutes = require("./routes/indexRoutes");
 
+const fileManagerRoutes = require("./routes/appsRoutes/fileManagerRoutes");
+const chatRoutes = require("./routes/appsRoutes/chatRoutes");
+const inboxRoutes = require("./routes/appsRoutes/inboxRoutes");
+
+
 // For the new app and routes
 const appRoutes = require("./routes/appRoutes");
 const authRoutes = require("./routes/authRoutes");
@@ -136,6 +141,9 @@ const authRoutes = require("./routes/authRoutes");
 app.use("/", indexRoutes);
 app.use("/user", userRoutes);
 app.use("/admin", adminRoutes);
+app.use("/apps/file-manager", fileManagerRoutes);
+app.use("/apps/chat", chatRoutes);
+app.use("/apps/inbox", inboxRoutes);
 
 // For the new App Structure
 app.use("/app", appRoutes);

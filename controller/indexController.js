@@ -46,7 +46,8 @@ const indexController = {
     }
   },
 
-  getHomePage: async (req, res) => {
+
+  getDashboard: async (req, res) => {
     try {
       res.render("pages/index", {
       });
@@ -55,6 +56,22 @@ const indexController = {
       res.status(500).send("Server Error");
     }
   },
+  
+
+  //the front page of the app
+  getFrontpage: async (req, res) => {
+    try {
+      res.render("pages/landing", {
+        currentUser: req.user,
+        successMsg: req.flash("success")[0],
+        errorMsg: req.flash("error")[0]
+      });
+    } catch (err) {
+      console.error(err);
+      res.status(500).send("Server Error");
+    }
+  },
+
 
   getCalendar: async (req, res) => {
     try {
@@ -205,6 +222,19 @@ const indexController = {
       res.status(500).json({ error: "Failed to search for user" });
     }
   },
+
+
+getTestPage: async (req, res) => {
+    try {
+        res.render("admin/church-settings/directory", {
+            title: "Test Page",
+            message: "This is a test page to verify EJS file rendering.",
+        });
+    } catch (err) {
+        console.error("Error rendering test page:", err);
+        res.status(500).send("Server Error");
+    }
+},
 };
 
 

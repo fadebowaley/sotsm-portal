@@ -6,8 +6,14 @@ const userService = require("../controller/clcUser");
 const clcService = require("../controller/clcChurch");
 const houseHoldController = require("../controller/houseHold");
 
-router.get("/", middleware.isLoggedIn, indexController.getHomePage);
+//get Dashboard
+router.get("/dashboard", middleware.isLoggedIn, indexController.getDashboard);
 router.get("/event", indexController.getCalendar);
+router.get("/test", indexController.getTestPage);
+router.get("/", indexController.getFrontpage);
+
+
+
 router.get("/pastors", indexController.getPastors);
 router.get("/confirmation", indexController.getConfirmation);
 router.get("/confirmation/:userId", indexController.getCon);
