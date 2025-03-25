@@ -1,3 +1,5 @@
 /node_modules
 .env
 /migrations
+/haloface/node_modules
+/halocrm/node_modules

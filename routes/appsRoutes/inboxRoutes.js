@@ -1,5 +1,5 @@
 const express = require("express");
-const inboxController = require("../../controller/appsControllers/inboxController");
+const inboxController = require("../../controller/apps/inboxController");
 const router = express.Router();
 
 router.get("/listing", inboxController.getMesssages);

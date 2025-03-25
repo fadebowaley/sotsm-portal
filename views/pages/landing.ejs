@@ -52,7 +52,12 @@
     <script src="https://cdn.amplitude.com/libs/analytics-browser-2.11.1-min.js.gz"></script>
     <script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.8.0-min.js.gz"></script>
     <script type="text/javascript" src="https://cdn.amplitude.com/script/999992f685fb1282fdee89700deda568.experiment.js"></script>
-    </head>
+    <style>
+        .app-default{
+        background-color:white; 
+        }
+    </style>
+</head>
     <body id="kt_app_body" class="app-default app-default" >
     <!--begin::Theme mode setup on page load-->
     <script>
@@ -68,7 +73,6 @@
     themeMode = defaultThemeMode;
     }
     }
-
     if (themeMode === "system") {
     themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
     }
@@ -76,6 +80,7 @@
     document.documentElement.setAttribute("data-bs-theme", themeMode);
     }            
     </script>
+
     <!--end::Theme mode setup on page load-->
     <div class="d-flex flex-column flex-root app-root" id="kt_app_root">
     <div class="app-page flex-column flex-column-fluid" id="kt_app_pages">
@@ -416,7 +421,7 @@
     </div>
     </div>
 
-    <div class="app-container container-xxl py-10">
+    <!-- <div class="app-container container-xxl py-10">
 
     <div class="tab-content">
     <div class="tab-pane fade show active" id="categories_bootstrap-templates" role="tabpanel">
@@ -1156,8 +1161,8 @@
     </div>
     </div>
 
-    </div>
-    <div class="block-dark py-10">
+    </div> -->
+    <div class="block-dark py-10" style="background-color:black;">
     <div class="app-container container-xxl py-20">        
 
     <div class="text-center mb-10 mb-lg-17">
@@ -1273,170 +1278,10 @@
     </div>
     </div>
 
-    <div class="mt-10 py-20">     
-
-    <div class="text-center mb-10 mb-lg-10">
-
-    <h1 class="text-dark lh-md fw-bold ls-nsm fs-2qx fs-lg-3qx mb-5">
-    Loved by Thousands
-    </h1>
+</div>
 
 
 
-    <div class="fw-normal fs-4 text-gray-800">
-    Thousands of web projects have been successfully deployed over the years.<br>
-    Thanks to regular updates and professional technical support.
-    </div>
-
-    </div>
-
-
-
-    <div class="testimonials slider mx-auto mb-0 pb-5 pb-lg-10">
-    <div
-    data-tns="true" 
-    data-tns-loop="true" 
-    data-tns-swipe-angle="false" 
-    data-tns-speed="2000" 
-    data-tns-nav-as-thumbnails="true" 
-    data-tns-autoplay="false" 
-    data-tns-autoplay-timeout="7000" 
-    data-tns-controls="false" 
-    data-tns-nav="true" 
-    data-tns-items="1" 
-    data-tns-center="true" 
-    data-tns-dots="true" 
-    data-tns-responsive="{1000: {
-    fixedWidth: 800,
-    items: 1
-    }}">
-
-        
-    <div class="slider-item">
-    <div class="border shadow rounded-3 px-10 py-7 m-7">
-    <div class="text-center mb-5">
-        <img class="testimonial-stars h-25px" src="/app/assets/media/misc/review-stars.svg" alt=""/>
-    </div>
-
-    <div class="testimonial-feedback mb-7 fs-6 lh-lg">
-        
-    I can not overestimate the impact Metronic has had. I run a team of 20 product managers, developers, QA and UX resources. Previously we designed everything ourselves.
-    For our newest platform we tried out Metronic. I can not overestimate the impact Metronic has had.It's
-    accelerated development 3x and reduced QA issues by 50% If you add up the reduced need for design time/resources, the increase
-
-    </div>
-
-    <div class="mb-1">
-        <span class="testimonial-author fs-lg">
-                <span class="fw-bold">Jonathan Bartlet,</span>&nbsp;
-                Customer
-        </span>
-    </div>
-    </div>
-    </div>
-
-        
-    <div class="slider-item">
-    <div class="border shadow rounded-3 px-10 py-7 m-7">
-    <div class="text-center mb-5">
-        <img class="testimonial-stars h-25px" src="/app/assets/media/misc/review-stars.svg" alt=""/>
-    </div>
-
-    <div class="testimonial-feedback mb-7 fs-6 lh-lg">
-        
-    My first foray into the world of Administrative/Dashboard. Bootstrap templates and I have to confess,
-    the layout of the package in the filesystem was such that I had no problem figuring it out.
-    Each page is self contained and includes all the CSS, jQuery, and extra components to fully function.
-
-    </div>
-
-    <div class="mb-1">
-        <span class="testimonial-author fs-lg">
-                <span class="fw-bold">JimOQuinn,</span>&nbsp;
-                Customer
-        </span>
-    </div>
-    </div>
-    </div>
-
-        
-    <div class="slider-item">
-    <div class="border shadow rounded-3 px-10 py-7 m-7">
-    <div class="text-center mb-5">
-        <img class="testimonial-stars h-25px" src="/app/assets/media/misc/review-stars.svg" alt=""/>
-    </div>
-
-    <div class="testimonial-feedback mb-7 fs-6 lh-lg">
-        
-    This is by far the cleanest template and the most well structured. The most well thought out design theme I have ever used. The codes are up to standard.
-    The css styles are very clean. In fact the cleanest and the most up to standard I have ever seen. This is also the easiest template to customize.
-
-    </div>
-
-    <div class="mb-1">
-        <span class="testimonial-author fs-lg">
-                <span class="fw-bold">judge321,</span>&nbsp;
-                Customer
-        </span>
-    </div>
-    </div>
-    </div>
-
-        
-    <div class="slider-item">
-    <div class="border shadow rounded-3 px-10 py-7 m-7">
-    <div class="text-center mb-5">
-        <img class="testimonial-stars h-25px" src="/app/assets/media/misc/review-stars.svg" alt=""/>
-    </div>
-
-    <div class="testimonial-feedback mb-7 fs-6 lh-lg">
-        
-    After a year with this template, I decided to rate it. Why? The main reason is the constant update system< that keep helping to improve my site all the time.
-    If someone ask me why take long time to rate, well I found some issues a year ago that send through some bugs report that they answer me quickly
-    but it take long time to see the changes make happens. Now I'm glad to use this template but I wonder if they could down the price of the extended version sometime because
-    I would like to purchase it a normal price. Anyway, you are doing really good job, congratulations
-
-    </div>
-
-    <div class="mb-1">
-        <span class="testimonial-author fs-lg">
-                <span class="fw-bold">eduardoac,</span>&nbsp;
-                Customer
-        </span>
-    </div>
-    </div>
-    </div>
-
-        
-    <div class="slider-item">
-    <div class="border shadow rounded-3 px-10 py-7 m-7">
-    <div class="text-center mb-5">
-        <img class="testimonial-stars h-25px" src="/app/assets/media/misc/review-stars.svg" alt=""/>
-    </div>
-
-    <div class="testimonial-feedback mb-7 fs-6 lh-lg">
-        
-    This theme has literally everything. The documentation is AMAZING, the examples are super useful, and it's really easy to pick and choose which plugins you want to include.
-    There are so many options for basically every component of the app and it's
-    easy to switch between them (ex. changing from a compact sidebar to the full sidebar)... So far I've saved about 2 days of work and I've only had the theme for 15 hours or so
-
-    </div>
-
-    <div class="mb-1">
-        <span class="testimonial-author fs-lg">
-                <span class="fw-bold">smallanditalian5,</span>&nbsp;
-                Customer
-        </span>
-    </div>
-    </div>
-    </div>
-
-
-    </div>
-    </div>
-
-    </div>
-    </div>
     </div>
 
     </div>
@@ -1464,7 +1309,7 @@
     <div class="rounded-3 d-flex align-items-center m-0 p-8 p-lg-12">
     <form
     class="validate border border-2 border-gray-300 rounded-3 d-flex position-relative m-0"
-    action="https://keenthemes.us3.list-manage.com/subscribe/post?u=b10f23244c11e2946463ea844&amp;id=3aba0b6220"
+    action="#"
     method="post"
     target="_blank"
     novalidate>

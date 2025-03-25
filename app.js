@@ -138,16 +138,20 @@ const inboxRoutes = require("./routes/appsRoutes/inboxRoutes");
 const appRoutes = require("./routes/appRoutes");
 const authRoutes = require("./routes/authRoutes");
 
+//routes for routes indexRoutes, 
 app.use("/", indexRoutes);
-app.use("/user", userRoutes);
+app.use("/auth", authRoutes);
 app.use("/admin", adminRoutes);
+app.use("/app", appRoutes);
+
+
+// For the new App Structure deleting this files 
+app.use("/user", userRoutes);
 app.use("/apps/file-manager", fileManagerRoutes);
 app.use("/apps/chat", chatRoutes);
 app.use("/apps/inbox", inboxRoutes);
 
-// For the new App Structure
-app.use("/app", appRoutes);
-app.use("/auth", authRoutes);
+
 
 // 404 Error Handler
 app.use((req, res, next) => {

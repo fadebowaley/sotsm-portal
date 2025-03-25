@@ -1,5 +1,5 @@
 const express = require("express");
-const fileManagerController = require("../../controller/appsControllers/fileManagerController")
+const fileManagerController = require("../../controller/apps/fileManagerController");
 const router = express.Router();
 
 router.get("/blank", fileManagerController.getBlank);

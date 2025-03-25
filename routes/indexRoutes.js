@@ -10,6 +10,7 @@ const houseHoldController = require("../controller/houseHold");
 router.get("/dashboard", middleware.isLoggedIn, indexController.getDashboard);
 router.get("/event", indexController.getCalendar);
 router.get("/test", indexController.getTestPage);
+
 router.get("/", indexController.getFrontpage);
 
 
