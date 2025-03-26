@@ -23,7 +23,7 @@ import {
 } from 'react-icons/pi';
 import { FcGoogle } from 'react-icons/fc';
 
-export default function AuthWrapperTwo({
+export default function AuthWrapper({
   children,
   title,
   isSocialLoginActive = false,
@@ -100,11 +100,11 @@ function AuthNavBar() {
         <Image src={logoImg} alt="Isomorphic" className="dark:invert" />
       </Link>
       <div className="flex space-x-6 xl:w-full xl:flex-col xl:space-x-0 xl:space-y-6 xl:pt-9 2xl:space-y-7 2xl:pt-12 3xl:pt-14">
-        <AuthNavLink href={routes.auth.signUp2}>
+        <AuthNavLink href={routes.auth.signUp}>
           <PiUserCirclePlus className="h-6 w-6" />
           Sign up
         </AuthNavLink>
-        <AuthNavLink href={routes.auth.signIn2}>
+        <AuthNavLink href={routes.auth.signIn}>
           <PiArrowLineRight className="h-[22px] w-[22px]" />
           Login
         </AuthNavLink>

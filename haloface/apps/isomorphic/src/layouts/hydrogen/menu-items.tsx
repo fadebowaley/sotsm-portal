@@ -482,22 +482,22 @@ export const menuItems = [
   // label end
   {
     name: 'Sign Up',
-    href: routes.auth.signUp2,
+    href: routes.auth.signUp,
     icon: <PiUserPlusDuotone />,
   },
   {
     name: 'Sign In',
-    href: routes.auth.signIn2,
+    href: routes.auth.signIn,
     icon: <PiShieldCheckDuotone />,
   },
   {
     name: 'Forgot Password',
-    href: routes.auth.forgotPassword2,
+    href: routes.auth.forgotPassword,
     icon: <PiLockKeyDuotone />,
   },
   {
     name: 'OTP Pages',
-    href: routes.auth.otp2,
+    href: routes.auth.otp,
     icon: <PiChatCenteredDotsDuotone />
   },
 ];

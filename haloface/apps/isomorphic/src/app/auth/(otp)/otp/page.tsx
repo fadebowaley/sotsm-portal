@@ -1,6 +1,6 @@
-import AuthWrapperTwo from '@/app/shared/auth-layout/auth-wrapper-two';
+import AuthWrapperTwo from '@/app/shared/auth-layout/auth-wrapper';
 import { Text } from 'rizzui/typography';
-import OtpForm from '@/app/auth/(otp)/otp-2/otp-form';
+// import OtpForm from '@/app/auth/(otp)/otp-2/otp-form';
 
 export default function OtpPage() {
   return (
@@ -10,7 +10,7 @@ export default function OtpPage() {
           We have sent you One Time Password to your email. Please enter your
           OTP
         </Text>
-        <OtpForm />
+        {/* <OtpForm /> */}
       </div>
     </AuthWrapperTwo>
   );

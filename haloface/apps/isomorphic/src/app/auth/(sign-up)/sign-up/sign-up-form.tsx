@@ -1,32 +1,35 @@
 'use client';
 
 import Link from 'next/link';
+import { useState } from 'react';
 import { SubmitHandler } from 'react-hook-form';
-import { Input, Button, Password, Checkbox, Text } from 'rizzui';
+import { Password, Checkbox, Button, Input, Text } from 'rizzui';
 import { useMedia } from '@core/hooks/use-media';
 import { Form } from '@core/ui/form';
 import { routes } from '@/config/routes';
-import { loginSchema, LoginSchema } from '@/validators/login.schema';
+import { SignUpSchema, signUpSchema } from '@/validators/signup.schema';
 
-const initialValues: LoginSchema = {
-  email: 'admin@admin.com',
-  password: 'admin',
-  rememberMe: true,
+const initialValues = {
+  email: '',
+  password: '',
+  isAgreed: false,
 };
 
-export default function SignInForm() {
+export default function SignUpForm() {
   const isMedium = useMedia('(max-width: 1200px)', false);
-  const onSubmit: SubmitHandler<LoginSchema> = (data) => {
-    console.log('Sign in data', data);
+  const [reset, setReset] = useState({});
+  const onSubmit: SubmitHandler<SignUpSchema> = (data) => {
+    console.log('sign up form data', data);
+    setReset({ ...initialValues, isAgreed: false });
   };
 
   return (
     <>
-      <Form<LoginSchema>
-        validationSchema={loginSchema}
+      <Form<SignUpSchema>
+        validationSchema={signUpSchema}
+        resetValues={reset}
         onSubmit={onSubmit}
         useFormProps={{
-          mode: 'onChange',
           defaultValues: initialValues,
         }}
       >
@@ -51,38 +54,43 @@ export default function SignInForm() {
               {...register('password')}
               error={errors.password?.message}
             />
-            <div className="flex items-center justify-between pb-2">
-              <Checkbox
-                {...register('rememberMe')}
-                label="Remember Me"
-                variant="flat"
-                className="[&>label>span]:font-medium"
-              />
-              <Link
-                href={routes.auth.forgotPassword2}
-                className="h-auto p-0 text-sm font-semibold text-blue underline transition-colors hover:text-gray-900 hover:no-underline"
-              >
-                Forget Password?
-              </Link>
+            <div className="flex items-start pb-2 text-gray-700">
+              <Checkbox {...register('isAgreed')} variant="flat" />
+              <p className="-mt-0.5 ps-2 text-sm leading-relaxed">
+                By signing up you have agreed to our{' '}
+                <Link
+                  href="/"
+                  className="font-semibold text-blue transition-colors hover:text-gray-1000"
+                >
+                  Terms
+                </Link>{' '}
+                &{' '}
+                <Link
+                  href="/"
+                  className="font-semibold text-blue transition-colors hover:text-gray-1000"
+                >
+                  Privacy Policy
+                </Link>
+              </p>
             </div>
             <Button
-              className="border-primary-light w-full border-2 text-base font-bold"
+              className="border-primary-light w-full border-2 text-base font-medium"
               type="submit"
               size={isMedium ? 'lg' : 'xl'}
               rounded="pill"
             >
-              Sign in
+              Create Account
             </Button>
           </div>
         )}
       </Form>
       <Text className="mt-5 text-center text-[15px] leading-loose text-gray-500 lg:text-start xl:mt-7 xl:text-base">
-        Don’t have an account?{' '}
+        Already have an account?{' '}
         <Link
-          href={routes.auth.signUp2}
+          href={routes.auth.signIn}
           className="font-semibold text-gray-700 transition-colors hover:text-blue"
         >
-          Create Account
+          Sign In
         </Link>
       </Text>
     </>
