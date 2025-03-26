@@ -1,18 +1,53 @@
+// Import required dependencies
 const express = require('express');
 const validate = require('../../middlewares/validate');
 const authValidation = require('../../validations/auth.validation');
 const authController = require('../../controllers/auth.controller');
 const auth = require('../../middlewares/auth');
 
+// Create Express router instance
 const router = express.Router();
 
+// Authentication Routes
+
+// Register a new user
+// Example: POST /auth/register
+// Body: { "name": "John Doe", "email": "john@example.com", "password": "password123" }
 router.post('/register', validate(authValidation.register), authController.register);
+
+// Login user
+// Example: POST /auth/login
+// Body: { "email": "john@example.com", "password": "password123" }
 router.post('/login', validate(authValidation.login), authController.login);
+
+// Logout user
+// Example: POST /auth/logout
+// Body: { "refreshToken": "eyJhbGciOiJIUzI1NiIs..." }
 router.post('/logout', validate(authValidation.logout), authController.logout);
+
+// Refresh access tokens using refresh token
+// Example: POST /auth/refresh-tokens
+// Body: { "refreshToken": "eyJhbGciOiJIUzI1NiIs..." }
 router.post('/refresh-tokens', validate(authValidation.refreshTokens), authController.refreshTokens);
+
+// Request password reset email
+// Example: POST /auth/forgot-password
+// Body: { "email": "john@example.com" }
 router.post('/forgot-password', validate(authValidation.forgotPassword), authController.forgotPassword);
+
+// Reset password using reset token
+// Example: POST /auth/reset-password
+// Body: { "token": "eyJhbGciOiJIUzI1NiIs...", "password": "newpassword123" }
 router.post('/reset-password', validate(authValidation.resetPassword), authController.resetPassword);
+
+// Send email verification link (requires authentication)
+// Example: POST /auth/send-verification-email
+// Headers: { "Authorization": "Bearer eyJhbGciOiJIUzI1NiIs..." }
 router.post('/send-verification-email', auth(), authController.sendVerificationEmail);
+
+// Verify email using verification token
+// Example: POST /auth/verify-email
+// Body: { "token": "eyJhbGciOiJIUzI1NiIs..." }
 router.post('/verify-email', validate(authValidation.verifyEmail), authController.verifyEmail);
 
 module.exports = router;
