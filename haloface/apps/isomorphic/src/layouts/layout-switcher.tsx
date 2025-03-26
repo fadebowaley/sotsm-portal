@@ -6,36 +6,11 @@ import { LAYOUT_OPTIONS } from '@/config/enums';
 import RadioBox from '@/layouts/settings/radio-box';
 import DrawerBlock from '@/layouts/settings/drawer-block';
 import HydrogenIcon from './layout-icons/hydrogen-icon';
-import HeliumIcon from './layout-icons/helium-icon';
-import LithiumIcon from './layout-icons/lithium-icon';
-import BerylliumIcon from './layout-icons/beryllium-icon';
-import BoronIcon from './layout-icons/boron-icon';
-import CarbonIcon from './layout-icons/carbon-icon';
 
 const layoutOptions = [
   {
     icon: HydrogenIcon,
     value: LAYOUT_OPTIONS.HYDROGEN,
-  },
-  {
-    icon: HeliumIcon,
-    value: LAYOUT_OPTIONS.HELIUM,
-  },
-  {
-    icon: LithiumIcon,
-    value: LAYOUT_OPTIONS.LITHIUM,
-  },
-  {
-    icon: BerylliumIcon,
-    value: LAYOUT_OPTIONS.BERYLLIUM,
-  },
-  {
-    icon: BoronIcon,
-    value: LAYOUT_OPTIONS.BORON,
-  },
-  {
-    icon: CarbonIcon,
-    value: LAYOUT_OPTIONS.CARBON,
   },
 ];
 

@@ -66,48 +66,43 @@ export const menuItems = [
     name: 'Overview',
   },
   // label end
-  {
-    name: 'File Manager',
-    href: '/',
-    icon: <PiFolderDuotone />,
-  },
-  {
-    name: 'Appointment',
-    href: routes.appointment.dashboard,
-    icon: <PiCalendarDuotone />,
-  },
-  {
-    name: 'Executive',
-    href: routes.executive.dashboard,
-    icon: <PiBriefcaseDuotone />,
-  },
+  // {
+  //   name: 'File Manager',
+  //   href: '/',
+  //   icon: <PiFolderDuotone />,
+  // },
+  // {
+  //   name: 'Executive',
+  //   href: routes.executive.dashboard,
+  //   icon: <PiBriefcaseDuotone />,
+  // },
   {
     name: 'Project',
     href: routes.project.dashboard,
     icon: <PiClipboardTextDuotone />,
   },
-  {
-    name: 'CRM',
-    href: routes.crm.dashboard,
-    icon: <PiFolderUserDuotone />,
-  },
-  {
-    name: 'Affiliate',
-    href: routes.affiliate.dashboard,
-    icon: <PiChartPieSliceDuotone />,
-  },
-  {
-    name: 'Store Analytics',
-    href: routes.storeAnalytics.dashboard,
-    icon: <PiPresentationChartDuotone />,
-    badge: 'NEW',
-  },
-  {
-    name: 'Bidding',
-    href: routes.bidding.dashboard,
-    icon: <PiScalesDuotone />,
-    badge: 'NEW',
-  },
+  // {
+  //   name: 'CRM',
+  //   href: routes.crm.dashboard,
+  //   icon: <PiFolderUserDuotone />,
+  // },
+  // {
+  //   name: 'Affiliate',
+  //   href: routes.affiliate.dashboard,
+  //   icon: <PiChartPieSliceDuotone />,
+  // },
+  // {
+  //   name: 'Store Analytics',
+  //   href: routes.storeAnalytics.dashboard,
+  //   icon: <PiPresentationChartDuotone />,
+  //   badge: 'NEW',
+  // },
+  // {
+  //   name: 'Bidding',
+  //   href: routes.bidding.dashboard,
+  //   icon: <PiScalesDuotone />,
+  //   badge: 'NEW',
+  // },
   {
     name: 'Social Media',
     href: routes.socialMedia.dashboard,
@@ -133,22 +128,22 @@ export const menuItems = [
     href: routes.eCommerce.dashboard,
     icon: <PiShoppingCartDuotone />,
   },
-  {
-    name: 'Analytics',
-    href: routes.analytics,
-    icon: <PiChartBarDuotone />,
-  },
+  // {
+  //   name: 'Analytics',
+  //   href: routes.analytics,
+  //   icon: <PiChartBarDuotone />,
+  // },
   {
     name: 'Support',
     href: routes.support.dashboard,
     icon: <PiHeadsetDuotone />,
   },
-  {
-    name: 'Podcast',
-    href: routes.podcast.dashboard,
-    icon: <PiApplePodcastsLogoDuotone />,
-    badge: 'NEW',
-  },
+  // {
+  //   name: 'Podcast',
+  //   href: routes.podcast.dashboard,
+  //   icon: <PiApplePodcastsLogoDuotone />,
+  //   badge: 'NEW',
+  // },
 
   // label start
   {
@@ -266,42 +261,6 @@ export const menuItems = [
     ],
   },
   {
-    name: 'Logistics',
-    href: '#',
-    icon: <PiPackageDuotone />,
-    dropdownItems: [
-      {
-        name: 'Shipment List',
-        href: routes.logistics.shipmentList,
-      },
-      {
-        name: 'Shipment Details',
-        href: routes.logistics.shipmentDetails(DUMMY_ID),
-      },
-      {
-        name: 'Create Shipment',
-        href: routes.logistics.createShipment,
-      },
-      {
-        name: 'Edit Shipment',
-        href: routes.logistics.editShipment(DUMMY_ID),
-      },
-      {
-        name: 'Customer Profile',
-        href: routes.logistics.customerProfile,
-      },
-      {
-        name: 'Tracking',
-        href: routes.logistics.tracking(DUMMY_ID),
-      },
-    ],
-  },
-  {
-    name: 'Job Feeds',
-    href: routes.jobBoard.jobFeed,
-    icon: <PiShapesDuotone />,
-  },
-  {
     name: 'Appointment',
     href: routes.appointment.appointmentList,
     icon: <PiCalendarDuotone />,
@@ -322,11 +281,6 @@ export const menuItems = [
     icon: <PiFolderLockDuotone />,
   },
   {
-    name: 'Point of Sale',
-    href: routes.pos.index,
-    icon: <PiCreditCardDuotone />,
-  },
-  {
     name: 'Invoice Builder',
     href: routes.invoice.builder,
     icon: <PiNewspaperClippingDuotone />,
@@ -345,16 +299,16 @@ export const menuItems = [
     href: routes.searchAndFilter.realEstate,
     icon: <PiHouseLineDuotone />,
   },
-  {
-    name: 'Flight Booking',
-    href: routes.searchAndFilter.flight,
-    icon: <PiAirplaneTiltDuotone />,
-  },
-  {
-    name: 'NFT',
-    href: routes.searchAndFilter.nft,
-    icon: <PiCoinDuotone />,
-  },
+  // {
+  //   name: 'Flight Booking',
+  //   href: routes.searchAndFilter.flight,
+  //   icon: <PiAirplaneTiltDuotone />,
+  // },
+  // {
+  //   name: 'NFT',
+  //   href: routes.searchAndFilter.nft,
+  //   icon: <PiCoinDuotone />,
+  // },
   // label end
   // label start
   {
@@ -528,110 +482,22 @@ export const menuItems = [
   // label end
   {
     name: 'Sign Up',
-    href: '#',
+    href: routes.auth.signUp2,
     icon: <PiUserPlusDuotone />,
-    dropdownItems: [
-      {
-        name: 'Modern Sign up',
-        href: routes.auth.signUp1,
-      },
-      {
-        name: 'Vintage Sign up',
-        href: routes.auth.signUp2,
-      },
-      {
-        name: 'Trendy Sign up',
-        href: routes.auth.signUp3,
-      },
-      {
-        name: 'Elegant Sign up',
-        href: routes.auth.signUp4,
-      },
-      {
-        name: 'Classic Sign up',
-        href: routes.auth.signUp5,
-      },
-    ],
   },
   {
     name: 'Sign In',
-    href: '#',
+    href: routes.auth.signIn2,
     icon: <PiShieldCheckDuotone />,
-    dropdownItems: [
-      {
-        name: 'Modern Sign in',
-        href: routes.auth.signIn1,
-      },
-      {
-        name: 'Vintage Sign in',
-        href: routes.auth.signIn2,
-      },
-      {
-        name: 'Trendy Sign in',
-        href: routes.auth.signIn3,
-      },
-      {
-        name: 'Elegant Sign in',
-        href: routes.auth.signIn4,
-      },
-      {
-        name: 'Classic Sign in',
-        href: routes.auth.signIn5,
-      },
-    ],
   },
   {
     name: 'Forgot Password',
-    href: '#',
+    href: routes.auth.forgotPassword2,
     icon: <PiLockKeyDuotone />,
-    dropdownItems: [
-      {
-        name: 'Modern Forgot password',
-        href: routes.auth.forgotPassword1,
-      },
-      {
-        name: 'Vintage Forgot password',
-        href: routes.auth.forgotPassword2,
-      },
-      {
-        name: 'Trendy Forgot password',
-        href: routes.auth.forgotPassword3,
-      },
-      {
-        name: 'Elegant Forgot password',
-        href: routes.auth.forgotPassword4,
-      },
-      {
-        name: 'Classic Forgot password',
-        href: routes.auth.forgotPassword5,
-      },
-    ],
   },
   {
     name: 'OTP Pages',
-    href: '#',
-    icon: <PiChatCenteredDotsDuotone />,
-    dropdownItems: [
-      {
-        name: 'Modern OTP page',
-        href: routes.auth.otp1,
-      },
-      {
-        name: 'Vintage OTP page',
-        href: routes.auth.otp2,
-      },
-      {
-        name: 'Trendy OTP page',
-        href: routes.auth.otp3,
-      },
-      {
-        name: 'Elegant OTP page',
-        href: routes.auth.otp4,
-      },
-      {
-        name: 'Classic OTP page',
-        href: routes.auth.otp5,
-      },
-    ],
+    href: routes.auth.otp2,
+    icon: <PiChatCenteredDotsDuotone />
   },
 ];
