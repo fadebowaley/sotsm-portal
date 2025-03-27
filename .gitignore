@@ -1,6 +1,7 @@
 /node_modules
 .env
-/start-servers.sh
+start-servers.sh
+window-start.sh
 /migrations
 /haloface/node_modules
 /halocrm/node_modules

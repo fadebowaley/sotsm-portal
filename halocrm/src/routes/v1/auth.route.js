@@ -88,9 +88,9 @@ module.exports = router;
  *                 minLength: 8
  *                 description: At least one number and one letter
  *             example:
- *               name: fake name
- *               email: fake@example.com
- *               password: password1
+ *               name: John Doe
+ *               email: johndoe@example.com
+ *               password: Password123
  *     responses:
  *       "201":
  *         description: Created
@@ -99,8 +99,40 @@ module.exports = router;
  *             schema:
  *               type: object
  *               properties:
- *                 user:
- *                   $ref: '#/components/schemas/User'
+ *                 userId:
+ *                   type: string
+ *                   example: user_123456
+ *                 tenantId:
+ *                   type: string
+ *                   example: tenant_789
+ *                 roles:
+ *                   type: array
+ *                   items:
+ *                     type: string
+ *                     example: 65f2c6e5d4f5a5b8e4a12345
+ *                 isOwner:
+ *                   type: boolean
+ *                   example: false
+ *                 isSuper:
+ *                   type: boolean
+ *                   example: false
+ *                 firstname:
+ *                   type: string
+ *                   example: John
+ *                 lastname:
+ *                   type: string
+ *                   example: Doe
+ *                 email:
+ *                   type: string
+ *                   format: email
+ *                   example: johndoe@example.com
+ *                 password:
+ *                   type: string
+ *                   format: password
+ *                   example: Password123
+ *                 isEmailVerified:
+ *                   type: boolean
+ *                   example: false
  *                 tokens:
  *                   $ref: '#/components/schemas/AuthTokens'
  *       "400":
