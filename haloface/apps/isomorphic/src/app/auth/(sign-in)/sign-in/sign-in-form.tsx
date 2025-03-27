@@ -1,11 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
-import { signIn } from 'next-auth/react';
 import { SubmitHandler } from 'react-hook-form';
-import { PiArrowRightBold } from 'react-icons/pi';
-import { Checkbox, Password, Button, Input, Text } from 'rizzui';
+import { Input, Button, Password, Checkbox, Text } from 'rizzui';
+import { useMedia } from '@core/hooks/use-media';
 import { Form } from '@core/ui/form';
 import { routes } from '@/config/routes';
 import { loginSchema, LoginSchema } from '@/validators/login.schema';
@@ -17,23 +15,18 @@ const initialValues: LoginSchema = {
 };
 
 export default function SignInForm() {
-  //TODO: why we need to reset it here
-  const [reset, setReset] = useState({});
-
+  const isMedium = useMedia('(max-width: 1200px)', false);
   const onSubmit: SubmitHandler<LoginSchema> = (data) => {
-    console.log(data);
-    signIn('credentials', {
-      ...data,
-    });
+    console.log('Sign in data', data);
   };
 
   return (
     <>
       <Form<LoginSchema>
         validationSchema={loginSchema}
-        resetValues={reset}
         onSubmit={onSubmit}
         useFormProps={{
+          mode: 'onChange',
           defaultValues: initialValues,
         }}
       >
@@ -41,20 +34,20 @@ export default function SignInForm() {
           <div className="space-y-5">
             <Input
               type="email"
-              size="lg"
+              size={isMedium ? 'lg' : 'xl'}
               label="Email"
               placeholder="Enter your email"
+              rounded="pill"
               className="[&>label>span]:font-medium"
-              inputClassName="text-sm"
               {...register('email')}
               error={errors.email?.message}
             />
             <Password
               label="Password"
               placeholder="Enter your password"
-              size="lg"
+              size={isMedium ? 'lg' : 'xl'}
+              rounded="pill"
               className="[&>label>span]:font-medium"
-              inputClassName="text-sm"
               {...register('password')}
               error={errors.password?.message}
             />
@@ -62,6 +55,7 @@ export default function SignInForm() {
               <Checkbox
                 {...register('rememberMe')}
                 label="Remember Me"
+                variant="flat"
                 className="[&>label>span]:font-medium"
               />
               <Link
@@ -71,20 +65,24 @@ export default function SignInForm() {
                 Forget Password?
               </Link>
             </div>
-            <Button className="w-full" type="submit" size="lg">
-              <span>Sign in</span>{' '}
-              <PiArrowRightBold className="ms-2 mt-0.5 h-5 w-5" />
+            <Button
+              className="border-primary-light w-full border-2 text-base font-bold"
+              type="submit"
+              size={isMedium ? 'lg' : 'xl'}
+              rounded="pill"
+            >
+              Sign in
             </Button>
           </div>
         )}
       </Form>
-      <Text className="mt-6 text-center leading-loose text-gray-500 lg:mt-8 lg:text-start">
+      <Text className="mt-5 text-center text-[15px] leading-loose text-gray-500 lg:text-start xl:mt-7 xl:text-base">
         Don’t have an account?{' '}
         <Link
           href={routes.auth.signUp}
           className="font-semibold text-gray-700 transition-colors hover:text-blue"
         >
-          Sign Up
+          Create Account
         </Link>
       </Text>
     </>
