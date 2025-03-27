@@ -335,11 +335,11 @@ export const menuItems = [
   //   href: routes.widgets.banners,
   //   icon: <PiImageDuotone />,
   // },
-  {
-    name: 'Maps',
-    href: routes.widgets.maps,
-    icon: <PiMapPinLineDuotone />,
-  },
+  // {
+  //   name: 'Maps',
+  //   href: routes.widgets.maps,
+  //   icon: <PiMapPinLineDuotone />,
+  // },
   {
     name: 'Email Templates',
     href: routes.emailTemplates,
@@ -370,71 +370,71 @@ export const menuItems = [
     href: routes.forms.newsletter,
     icon: <PiEnvelopeSimpleOpenDuotone />,
   },
-  {
-    name: 'Multi Step',
-    href: routes.multiStep,
-    icon: <PiStepsDuotone />,
-  },
-  {
-    name: 'Multi Step 2',
-    href: routes.multiStep2,
-    icon: <PiStairsDuotone />,
-  },
+  // {
+  //   name: 'Multi Step',
+  //   href: routes.multiStep,
+  //   icon: <PiStepsDuotone />,
+  // },
+  // {
+  //   name: 'Multi Step 2',
+  //   href: routes.multiStep2,
+  //   icon: <PiStairsDuotone />,
+  // },
   {
     name: 'Payment Checkout',
     href: routes.eCommerce.checkout,
     icon: <PiCreditCardDuotone />,
   },
   // label start
-  {
-    name: 'Tables',
-  },
-  // label end
-  {
-    name: 'Basic',
-    href: routes.tables.basic,
-    icon: <PiGridFourDuotone />,
-  },
-  {
-    name: 'Collapsible',
-    href: routes.tables.collapsible,
-    icon: <PiCaretCircleUpDownDuotone />,
-  },
-  {
-    name: 'Enhanced',
-    href: routes.tables.enhanced,
-    icon: <PiTableDuotone />,
-  },
-  {
-    name: 'Sticky Header',
-    href: routes.tables.stickyHeader,
-    icon: <PiBrowserDuotone />,
-  },
-  {
-    name: 'Pagination',
-    href: routes.tables.pagination,
-    icon: <PiListNumbersDuotone />,
-  },
-  {
-    name: 'Search',
-    href: routes.tables.search,
-    icon: <PiHourglassSimpleDuotone />,
-  },
-  {
-    name: 'Resizable',
-    href: routes.tables.resizable,
-    icon: <PiArrowsOutLineHorizontalDuotone />,
-  },
-  {
-    name: 'Pinning',
-    href: routes.tables.pinning,
-    icon: <PiPushPinDuotone />,
-  },
-  {
-    name: 'Drag & Drop',
-    href: routes.tables.dnd,
-    icon: <PiArrowsOutDuotone />,
-  },
+  // {
+  //   name: 'Tables',
+  // },
+  // // label end
+  // {
+  //   name: 'Basic',
+  //   href: routes.tables.basic,
+  //   icon: <PiGridFourDuotone />,
+  // },
+  // {
+  //   name: 'Collapsible',
+  //   href: routes.tables.collapsible,
+  //   icon: <PiCaretCircleUpDownDuotone />,
+  // },
+  // {
+  //   name: 'Enhanced',
+  //   href: routes.tables.enhanced,
+  //   icon: <PiTableDuotone />,
+  // },
+  // {
+  //   name: 'Sticky Header',
+  //   href: routes.tables.stickyHeader,
+  //   icon: <PiBrowserDuotone />,
+  // },
+  // {
+  //   name: 'Pagination',
+  //   href: routes.tables.pagination,
+  //   icon: <PiListNumbersDuotone />,
+  // },
+  // {
+  //   name: 'Search',
+  //   href: routes.tables.search,
+  //   icon: <PiHourglassSimpleDuotone />,
+  // },
+  // {
+  //   name: 'Resizable',
+  //   href: routes.tables.resizable,
+  //   icon: <PiArrowsOutLineHorizontalDuotone />,
+  // },
+  // {
+  //   name: 'Pinning',
+  //   href: routes.tables.pinning,
+  //   icon: <PiPushPinDuotone />,
+  // },
+  // {
+  //   name: 'Drag & Drop',
+  //   href: routes.tables.dnd,
+  //   icon: <PiArrowsOutDuotone />,
+  // },
   // label start
   {
     name: 'Pages',
@@ -444,60 +444,60 @@ export const menuItems = [
     href: routes.profile,
     icon: <PiUserCircleDuotone />,
   },
-  {
-    name: 'Welcome',
-    href: routes.welcome,
-    icon: <PiShootingStarDuotone />,
-  },
-  {
-    name: 'Coming soon',
-    href: routes.comingSoon,
-    icon: <PiRocketLaunchDuotone />,
-  },
-  {
-    name: 'Access Denied',
-    href: routes.accessDenied,
-    icon: <PiFolderLockDuotone />,
-  },
-  {
-    name: 'Not Found',
-    href: routes.notFound,
-    icon: <PiBinocularsDuotone />,
-  },
-  {
-    name: 'Maintenance',
-    href: routes.maintenance,
-    icon: <PiHammerDuotone />,
-  },
-  {
-    name: 'Blank',
-    href: routes.blank,
-    icon: <PiNoteBlankDuotone />,
-  },
+  // {
+  //   name: 'Welcome',
+  //   href: routes.welcome,
+  //   icon: <PiShootingStarDuotone />,
+  // },
+  // {
+  //   name: 'Coming soon',
+  //   href: routes.comingSoon,
+  //   icon: <PiRocketLaunchDuotone />,
+  // },
+  // {
+  //   name: 'Access Denied',
+  //   href: routes.accessDenied,
+  //   icon: <PiFolderLockDuotone />,
+  // },
+  // {
+  //   name: 'Not Found',
+  //   href: routes.notFound,
+  //   icon: <PiBinocularsDuotone />,
+  // },
+  // {
+  //   name: 'Maintenance',
+  //   href: routes.maintenance,
+  //   icon: <PiHammerDuotone />,
+  // },
+  // {
+  //   name: 'Blank',
+  //   href: routes.blank,
+  //   icon: <PiNoteBlankDuotone />,
+  // },
 
-  // label start
-  {
-    name: 'Authentication',
-  },
-  // label end
-  {
-    name: 'Sign Up',
-    href: routes.auth.signUp,
-    icon: <PiUserPlusDuotone />,
-  },
-  {
-    name: 'Sign In',
-    href: routes.auth.signIn,
-    icon: <PiShieldCheckDuotone />,
-  },
-  {
-    name: 'Forgot Password',
-    href: routes.auth.forgotPassword,
-    icon: <PiLockKeyDuotone />,
-  },
-  {
-    name: 'OTP Pages',
-    href: routes.auth.otp,
-    icon: <PiChatCenteredDotsDuotone />
-  },
+  // // label start
+  // {
+  //   name: 'Authentication',
+  // },
+  // // label end
+  // {
+  //   name: 'Sign Up',
+  //   href: routes.auth.signUp,
+  //   icon: <PiUserPlusDuotone />,
+  // },
+  // {
+  //   name: 'Sign In',
+  //   href: routes.auth.signIn,
+  //   icon: <PiShieldCheckDuotone />,
+  // },
+  // {
+  //   name: 'Forgot Password',
+  //   href: routes.auth.forgotPassword,
+  //   icon: <PiLockKeyDuotone />,
+  // },
+  // {
+  //   name: 'OTP Pages',
+  //   href: routes.auth.otp,
+  //   icon: <PiChatCenteredDotsDuotone />
+  // },
 ];
