@@ -21,12 +21,12 @@ export default function SignIn() {
           continue.
         </>
       }
-      description="By signing up, you will gain access to exclusive content, special
-      offers, and be the first to hear about exciting news and updates."
-      bannerTitle="The simplest way to manage your workspace."
-      bannerDescription="Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-      amet sint velit officia consequat duis."
-      isSocialLoginActive={true}
+      // description="By signing up, you will gain access to exclusive content, special
+      // offers, and be the first to hear about exciting news and updates."
+      // bannerTitle="The simplest way to manage your workspace."
+      // bannerDescription="Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+      // amet sint velit officia consequat duis."
+      // isSocialLoginActive={true}
       // pageImage={
       //   // <div className="relative mx-auto aspect-[4/3.37] w-[500px] xl:w-[620px] 2xl:w-[820px]">
       //   //   <Image
