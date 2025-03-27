@@ -29,7 +29,7 @@ export const env = createEnv({
   client: {
     NEXT_PUBLIC_APP_NAME: z.string().optional(),
     NEXT_PUBLIC_GOOGLE_MAP_API_KEY: z.string().optional().default(''),
-    BACKEND_API_URL: process.env.BACKEND_API_URL || "http://localhost:3000",
+    // BACKEND_API_URL: process.env.BACKEND_API_URL || "http://localhost:3000",
   },
   runtimeEnv: process.env,
 });
