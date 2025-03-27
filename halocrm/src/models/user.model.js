@@ -2,15 +2,29 @@ const mongoose = require('mongoose');
 const validator = require('validator');
 const bcrypt = require('bcryptjs');
 const { toJSON, paginate } = require('./plugins');
-const { roles } = require('../config/roles');
 
 const userSchema = mongoose.Schema(
   {
-    name: {
+    userId: {
       type: String,
       required: true,
-      trim: true,
+      unique: true,
+      index: true,
     },
+
+    tenantId: {
+      type: String,
+      index: true,
+    },
+
+    roles: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Role' }], // Owner
+
+    isOwner: { type: Boolean, default: false },
+    isSuper: { type: Boolean, default: false },
+
+    firstname: { type: String, required: true, trim: true },
+    lastname: { type: String, required: true, trim: true },
+
     email: {
       type: String,
       required: true,
@@ -87,5 +101,4 @@ userSchema.pre('save', async function (next) {
  * @typedef User
  */
 const User = mongoose.model('User', userSchema);
-
 module.exports = User;
