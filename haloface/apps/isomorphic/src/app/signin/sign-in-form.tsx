@@ -84,7 +84,7 @@ export default function SignInForm() {
           href={routes.auth.signUp}
           className="font-semibold text-gray-700 transition-colors hover:text-blue"
         >
-          Sign Up
+          Register
         </Link>
       </Text>
     </>
