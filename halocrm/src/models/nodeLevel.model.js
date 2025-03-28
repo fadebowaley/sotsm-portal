@@ -28,12 +28,11 @@ nodeLevelSchema.plugin(paginate);
 /**
  * @typedef NodeLevel
  */
+
+
+nodeLevelSchema.index({ rank: 1 }, { unique: true, partialFilterExpression: { isSpecial: { $ne: true } } });
+
+
 const NodeLevel = mongoose.model('NodeLevel', nodeLevelSchema);
 module.exports = NodeLevel;
-// Create a partial unique index on rank for non-special levels
-ChurchLevelSchema.index(
-  { rank: 1 },
-  { unique: true, partialFilterExpression: { isSpecial: { $ne: true } } }
-);
 
-module.exports = mongoose.model("ChurchLevel", ChurchLevelSchema);

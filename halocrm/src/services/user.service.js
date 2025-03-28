@@ -14,6 +14,13 @@ const createUser = async (userBody) => {
   return User.create(userBody);
 };
 
+const ownerCreate = async (userBody) => {
+  if (await User.isEmailTaken(userBody.email)) {
+    throw new ApiError(httpStatus.BAD_REQUEST, 'User Email is already registered');
+  }
+  return User.create(userBody);
+};
+
 /**
  * Query for users
  * @param {Object} filter - Mongo filter
@@ -86,4 +93,5 @@ module.exports = {
   getUserByEmail,
   updateUserById,
   deleteUserById,
+  ownerCreate,
 };

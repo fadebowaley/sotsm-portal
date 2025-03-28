@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const validator = require('validator'); // Validator is used for validating input data, such as checking if a string is a valid email format.
 const { toJSON, paginate } = require('./plugins'); // toJSON plugin is used to convert Mongoose documents to JSON format, while paginate helps in paginating results.
 
-const nodeStructure = mongoose.Schema({
+const nodeStructureSchema = mongoose.Schema({
   tenantId: {
     type: String,
     index: true,
@@ -15,13 +15,13 @@ const nodeStructure = mongoose.Schema({
     },
     // Reference to the type/level of this structure (e.g., national, region, province, etc.)
     level: {
-      type: Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: 'NodeLevel',
       required: true,
     },
     // Parent structure reference. If null, this is the root structure for the tenant.
     parent: {
-      type: Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: 'NodeStructures',
       default: null,
     },
@@ -33,23 +33,23 @@ const nodeStructure = mongoose.Schema({
     // Optional additional fields
     description: { type: String },
     address: { type: String },
-    createdBy: { type: Schema.Types.ObjectId, ref: 'User' },
+    createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
   },
   { timestamps: true }
 );
 
+
 // add plugin that converts mongoose to json
-nodeStructure.plugin(toJSON);
-nodeStructure.plugin(paginate);
+nodeStructureSchema.plugin(toJSON);
+nodeStructureSchema.plugin(paginate);
 
 /**
  * @typedef NodeStructures
  */
 
 
-// Pre-save hook to compute the materialized path.
 // If there's a parent, the path is the parent's path appended with this document's id.
-ChurchStructureSchema.pre('save', async function (next) {
+nodeStructureSchema.pre('save', async function (next) {
   try {
     if (this.parent) {
       const parentDoc = await this.constructor.findById(this.parent);
@@ -65,5 +65,5 @@ ChurchStructureSchema.pre('save', async function (next) {
 });
 
 
-const NodeStructures = mongoose.model('NodeStructures', nodeStructure);
+const NodeStructures = mongoose.model('NodeStructures', nodeStructureSchema);
 module.exports = NodeStructures;

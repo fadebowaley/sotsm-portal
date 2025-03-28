@@ -3,17 +3,20 @@ const validator = require('validator'); // Validator is used for validating inpu
 const { toJSON, paginate } = require('./plugins'); // toJSON plugin is used to convert Mongoose documents to JSON format, while paginate helps in paginating results.
 
 const nodeSchema = mongoose.Schema(
+
   {
     tenantId: {
       type: String,
       index: true,
     },
+
     level: {
-      type: Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: 'NodeLevel',
       required: true,
     },
-    parent: { type: Schema.Types.ObjectId, ref: 'Nodes' },
+
+    parent: { type: mongoose.Schema.Types.ObjectId, ref: 'Nodes' },
     isMain: { type: Boolean, default: true },
     isOwner: { type: Boolean, default: false },
     name: { type: String, required: true },
@@ -23,7 +26,7 @@ const nodeSchema = mongoose.Schema(
     country: { type: String, required: true },
     postalCode: { type: String },
     dateOfEstablishment: { type: Date },
-    users: [{ type: Schema.Types.ObjectId, ref: 'User' }],
+    users: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
   },
   { timestamps: true } // Automatically adds createdAt & updatedAt fields
 );
@@ -44,7 +47,7 @@ nodeSchema.pre('save', async function (next) {
   // If level is greater than 0, a parent is required
   if (this.level > 0) {
     if (!this.parent) {
-      return next(new Error(`A parent church (level ${this.level - 1}) is required for a church at level ${this.level}.`));
+      return next(new Error(`A parent node (level ${this.level - 1}) is required for a node at level ${this.level}.`));
     }
     try {
       const parentNode = await this.constructor.findById(this.parent);

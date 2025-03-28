@@ -28,7 +28,10 @@ const sendEmail = async (to, subject, text) => {
  * @param {string} to
  * @param {string} token
  * @returns {Promise}
+ *
  */
+
+
 const sendResetPasswordEmail = async (to, token) => {
   const subject = 'Reset password';
   // replace this url with the link to the reset password page of your front-end app
@@ -45,6 +48,7 @@ If you did not request any password resets, then ignore this email.`;
  * @param {string} token
  * @returns {Promise}
  */
+
 const sendVerificationEmail = async (to, token) => {
   const subject = 'Email Verification';
   // replace this url with the link to the email verification page of your front-end app
@@ -55,9 +59,16 @@ If you did not create an account, then ignore this email.`;
   await sendEmail(to, subject, text);
 };
 
+
+
 module.exports = {
   transport,
   sendEmail,
   sendResetPasswordEmail,
   sendVerificationEmail,
+  //send Welcome message
+  //send order esage
+  //send jointing the team
+  //sent password rest and verified
+
 };
