@@ -7,7 +7,6 @@ const statementSchema = mongoose.Schema({
     type: String,
     index: true,
   },
-  //write a profile  cqtegorizing into education,
   //  personal profile, ministry resume,
 });
 

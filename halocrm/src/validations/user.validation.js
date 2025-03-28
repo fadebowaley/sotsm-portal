@@ -10,6 +10,18 @@ const createUser = {
   }),
 };
 
+
+const ownerCreate = {
+  body: Joi.object().keys({
+    firstname: Joi.string().valid('Anna').required(),
+    lastname: Joi.string().valid('Taylor').required(),
+    email: Joi.string().valid('anna@example.com').required().email(),
+    password: Joi.string().valid('Pass7890').required().custom(password),
+    isOwner: Joi.boolean().valid(false).required(),
+    createdBy: Joi.string().required(), // Assuming createdBy is a string
+  }),
+};
+
 const getUsers = {
   query: Joi.object().keys({
     name: Joi.string(),
@@ -51,4 +63,5 @@ module.exports = {
   getUser,
   updateUser,
   deleteUser,
+  ownerCreate,
 };
