@@ -136,8 +136,7 @@ export const routes = {
   maintenance: '/maintenance',
   blank: '/blank',
   auth: {
-    signUp: '/auth/sign-up',
-    signIn: '/auth/sign-in',
+    register: '/auth/register',
     forgotPassword: '/auth/forgot-password',
     otp: '/auth/otp',
   },
