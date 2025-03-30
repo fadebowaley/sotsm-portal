@@ -11,8 +11,8 @@ export const signUpSchema = z.object({
   firstName: z.string().min(1, { message: messages.firstNameRequired }),
   lastName: z.string().min(1, { message: messages.firstNameRequired }),
   email: validateEmail.min(1, { message: messages.emailIsRequired }),
-  password: validatePassword.min(1, { message: messages.passwordRequired }),
-  confirmPassword: z.string().min(1, { message: messages.passwordRequired }),
+  password: validatePassword.min(8, { message: messages.passwordRequired }),
+  confirmPassword: z.string().min(8, { message: messages.passwordRequired }),
   isAgreed: z.boolean().refine(val => val === true, {
     message: 'You must agree to the terms',
   }),
