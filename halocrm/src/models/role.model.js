@@ -47,8 +47,18 @@ roleSchema.plugin(toJSON);
 roleSchema.plugin(paginate);
 
 
+// ===== ADD THE STATIC METHOD HERE =====
+roleSchema.statics.isNameTaken = async function (name, excludeRoleId) {
+  const role = await this.findOne({ 
+    name, 
+    _id: { $ne: excludeRoleId } 
+  });
+  return !!role;
+};
+// =====================================
+
 /**
- * @typedef User
+ * @typedef Role
  */
 
 const Role = mongoose.model('Role', roleSchema);
