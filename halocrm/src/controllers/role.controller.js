@@ -81,4 +81,6 @@ module.exports = {
   updateRole,
   deleteRole,
   checkPermission,
+
+};
 };

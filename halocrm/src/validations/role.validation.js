@@ -15,3 +15,4 @@ module.exports = {
   deleteRole: { /* ... existing ... */ },
   checkPermission // Add this
 };
+};

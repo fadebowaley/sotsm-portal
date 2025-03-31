@@ -48,6 +48,8 @@ roleSchema.plugin(paginate);
 
 
 
+=======
+// ===== ADD THE STATIC METHOD HERE =====
 
 roleSchema.statics.isNameTaken = async function (name, excludeRoleId) {
   const role = await this.findOne({ 
@@ -56,7 +58,11 @@ roleSchema.statics.isNameTaken = async function (name, excludeRoleId) {
   });
   return !!role;
 };
+
 // ====================================s=
+=======
+// =====================================
+
 
 /**
  * @typedef Role

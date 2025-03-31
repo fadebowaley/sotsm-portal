@@ -24,6 +24,7 @@ const express = require('express');
 const authRoute = require('./auth.route');
 const userRoute = require('./user.route');
 const docsRoute = require('./docs.route');
+const roleRoute = require('./role.route');
 const config = require('../../config/config');
 const roleRoute = require('./role.route'); // New addition
 
@@ -39,6 +40,10 @@ const defaultRoutes = [
     path: '/users',   // Example: /users/123, /users/profile
     route: userRoute,
   },
+  {
+    path: '/roles',   // Example: /role/123, />
+    route: roleRoute,
+   },
 
   {
     path: '/roles',   // Mount under /v1/roles
