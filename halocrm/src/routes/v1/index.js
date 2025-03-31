@@ -25,6 +25,7 @@ const authRoute = require('./auth.route');
 const userRoute = require('./user.route');
 const docsRoute = require('./docs.route');
 const config = require('../../config/config');
+const roleRoute = require('./role.route'); // New addition
 
 const router = express.Router();
 
@@ -37,6 +38,11 @@ const defaultRoutes = [
   {
     path: '/users',   // Example: /users/123, /users/profile
     route: userRoute,
+  },
+
+  {
+    path: '/roles',   // Mount under /v1/roles
+    route: roleRoute,
   },
 
   // add more routes here like app, admin,

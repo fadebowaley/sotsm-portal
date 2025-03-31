@@ -1,6 +1,8 @@
 const httpStatus = require('http-status');
 const catchAsync = require('../utils/catchAsync');
 const { authService, userService, tokenService, emailService } = require('../services');
+const cookieOptions = require('../utils/cookieOptions');
+
 
 /**
  * Register a new user
@@ -40,8 +42,17 @@ const login = catchAsync(async (req, res) => {
   const { email, password } = req.body;
   const user = await authService.loginUserWithEmailAndPassword(email, password);
   const tokens = await tokenService.generateAuthTokens(user);
-  res.send({ user, tokens });
+  
+  
+  // Set access token in HTTP-only cookies
+  res.cookie('accessToken', tokens.access.token, cookieOptions);
+
+  res.status(httpStatus.OK).send({
+    user,
+    message: 'Login successful. Access token is stored in cookies.',
+  });
 });
+
 
 /**
  * Logout user by invalidating refresh token
