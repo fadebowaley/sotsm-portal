@@ -10,7 +10,6 @@ const roleSchema = mongoose.Schema({
   name: {
     type: String,
     required: [true, 'Role name is required'],
-    unique: true,
     trim: true,
     lowercase: true,
     minlength: [3, 'Role name must be at least 3 characters long'],
@@ -46,22 +45,6 @@ const roleSchema = mongoose.Schema({
 roleSchema.plugin(toJSON);
 roleSchema.plugin(paginate);
 
-
-
-=======
-// ===== ADD THE STATIC METHOD HERE =====
-
-roleSchema.statics.isNameTaken = async function (name, excludeRoleId) {
-  const role = await this.findOne({ 
-    name, 
-    _id: { $ne: excludeRoleId } 
-  });
-  return !!role;
-};
-
-// ====================================s=
-=======
-// =====================================
 
 
 /**
