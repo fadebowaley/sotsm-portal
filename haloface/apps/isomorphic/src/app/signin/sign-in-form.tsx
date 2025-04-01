@@ -6,7 +6,7 @@ import { Checkbox, Password, Button, Input, Text } from 'rizzui';
 import { Form } from '@core/ui/form';
 import { routes } from '@/config/routes';
 import { loginSchema, LoginSchema } from '@/validators/login.schema';
-import { useLogin } from '@/hooks/useLogin';
+import { useLogin } from '@/app/signin/useLogin';
 import { SubmitHandler } from 'react-hook-form';
 
 export default function SignInForm() {
@@ -45,11 +45,11 @@ export default function SignInForm() {
             />
             
             <div className="flex items-center justify-between pb-2">
-              <Checkbox
+              {/* <Checkbox
                 {...register('rememberMe')}
                 label="Remember Me"
                 className="[&>label>span]:font-medium"
-              />
+              /> */}
               <Link
                 href={routes.auth.forgotPassword}
                 className="h-auto p-0 text-sm font-semibold text-blue underline transition-colors hover:text-gray-900 hover:no-underline"

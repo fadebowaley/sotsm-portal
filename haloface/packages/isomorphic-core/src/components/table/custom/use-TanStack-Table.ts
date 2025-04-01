@@ -41,6 +41,12 @@ export function useTanStackTable<T extends Record<string, any>>({
   columnConfig: ColumnDef<T, any>[];
 }) {
   const [data, setData] = React.useState<T[]>([...tableData]);
+  React.useEffect(() => {
+    if (JSON.stringify(data) !== JSON.stringify(tableData)) {
+      setData(tableData);
+    }
+  }, [tableData])
+
   const [columns] = React.useState(() => [...columnConfig]);
   const [globalFilter, setGlobalFilter] = React.useState("");
   const [sorting, setSorting] = React.useState<SortingState>([]);

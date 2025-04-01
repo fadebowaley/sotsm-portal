@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { useRegister } from '@/hooks/useRegister';
+import { useRegister } from '@/app/auth/register/useRegister';
 import { SubmitHandler } from 'react-hook-form';
 import { Password, Checkbox, Button, Input, Text } from 'rizzui';
 import { useMedia } from '@core/hooks/use-media';

@@ -14,9 +14,15 @@ const verifyCallback = (req, resolve, reject, requiredRights) => async (err, use
 
   // If there are required rights to check
   if (requiredRights.length) {
+    // Original code
     const userRights = roleRights.get(user.role); // Get the rights associated with the user's role
     // Check if the user has all the required rights
     const hasRequiredRights = requiredRights.every((requiredRight) => userRights.includes(requiredRight));
+    
+    // // Timi Fixes
+    // const userRights = roleRights.get(user.role) || []; // Default to an empty array
+    // const hasRequiredRights = requiredRights.every((requiredRight) => userRights.includes(requiredRight));
+
     // If the user does not have the required rights and is not the owner of the resource, reject with a forbidden error
     if (!hasRequiredRights && req.params.userId !== user.id) {
       return reject(new ApiError(httpStatus.FORBIDDEN, 'Forbidden'));

@@ -12,7 +12,7 @@ import {
   Button,
   CheckboxGroup,
 } from 'rizzui';
-import { PERMISSIONS } from '@/data/users-data';
+import { PERMISSIONS } from '@/app/shared/roles-permissions/useData';
 import { Form } from '@core/ui/form';
 import {
   RolePermissionInput,
