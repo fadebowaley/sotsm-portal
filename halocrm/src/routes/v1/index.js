@@ -27,6 +27,8 @@ const docsRoute = require('./docs.route');
 const roleRoute = require('./role.route');
 const config = require('../../config/config');
 const roleRoute = require('./role.route'); // New addition
+const nodeLevelRoute = require('./nodeLevel.route'); // New addition
+const nodeStructureRoute = require('./nodeStructure.route'); // New addition
 
 const router = express.Router();
 
@@ -50,6 +52,16 @@ const defaultRoutes = [
     route: roleRoute,
   },
 
+  {
+    path: '/node-levels',
+    route: nodeLevelRoute,
+  },
+  {
+    path: '/node-structures',
+    route: nodeStructureRoute,
+  },
+
+  
   // add more routes here like app, admin,
 ];
 
