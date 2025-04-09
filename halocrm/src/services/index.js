@@ -20,3 +20,4 @@ module.exports.statementService = require('./statement.service');
 module.exports.structureService = require('./structure.service');
 module.exports.tokenService = require('./token.service');
 module.exports.userService = require('./user.service');
+module.exports.userService = require('./role.service');

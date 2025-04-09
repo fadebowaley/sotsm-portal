@@ -43,7 +43,7 @@ const settingsRoute = require('./settings.route');
 const statementRoute = require('./statement.route');
 const collectionRoute = require('./collection.route');
 
-// declare rest of the routes: nodeLevel, nodeStructure, node etc.
+
 const config = require('../../config/config');
 
 const router = express.Router();
@@ -59,6 +59,7 @@ const defaultRoutes = [
     route: userRoute,
   },
   {
+
     path: '/roles', // Example: /roles/123, /roles/info
     route: roleRoute,
   },
@@ -130,6 +131,13 @@ const defaultRoutes = [
     path: '/collections',
     route: collectionRoute,
   },
+
+    path: '/roles',   // Example: /role/123, />
+    route: roleRoute,
+   },
+
+  // add more routes here like app, admin,
+
 ];
 
 // Routes only available during development

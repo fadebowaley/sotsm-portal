@@ -47,7 +47,13 @@ const getRoles = catchAsync(async (req, res) => {
 });
 
 
-const getRole = catchAsync(async (req, res) => {
+
+
+/**
+ * Get single role
+ * @route GET /roles/:roleId
+ * @access Private/Admin
+ */const getRole = catchAsync(async (req, res) => {
   const role = await roleService.getRoleById(req.params.roleId);
   if (!role) {
     throw new ApiError(httpStatus.NOT_FOUND, 'Role not found');
@@ -55,11 +61,29 @@ const getRole = catchAsync(async (req, res) => {
   res.send(role);
 });
 
+
 const updateRole = catchAsync(async (req, res) => {
   const updated = await roleService.updateRoleById(req.params.roleId, req.body);
   res.send(updated);
 });
 
+
+
+/**
+ * Update role
+ * @route PATCH /roles/:roleId
+ * @access Private/Admin
+ */
+const updateRole = catchAsync(async (req, res) => {
+  const role = await roleService.updateRoleById(req.params.roleId, req.body);
+  res.send(role);
+});
+
+/**
+ * Delete role
+ * @route DELETE /roles/:roleId
+ * @access Private/Admin
+ */
 
 const deleteRole = catchAsync(async (req, res) => {
   await roleService.deleteRoleById(req.params.roleId);
@@ -68,11 +92,31 @@ const deleteRole = catchAsync(async (req, res) => {
 
 
 
+
 const assignPermissions = catchAsync(async (req, res) => {
   const updatedRole = await roleService.assignPermissions(req.params.roleId, req.body.permissions);
   res.send(updatedRole);
 });
 
+
+
+
+/**
+ * Check permission
+ * @route GET /roles/:roleId/has-permission/:permission
+ * @access Private/Admin
+ */
+const checkPermission = catchAsync(async (req, res) => {
+  const hasPerm = await roleService.hasPermission(
+    req.params.roleId, 
+    req.params.permission
+  );
+  res.send({ 
+    roleId: req.params.roleId,
+    permission: req.params.permission,
+    hasPermission: hasPerm 
+  });
+});
 
 
 module.exports = {
@@ -84,4 +128,6 @@ module.exports = {
   bulkCreateRoles,
   deleteAllRoles,
   assignPermissions,
+  checkPermission,
+
 };

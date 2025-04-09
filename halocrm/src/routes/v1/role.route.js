@@ -1,3 +1,4 @@
+
 // Import required dependencies
 const express = require('express');
 const auth = require('../../middlewares/auth');
@@ -34,6 +35,7 @@ router.route('/').delete(auth('delete:roles'), roleController.deleteAllRoles);
 router.route('/bulk').post(auth('create:roles'), validate(roleValidation.bulkCreateRoles), roleController.bulkCreateRoles);
 
 module.exports = router;
+
 
 /**
  * @swagger
@@ -529,3 +531,5 @@ module.exports = router;
  *             schema:
  *               $ref: '#/components/schemas/Error'
  */
+
+

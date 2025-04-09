@@ -39,11 +39,25 @@ roleSchema.index({ userId: 1 }, { unique: false });
 
 
 
+// ===== ADD THE STATIC METHOD HERE =====
+roleSchema.statics.isNameTaken = async function (name, excludeRoleId) {
+  const role = await this.findOne({ 
+    name, 
+    _id: { $ne: excludeRoleId } 
+  });
+  return !!role;
+};
+
+
 /**
+
  * Create a role (with tenant support)
  * @param {Object} roleData - The role data (from request body)
  * @param {Object} currentUser - The currently authenticated user (from req.user)
  * @returns {Promise<Role>}
+
+ * @typedef Role
+
  */
 roleSchema.statics.createRole = async function (roleData, currentUser) {
   if (!currentUser?.tenantId || !currentUser?.userId) {
@@ -67,6 +81,7 @@ roleSchema.statics.bulkCreateRoles = async function (rolesArray, user) {
   if (!user?.isOwner && !user?.hasPermissionToCreateRoles) {
     throw new ApiError(httpStatus.FORBIDDEN, 'You are not authorized to create roles');
   }
+
 
   if (!Array.isArray(rolesArray) || rolesArray.length === 0) {
     throw new ApiError(httpStatus.BAD_REQUEST, 'Roles array is empty');
@@ -127,3 +142,5 @@ roleSchema.statics.deleteAllRoles = async function (tenantId) {
 
 const Role = mongoose.model('Role', roleSchema);
 module.exports = Role;
+
+
