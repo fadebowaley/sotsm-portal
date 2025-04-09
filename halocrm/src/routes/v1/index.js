@@ -135,15 +135,7 @@ const defaultRoutes = [
     route: collectionRoute,
   },
 
-    path: '/roles',   // Example: /role/123, />
-    route: roleRoute,
-   },
-
-  {
-    path: '/roles',   // Mount under /v1/roles
-    route: roleRoute,
-  },
-
+ 
   {
     path: '/node-levels',
     route: nodeLevelRoute,

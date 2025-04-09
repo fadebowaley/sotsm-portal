@@ -20,6 +20,5 @@ module.exports.statementService = require('./statement.service');
 module.exports.structureService = require('./structure.service');
 module.exports.tokenService = require('./token.service');
 module.exports.userService = require('./user.service');
-module.exports.roleService = require('./role.service');
 module.exports.nodeLevelService = require('./nodeLevel.service');
 module.exports.nodeStructureService = require('./nodeStructure.service');
