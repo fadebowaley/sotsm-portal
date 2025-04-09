@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+const validator = require('validator');
+const httpStatus = require('http-status');
 const ApiError = require('../utils/ApiError');
 const { toJSON, paginate, tenantPlugin } = require('./plugins');
 const logger = require('../config/logger');
@@ -8,7 +10,18 @@ const roleSchema = mongoose.Schema({
     type: String,
     index: true,
   },
-  name: { type: String, unique: true, required: true },
+  name: {
+    type: String,
+    unique: true,
+    required: [true, 'Role name is required'],
+    trim: true,
+    lowercase: true,
+    minlength: [3, 'Role name must be at least 3 characters long'],
+    validate: {
+      validator: (value) => validator.isAlpha(value, 'en-US', { ignore: ' -' }),
+      message: 'Role name should only contain letters, spaces, or hyphens',
+    },
+  },
   description: {
     type: String,
     trim: true,
@@ -30,39 +43,26 @@ const roleSchema = mongoose.Schema({
   },
 });
 
-
-// add plugin that converts mongoose to json
+// Add plugins that convert mongoose to JSON and handle pagination
 roleSchema.plugin(toJSON);
 roleSchema.plugin(paginate);
 roleSchema.plugin(tenantPlugin);
-roleSchema.index({ userId: 1 }, { unique: false });
 
-
-
-// ===== ADD THE STATIC METHOD HERE =====
+// Static method to check if a role name is taken
 roleSchema.statics.isNameTaken = async function (name, excludeRoleId) {
-  const role = await this.findOne({ 
-    name, 
-    _id: { $ne: excludeRoleId } 
+  const role = await this.findOne({
+    name,
+    _id: { $ne: excludeRoleId },
   });
   return !!role;
 };
 
-
-/**
-
- * Create a role (with tenant support)
- * @param {Object} roleData - The role data (from request body)
- * @param {Object} currentUser - The currently authenticated user (from req.user)
- * @returns {Promise<Role>}
-
- * @typedef Role
-
- */
+// Static method to create a role
 roleSchema.statics.createRole = async function (roleData, currentUser) {
   if (!currentUser?.tenantId || !currentUser?.userId) {
     throw new Error('Missing tenantId or userId in currentUser');
   }
+
   // Attach user and tenant IDs
   const completeData = {
     ...roleData,
@@ -75,13 +75,11 @@ roleSchema.statics.createRole = async function (roleData, currentUser) {
   return role;
 };
 
-
-
+// Static method to bulk create roles
 roleSchema.statics.bulkCreateRoles = async function (rolesArray, user) {
   if (!user?.isOwner && !user?.hasPermissionToCreateRoles) {
     throw new ApiError(httpStatus.FORBIDDEN, 'You are not authorized to create roles');
   }
-
 
   if (!Array.isArray(rolesArray) || rolesArray.length === 0) {
     throw new ApiError(httpStatus.BAD_REQUEST, 'Roles array is empty');
@@ -113,8 +111,7 @@ roleSchema.statics.bulkCreateRoles = async function (rolesArray, user) {
   return await this.insertMany(rolesToCreate);
 };
 
-
-
+// Static method to delete all roles for a tenant
 roleSchema.statics.deleteAllRoles = async function (tenantId) {
   if (!tenantId) {
     throw new ApiError(httpStatus.BAD_REQUEST, 'Tenant ID is required to delete all roles');
@@ -137,10 +134,5 @@ roleSchema.statics.deleteAllRoles = async function (tenantId) {
   }
 };
 
-
-
-
 const Role = mongoose.model('Role', roleSchema);
 module.exports = Role;
-
-

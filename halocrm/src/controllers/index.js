@@ -9,4 +9,6 @@ module.exports.paymentController = require('./payment.controller');
 module.exports.reportController = require('./payment.controller');
 module.exports.appController = require('./app.controller');
 module.exports.adminController = require('./admin.controller');
-module.exports.userController = require('./role.controller');
+module.exports.userController = require('./user.controller');
+module.exports.nodeLevelController = require('./nodeLevel.controller');
+module.exports.nodeStructureController = require('./nodeStructure.controller');

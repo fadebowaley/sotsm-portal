@@ -4,14 +4,13 @@ const ApiError = require('../utils/ApiError');
 const catchAsync = require('../utils/catchAsync');
 const { roleService } = require('../services');
 
-
+// Controller: createRole
 const createRole = catchAsync(async (req, res) => {
   const role = await roleService.createRole(req.body, req.user);
   res.status(httpStatus.CREATED).send(role);
 });
 
-
-
+// Controller: bulkCreateRoles
 const bulkCreateRoles = catchAsync(async (req, res) => {
   const roles = await roleService.bulkCreateRoles(req.body.rolesArray, req.user);
   res.status(httpStatus.CREATED).json({
@@ -19,7 +18,6 @@ const bulkCreateRoles = catchAsync(async (req, res) => {
     data: roles,
   });
 });
-
 
 // Controller: deleteAllRoles
 const deleteAllRoles = catchAsync(async (req, res) => {
@@ -31,13 +29,11 @@ const deleteAllRoles = catchAsync(async (req, res) => {
   // Return a success message with the result
   res.status(httpStatus.OK).json({
     message: result.message,
-    deletedCount: result.deletedCount
+    deletedCount: result.deletedCount,
   });
 });
 
-
-
-
+// Controller: getRoles
 const getRoles = catchAsync(async (req, res) => {
   const filter = pick(req.query, ['name', 'isActive']);
   const options = pick(req.query, ['sortBy', 'limit', 'page']);
@@ -46,14 +42,8 @@ const getRoles = catchAsync(async (req, res) => {
   res.send(result);
 });
 
-
-
-
-/**
- * Get single role
- * @route GET /roles/:roleId
- * @access Private/Admin
- */const getRole = catchAsync(async (req, res) => {
+// Controller: getRole (single role by ID)
+const getRole = catchAsync(async (req, res) => {
   const role = await roleService.getRoleById(req.params.roleId);
   if (!role) {
     throw new ApiError(httpStatus.NOT_FOUND, 'Role not found');
@@ -61,14 +51,7 @@ const getRoles = catchAsync(async (req, res) => {
   res.send(role);
 });
 
-
-const updateRole = catchAsync(async (req, res) => {
-  const updated = await roleService.updateRoleById(req.params.roleId, req.body);
-  res.send(updated);
-});
-
-
-
+// Controller: updateRole
 /**
  * Update role
  * @route PATCH /roles/:roleId
@@ -79,28 +62,24 @@ const updateRole = catchAsync(async (req, res) => {
   res.send(role);
 });
 
+// Controller: deleteRole
 /**
  * Delete role
  * @route DELETE /roles/:roleId
  * @access Private/Admin
  */
-
 const deleteRole = catchAsync(async (req, res) => {
   await roleService.deleteRoleById(req.params.roleId);
   res.status(httpStatus.NO_CONTENT).send();
 });
 
-
-
-
+// Controller: assignPermissions
 const assignPermissions = catchAsync(async (req, res) => {
   const updatedRole = await roleService.assignPermissions(req.params.roleId, req.body.permissions);
   res.send(updatedRole);
 });
 
-
-
-
+// Controller: checkPermission
 /**
  * Check permission
  * @route GET /roles/:roleId/has-permission/:permission
@@ -108,16 +87,15 @@ const assignPermissions = catchAsync(async (req, res) => {
  */
 const checkPermission = catchAsync(async (req, res) => {
   const hasPerm = await roleService.hasPermission(
-    req.params.roleId, 
+    req.params.roleId,
     req.params.permission
   );
-  res.send({ 
+  res.send({
     roleId: req.params.roleId,
     permission: req.params.permission,
-    hasPermission: hasPerm 
+    hasPermission: hasPerm,
   });
 });
-
 
 module.exports = {
   createRole,
@@ -129,5 +107,4 @@ module.exports = {
   deleteAllRoles,
   assignPermissions,
   checkPermission,
-
 };

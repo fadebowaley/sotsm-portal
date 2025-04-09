@@ -65,6 +65,7 @@ if (config.env !== 'test') {
   app.use(morgan.errorHandler);
 }
 
+
 // set security HTTP headers
 app.use(helmet());
 
@@ -74,6 +75,7 @@ app.use(express.json());
 // parse urlencoded request body
 app.use(express.urlencoded({ extended: true }));
 
+
 // sanitize request data
 app.use(xss());
 app.use(mongoSanitize());
@@ -81,8 +83,14 @@ app.use(mongoSanitize());
 // gzip compression
 app.use(compression());
 
-// enable cors
-app.use(cors());
+// enable CORS with credentials ✅ (Updated)
+app.use(
+  cors({
+    origin: 'http://localhost:3001', // Change to your frontend URL
+    credentials: true, // Allow cookies
+  })
+);
+
 app.options('*', cors());
 
 // jwt authentication

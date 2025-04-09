@@ -1,0 +1,287 @@
+[33mcommit b4c154f9d38cea9cac16f01b12e95d8485ffa987[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32malpha[m[33m, [m[1;31morigin/alpha[m[33m)[m
+Author: Kenny12354 <ogunfoworakehinde55@gmail.com>
+Date:   Mon Mar 31 07:56:01 2025 -0700
+
+    Updated role management and authentication with cookies
+
+[33mcommit ed4583580dff22b2f8f49621a48074649eecdd44[m
+Merge: d84a1f7 ca3a607
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Fri Mar 28 13:10:27 2025 +0100
+
+    Merge pull request #3 from fadebowaley/halo
+    
+    update of register controllers and fixing
+
+[33mcommit ca3a6075c3f6498c43dbfadc2a557515f70b4874[m[33m ([m[1;31morigin/halo[m[33m)[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Thu Mar 27 15:50:34 2025 +0100
+
+    update of register controllers and fixing
+
+[33mcommit d84a1f7b339707c33f238936b339c1011c8bb3a0[m
+Merge: a680a40 b947beb
+Author: Kadeba Oluwapelumi Ayobami <92647600+PelumiKadeba10@users.noreply.github.com>
+Date:   Thu Mar 27 12:45:18 2025 +0100
+
+    Merge pull request #2 from fadebowaley/beta
+    
+    Beta improvement on fronend template
+
+[33mcommit b947beb574362d2f9b66cf9895f7676c629825a9[m
+Merge: 3f8d05f a680a40
+Author: Oluwapelumi <pelekadeba@gmail.com>
+Date:   Thu Mar 27 12:38:19 2025 +0100
+
+    Merge branch 'gamma' of https://github.com/fadebowaley/sotsm-portal into beta
+
+[33mcommit 3f8d05fa6b041adcd5b3812f50b125f75b712350[m
+Author: Oluwapelumi <pelekadeba@gmail.com>
+Date:   Thu Mar 27 12:36:06 2025 +0100
+
+    removed the description
+
+[33mcommit a680a403ef4b501957c4039ba08f2e60a4a5875c[m
+Merge: e469314 c35e830
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Thu Mar 27 12:34:45 2025 +0100
+
+    Merge pull request #1 from fadebowaley/halo
+    
+    rename and adding of collection schema
+
+[33mcommit c35e830de7562301e5d3b2ded992fda58c650243[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Thu Mar 27 12:23:17 2025 +0100
+
+    rename and adding of collection schema
+
+[33mcommit 1d9688e1389770f98bf95c4fe4ee015ee53f9d17[m
+Author: Oluwapelumi <pelekadeba@gmail.com>
+Date:   Thu Mar 27 12:22:21 2025 +0100
+
+    env changes
+
+[33mcommit d3f177ab040039e02f3b761e84ffa4ba68d12564[m
+Author: Oluwapelumi <pelekadeba@gmail.com>
+Date:   Thu Mar 27 12:13:02 2025 +0100
+
+    env.mjs changes
+
+[33mcommit 0f5c802cd335adb8315bc7d9af4bd3bc22e202ee[m
+Author: Oluwapelumi <pelekadeba@gmail.com>
+Date:   Thu Mar 27 12:09:10 2025 +0100
+
+    added /start.server to gitignore
+
+[33mcommit e469314075a1165a271b9c3e0bea88670e2e8221[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Thu Mar 27 10:48:26 2025 +0100
+
+    adding new models to helloface
+
+[33mcommit 56a647b9156605416ef05ca40c87a1613bef196d[m
+Author: Oluwapelumi <pelekadeba@gmail.com>
+Date:   Wed Mar 26 16:28:49 2025 +0100
+
+    Further Clean-up
+
+[33mcommit 3dd838c8ad5397f52d80137833e8c8bf6e5f9890[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Wed Mar 26 13:15:35 2025 +0100
+
+    pushing swagger documentations
+
+[33mcommit 5ccde979145c9886f5e042d4748737d7617f6e46[m
+Author: Oluwapelumi <pelekadeba@gmail.com>
+Date:   Wed Mar 26 13:03:49 2025 +0100
+
+    Changes in start-server.bash to enable run on windows, halocrm tidyup, package.json scripts command change for windows, haloface devdependencies added in pnpm-lock.yaml, deleted .env.local.example in haloface
+
+[33mcommit 341d3ee184e0bfaf677ef81d9836dbce6649328e[m[33m ([m[1;32m=r[m[33m)[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Tue Mar 25 12:32:47 2025 +0100
+
+    adding of startup scripts
+
+[33mcommit ab2e7f10eec9ac86eeaf60e3d3e6be1e4e7ecd2e[m[33m ([m[1;31morigin/production[m[33m, [m[1;31morigin/lima[m[33m)[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Tue Mar 25 11:50:32 2025 +0100
+
+    setting architecture for halocrm
+
+[33mcommit 6f99c90f09d46e51721a1ec34db151589cb49d4a[m[33m ([m[1;31morigin/tango-dev[m[33m)[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Fri Mar 21 17:45:51 2025 +0100
+
+    update of latest modification on halo-branch
+
+[33mcommit bf66df01106e0d18f5c43a04ea8db21b7602024d[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Sun Mar 16 16:06:56 2025 +0100
+
+    from the old emerges the new
+
+[33mcommit 8fb716b35981fcf78b36dbab86479a1519adca76[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Thu Aug 1 11:01:06 2024 +0100
+
+    update of readme.file
+
+[33mcommit d1a8b1aaa598c8972d10cbdd5535e82d6f08f567[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Sat May 4 13:27:29 2024 +0100
+
+    comment out functions
+
+[33mcommit 076e30cbc6bc7ade7cfdfdc44238fc5f07506c02[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Sat May 4 10:51:13 2024 +0100
+
+    update of validation routes
+
+[33mcommit 6ada04bad242a3457af1b31a3c78815c884c6769[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Fri May 3 17:03:03 2024 +0100
+
+    update on git for views
+
+[33mcommit c9519ac618c5d0760bde6cfff4193c94e1fc3dee[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Fri May 3 05:51:07 2024 +0100
+
+    fixing passport auth issues line 45
+
+[33mcommit 60ddbf39ee1e7113a31affa34c6c61bc74a81b20[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Thu May 2 20:36:07 2024 +0100
+
+    update of routes and indexes
+
+[33mcommit af93434870a72845125f9cb99d7372bb08452dfa[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Thu May 2 16:20:58 2024 +0100
+
+    update of user settings on app
+
+[33mcommit bc8dc995dfcae754a132f6a31b0907f5a1845adf[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Thu May 2 08:29:46 2024 +0100
+
+    update of tables and submission middleware
+
+[33mcommit 8235ea75c4ce01c5fcf69736bce8fe6d9bd1fc4a[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Mon Apr 29 14:43:45 2024 +0100
+
+    updated routes config
+
+[33mcommit 2f622c5de85c4fe926e9801b34864bda188db736[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Mon Apr 29 14:16:06 2024 +0100
+
+    update of auth
+
+[33mcommit 9ff4712cc9cf829420d9616512556d8b61ae0c26[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Mon Apr 29 13:52:14 2024 +0100
+
+    modified sensitive info
+
+[33mcommit 54a5685fa873ff1284f7f38ddcc4ebba17e5324a[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Mon Apr 29 13:06:07 2024 +0100
+
+    update on work in progress
+
+[33mcommit 326586138bbc1f9a87ad7529a363077cafc1f181[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Sun Apr 14 12:06:48 2024 +0100
+
+    modifications views, indexcontroller, views
+
+[33mcommit 63b53cd75d1eb660fc9adde3a795bfa3fec9d7b4[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Fri Apr 12 11:42:47 2024 +0100
+
+    update of fixes and features
+
+[33mcommit 32e75653548b3325548029d7946b4cf57019f6fe[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Thu Apr 11 18:20:27 2024 +0100
+
+    add modified files
+
+[33mcommit 7d62d7e37cb5ff0f1e12b52ea9a7783c1b711a37[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Tue Apr 9 18:07:33 2024 +0100
+
+    update of js submission
+
+[33mcommit 9367fe1854f6345f384512d39f65de11c60681f0[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Tue Apr 9 15:16:33 2024 +0100
+
+    update of migration and seeder files
+
+[33mcommit c8de88722cdf8782be3d0eb0edc26f9d6640b707[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Mon Apr 8 19:10:04 2024 +0100
+
+    update database for settings
+
+[33mcommit 911e4d68c9e4932177810349eb8694b00d53cac1[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Mon Apr 8 19:08:41 2024 +0100
+
+    update on cors
+
+[33mcommit 64c4bd8a77a11190495b21d2f264fe877e290bef[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Mon Apr 8 19:05:58 2024 +0100
+
+    setting cors for app
+
+[33mcommit ff9461966af0d7ab22209d81f0dd4a9f5fabdb3f[m
+Merge: 4b3044b 8e1a39e
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Thu Apr 4 12:44:21 2024 +0100
+
+    Merge branch 'main' of https://github.com/fadebowaley/sotsm-portal
+
+[33mcommit 4b3044b8b0ed6255bd56eacf08fb93bd061da5c0[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Thu Apr 4 12:40:21 2024 +0100
+
+    update of frontend work
+
+[33mcommit 8e1a39e5b2b134969fcf92485349aad706e96144[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Sat Mar 23 05:32:57 2024 +0100
+
+    Add or update the Azure App Service build and deployment workflow config
+
+[33mcommit 31c1b3d8cd1ef3967bc307406298a180187ec493[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Sat Mar 23 05:31:42 2024 +0100
+
+    adding of workflow action
+
+[33mcommit fa4d902ffcd0f48d49e6d8fecb2df64b1d5a2fbd[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Sat Mar 23 04:04:45 2024 +0100
+
+    package adding
+    "
+
+[33mcommit cc15320a046c343f00fb3c0a3091a2116ff78cf8[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Fri Mar 22 20:41:54 2024 +0100
+
+    update of forms
+
+[33mcommit 9a724047886d2a0a20742e26a941142f0117dce3[m
+Author: Ademola Adebowale <fadebowaley@gmail.com>
+Date:   Fri Mar 22 12:12:18 2024 +0100
+
+    first commit to sotsm-portal development

@@ -45,6 +45,9 @@ const collectionRoute = require('./collection.route');
 
 
 const config = require('../../config/config');
+const roleRoute = require('./role.route'); // New addition
+const nodeLevelRoute = require('./nodeLevel.route'); // New addition
+const nodeStructureRoute = require('./nodeStructure.route'); // New addition
 
 const router = express.Router();
 
@@ -132,10 +135,17 @@ const defaultRoutes = [
     route: collectionRoute,
   },
 
-    path: '/roles',   // Example: /role/123, />
-    route: roleRoute,
-   },
+ 
+  {
+    path: '/node-levels',
+    route: nodeLevelRoute,
+  },
+  {
+    path: '/node-structures',
+    route: nodeStructureRoute,
+  },
 
+  
   // add more routes here like app, admin,
 
 ];

@@ -18,4 +18,5 @@ module.exports.settingsValidation = require('./settings.validation');
 module.exports.statementValidation = require('./statement.validation');
 module.exports.structureValidation = require('./structure.validation');
 module.exports.userValidation = require('./user.validation');
-module.exports.userValidation = require('./role.validation');
+module.exports.nodeLevelValidation = require('./nodeLevel.validation');
+module.exports.nodeStructureValidation = require('./nodeStructure.validation');

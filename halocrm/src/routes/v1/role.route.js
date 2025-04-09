@@ -35,6 +35,7 @@ router.route('/').delete(auth('delete:roles'), roleController.deleteAllRoles);
 router.route('/bulk').post(auth('create:roles'), validate(roleValidation.bulkCreateRoles), roleController.bulkCreateRoles);
 
 module.exports = router;
+module.exports = router;
 
 
 /**
@@ -531,5 +532,3 @@ module.exports = router;
  *             schema:
  *               $ref: '#/components/schemas/Error'
  */
-
-
