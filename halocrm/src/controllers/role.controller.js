@@ -1,34 +1,48 @@
 const httpStatus = require('http-status');
+const pick = require('../utils/pick');
+const ApiError = require('../utils/ApiError');
 const catchAsync = require('../utils/catchAsync');
 const { roleService } = require('../services');
 
-/**
- * Create a new role
- * @route POST /roles
- * @access Private/Admin
- */
+// Controller: createRole
 const createRole = catchAsync(async (req, res) => {
-  const role = await roleService.createRole(req.body);
+  const role = await roleService.createRole(req.body, req.user);
   res.status(httpStatus.CREATED).send(role);
 });
 
-/**
- * Get all roles
- * @route GET /roles
- * @access Private/Admin
- */
+// Controller: bulkCreateRoles
+const bulkCreateRoles = catchAsync(async (req, res) => {
+  const roles = await roleService.bulkCreateRoles(req.body.rolesArray, req.user);
+  res.status(httpStatus.CREATED).json({
+    message: `${roles.length} roles successfully created.`,
+    data: roles,
+  });
+});
+
+// Controller: deleteAllRoles
+const deleteAllRoles = catchAsync(async (req, res) => {
+  const tenantId = req.user.tenantId;
+
+  // Call the service to delete all roles under the tenant
+  const result = await roleService.deleteAllRoles(tenantId);
+
+  // Return a success message with the result
+  res.status(httpStatus.OK).json({
+    message: result.message,
+    deletedCount: result.deletedCount,
+  });
+});
+
+// Controller: getRoles
 const getRoles = catchAsync(async (req, res) => {
   const filter = pick(req.query, ['name', 'isActive']);
   const options = pick(req.query, ['sortBy', 'limit', 'page']);
+  options.user = req.user; // Add the user object to options
   const result = await roleService.queryRoles(filter, options);
   res.send(result);
 });
 
-/**
- * Get single role
- * @route GET /roles/:roleId
- * @access Private/Admin
- */
+// Controller: getRole (single role by ID)
 const getRole = catchAsync(async (req, res) => {
   const role = await roleService.getRoleById(req.params.roleId);
   if (!role) {
@@ -37,6 +51,7 @@ const getRole = catchAsync(async (req, res) => {
   res.send(role);
 });
 
+// Controller: updateRole
 /**
  * Update role
  * @route PATCH /roles/:roleId
@@ -47,6 +62,7 @@ const updateRole = catchAsync(async (req, res) => {
   res.send(role);
 });
 
+// Controller: deleteRole
 /**
  * Delete role
  * @route DELETE /roles/:roleId
@@ -57,6 +73,13 @@ const deleteRole = catchAsync(async (req, res) => {
   res.status(httpStatus.NO_CONTENT).send();
 });
 
+// Controller: assignPermissions
+const assignPermissions = catchAsync(async (req, res) => {
+  const updatedRole = await roleService.assignPermissions(req.params.roleId, req.body.permissions);
+  res.send(updatedRole);
+});
+
+// Controller: checkPermission
 /**
  * Check permission
  * @route GET /roles/:roleId/has-permission/:permission
@@ -64,13 +87,13 @@ const deleteRole = catchAsync(async (req, res) => {
  */
 const checkPermission = catchAsync(async (req, res) => {
   const hasPerm = await roleService.hasPermission(
-    req.params.roleId, 
+    req.params.roleId,
     req.params.permission
   );
-  res.send({ 
+  res.send({
     roleId: req.params.roleId,
     permission: req.params.permission,
-    hasPermission: hasPerm 
+    hasPermission: hasPerm,
   });
 });
 
@@ -80,7 +103,8 @@ module.exports = {
   getRole,
   updateRole,
   deleteRole,
+  bulkCreateRoles,
+  deleteAllRoles,
+  assignPermissions,
   checkPermission,
-
-};
 };

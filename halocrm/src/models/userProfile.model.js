@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const validator = require('validator'); // Validator is used for validating input data, such as checking if a string is a valid email format.
-const { toJSON, paginate } = require('./plugins'); // toJSON plugin is used to convert Mongoose documents to JSON format, while paginate helps in paginating results.
+const { toJSON, paginate, tenantPlugin } = require('./plugins'); // toJSON plugin is used to convert Mongoose documents to JSON format, while paginate helps in paginating results.
 
 const userProfileSchema = mongoose.Schema({
   tenantId: {
@@ -85,6 +85,7 @@ const userProfileSchema = mongoose.Schema({
 // add plugin that converts mongoose to json
 userProfileSchema.plugin(toJSON);
 userProfileSchema.plugin(paginate);
+userProfileSchema.plugin(tenantPlugin);
 
 
 /**
