@@ -1,22 +1,111 @@
 const mongoose = require('mongoose');
-const validator = require('validator'); // Validator is used for validating input data, such as checking if a string is a valid email format.
-const { toJSON, paginate } = require('./plugins'); // toJSON plugin is used to convert Mongoose documents to JSON format, while paginate helps in paginating results.
+const { toJSON, paginate, tenantPlugin } = require('./plugins');
 
-const settingsSchema = mongoose.Schema({
-  tenantId: {
-    type: String,
-    index: true,
+
+/****
+ *References: Node, Datapoint, Report.
+Contains a key and config to support any kind of setting (feature toggles, thresholds, visibility, etc.).
+Static methods:
+upsertSetting(data) → create or update setting.
+getSetting(tenantId, node, key) → retrieve a setting for runtime use.
+ */
+
+const settingsSchema = mongoose.Schema(
+  {
+    tenantId: {
+      type: String,
+      required: true,
+      index: true,
+    },
+    userId: {
+      type: String,
+      required: true,
+      index: true,
+    },
+
+    node: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Node',
+      required: true,
+    },
+
+    datapoint: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Datapoint',
+    },
+
+    report: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Report',
+    },
+
+    key: {
+      type: String,
+      required: true,
+      trim: true,
+      index: true,
+    },
+
+    config: {
+      type: mongoose.Schema.Types.Mixed,
+      required: true,
+    },
+
+    description: {
+      type: String,
+      trim: true,
+    },
+
+    isActive: {
+      type: Boolean,
+      default: true,
+    },
   },
-  //write a profile  cqtegorizing into education,
-  //  personal profile, ministry resume,
-});
+  {
+    timestamps: true,
+  }
+);
 
-// add plugin that converts mongoose to json
+// Plugins
 settingsSchema.plugin(toJSON);
 settingsSchema.plugin(paginate);
+settingsSchema.plugin(tenantPlugin);
 
 /**
- * @typedef Settings
+ * Upsert a setting by key, node, and tenant
+ * @param {Object} data
+ * @returns {Promise<Setting>}
  */
-const Settings = mongoose.model('Settings', settingsSchema);
-module.exports = Settings;
+settingsSchema.statics.upsertSetting = async function (data) {
+  const { tenantId, node, key } = data;
+
+  const existing = await this.findOne({ tenantId, node, key });
+
+  if (existing) {
+    Object.assign(existing, data);
+    await existing.save();
+    return existing;
+  }
+
+  const setting = new this(data);
+  await setting.save();
+  return setting;
+};
+
+/**
+ * Get setting by key and node
+ * @param {string} tenantId
+ * @param {ObjectId} node
+ * @param {string} key
+ * @returns {Promise<Setting|null>}
+ */
+settingsSchema.statics.getSetting = async function (tenantId, node, key) {
+  return this.findOne({ tenantId, node, key });
+};
+
+/**
+ * @typedef Setting
+ */
+const Setting = mongoose.model('Setting', settingsSchema);
+
+module.exports = Setting;

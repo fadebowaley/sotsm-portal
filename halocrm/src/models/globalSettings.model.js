@@ -1,9 +1,13 @@
 const mongoose = require('mongoose');
 const validator = require('validator'); // Validator is used for validating input data, such as checking if a string is a valid email format.
-const { toJSON, paginate } = require('./plugins'); // toJSON plugin is used to convert Mongoose documents to JSON format, while paginate helps in paginating results.
+const { toJSON, paginate, tenantPlugin } = require('./plugins'); // toJSON plugin is used to convert Mongoose documents to JSON format, while paginate helps in paginating results.
 
 const globalSettingsSchema = new mongoose.Schema(
   {
+    tenantId: {
+      type: String,
+      index: true,
+    },
     // General Organization Profile
     organizationName: { type: String, default: 'Default Organization Name' },
     logoUrl: { type: String },
@@ -84,6 +88,7 @@ const globalSettingsSchema = new mongoose.Schema(
 // add plugin that converts mongoose to json
 globalSettingsSchema.plugin(toJSON);
 globalSettingsSchema.plugin(paginate);
+globalSettingsSchema.plugin(tenantPlugin);
 
 /**
  * @typedef globalSettings

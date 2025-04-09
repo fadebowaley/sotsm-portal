@@ -14,6 +14,8 @@ const { tokenTypes } = require('../config/tokens');
  * @param {string} type
  * @param {string} [secret]
  * @returns {string}
+ * @example
+ * const token = generateToken('60d5ec49f1b2c8b1f8e4e1a1', moment().add(1, 'hour'), tokenTypes.ACCESS);
  */
 const generateToken = (userId, expires, type, secret = config.jwt.secret) => {
   const payload = {
@@ -33,6 +35,8 @@ const generateToken = (userId, expires, type, secret = config.jwt.secret) => {
  * @param {string} type
  * @param {boolean} [blacklisted]
  * @returns {Promise<Token>}
+ * @example
+ * const tokenDoc = await saveToken('someTokenString', '60d5ec49f1b2c8b1f8e4e1a1', moment().add(1, 'day'), tokenTypes.REFRESH);
  */
 const saveToken = async (token, userId, expires, type, blacklisted = false) => {
   const tokenDoc = await Token.create({
@@ -50,6 +54,8 @@ const saveToken = async (token, userId, expires, type, blacklisted = false) => {
  * @param {string} token
  * @param {string} type
  * @returns {Promise<Token>}
+ * @example
+ * const tokenDoc = await verifyToken('someTokenString', tokenTypes.ACCESS);
  */
 const verifyToken = async (token, type) => {
   const payload = jwt.verify(token, config.jwt.secret);
@@ -64,6 +70,8 @@ const verifyToken = async (token, type) => {
  * Generate auth tokens
  * @param {User} user
  * @returns {Promise<Object>}
+ * @example
+ * const tokens = await generateAuthTokens(user);
  */
 const generateAuthTokens = async (user) => {
   const accessTokenExpires = moment().add(config.jwt.accessExpirationMinutes, 'minutes');
@@ -89,6 +97,8 @@ const generateAuthTokens = async (user) => {
  * Generate reset password token
  * @param {string} email
  * @returns {Promise<string>}
+ * @example
+ * const resetToken = await generateResetPasswordToken('user@example.com');
  */
 const generateResetPasswordToken = async (email) => {
   const user = await userService.getUserByEmail(email);
@@ -105,6 +115,8 @@ const generateResetPasswordToken = async (email) => {
  * Generate verify email token
  * @param {User} user
  * @returns {Promise<string>}
+ * @example
+ * const verifyToken = await generateVerifyEmailToken(user);
  */
 const generateVerifyEmailToken = async (user) => {
   const expires = moment().add(config.jwt.verifyEmailExpirationMinutes, 'minutes');

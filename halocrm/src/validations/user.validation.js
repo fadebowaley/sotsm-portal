@@ -12,25 +12,31 @@ const createUser = {
 
 
 const ownerCreate = {
-  body: Joi.object().keys({
-    firstname: Joi.string().valid('Anna').required(),
-    lastname: Joi.string().valid('Taylor').required(),
-    email: Joi.string().valid('anna@example.com').required().email(),
-    password: Joi.string().valid('Pass7890').required().custom(password),
-    isOwner: Joi.boolean().valid(false).required(),
-    createdBy: Joi.string().required(), // Assuming createdBy is a string
-  }),
+  body: Joi.object()
+    .keys({
+      firstname: Joi.string().required(),
+      lastname: Joi.string().required(),
+      email: Joi.string().required().email(),
+      password: Joi.string().required().custom(password),
+      isOwner: Joi.boolean().valid(false).default(false),
+    })
 };
+
+
 
 const getUsers = {
   query: Joi.object().keys({
-    name: Joi.string(),
+    firstname: Joi.string(),
+    lastname: Joi.string(),
     role: Joi.string(),
     sortBy: Joi.string(),
     limit: Joi.number().integer(),
     page: Joi.number().integer(),
+    email: Joi.string().email(),
+    userId: Joi.string(),
   }),
 };
+
 
 const getUser = {
   params: Joi.object().keys({
@@ -46,7 +52,10 @@ const updateUser = {
     .keys({
       email: Joi.string().email(),
       password: Joi.string().custom(password),
-      name: Joi.string(),
+      firstname: Joi.string(),
+      lastname: Joi.string(),
+      isSuper: Joi.boolean().valid(false).default(false),
+      isOwner: Joi.boolean().valid(false).default(false),
     })
     .min(1),
 };

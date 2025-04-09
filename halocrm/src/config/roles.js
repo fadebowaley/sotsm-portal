@@ -1,3 +1,6 @@
+//const { Role } = require('../models');
+
+
 const allRoles = {
   user: [],
   admin: ['getUsers', 'manageUsers'],

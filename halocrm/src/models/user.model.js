@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const validator = require('validator');
 const bcrypt = require('bcryptjs');
-const { toJSON, paginate } = require('./plugins');
+const { toJSON, paginate, tenantPlugin } = require('./plugins');
 
 const userSchema = mongoose.Schema(
   {
@@ -20,7 +20,6 @@ const userSchema = mongoose.Schema(
     roles: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Role', default: [] }],
     isOwner: { type: Boolean, default: false },
     isSuper: { type: Boolean, default: false },
-
     firstname: { type: String, required: true, trim: true },
     lastname: { type: String, required: true, trim: true },
 
@@ -60,6 +59,7 @@ const userSchema = mongoose.Schema(
 // Add plugins that convert mongoose to JSON and paginate
 userSchema.plugin(toJSON);
 userSchema.plugin(paginate);
+userSchema.plugin(tenantPlugin);
 
 /** create user body staic ethod */
 
@@ -92,7 +92,6 @@ userSchema.statics.generateTenantId = async function (isOwner, createdBy) {
   if (!creator) {
     throw new Error('Creator not found');
   }
-
   return creator.tenantId;
 };
 
@@ -113,11 +112,28 @@ userSchema.statics.isEmailTaken = async function (email, excludeUserId) {
  * @returns {Promise<User>}
  */
 
+/**
+ * Create a new user
+ * - Generates a unique userId for the user
+ * - Generates a tenantId based on whether the user is an owner or not
+ * - Saves the user to the database
+ * @param {Object} userBody - The user data
+ * @returns {Promise<User>}
+ */
 userSchema.statics.create = async function (userBody) {
+  // Generate a unique userId
   userBody.userId = this.generateUserId();
+
+  // Generate a tenantId based on ownership
   userBody.tenantId = await this.generateTenantId(userBody.isOwner, userBody.createdBy);
+
+  // Create a new user instance with the provided data
   const user = new this(userBody);
+
+  // Save the user to the database
   await user.save();
+
+  // Return the created user
   return user;
 };
 
@@ -126,6 +142,7 @@ userSchema.statics.create = async function (userBody) {
  * @param {string} password
  * @returns {Promise<boolean>}
  */
+
 userSchema.methods.isPasswordMatch = async function (password) {
   return bcrypt.compare(password, this.password);
 };

@@ -8,6 +8,7 @@ const register = {
     email: Joi.string().required().email(),
     password: Joi.string().required().custom(password),
     isOwner: Joi.boolean().required(),
+    // isSuper: Joi.boolean().required(),
   }),
 };
 
