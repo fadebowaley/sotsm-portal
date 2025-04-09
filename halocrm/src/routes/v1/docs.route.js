@@ -14,39 +14,16 @@
  * 3. Sets up routes:
  *    - Serves Swagger UI at the root path ('/')
  *    - Enables API explorer in the UI
- *
- * Example usage:
- *
- * 1. Start your server and visit /v1/docs in browser
- * 2. You'll see the Swagger UI with all documented endpoints
- * 3. Try documenting an endpoint in your route file:
- *
- *    @swagger
- *    /users:
- *      get:
- *        summary: Get all users
- *        responses:
- *          200:
- *            description: List of users
- *            content:
- *              application/json:
- *                schema:
- *                  type: array
- *
- * 4. Refresh the docs page to see your new endpoint documentation
  */
 
 const express = require('express');
 const swaggerJsdoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
-const swaggerDefinition = require('../../docs/swaggerDef');
+const swaggerConfig = require('../../docs/swaggerConfig');
 
 const router = express.Router();
 
-const specs = swaggerJsdoc({
-  swaggerDefinition,
-  apis: ['src/docs/*.yml', 'src/routes/v1/*.js'],
-});
+const specs = swaggerJsdoc(swaggerConfig);
 
 router.use('/', swaggerUi.serve);
 router.get(
